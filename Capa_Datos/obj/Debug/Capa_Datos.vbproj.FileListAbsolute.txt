@@ -1,0 +1,8 @@
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.pdb
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.xml
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.Resources.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbproj.GenerateResource.Cache
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.xml
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.pdb

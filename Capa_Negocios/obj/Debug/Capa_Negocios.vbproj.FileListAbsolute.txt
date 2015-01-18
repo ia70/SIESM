@@ -1,0 +1,8 @@
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.pdb
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.xml
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.Resources.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.GenerateResource.Cache
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.xml
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.pdb
