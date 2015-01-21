@@ -57,13 +57,13 @@ DROP PROCEDURE IF EXISTS articulo_mostrar;
  DELIMITER //
 CREATE PROCEDURE articulo_mostrar()
    BEGIN
-   SELECT id_articulo AS 'Código',
-   nombre_corto AS 'Nombre corto',
-   nombre_largo AS 'Nombre del articulo',
-   descripcion AS 'Descripción',
-   imagen AS 'Imagen del articulo',
-   fecha_registro AS 'Fecha en que se registró'
-   FROM articulo;
+		SELECT id_articulo AS 'Código',
+		nombre_corto AS 'Nombre corto',
+		nombre_largo AS 'Nombre del articulo',
+		descripcion AS 'Descripción',
+		imagen AS 'Imagen del articulo',
+		fecha_registro AS 'Fecha en que se registró'
+		FROM articulo;
    END //
 DELIMITER ;
 
@@ -79,13 +79,40 @@ CREATE PROCEDURE articulo_insertar(
     IN fec_reg DATE
 )
    BEGIN
-   INSERT INTO articulo(id_articulo, nombre_corto, nombre_largo, descripcion, imagen, fecha_registro) 
-   VALUES(id_art, nom_cor, nom_lar, des, ima, fec_reg);
-   
+		INSERT INTO articulo(id_articulo, nombre_corto, nombre_largo, descripcion, imagen, fecha_registro) 
+		VALUES(id_art, nom_cor, nom_lar, des, ima, fec_reg);
    END //
 DELIMITER ;
 
 
+DROP PROCEDURE IF EXISTS articulo_editar;
+ DELIMITER //
+CREATE PROCEDURE articulo_editar(
+	IN id_art VARCHAR(20), 
+    IN nom_cor VARCHAR(15),
+    IN nom_lar VARCHAR(30),
+    IN des VARCHAR(120),
+    IN ima MEDIUMBLOB,
+    IN fec_reg DATE
+)
+   BEGIN
+		UPDATE articulo SET nombre_corto=nom_cor, 
+		nombre_largo=nom_lar, 
+		descripcion=des, 
+		imagen=ima, 
+		fecha_registro=fec_reg
+		WHERE id_articulo=id_art;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_eliminar;
+ DELIMITER //
+CREATE PROCEDURE articulo_eliminar(IN articulo VARCHAR(20))
+   BEGIN
+		DELETE FROM articulo WHERE id_articulo=articulo;
+   END //
+DELIMITER ;
 #TABLA INVENTARIO ----------------------------------------------
 #TABLA PROVEEDOR -----------------------------------------------
 #TABLA SUCURSAL ------------------------------------------------
