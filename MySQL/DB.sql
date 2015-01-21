@@ -114,5 +114,13 @@ CREATE PROCEDURE articulo_eliminar(IN articulo VARCHAR(20))
    END //
 DELIMITER ;
 #TABLA INVENTARIO ----------------------------------------------
+DROP PROCEDURE IF EXISTS articulo_eliminar;
+ DELIMITER //
+CREATE PROCEDURE articulo_eliminar(IN articulo VARCHAR(20))
+   BEGIN
+		DELETE FROM articulo WHERE id_articulo=articulo;
+   END //
+DELIMITER ;
+
 #TABLA PROVEEDOR -----------------------------------------------
 #TABLA SUCURSAL ------------------------------------------------
