@@ -61,8 +61,8 @@ CREATE PROCEDURE articulo_mostrar()
 		nombre_corto AS 'Nombre corto',
 		nombre_largo AS 'Nombre del articulo',
 		descripcion AS 'Descripción',
-		imagen AS 'Imagen del articulo',
-		fecha_registro AS 'Fecha en que se registró'
+        CAST(imagen AS char) AS 'Imagen',
+        CAST(fecha_registro AS char) AS 'Fecha de registro'
 		FROM articulo;
    END //
 DELIMITER ;
@@ -113,7 +113,11 @@ CREATE PROCEDURE articulo_eliminar(IN articulo VARCHAR(20))
 		DELETE FROM articulo WHERE id_articulo=articulo;
    END //
 DELIMITER ;
+
+
+
 #TABLA INVENTARIO ----------------------------------------------
+
 DROP PROCEDURE IF EXISTS inventario_mostrar;
  DELIMITER //
 CREATE PROCEDURE inventario_mostrar()
@@ -132,6 +136,7 @@ CREATE PROCEDURE inventario_mostrar()
 		FROM inventario;
    END //
 DELIMITER ;
+
 
 DROP PROCEDURE IF EXISTS inventario_ingresar;
  DELIMITER //
@@ -184,7 +189,11 @@ CREATE PROCEDURE inventario_eliminar(IN registro INT, sucursal INT, proveedor IN
 		DELETE FROM inventario WHERE (id_registro=registro, id_sucursal=sucursal, id_proveedor=proveedor, id_articulo=articulo);
    END //
 DELIMITER ;
+
+
+
 #TABLA PROVEEDOR -----------------------------------------------
+
 DROP PROCEDURE IF EXISTS proveedor_mostrar;
  DELIMITER //
 CREATE PROCEDURE proveedor_mostrar()
@@ -242,7 +251,10 @@ CREATE PROCEDURE proveedor_eliminar(IN proveedor INT)
    END //
 DELIMITER ;
 
+
+
 #TABLA SUCURSAL ------------------------------------------------
+
 DROP PROCEDURE IF EXISTS sucursal_mostrar;
  DELIMITER //
 CREATE PROCEDURE sucursal_mostrar()
