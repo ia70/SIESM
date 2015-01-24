@@ -154,7 +154,7 @@ Partial Class Articulo_N
         Me.txtdescripcion.MaxLength = 120
         Me.txtdescripcion.Multiline = True
         Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.txtdescripcion.Size = New System.Drawing.Size(269, 101)
         Me.txtdescripcion.TabIndex = 21
         '

@@ -8,7 +8,7 @@ Public Class Articulo_N
         LimpiarCampos()
     End Sub
     Sub LimpiarCampos()
-        txtdescripcion.Text = ""
+        'txtdescripcion.Text = ""
         txtid_articulo.Text = ""
         txtnombre_corto.Text = ""
         txtnombre_largo.Text = ""
@@ -58,4 +58,5 @@ Public Class Articulo_N
         objeto.fecha_registro = Date.Today.Date.ToString("yyyy.MM.dd")
         Articulo.nuevoArticulo(objeto)
     End Sub
+
 End Class

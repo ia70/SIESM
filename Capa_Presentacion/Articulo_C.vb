@@ -1,6 +1,6 @@
 ﻿Imports Capa_Negocios
 Public Class Articulo_C
-
+    Dim Articulo As New CNarticulo
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         End
     End Sub
@@ -24,6 +24,7 @@ Public Class Articulo_C
         lblnombre_largo.Text = dgvarticulos.Item(2, dgvarticulos.CurrentRow.Index).Value.ToString
         lbldescripcion.Text = dgvarticulos.Item(3, dgvarticulos.CurrentRow.Index).Value.ToString
         lblfecha_registro.Text = dgvarticulos.Item(5, dgvarticulos.CurrentRow.Index).Value.ToString
+        ptrimagen.Image = Articulo.Bytes_Imagen(dgvarticulos.Item(4, dgvarticulos.CurrentRow.Index).Value)
     End Sub
 
     Private Sub dgvarticulos_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvarticulos.CurrentCellChanged
