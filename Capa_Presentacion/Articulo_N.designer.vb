@@ -25,16 +25,16 @@ Partial Class Articulo_N
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btbuscar_imagen = New System.Windows.Forms.Button()
-        Me.btlimpiar_campos = New System.Windows.Forms.Button()
-        Me.btterminar = New System.Windows.Forms.Button()
-        Me.btguardar = New System.Windows.Forms.Button()
-        Me.pcimagen = New System.Windows.Forms.PictureBox()
+        Me.btnbuscar_imagen = New System.Windows.Forms.Button()
+        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
+        Me.btnterminar = New System.Windows.Forms.Button()
+        Me.btnguardar = New System.Windows.Forms.Button()
+        Me.ptrimagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txdescripcion = New System.Windows.Forms.TextBox()
-        Me.txnombre_largo = New System.Windows.Forms.TextBox()
-        Me.txnombre_corto = New System.Windows.Forms.TextBox()
-        Me.txid_articulo = New System.Windows.Forms.TextBox()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
+        Me.txtnombre_largo = New System.Windows.Forms.TextBox()
+        Me.txtnombre_corto = New System.Windows.Forms.TextBox()
+        Me.txtid_articulo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -42,7 +42,7 @@ Partial Class Articulo_N
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.pcimagen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -70,16 +70,16 @@ Partial Class Articulo_N
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Panel3.Controls.Add(Me.btbuscar_imagen)
-        Me.Panel3.Controls.Add(Me.btlimpiar_campos)
-        Me.Panel3.Controls.Add(Me.btterminar)
-        Me.Panel3.Controls.Add(Me.btguardar)
-        Me.Panel3.Controls.Add(Me.pcimagen)
+        Me.Panel3.Controls.Add(Me.btnbuscar_imagen)
+        Me.Panel3.Controls.Add(Me.btnlimpiar_campos)
+        Me.Panel3.Controls.Add(Me.btnterminar)
+        Me.Panel3.Controls.Add(Me.btnguardar)
+        Me.Panel3.Controls.Add(Me.ptrimagen)
         Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.txdescripcion)
-        Me.Panel3.Controls.Add(Me.txnombre_largo)
-        Me.Panel3.Controls.Add(Me.txnombre_corto)
-        Me.Panel3.Controls.Add(Me.txid_articulo)
+        Me.Panel3.Controls.Add(Me.txtdescripcion)
+        Me.Panel3.Controls.Add(Me.txtnombre_largo)
+        Me.Panel3.Controls.Add(Me.txtnombre_corto)
+        Me.Panel3.Controls.Add(Me.txtid_articulo)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
@@ -90,58 +90,54 @@ Partial Class Articulo_N
         Me.Panel3.Size = New System.Drawing.Size(730, 389)
         Me.Panel3.TabIndex = 17
         '
-        'btbuscar_imagen
+        'btnbuscar_imagen
         '
-        Me.btbuscar_imagen.Enabled = False
-        Me.btbuscar_imagen.Location = New System.Drawing.Point(465, 247)
-        Me.btbuscar_imagen.Name = "btbuscar_imagen"
-        Me.btbuscar_imagen.Size = New System.Drawing.Size(253, 30)
-        Me.btbuscar_imagen.TabIndex = 27
-        Me.btbuscar_imagen.Text = "Buscar imágen"
-        Me.btbuscar_imagen.UseVisualStyleBackColor = True
+        Me.btnbuscar_imagen.Location = New System.Drawing.Point(465, 247)
+        Me.btnbuscar_imagen.Name = "btnbuscar_imagen"
+        Me.btnbuscar_imagen.Size = New System.Drawing.Size(253, 30)
+        Me.btnbuscar_imagen.TabIndex = 27
+        Me.btnbuscar_imagen.Text = "Buscar imágen"
+        Me.btnbuscar_imagen.UseVisualStyleBackColor = True
         '
-        'btlimpiar_campos
+        'btnlimpiar_campos
         '
-        Me.btlimpiar_campos.Enabled = False
-        Me.btlimpiar_campos.Location = New System.Drawing.Point(358, 303)
-        Me.btlimpiar_campos.Name = "btlimpiar_campos"
-        Me.btlimpiar_campos.Size = New System.Drawing.Size(138, 30)
-        Me.btlimpiar_campos.TabIndex = 26
-        Me.btlimpiar_campos.Text = "Limpiar campos"
-        Me.btlimpiar_campos.UseVisualStyleBackColor = True
+        Me.btnlimpiar_campos.Location = New System.Drawing.Point(358, 303)
+        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
+        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
+        Me.btnlimpiar_campos.TabIndex = 26
+        Me.btnlimpiar_campos.Text = "Limpiar campos"
+        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
         '
-        'btterminar
+        'btnterminar
         '
-        Me.btterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btterminar.Location = New System.Drawing.Point(613, 303)
-        Me.btterminar.Name = "btterminar"
-        Me.btterminar.Size = New System.Drawing.Size(105, 30)
-        Me.btterminar.TabIndex = 25
-        Me.btterminar.Text = "Terminar"
-        Me.btterminar.UseVisualStyleBackColor = True
+        Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnterminar.Location = New System.Drawing.Point(613, 303)
+        Me.btnterminar.Name = "btnterminar"
+        Me.btnterminar.Size = New System.Drawing.Size(105, 30)
+        Me.btnterminar.TabIndex = 25
+        Me.btnterminar.Text = "Terminar"
+        Me.btnterminar.UseVisualStyleBackColor = True
         '
-        'btguardar
+        'btnguardar
         '
-        Me.btguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btguardar.Enabled = False
-        Me.btguardar.Location = New System.Drawing.Point(502, 303)
-        Me.btguardar.Name = "btguardar"
-        Me.btguardar.Size = New System.Drawing.Size(105, 30)
-        Me.btguardar.TabIndex = 24
-        Me.btguardar.Text = "Guardar"
-        Me.btguardar.UseVisualStyleBackColor = True
+        Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnguardar.Location = New System.Drawing.Point(502, 303)
+        Me.btnguardar.Name = "btnguardar"
+        Me.btnguardar.Size = New System.Drawing.Size(105, 30)
+        Me.btnguardar.TabIndex = 24
+        Me.btnguardar.Text = "Guardar"
+        Me.btnguardar.UseVisualStyleBackColor = True
         '
-        'pcimagen
+        'ptrimagen
         '
-        Me.pcimagen.BackColor = System.Drawing.Color.White
-        Me.pcimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pcimagen.Enabled = False
-        Me.pcimagen.Location = New System.Drawing.Point(462, 65)
-        Me.pcimagen.Name = "pcimagen"
-        Me.pcimagen.Size = New System.Drawing.Size(256, 170)
-        Me.pcimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pcimagen.TabIndex = 23
-        Me.pcimagen.TabStop = False
+        Me.ptrimagen.BackColor = System.Drawing.Color.White
+        Me.ptrimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ptrimagen.Location = New System.Drawing.Point(462, 65)
+        Me.ptrimagen.Name = "ptrimagen"
+        Me.ptrimagen.Size = New System.Drawing.Size(256, 170)
+        Me.ptrimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ptrimagen.TabIndex = 23
+        Me.ptrimagen.TabStop = False
         '
         'Label5
         '
@@ -152,44 +148,41 @@ Partial Class Articulo_N
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Imágen del articulo:"
         '
-        'txdescripcion
+        'txtdescripcion
         '
-        Me.txdescripcion.Enabled = False
-        Me.txdescripcion.Location = New System.Drawing.Point(169, 134)
-        Me.txdescripcion.MaxLength = 120
-        Me.txdescripcion.Multiline = True
-        Me.txdescripcion.Name = "txdescripcion"
-        Me.txdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txdescripcion.Size = New System.Drawing.Size(269, 101)
-        Me.txdescripcion.TabIndex = 21
+        Me.txtdescripcion.Location = New System.Drawing.Point(169, 134)
+        Me.txtdescripcion.MaxLength = 120
+        Me.txtdescripcion.Multiline = True
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtdescripcion.Size = New System.Drawing.Size(269, 101)
+        Me.txtdescripcion.TabIndex = 21
         '
-        'txnombre_largo
+        'txtnombre_largo
         '
-        Me.txnombre_largo.Enabled = False
-        Me.txnombre_largo.Location = New System.Drawing.Point(169, 99)
-        Me.txnombre_largo.MaxLength = 30
-        Me.txnombre_largo.Name = "txnombre_largo"
-        Me.txnombre_largo.Size = New System.Drawing.Size(269, 26)
-        Me.txnombre_largo.TabIndex = 20
+        Me.txtnombre_largo.Location = New System.Drawing.Point(169, 99)
+        Me.txtnombre_largo.MaxLength = 30
+        Me.txtnombre_largo.Name = "txtnombre_largo"
+        Me.txtnombre_largo.Size = New System.Drawing.Size(269, 26)
+        Me.txtnombre_largo.TabIndex = 20
         '
-        'txnombre_corto
+        'txtnombre_corto
         '
-        Me.txnombre_corto.Enabled = False
-        Me.txnombre_corto.Location = New System.Drawing.Point(169, 65)
-        Me.txnombre_corto.MaxLength = 15
-        Me.txnombre_corto.Name = "txnombre_corto"
-        Me.txnombre_corto.Size = New System.Drawing.Size(204, 26)
-        Me.txnombre_corto.TabIndex = 19
+        Me.txtnombre_corto.Location = New System.Drawing.Point(169, 65)
+        Me.txtnombre_corto.MaxLength = 15
+        Me.txtnombre_corto.Name = "txtnombre_corto"
+        Me.txtnombre_corto.Size = New System.Drawing.Size(204, 26)
+        Me.txtnombre_corto.TabIndex = 19
         '
-        'txid_articulo
+        'txtid_articulo
         '
-        Me.txid_articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txid_articulo.Location = New System.Drawing.Point(169, 30)
-        Me.txid_articulo.MaxLength = 20
-        Me.txid_articulo.Name = "txid_articulo"
-        Me.txid_articulo.Size = New System.Drawing.Size(204, 26)
-        Me.txid_articulo.TabIndex = 18
-        Me.txid_articulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtid_articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtid_articulo.Location = New System.Drawing.Point(169, 30)
+        Me.txtid_articulo.MaxLength = 20
+        Me.txtid_articulo.Name = "txtid_articulo"
+        Me.txtid_articulo.Size = New System.Drawing.Size(204, 26)
+        Me.txtid_articulo.TabIndex = 18
+        Me.txtid_articulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
@@ -256,26 +249,26 @@ Partial Class Articulo_N
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.pcimagen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents btlimpiar_campos As System.Windows.Forms.Button
-    Friend WithEvents btterminar As System.Windows.Forms.Button
-    Friend WithEvents btguardar As System.Windows.Forms.Button
-    Friend WithEvents pcimagen As System.Windows.Forms.PictureBox
+    Friend WithEvents btnlimpiar_campos As System.Windows.Forms.Button
+    Friend WithEvents btnterminar As System.Windows.Forms.Button
+    Friend WithEvents btnguardar As System.Windows.Forms.Button
+    Friend WithEvents ptrimagen As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txdescripcion As System.Windows.Forms.TextBox
-    Friend WithEvents txnombre_largo As System.Windows.Forms.TextBox
-    Friend WithEvents txnombre_corto As System.Windows.Forms.TextBox
-    Friend WithEvents txid_articulo As System.Windows.Forms.TextBox
+    Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents txtnombre_largo As System.Windows.Forms.TextBox
+    Friend WithEvents txtnombre_corto As System.Windows.Forms.TextBox
+    Friend WithEvents txtid_articulo As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents btbuscar_imagen As System.Windows.Forms.Button
+    Friend WithEvents btnbuscar_imagen As System.Windows.Forms.Button
 End Class

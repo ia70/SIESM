@@ -3,7 +3,7 @@
     Private _nombre_corto As String
     Private _nombre_largo As String
     Private _descripcion As String
-    Private _imagen As String
+    Private _imagen As Byte()
     Private _fecha_registro As String
 
     Public Property id_articulo As String
@@ -38,11 +38,11 @@
             _descripcion = value
         End Set
     End Property
-    Public Property imagen As String
+    Public Property imagen As Byte()
         Get
             Return _imagen
         End Get
-        Set(value As String)
+        Set(value As Byte())
             _imagen = value
         End Set
     End Property
