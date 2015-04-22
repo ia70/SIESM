@@ -19,12 +19,17 @@ Public Class Articulo_C
     End Sub
 
     Sub llenarCampos()
-        txtid_articulo.Text = dgvarticulos.Item(0, dgvarticulos.CurrentRow.Index).Value.ToString
-        lblnombre_corto.Text = dgvarticulos.Item(1, dgvarticulos.CurrentRow.Index).Value.ToString
-        lblnombre_largo.Text = dgvarticulos.Item(2, dgvarticulos.CurrentRow.Index).Value.ToString
-        lbldescripcion.Text = dgvarticulos.Item(3, dgvarticulos.CurrentRow.Index).Value.ToString
-        lblfecha_registro.Text = dgvarticulos.Item(5, dgvarticulos.CurrentRow.Index).Value.ToString
-        ptrimagen.Image = Articulo.Bytes_Imagen(dgvarticulos.Item(4, dgvarticulos.CurrentRow.Index).Value)
+        Try
+            txtid_articulo.Text = dgvarticulos.Item(0, dgvarticulos.CurrentRow.Index).Value.ToString
+            lblnombre_corto.Text = dgvarticulos.Item(1, dgvarticulos.CurrentRow.Index).Value.ToString
+            lblnombre_largo.Text = dgvarticulos.Item(2, dgvarticulos.CurrentRow.Index).Value.ToString
+            lbldescripcion.Text = dgvarticulos.Item(3, dgvarticulos.CurrentRow.Index).Value.ToString
+            lblfecha_registro.Text = dgvarticulos.Item(5, dgvarticulos.CurrentRow.Index).Value.ToString
+            ptrimagen.Image = Articulo.Bytes_Imagen(dgvarticulos.Item(4, dgvarticulos.CurrentRow.Index).Value)
+        Catch ex As Exception
+
+        End Try
+        
     End Sub
 
     Private Sub dgvarticulos_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvarticulos.CurrentCellChanged

@@ -59,4 +59,15 @@ Public Class Articulo_N
         Articulo.nuevoArticulo(objeto)
     End Sub
 
+    Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtid_articulo.KeyPress
+        Validar_Num(e)
+    End Sub
+
+    Private Sub txtnombre_corto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnombre_corto.KeyPress
+        Validar_Nombres(txtnombre_corto, e)
+    End Sub
+
+    Private Sub txtnombre_largo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnombre_largo.KeyPress
+        Validar_Nombres(txtnombre_largo, e)
+    End Sub
 End Class

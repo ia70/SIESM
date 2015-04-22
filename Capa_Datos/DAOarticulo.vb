@@ -28,7 +28,7 @@ Public Class DAOarticulo
                 .Add("nom_cor", MySqlDbType.VarChar).Value = objP.nombre_corto
                 .Add("nom_lar", MySqlDbType.VarChar).Value = objP.nombre_largo
                 .Add("des", MySqlDbType.VarChar).Value = objP.descripcion
-                .Add("ima", MySqlDbType.MediumBlob).Value = objP.imagen
+                .Add("ima", MySqlDbType.LongBlob).Value = objP.imagen
                 .Add("fec_reg", MySqlDbType.Date).Value = objP.fecha_registro
             End With
             da.SelectCommand.ExecuteNonQuery()

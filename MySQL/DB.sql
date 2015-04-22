@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS articulo (
     nombre_corto VARCHAR(15) NOT NULL,
     nombre_largo VARCHAR(30) NOT NULL,
     descripcion VARCHAR(120),
-    imagen MEDIUMBLOB,
+    imagen LONGBLOB,
     fecha_registro DATE,
     PRIMARY KEY (id_articulo)
 );
@@ -61,7 +61,7 @@ CREATE PROCEDURE articulo_mostrar()
 		nombre_corto AS 'Nombre corto',
 		nombre_largo AS 'Nombre del articulo',
 		descripcion AS 'Descripción',
-        CAST(imagen AS char) AS 'Imagen',
+        imagen AS 'Imagen',
         CAST(fecha_registro AS char) AS 'Fecha de registro'
 		FROM articulo;
    END //
@@ -75,7 +75,7 @@ CREATE PROCEDURE articulo_insertar(
     IN nom_cor VARCHAR(15),
     IN nom_lar VARCHAR(30),
     IN des VARCHAR(120),
-    IN ima MEDIUMBLOB,
+    IN ima LONGBLOB,
     IN fec_reg DATE
 )
    BEGIN
