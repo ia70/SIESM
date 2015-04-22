@@ -92,6 +92,7 @@ Partial Class Articulo_N
         '
         'btnbuscar_imagen
         '
+        Me.btnbuscar_imagen.Enabled = False
         Me.btnbuscar_imagen.Location = New System.Drawing.Point(465, 247)
         Me.btnbuscar_imagen.Name = "btnbuscar_imagen"
         Me.btnbuscar_imagen.Size = New System.Drawing.Size(253, 30)
@@ -101,6 +102,7 @@ Partial Class Articulo_N
         '
         'btnlimpiar_campos
         '
+        Me.btnlimpiar_campos.Enabled = False
         Me.btnlimpiar_campos.Location = New System.Drawing.Point(358, 303)
         Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
         Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
@@ -121,6 +123,7 @@ Partial Class Articulo_N
         'btnguardar
         '
         Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnguardar.Enabled = False
         Me.btnguardar.Location = New System.Drawing.Point(502, 303)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(105, 30)
@@ -150,6 +153,7 @@ Partial Class Articulo_N
         '
         'txtdescripcion
         '
+        Me.txtdescripcion.Enabled = False
         Me.txtdescripcion.Location = New System.Drawing.Point(169, 134)
         Me.txtdescripcion.MaxLength = 120
         Me.txtdescripcion.Multiline = True
@@ -160,6 +164,7 @@ Partial Class Articulo_N
         '
         'txtnombre_largo
         '
+        Me.txtnombre_largo.Enabled = False
         Me.txtnombre_largo.Location = New System.Drawing.Point(169, 99)
         Me.txtnombre_largo.MaxLength = 30
         Me.txtnombre_largo.Name = "txtnombre_largo"
@@ -168,6 +173,7 @@ Partial Class Articulo_N
         '
         'txtnombre_corto
         '
+        Me.txtnombre_corto.Enabled = False
         Me.txtnombre_corto.Location = New System.Drawing.Point(169, 65)
         Me.txtnombre_corto.MaxLength = 15
         Me.txtnombre_corto.Name = "txtnombre_corto"

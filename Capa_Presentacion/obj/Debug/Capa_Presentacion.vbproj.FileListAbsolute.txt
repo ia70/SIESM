@@ -19,3 +19,7 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Pr
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.dll
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.pdb
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.xml
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.manifest
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.application
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe.manifest
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.application
