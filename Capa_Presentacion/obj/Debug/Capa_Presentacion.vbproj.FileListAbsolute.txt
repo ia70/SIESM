@@ -23,4 +23,3 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Pr
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.application
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe.manifest
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.application
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Articulo_EL.resources

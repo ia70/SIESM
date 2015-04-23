@@ -67,6 +67,20 @@ CREATE PROCEDURE articulo_mostrar()
    END //
 DELIMITER ;
 
+DROP PROCEDURE IF EXISTS articulo_consultar;
+ DELIMITER //
+CREATE PROCEDURE articulo_consultar(IN id_art VARCHAR(20))
+   BEGIN
+		SELECT id_articulo AS 'Código',
+		nombre_corto AS 'Nombre corto',
+		nombre_largo AS 'Nombre del articulo',
+		descripcion AS 'Descripción',
+        imagen AS 'Imagen',
+        CAST(fecha_registro AS char) AS 'Fecha de registro'
+		FROM articulo 
+        WHERE id_articulo=id_art;
+   END //
+DELIMITER ;
 
 DROP PROCEDURE IF EXISTS articulo_insertar;
  DELIMITER //
@@ -208,7 +222,7 @@ CREATE PROCEDURE proveedor_mostrar()
    END //
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS proveedor_agregar;
+DROP PROCEDURE IF EXISTS proveedor_ingresar;
  DELIMITER //
 CREATE PROCEDURE proveedor_ingresar(
 	IN id_prov INT,
