@@ -1,6 +1,28 @@
 ﻿Imports Capa_Negocios
 Public Class Articulo_C
     Dim Articulo As New CNarticulo
+    Dim Tabla As New DataSet
+    Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtconsulta.KeyPress
+        If Len(txtconsulta.Text) > 4 And e.KeyChar = ChrW(13) Then
+            Tabla = Articulo.consultarArticulo(txtconsulta.Text)
+            txtconsulta.Text = ""
+            If Tabla.Tables(0).Rows.Count = 0 Then
+                M("El articulo solicitado no existe", 3)
+            Else
+                txtIdarticulo.Text = Tabla.Tables(0).Rows(0)(0).ToString()
+                txtnombre_corto.Text = Tabla.Tables(0).Rows(0)(1).ToString()
+                txtnombre_largo.Text = Tabla.Tables(0).Rows(0)(2).ToString()
+                txtdescripcion.Text = Tabla.Tables(0).Rows(0)(3).ToString()
+                ptrimagen.Image = Nothing
+                On Error Resume Next
+                ptrimagen.Image = Articulo.Bytes_Imagen(Tabla.Tables(0).Rows(0)(4))
+                txtFecha.Text = Tabla.Tables(0).Rows(0)(5).ToString()
+                txtconsulta.Focus()
+            End If
+        Else
+            Validar_Num(e)
+        End If
+    End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         End
     End Sub
@@ -20,11 +42,11 @@ Public Class Articulo_C
 
     Sub llenarCampos()
         Try
-            txtid_articulo.Text = dgvarticulos.Item(0, dgvarticulos.CurrentRow.Index).Value.ToString
-            lblnombre_corto.Text = dgvarticulos.Item(1, dgvarticulos.CurrentRow.Index).Value.ToString
-            lblnombre_largo.Text = dgvarticulos.Item(2, dgvarticulos.CurrentRow.Index).Value.ToString
-            lbldescripcion.Text = dgvarticulos.Item(3, dgvarticulos.CurrentRow.Index).Value.ToString
-            lblfecha_registro.Text = dgvarticulos.Item(5, dgvarticulos.CurrentRow.Index).Value.ToString
+            txtIdArticulo.Text = dgvarticulos.Item(0, dgvarticulos.CurrentRow.Index).Value.ToString
+            txtnombre_corto.Text = dgvarticulos.Item(1, dgvarticulos.CurrentRow.Index).Value.ToString
+            txtnombre_largo.Text = dgvarticulos.Item(2, dgvarticulos.CurrentRow.Index).Value.ToString
+            txtdescripcion.Text = dgvarticulos.Item(3, dgvarticulos.CurrentRow.Index).Value.ToString
+            txtFecha.Text = dgvarticulos.Item(5, dgvarticulos.CurrentRow.Index).Value.ToString
             ptrimagen.Image = Nothing
             ptrimagen.Image = Articulo.Bytes_Imagen(dgvarticulos.Item(4, dgvarticulos.CurrentRow.Index).Value)
         Catch ex As Exception
@@ -37,7 +59,7 @@ Public Class Articulo_C
         llenarCampos()
     End Sub
 
-    Private Sub txtid_articulo_TextChanged(sender As Object, e As EventArgs) Handles txtid_articulo.TextChanged
+    Private Sub txtid_articulo_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class
