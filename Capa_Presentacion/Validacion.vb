@@ -85,7 +85,7 @@
         Return e
     End Function
 
-    Public Sub MS(ByVal Texto As String, ByVal Tipo As Integer)
+    Public Sub M(ByVal Texto As String, ByVal Tipo As Integer)
         If Tipo = 1 Then
             MsgBox(Texto, vbInformation, "SIESM")
         ElseIf Tipo = 2 Then

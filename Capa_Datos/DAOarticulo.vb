@@ -19,7 +19,7 @@ Public Class DAOarticulo
     Public Function consultarArticulos(ByVal ID As String) As DataSet
         Dim ds As New DataSet
         cn = objCon.conectar
-        da = New MySqlDataAdapter("CALL articulo_mostrar", cn)
+        da = New MySqlDataAdapter("CALL articulo_consultar('" & ID & "')", cn)
         da.Fill(ds, "Articulos")
         Return ds
         ds.Dispose()
@@ -30,7 +30,7 @@ Public Class DAOarticulo
     Public Sub nuevoArticulo(ByVal objP As CEarticulo)
         cn = objCon.conectar
         Try
-            cn.Open()
+            'cn.Open()
             da = New MySqlDataAdapter("articulo_insertar", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters

@@ -25,19 +25,22 @@ Partial Class Articulo_EL
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.btnterminar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.ptrimagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtdescripcion = New System.Windows.Forms.TextBox()
-        Me.txtnombre_largo = New System.Windows.Forms.TextBox()
-        Me.txtnombre_corto = New System.Windows.Forms.TextBox()
-        Me.txtid_articulo = New System.Windows.Forms.TextBox()
+        Me.txtconsulta = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtIdArticulo = New System.Windows.Forms.Label()
+        Me.txtnombre_corto = New System.Windows.Forms.Label()
+        Me.txtnombre_largo = New System.Windows.Forms.Label()
+        Me.txtdescripcion = New System.Windows.Forms.Label()
+        Me.txtFecha = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,23 +71,46 @@ Partial Class Articulo_EL
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.txtFecha)
+        Me.Panel3.Controls.Add(Me.txtdescripcion)
+        Me.Panel3.Controls.Add(Me.txtnombre_largo)
+        Me.Panel3.Controls.Add(Me.txtnombre_corto)
+        Me.Panel3.Controls.Add(Me.txtIdArticulo)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.btnterminar)
         Me.Panel3.Controls.Add(Me.btnEliminar)
         Me.Panel3.Controls.Add(Me.ptrimagen)
         Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.txtdescripcion)
-        Me.Panel3.Controls.Add(Me.txtnombre_largo)
-        Me.Panel3.Controls.Add(Me.txtnombre_corto)
-        Me.Panel3.Controls.Add(Me.txtid_articulo)
+        Me.Panel3.Controls.Add(Me.txtconsulta)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(730, 389)
         Me.Panel3.TabIndex = 17
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(29, 84)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(138, 19)
+        Me.Label8.TabIndex = 28
+        Me.Label8.Text = "Código de barra:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(29, 227)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(125, 19)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Fecha registro:"
         '
         'btnterminar
         '
@@ -111,7 +137,7 @@ Partial Class Articulo_EL
         '
         Me.ptrimagen.BackColor = System.Drawing.Color.White
         Me.ptrimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptrimagen.Location = New System.Drawing.Point(462, 65)
+        Me.ptrimagen.Location = New System.Drawing.Point(462, 79)
         Me.ptrimagen.Name = "ptrimagen"
         Me.ptrimagen.Size = New System.Drawing.Size(256, 170)
         Me.ptrimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -121,86 +147,56 @@ Partial Class Articulo_EL
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(524, 33)
+        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(524, 39)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 18)
+        Me.Label5.Size = New System.Drawing.Size(159, 19)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Imágen del articulo:"
         '
-        'txtdescripcion
+        'txtconsulta
         '
-        Me.txtdescripcion.Enabled = False
-        Me.txtdescripcion.Location = New System.Drawing.Point(169, 134)
-        Me.txtdescripcion.MaxLength = 120
-        Me.txtdescripcion.Multiline = True
-        Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtdescripcion.Size = New System.Drawing.Size(269, 101)
-        Me.txtdescripcion.TabIndex = 21
-        '
-        'txtnombre_largo
-        '
-        Me.txtnombre_largo.Enabled = False
-        Me.txtnombre_largo.Location = New System.Drawing.Point(169, 99)
-        Me.txtnombre_largo.MaxLength = 30
-        Me.txtnombre_largo.Name = "txtnombre_largo"
-        Me.txtnombre_largo.Size = New System.Drawing.Size(269, 26)
-        Me.txtnombre_largo.TabIndex = 20
-        '
-        'txtnombre_corto
-        '
-        Me.txtnombre_corto.Enabled = False
-        Me.txtnombre_corto.Location = New System.Drawing.Point(169, 65)
-        Me.txtnombre_corto.MaxLength = 15
-        Me.txtnombre_corto.Name = "txtnombre_corto"
-        Me.txtnombre_corto.Size = New System.Drawing.Size(204, 26)
-        Me.txtnombre_corto.TabIndex = 19
-        '
-        'txtid_articulo
-        '
-        Me.txtid_articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid_articulo.Location = New System.Drawing.Point(169, 30)
-        Me.txtid_articulo.MaxLength = 20
-        Me.txtid_articulo.Name = "txtid_articulo"
-        Me.txtid_articulo.Size = New System.Drawing.Size(204, 26)
-        Me.txtid_articulo.TabIndex = 18
-        Me.txtid_articulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtconsulta.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtconsulta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtconsulta.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtconsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtconsulta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtconsulta.Location = New System.Drawing.Point(214, 33)
+        Me.txtconsulta.MaxLength = 20
+        Me.txtconsulta.Name = "txtconsulta"
+        Me.txtconsulta.Size = New System.Drawing.Size(123, 26)
+        Me.txtconsulta.TabIndex = 18
+        Me.txtconsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(36, 102)
+        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(29, 153)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(107, 18)
+        Me.Label4.Size = New System.Drawing.Size(119, 19)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Nombre largo:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(36, 68)
+        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(29, 119)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 18)
+        Me.Label3.Size = New System.Drawing.Size(120, 19)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Nombre corto:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 137)
+        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(29, 188)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 18)
+        Me.Label2.Size = New System.Drawing.Size(107, 19)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Descripción:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(127, 18)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Código de barra:"
         '
         'Label6
         '
@@ -214,6 +210,41 @@ Partial Class Articulo_EL
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Eliminar articulo"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txtIdArticulo
+        '
+        Me.txtIdArticulo.Location = New System.Drawing.Point(171, 83)
+        Me.txtIdArticulo.Name = "txtIdArticulo"
+        Me.txtIdArticulo.Size = New System.Drawing.Size(285, 25)
+        Me.txtIdArticulo.TabIndex = 29
+        '
+        'txtnombre_corto
+        '
+        Me.txtnombre_corto.Location = New System.Drawing.Point(171, 118)
+        Me.txtnombre_corto.Name = "txtnombre_corto"
+        Me.txtnombre_corto.Size = New System.Drawing.Size(285, 25)
+        Me.txtnombre_corto.TabIndex = 30
+        '
+        'txtnombre_largo
+        '
+        Me.txtnombre_largo.Location = New System.Drawing.Point(171, 152)
+        Me.txtnombre_largo.Name = "txtnombre_largo"
+        Me.txtnombre_largo.Size = New System.Drawing.Size(285, 25)
+        Me.txtnombre_largo.TabIndex = 31
+        '
+        'txtdescripcion
+        '
+        Me.txtdescripcion.Location = New System.Drawing.Point(171, 187)
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.Size = New System.Drawing.Size(285, 25)
+        Me.txtdescripcion.TabIndex = 32
+        '
+        'txtFecha
+        '
+        Me.txtFecha.Location = New System.Drawing.Point(171, 227)
+        Me.txtFecha.Name = "txtFecha"
+        Me.txtFecha.Size = New System.Drawing.Size(273, 25)
+        Me.txtFecha.TabIndex = 33
         '
         'Articulo_EL
         '
@@ -242,13 +273,16 @@ Partial Class Articulo_EL
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents ptrimagen As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
-    Friend WithEvents txtnombre_largo As System.Windows.Forms.TextBox
-    Friend WithEvents txtnombre_corto As System.Windows.Forms.TextBox
-    Friend WithEvents txtid_articulo As System.Windows.Forms.TextBox
+    Friend WithEvents txtconsulta As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtIdArticulo As System.Windows.Forms.Label
+    Friend WithEvents txtFecha As System.Windows.Forms.Label
+    Friend WithEvents txtdescripcion As System.Windows.Forms.Label
+    Friend WithEvents txtnombre_largo As System.Windows.Forms.Label
+    Friend WithEvents txtnombre_corto As System.Windows.Forms.Label
 End Class

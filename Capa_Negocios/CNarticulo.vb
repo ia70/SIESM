@@ -13,6 +13,10 @@ Public Class CNarticulo
     Public Sub nuevoArticulo(ByVal objP As CEarticulo)
         objArt.nuevoArticulo(objP)
     End Sub
+
+    Public Function consultarArticulo(ByVal ID As String) As DataSet
+        Return objArt.consultarArticulos(ID)
+    End Function
     Public Function Imagen_Bytes(ByVal Imagen As Image) As Byte()
         'si hay imagen
         If Not Imagen Is Nothing Then

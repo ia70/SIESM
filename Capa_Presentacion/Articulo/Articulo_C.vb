@@ -25,6 +25,7 @@ Public Class Articulo_C
             lblnombre_largo.Text = dgvarticulos.Item(2, dgvarticulos.CurrentRow.Index).Value.ToString
             lbldescripcion.Text = dgvarticulos.Item(3, dgvarticulos.CurrentRow.Index).Value.ToString
             lblfecha_registro.Text = dgvarticulos.Item(5, dgvarticulos.CurrentRow.Index).Value.ToString
+            ptrimagen.Image = Nothing
             ptrimagen.Image = Articulo.Bytes_Imagen(dgvarticulos.Item(4, dgvarticulos.CurrentRow.Index).Value)
         Catch ex As Exception
 

@@ -67,7 +67,7 @@ Public Class Articulo_N
         If e.KeyChar = ChrW(13) And Len(txtnombre_corto.Text) > 3 Then
             txtnombre_largo.Focus()
         Else
-            'Validar_Nombres(txtnombre_corto, e)
+            Validar_Nombres(txtnombre_corto, e)
         End If
 
     End Sub
@@ -76,7 +76,7 @@ Public Class Articulo_N
         If e.KeyChar = ChrW(13) And Len(txtnombre_largo.Text) > 3 Then
             txtdescripcion.Focus()
         Else
-            'Validar_Nombres(txtnombre_largo, e)
+            Validar_Nombres(txtnombre_largo, e)
         End If
     End Sub
 
@@ -84,7 +84,7 @@ Public Class Articulo_N
         If e.KeyChar = ChrW(13) And Len(txtdescripcion.Text) > 3 Then
             btnguardar.Focus()
         Else
-            'Validar_Texto(txtdescripcion, e)
+            Validar_Texto(txtdescripcion, e)
         End If
     End Sub
 
