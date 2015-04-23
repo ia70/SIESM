@@ -103,16 +103,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Articulo_C.Designer.vb">
+    <Compile Include="Articulo\Articulo_C.Designer.vb">
       <DependentUpon>Articulo_C.vb</DependentUpon>
     </Compile>
-    <Compile Include="Articulo_C.vb">
+    <Compile Include="Articulo\Articulo_C.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Articulo_N.designer.vb">
+    <Compile Include="Articulo\Articulo_EL.designer.vb">
+      <DependentUpon>Articulo_EL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Articulo\Articulo_EL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Articulo\Articulo_N.designer.vb">
       <DependentUpon>Articulo_N.vb</DependentUpon>
     </Compile>
-    <Compile Include="Articulo_N.vb">
+    <Compile Include="Articulo\Articulo_N.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -133,10 +139,13 @@
     <Compile Include="Validacion.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Articulo_C.resx">
+    <EmbeddedResource Include="Articulo\Articulo_C.resx">
       <DependentUpon>Articulo_C.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Articulo_N.resx">
+    <EmbeddedResource Include="Articulo\Articulo_EL.resx">
+      <DependentUpon>Articulo_EL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Articulo\Articulo_N.resx">
       <DependentUpon>Articulo_N.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -147,7 +156,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Capa_Presentacion_ClaveTemporal.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -157,7 +165,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="Conf\App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.vbproj">
@@ -186,6 +194,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
