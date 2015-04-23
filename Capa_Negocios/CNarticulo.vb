@@ -51,7 +51,7 @@ Public Class CNarticulo
         'Definiendo propiedades al openfiledialog
         With openfiler
             'directorio inicial
-            .InitialDirectory = "C:\"
+            '.InitialDirectory = "C:\"
             'archivos que se pueden abrir
             .Filter = "Archivos de imágen(*.jpg)|*.jpg"
             'indice del archivo de lectura por defecto
