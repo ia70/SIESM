@@ -1,7 +1,6 @@
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Resources.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Articulo_N.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.xml
@@ -15,7 +14,6 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Ne
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Datos.xml
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Articulo_C.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.dll
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.pdb
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.xml
@@ -23,5 +21,7 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Pr
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.application
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe.manifest
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.application
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Articulo_ED.resources
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Articulo_EL.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_C.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_ED.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_EL.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_N.resources

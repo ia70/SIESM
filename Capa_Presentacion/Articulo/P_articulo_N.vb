@@ -54,9 +54,15 @@ Public Class P_articulo_N
     End Sub
 
     Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtid_articulo.KeyPress
-        If e.KeyChar = ChrW(13) And Len(txtid_articulo.Text) > 3 Then
-            Campos(True)
-            txtnombre_corto.Focus()
+        If e.KeyChar = ChrW(13) And Len(txtid_articulo.Text) > 4 Then
+            If Articulo.Existe(txtid_articulo.Text) Then
+                M("¡El articulo " + txtid_articulo.Text + " ya existe!", 3)
+                txtid_articulo.Text = ""
+                txtid_articulo.Focus()
+            Else
+                Campos(True)
+                txtnombre_corto.Focus()
+            End If
         Else
             Validar_Num(e)
         End If

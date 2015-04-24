@@ -30,11 +30,15 @@ Public Class P_articulo_EL
         End
     End Sub
 
-    Private Sub txtconsulta_TextChanged(sender As Object, e As EventArgs) Handles txtconsulta.TextChanged
-
-    End Sub
-
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-
+        Articulo.Eliminar(txtIdArticulo.Text)
+        btnEliminar.Enabled = False
+        txtIdArticulo.Text = ""
+        txtnombre_corto.Text = ""
+        txtnombre_largo.Text = ""
+        txtdescripcion.Text = ""
+        ptrimagen.Image = Nothing
+        txtFecha.Text = ""
+        txtconsulta.Focus()
     End Sub
 End Class

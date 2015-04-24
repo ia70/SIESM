@@ -18,13 +18,17 @@ Public Class N_articulo
         Return objArt.Consulta(ID)
     End Function
 
-    Public Sub Eliminar()
-
+    Public Sub Eliminar(ByVal ID As String)
+        objArt.Eliminar(ID)
     End Sub
 
     Public Sub Editar()
 
     End Sub
+
+    Public Function Existe(ByVal ID As String) As Boolean
+        Return objArt.Existe(ID)
+    End Function
     Public Function Imagen_Bytes(ByVal Imagen As Image) As Byte()
         'si hay imagen
         If Not Imagen Is Nothing Then
