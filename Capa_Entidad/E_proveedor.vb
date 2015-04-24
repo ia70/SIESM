@@ -1,33 +1,33 @@
-﻿Public Class CEarticulo
-    Private _id_articulo As String
-    Private _nombre_corto As String
-    Private _nombre_largo As String
+﻿Public Class E_proveedor
+    Private _id_proveedor As Integer
+    Private _nombre As String
+    Private _direccion As String
     Private _descripcion As String
-    Private _imagen As Byte()
+    Private _telefono As String
     Private _fecha_registro As String
 
-    Public Property id_articulo As String
+    Public Property id_proveedor As Integer
         Get
-            Return _id_articulo
+            Return _id_proveedor
         End Get
-        Set(value As String)
-            _id_articulo = value
+        Set(value As Integer)
+            _id_proveedor = value
         End Set
     End Property
-    Public Property nombre_corto As String
+    Public Property nombre As String
         Get
-            Return _nombre_corto
+            Return _nombre
         End Get
         Set(value As String)
-            _nombre_corto = value
+            _nombre = value
         End Set
     End Property
-    Public Property nombre_largo As String
+    Public Property direccion As String
         Get
-            Return _nombre_largo
+            Return _direccion
         End Get
         Set(value As String)
-            _nombre_largo = value
+            _direccion = value
         End Set
     End Property
     Public Property descripcion As String
@@ -38,12 +38,12 @@
             _descripcion = value
         End Set
     End Property
-    Public Property imagen As Byte()
+    Public Property telefono As String
         Get
-            Return _imagen
+            Return _telefono
         End Get
-        Set(value As Byte())
-            _imagen = value
+        Set(value As String)
+            _telefono = value
         End Set
     End Property
     Public Property fecha_registro As String
@@ -54,6 +54,4 @@
             _fecha_registro = value
         End Set
     End Property
-
-
 End Class

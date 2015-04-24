@@ -1,11 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Capa_Entidad
-Public Class DAOarticulo
+Public Class D_articulo
     Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
 
-    Public Function listadoArticulos() As DataSet
+    Public Function Listado() As DataSet
         Dim ds As New DataSet
         cn = objCon.conectar
         da = New MySqlDataAdapter("CALL articulo_mostrar", cn)
@@ -16,7 +16,7 @@ Public Class DAOarticulo
         cn.Dispose()
     End Function
 
-    Public Function consultarArticulos(ByVal ID As String) As DataSet
+    Public Function Consulta(ByVal ID As String) As DataSet
         Dim ds As New DataSet
         cn = objCon.conectar
         da = New MySqlDataAdapter("CALL articulo_consultar('" & ID & "')", cn)
@@ -27,7 +27,8 @@ Public Class DAOarticulo
         cn.Dispose()
     End Function
 
-    Public Sub nuevoArticulo(ByVal objP As CEarticulo)
+    Public Sub Insertar(ByVal objP As E_articulo)
+        Dim Exito As Integer
         cn = objCon.conectar
         Try
             'cn.Open()
@@ -41,7 +42,7 @@ Public Class DAOarticulo
                 .Add("ima", MySqlDbType.LongBlob).Value = objP.imagen
                 .Add("fec_reg", MySqlDbType.Date).Value = objP.fecha_registro
             End With
-            da.SelectCommand.ExecuteNonQuery()
+            Exito = da.SelectCommand.ExecuteNonQuery()
             MsgBox("Registro guardado correctamente!", vbInformation + vbOKOnly, "SIESM")
         Catch ex As Exception
             MsgBox("Error al agregar articulo :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")

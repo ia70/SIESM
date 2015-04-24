@@ -1,4 +1,4 @@
-﻿Public Class CEinventario
+﻿Public Class E_inventario
     Private _id_registro As Integer
     Private _id_sucursal As Integer
     Private _id_proveedor As Integer

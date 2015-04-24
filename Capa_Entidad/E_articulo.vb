@@ -1,34 +1,33 @@
-﻿Public Class CEsucursal
-    Private _id_sucursal As Integer
-    Private _nombre As String
-    Private _direccion As String
+﻿Public Class E_articulo
+    Private _id_articulo As String
+    Private _nombre_corto As String
+    Private _nombre_largo As String
     Private _descripcion As String
-    Private _telefono As String
-    Private _imagen As String
+    Private _imagen As Byte()
     Private _fecha_registro As String
 
-    Public Property id_sucursal As Integer
+    Public Property id_articulo As String
         Get
-            Return _id_sucursal
-        End Get
-        Set(value As Integer)
-            _id_sucursal = value
-        End Set
-    End Property
-    Public Property nombre As String
-        Get
-            Return _nombre
+            Return _id_articulo
         End Get
         Set(value As String)
-            _nombre = value
+            _id_articulo = value
         End Set
     End Property
-    Public Property direccion As String
+    Public Property nombre_corto As String
         Get
-            Return _direccion
+            Return _nombre_corto
         End Get
         Set(value As String)
-            _direccion = value
+            _nombre_corto = value
+        End Set
+    End Property
+    Public Property nombre_largo As String
+        Get
+            Return _nombre_largo
+        End Get
+        Set(value As String)
+            _nombre_largo = value
         End Set
     End Property
     Public Property descripcion As String
@@ -39,19 +38,11 @@
             _descripcion = value
         End Set
     End Property
-    Public Property telefono As String
-        Get
-            Return _telefono
-        End Get
-        Set(value As String)
-            _telefono = value
-        End Set
-    End Property
-    Public Property imagen As String
+    Public Property imagen As Byte()
         Get
             Return _imagen
         End Get
-        Set(value As String)
+        Set(value As Byte())
             _imagen = value
         End Set
     End Property
@@ -63,5 +54,6 @@
             _fecha_registro = value
         End Set
     End Property
+
 
 End Class

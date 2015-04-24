@@ -3,19 +3,19 @@ Imports System.Drawing
 Imports System.IO
 Imports System.Windows.Forms
 Imports Capa_Entidad
-Public Class CNarticulo
+Public Class N_articulo
 
-    Dim objArt As New DAOarticulo
+    Dim objArt As New D_articulo
     Public Function Listado() As DataSet
-        Return objArt.listadoArticulos()
+        Return objArt.Listado()
     End Function
 
-    Public Sub Agregar(ByVal objP As CEarticulo)
-        objArt.nuevoArticulo(objP)
+    Public Sub Insertar(ByVal objP As E_articulo)
+        objArt.Insertar(objP)
     End Sub
 
-    Public Function Consultar(ByVal ID As String) As DataSet
-        Return objArt.consultarArticulos(ID)
+    Public Function Consulta(ByVal ID As String) As DataSet
+        Return objArt.Consulta(ID)
     End Function
 
     Public Sub Eliminar()

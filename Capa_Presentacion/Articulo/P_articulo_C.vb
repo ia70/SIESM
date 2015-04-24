@@ -1,10 +1,10 @@
 ﻿Imports Capa_Negocios
-Public Class Articulo_C
-    Dim Articulo As New CNarticulo
+Public Class P_articulo_C
+    Dim Articulo As New N_articulo
     Dim Tabla As New DataSet
     Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtconsulta.KeyPress
         If Len(txtconsulta.Text) > 4 And e.KeyChar = ChrW(13) Then
-            Tabla = Articulo.Consultar(txtconsulta.Text)
+            Tabla = Articulo.Consulta(txtconsulta.Text)
             txtconsulta.Text = ""
             If Tabla.Tables(0).Rows.Count = 0 Then
                 M("El articulo solicitado no existe", 3)
@@ -32,7 +32,7 @@ Public Class Articulo_C
     End Sub
 
     Sub cargaArticulos()
-        Dim capaNegocio As New CNarticulo
+        Dim capaNegocio As New N_articulo
         dgvarticulos.DataSource = capaNegocio.Listado.Tables("Articulos")
     End Sub
 
@@ -52,7 +52,7 @@ Public Class Articulo_C
         Catch ex As Exception
 
         End Try
-        
+
     End Sub
 
     Private Sub dgvarticulos_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvarticulos.CurrentCellChanged

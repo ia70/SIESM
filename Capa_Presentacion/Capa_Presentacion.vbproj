@@ -106,28 +106,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Articulo\Articulo_C.Designer.vb">
-      <DependentUpon>Articulo_C.vb</DependentUpon>
+    <Compile Include="Articulo\P_articulo_C.Designer.vb">
+      <DependentUpon>P_articulo_C.vb</DependentUpon>
     </Compile>
-    <Compile Include="Articulo\Articulo_C.vb">
+    <Compile Include="Articulo\P_articulo_C.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Articulo\Articulo_ED.Designer.vb">
-      <DependentUpon>Articulo_ED.vb</DependentUpon>
+    <Compile Include="Articulo\P_articulo_ED.Designer.vb">
+      <DependentUpon>P_articulo_ED.vb</DependentUpon>
     </Compile>
-    <Compile Include="Articulo\Articulo_ED.vb">
+    <Compile Include="Articulo\P_articulo_ED.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Articulo\Articulo_EL.Designer.vb">
-      <DependentUpon>Articulo_EL.vb</DependentUpon>
+    <Compile Include="Articulo\P_articulo_EL.Designer.vb">
+      <DependentUpon>P_articulo_EL.vb</DependentUpon>
     </Compile>
-    <Compile Include="Articulo\Articulo_EL.vb">
+    <Compile Include="Articulo\P_articulo_EL.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Articulo\Articulo_N.designer.vb">
-      <DependentUpon>Articulo_N.vb</DependentUpon>
+    <Compile Include="Articulo\P_articulo_N.designer.vb">
+      <DependentUpon>P_articulo_N.vb</DependentUpon>
     </Compile>
-    <Compile Include="Articulo\Articulo_N.vb">
+    <Compile Include="Articulo\P_articulo_N.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Application.Designer.vb">
@@ -148,17 +148,17 @@
     <Compile Include="Validacion.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Articulo\Articulo_C.resx">
-      <DependentUpon>Articulo_C.vb</DependentUpon>
+    <EmbeddedResource Include="Articulo\P_articulo_C.resx">
+      <DependentUpon>P_articulo_C.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Articulo\Articulo_ED.resx">
-      <DependentUpon>Articulo_ED.vb</DependentUpon>
+    <EmbeddedResource Include="Articulo\P_articulo_ED.resx">
+      <DependentUpon>P_articulo_ED.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Articulo\Articulo_EL.resx">
-      <DependentUpon>Articulo_EL.vb</DependentUpon>
+    <EmbeddedResource Include="Articulo\P_articulo_EL.resx">
+      <DependentUpon>P_articulo_EL.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Articulo\Articulo_N.resx">
-      <DependentUpon>Articulo_N.vb</DependentUpon>
+    <EmbeddedResource Include="Articulo\P_articulo_N.resx">
+      <DependentUpon>P_articulo_N.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

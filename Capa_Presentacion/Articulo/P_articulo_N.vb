@@ -1,7 +1,7 @@
 ﻿Imports Capa_Negocios
 Imports Capa_Entidad
-Public Class Articulo_N
-    Dim Articulo As New Capa_Negocios.CNarticulo
+Public Class P_articulo_N
+    Dim Articulo As New Capa_Negocios.N_articulo
 
     'Codigo de los botones y componentes del formulario
     Private Sub btnlimpiar_campos_Click(sender As Object, e As EventArgs) Handles btnlimpiar_campos.Click
@@ -41,14 +41,14 @@ Public Class Articulo_N
     End Sub
 
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
-        Dim objeto As New CEarticulo
+        Dim objeto As New E_articulo
         objeto.id_articulo = getid_articulo()
         objeto.nombre_corto = getnombre_corto()
         objeto.nombre_largo = getnombre_largo()
         objeto.descripcion = getdescripcion()
         objeto.imagen = Articulo.Imagen_Bytes(ptrimagen.Image)
         objeto.fecha_registro = Date.Today.Date.ToString("yyyy.MM.dd")
-        Articulo.Agregar(objeto)
+        Articulo.Insertar(objeto)
         Call btnlimpiar_campos_Click(sender, e)
         Campos(False)
     End Sub
