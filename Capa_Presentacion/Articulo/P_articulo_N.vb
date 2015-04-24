@@ -95,7 +95,7 @@ Public Class P_articulo_N
     End Sub
 
     Private Sub btnterminar_Click(sender As Object, e As EventArgs) Handles btnterminar.Click
-        End
+        Me.Close()
     End Sub
 
     Private Sub txtid_articulo_TextChanged(sender As Object, e As EventArgs) Handles txtid_articulo.TextChanged

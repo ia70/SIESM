@@ -213,7 +213,7 @@ Partial Class P_articulo_C
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(105, 30)
         Me.btnSalir.TabIndex = 25
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.Text = "Terminar"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'ptrimagen
@@ -251,7 +251,7 @@ Partial Class P_articulo_C
         Me.Label6.Text = "Consultar articulo"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Articulo_C
+        'P_articulo_C
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -261,7 +261,7 @@ Partial Class P_articulo_C
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Articulo_C"
+        Me.Name = "P_articulo_C"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de articulos"
         Me.Panel1.ResumeLayout(False)

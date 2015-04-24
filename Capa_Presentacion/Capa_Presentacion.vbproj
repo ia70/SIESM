@@ -145,6 +145,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Principal\P_puntoVenta.Designer.vb">
+      <DependentUpon>P_puntoVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\P_puntoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Proveedor\P_proveedor_C.Designer.vb">
       <DependentUpon>P_proveedor_C.vb</DependentUpon>
     </Compile>
@@ -189,6 +195,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\P_puntoVenta.resx">
+      <DependentUpon>P_puntoVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedor\P_proveedor_C.resx">
       <DependentUpon>P_proveedor_C.vb</DependentUpon>

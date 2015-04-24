@@ -26,7 +26,7 @@ Public Class P_articulo_C
         End If
     End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        End
+        Me.Close()
     End Sub
 
     Private Sub P_articulo_C_Activated(sender As Object, e As EventArgs) Handles Me.Activated

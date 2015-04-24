@@ -27,7 +27,7 @@ Public Class P_articulo_EL
 
 
     Private Sub btnterminar_Click(sender As Object, e As EventArgs) Handles btnterminar.Click
-        End
+        Me.Close()
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
