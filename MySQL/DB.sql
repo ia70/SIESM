@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS sucursal (
     direccion VARCHAR(250),
     descripcion VARCHAR(250),
     telefono VARCHAR(12),
-    imagen MEDIUMBLOB,
+    imagen LONGBLOB,
     fecha_registro DATE,
     PRIMARY KEY (id_sucursal)
 );

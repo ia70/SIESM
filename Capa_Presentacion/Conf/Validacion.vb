@@ -79,7 +79,7 @@
 
     'Función para validacion de Números generales
     Public Function Validar_Num(ByVal e As KeyPressEventArgs) As KeyPressEventArgs
-        If Not IsNumeric(e.KeyChar) And Not e.KeyChar = ChrW(127) And Not e.KeyChar = ChrW(13) And Not e.KeyChar = ChrW(8) Then
+        If (Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = ChrW(127) And Not e.KeyChar = ChrW(13) And Not e.KeyChar = ChrW(8) Then
             e.KeyChar = Nothing
         End If
         Return e

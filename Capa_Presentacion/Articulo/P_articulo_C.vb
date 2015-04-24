@@ -19,12 +19,18 @@ Public Class P_articulo_C
                 txtFecha.Text = Tabla.Tables(0).Rows(0)(5).ToString()
                 txtconsulta.Focus()
             End If
+            'ElseIf (Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57) And Not Char.IsControl(e.KeyChar) Then
+            'e.KeyChar = Nothing
         Else
             Validar_Num(e)
         End If
     End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         End
+    End Sub
+
+    Private Sub P_articulo_C_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        txtconsulta.Focus()
     End Sub
 
     Private Sub Articulo_C_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -57,9 +63,14 @@ Public Class P_articulo_C
 
     Private Sub dgvarticulos_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvarticulos.CurrentCellChanged
         llenarCampos()
+        txtconsulta.Focus()
     End Sub
 
     Private Sub txtid_articulo_TextChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub P_articulo_C_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        txtconsulta.Focus()
     End Sub
 End Class
