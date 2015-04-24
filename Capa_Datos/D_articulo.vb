@@ -90,4 +90,30 @@ Public Class D_articulo
         End Try
 
     End Sub
+
+    Public Sub Editar(ByVal objP As E_articulo)
+        Dim Exito As Integer
+        cn = objCon.conectar
+        Try
+            cn.Open()
+            da = New MySqlDataAdapter("articulo_editar", cn)
+            da.SelectCommand.CommandType = CommandType.StoredProcedure
+            With da.SelectCommand.Parameters
+                .Add("id_art", MySqlDbType.VarChar).Value = objP.id_articulo
+                .Add("nom_cor", MySqlDbType.VarChar).Value = objP.nombre_corto
+                .Add("nom_lar", MySqlDbType.VarChar).Value = objP.nombre_largo
+                .Add("des", MySqlDbType.VarChar).Value = objP.descripcion
+                .Add("ima", MySqlDbType.LongBlob).Value = objP.imagen
+                .Add("fec_reg", MySqlDbType.Date).Value = objP.fecha_registro
+            End With
+            Exito = da.SelectCommand.ExecuteNonQuery()
+            MsgBox("Registro modificado correctamente!", vbInformation + vbOKOnly, "SIESM")
+        Catch ex As Exception
+            MsgBox("Error al intentar modificar el articulo :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
+        Finally
+            da.Dispose()
+            cn.Dispose()
+        End Try
+
+    End Sub
 End Class

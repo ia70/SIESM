@@ -22,8 +22,8 @@ Public Class N_articulo
         objArt.Eliminar(ID)
     End Sub
 
-    Public Sub Editar()
-
+    Public Sub Editar(ByVal objP As E_articulo)
+        objArt.Editar(objP)
     End Sub
 
     Public Function Existe(ByVal ID As String) As Boolean
