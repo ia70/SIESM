@@ -48,7 +48,7 @@ Public Class Articulo_N
         objeto.descripcion = getdescripcion()
         objeto.imagen = Articulo.Imagen_Bytes(ptrimagen.Image)
         objeto.fecha_registro = Date.Today.Date.ToString("yyyy.MM.dd")
-        Articulo.nuevoArticulo(objeto)
+        Articulo.Agregar(objeto)
         Call btnlimpiar_campos_Click(sender, e)
         Campos(False)
     End Sub

@@ -6,17 +6,25 @@ Imports Capa_Entidad
 Public Class CNarticulo
 
     Dim objArt As New DAOarticulo
-    Public Function listadoArticulos() As DataSet
+    Public Function Listado() As DataSet
         Return objArt.listadoArticulos()
     End Function
 
-    Public Sub nuevoArticulo(ByVal objP As CEarticulo)
+    Public Sub Agregar(ByVal objP As CEarticulo)
         objArt.nuevoArticulo(objP)
     End Sub
 
-    Public Function consultarArticulo(ByVal ID As String) As DataSet
+    Public Function Consultar(ByVal ID As String) As DataSet
         Return objArt.consultarArticulos(ID)
     End Function
+
+    Public Sub Eliminar()
+
+    End Sub
+
+    Public Sub Editar()
+
+    End Sub
     Public Function Imagen_Bytes(ByVal Imagen As Image) As Byte()
         'si hay imagen
         If Not Imagen Is Nothing Then
