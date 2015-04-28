@@ -73,12 +73,11 @@ Public Class D_proveedor
             da = New MySqlDataAdapter("proveedor_insertar", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id_prov", MySqlDbType.Int32).Value = objP.id_proveedor
                 .Add("nom", MySqlDbType.VarChar).Value = objP.nombre
                 .Add("dir", MySqlDbType.VarChar).Value = objP.direccion
                 .Add("des", MySqlDbType.VarChar).Value = objP.descripcion
-                .Add("tel", MySqlDbType.LongBlob).Value = objP.telefono
-                .Add("fec_reg", MySqlDbType.Date).Value = objP.fecha_registro
+                .Add("tel", MySqlDbType.VarChar).Value = objP.telefono
+                .Add("fec_reg", MySqlDbType.VarChar).Value = objP.fecha_registro
             End With
             Exito = da.SelectCommand.ExecuteNonQuery()
             MsgBox("Registro guardado correctamente!", vbInformation + vbOKOnly, "SIESM")
@@ -99,12 +98,11 @@ Public Class D_proveedor
             da = New MySqlDataAdapter("proveedor_editar", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id_prov", MySqlDbType.Int32).Value = objP.id_proveedor
                 .Add("nom", MySqlDbType.VarChar).Value = objP.nombre
                 .Add("dir", MySqlDbType.VarChar).Value = objP.direccion
                 .Add("des", MySqlDbType.VarChar).Value = objP.descripcion
-                .Add("tel", MySqlDbType.LongBlob).Value = objP.telefono
-                .Add("fec_reg", MySqlDbType.Date).Value = objP.fecha_registro
+                .Add("tel", MySqlDbType.VarChar).Value = objP.telefono
+                .Add("fec_reg", MySqlDbType.VarChar).Value = objP.fecha_registro
             End With
             Exito = da.SelectCommand.ExecuteNonQuery()
             MsgBox("Registro guardado correctamente!", vbInformation + vbOKOnly, "SIESM")

@@ -8,22 +8,23 @@ CREATE TABLE IF NOT EXISTS articulo (
     nombre_largo VARCHAR(30) NOT NULL,
     descripcion VARCHAR(120),
     imagen LONGBLOB,
-    fecha_registro DATE,
+    fecha_registro DATE NOT NULL,
+    nivel_critico INT,
+	unidad_medida VARCHAR(10),
+	precio_compra DEC(10,4) NOT NULL,
+	precio_venta DEC(10,4) NOT NULL,
     PRIMARY KEY (id_articulo)
 );
 
 CREATE TABLE IF NOT EXISTS inventario (
-	id_registro INT NOT NULL AUTO_INCREMENT,
-    id_sucursal INT NOT NULL,
-    id_proveedor INT NOT NULL,
+	id_inventario INT NOT NULL AUTO_INCREMENT,
+    id_sucursal INT,
+    id_proveedor INT,
+    id_usuario INT,
     id_articulo VARCHAR(20),
-    unidad_medida VARCHAR(10),
-    existencia DECIMAL(5,2),
-    nivel_critico INT,
-    precio_compra DECIMAL(5,2),
-    precio_venta DECIMAL(5,2),
+    existencia DECIMAL(10,4),
     fecha_surtido DATE,
-    PRIMARY KEY (id_registro)
+    PRIMARY KEY (id_inventario)
 );
 
 CREATE TABLE IF NOT EXISTS sucursal (
@@ -62,7 +63,11 @@ CREATE PROCEDURE articulo_mostrar()
 		nombre_largo AS 'Nombre del articulo',
 		descripcion AS 'Descripción',
         imagen AS 'Imagen',
-        CAST(fecha_registro AS char) AS 'Fecha de registro'
+        CAST(fecha_registro AS char) AS 'Fecha de registro',
+		nivel_critico AS 'Nivel Critico',
+        unidad_medida AS 'Unidad de medida',
+        precio_compra AS 'Precio de compra',
+        precio_venta AS 'Precio de venta'
 		FROM articulo;
    END //
 DELIMITER ;
@@ -76,7 +81,11 @@ CREATE PROCEDURE articulo_consultar(IN id_art VARCHAR(20))
 		nombre_largo AS 'Nombre del articulo',
 		descripcion AS 'Descripción',
         imagen AS 'Imagen',
-        CAST(fecha_registro AS char) AS 'Fecha de registro'
+        CAST(fecha_registro AS char) AS 'Fecha de registro',
+		nivel_critico AS 'Nivel Critico',
+        unidad_medida AS 'Unidad de medida',
+        precio_compra AS 'Precio de compra',
+        precio_venta AS 'Precio de venta'
 		FROM articulo 
         WHERE id_articulo=id_art;
    END //
@@ -90,11 +99,15 @@ CREATE PROCEDURE articulo_insertar(
     IN nom_lar VARCHAR(30),
     IN des VARCHAR(120),
     IN ima LONGBLOB,
-    IN fec_reg DATE
+    IN fec_reg DATE,
+    IN niv_cri INT,
+    IN uni_med VARCHAR(10),
+    IN pre_com DEC(10,4),
+    IN pre_ven DEC(10,4)
 )
    BEGIN
-		INSERT INTO articulo(id_articulo, nombre_corto, nombre_largo, descripcion, imagen, fecha_registro) 
-		VALUES(id_art, nom_cor, nom_lar, des, ima, fec_reg);
+		INSERT INTO articulo(id_articulo, nombre_corto, nombre_largo, descripcion, imagen, fecha_registro, nivel_critico, unidad_medida, precio_compra, precio_venta) 
+		VALUES(id_art, nom_cor, nom_lar, des, ima, fec_reg, niv_cri, uni_med, pre_com, pre_ven);
    END //
 DELIMITER ;
 
@@ -106,15 +119,23 @@ CREATE PROCEDURE articulo_editar(
     IN nom_cor VARCHAR(15),
     IN nom_lar VARCHAR(30),
     IN des VARCHAR(120),
-    IN ima MEDIUMBLOB,
-    IN fec_reg DATE
+    IN ima LONGBLOB,
+    IN fec_reg DATE,
+    IN niv_cri INT,
+    IN uni_med VARCHAR(10),
+    IN pre_com DEC(10,4),
+    IN pre_ven DEC(10,4)
 )
    BEGIN
 		UPDATE articulo SET nombre_corto=nom_cor, 
 		nombre_largo=nom_lar, 
 		descripcion=des, 
 		imagen=ima, 
-		fecha_registro=fec_reg
+		fecha_registro=fec_reg,
+        nivel_critico=niv_cri,
+        unidad_medida=uni_med,
+        precio_compra=pre_com,
+        precio_venta=pre_ven
 		WHERE id_articulo=id_art;
    END //
 DELIMITER ;
@@ -222,9 +243,24 @@ CREATE PROCEDURE proveedor_mostrar()
    END //
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS proveedor_ingresar;
+DROP PROCEDURE IF EXISTS proveedor_consulta;
  DELIMITER //
-CREATE PROCEDURE proveedor_ingresar(
+CREATE PROCEDURE proveedor_consulta(IN id INT)
+   BEGIN
+		SELECT id_proveedor AS 'Clave única para el proveedor',
+		nombre AS 'Nombre del proveedor',
+		direccion AS 'Dirección del proveedor',
+		descripcion AS 'Descripción o anotaciones acerca del proveedor',
+		telefono AS 'Teléfono del proveedor',
+		fecha_registro AS 'Fecha en que se registró el proveedor'
+		FROM proveedor
+        WHERE id_proveedor = id;
+   END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS proveedor_insertar;
+ DELIMITER //
+CREATE PROCEDURE proveedor_insertar(
 	IN id_prov INT,
     IN nom VARCHAR(30),
     IN dir VARCHAR(250),
@@ -283,9 +319,9 @@ CREATE PROCEDURE sucursal_mostrar()
    END //
 DELIMITER ;
 
-DROP PROCEDURE IF EXISTS sucursal_agregar;
+DROP PROCEDURE IF EXISTS sucursal_insertar;
  DELIMITER //
-CREATE PROCEDURE sucursal_agregar(
+CREATE PROCEDURE sucursal_insertar(
 	IN id_suc INT,
     IN nom VARCHAR(30),
     IN dir VARCHAR(250),

@@ -26,22 +26,20 @@ Partial Class P_proveedor_C
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txtFecha = New System.Windows.Forms.Label()
-        Me.txtdescripcion = New System.Windows.Forms.Label()
-        Me.txtnombre_largo = New System.Windows.Forms.Label()
-        Me.txtnombre_corto = New System.Windows.Forms.Label()
-        Me.txtIdArticulo = New System.Windows.Forms.Label()
+        Me.txtTelefono = New System.Windows.Forms.Label()
+        Me.txtDireccion = New System.Windows.Forms.Label()
+        Me.txtNombre = New System.Windows.Forms.Label()
+        Me.txtIdProveedor = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnterminar = New System.Windows.Forms.Button()
         Me.txtconsulta = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.dgvarticulos = New System.Windows.Forms.DataGridView()
-        Me.btnSalir = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.dgvarticulos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -54,94 +52,108 @@ Partial Class P_proveedor_C
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(656, 492)
-        Me.Panel1.TabIndex = 2
+        Me.Panel1.Size = New System.Drawing.Size(455, 422)
+        Me.Panel1.TabIndex = 4
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(5, 441)
+        Me.Panel2.Location = New System.Drawing.Point(5, 371)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(646, 46)
+        Me.Panel2.Size = New System.Drawing.Size(445, 46)
         Me.Panel2.TabIndex = 18
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Panel3.Controls.Add(Me.txtFecha)
-        Me.Panel3.Controls.Add(Me.txtdescripcion)
-        Me.Panel3.Controls.Add(Me.txtnombre_largo)
-        Me.Panel3.Controls.Add(Me.txtnombre_corto)
-        Me.Panel3.Controls.Add(Me.txtIdArticulo)
+        Me.Panel3.Controls.Add(Me.txtTelefono)
+        Me.Panel3.Controls.Add(Me.txtDireccion)
+        Me.Panel3.Controls.Add(Me.txtNombre)
+        Me.Panel3.Controls.Add(Me.txtIdProveedor)
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.btnterminar)
         Me.Panel3.Controls.Add(Me.txtconsulta)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.dgvarticulos)
-        Me.Panel3.Controls.Add(Me.btnSalir)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(646, 433)
+        Me.Panel3.Size = New System.Drawing.Size(445, 363)
         Me.Panel3.TabIndex = 17
         '
         'txtFecha
         '
-        Me.txtFecha.Location = New System.Drawing.Point(188, 182)
+        Me.txtFecha.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtFecha.Location = New System.Drawing.Point(176, 227)
         Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.Size = New System.Drawing.Size(214, 25)
-        Me.txtFecha.TabIndex = 44
+        Me.txtFecha.Size = New System.Drawing.Size(240, 25)
+        Me.txtFecha.TabIndex = 33
         '
-        'txtdescripcion
+        'txtTelefono
         '
-        Me.txtdescripcion.Location = New System.Drawing.Point(188, 142)
-        Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(285, 25)
-        Me.txtdescripcion.TabIndex = 43
+        Me.txtTelefono.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtTelefono.Location = New System.Drawing.Point(171, 187)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(252, 25)
+        Me.txtTelefono.TabIndex = 32
         '
-        'txtnombre_largo
+        'txtDireccion
         '
-        Me.txtnombre_largo.Location = New System.Drawing.Point(188, 107)
-        Me.txtnombre_largo.Name = "txtnombre_largo"
-        Me.txtnombre_largo.Size = New System.Drawing.Size(285, 25)
-        Me.txtnombre_largo.TabIndex = 42
+        Me.txtDireccion.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtDireccion.Location = New System.Drawing.Point(171, 152)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(252, 25)
+        Me.txtDireccion.TabIndex = 31
         '
-        'txtnombre_corto
+        'txtNombre
         '
-        Me.txtnombre_corto.Location = New System.Drawing.Point(188, 73)
-        Me.txtnombre_corto.Name = "txtnombre_corto"
-        Me.txtnombre_corto.Size = New System.Drawing.Size(285, 25)
-        Me.txtnombre_corto.TabIndex = 41
+        Me.txtNombre.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtNombre.Location = New System.Drawing.Point(171, 118)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(252, 25)
+        Me.txtNombre.TabIndex = 30
         '
-        'txtIdArticulo
+        'txtIdProveedor
         '
-        Me.txtIdArticulo.Location = New System.Drawing.Point(188, 38)
-        Me.txtIdArticulo.Name = "txtIdArticulo"
-        Me.txtIdArticulo.Size = New System.Drawing.Size(285, 25)
-        Me.txtIdArticulo.TabIndex = 40
+        Me.txtIdProveedor.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtIdProveedor.Location = New System.Drawing.Point(171, 83)
+        Me.txtIdProveedor.Name = "txtIdProveedor"
+        Me.txtIdProveedor.Size = New System.Drawing.Size(252, 25)
+        Me.txtIdProveedor.TabIndex = 29
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(46, 39)
+        Me.Label8.Location = New System.Drawing.Point(29, 84)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(138, 19)
-        Me.Label8.TabIndex = 39
-        Me.Label8.Text = "Código de barra:"
+        Me.Label8.Size = New System.Drawing.Size(114, 19)
+        Me.Label8.TabIndex = 28
+        Me.Label8.Text = "ID proveedor:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(46, 182)
+        Me.Label7.Location = New System.Drawing.Point(29, 227)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 19)
-        Me.Label7.TabIndex = 38
-        Me.Label7.Text = "Fecha registro:"
+        Me.Label7.Size = New System.Drawing.Size(148, 19)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Fecha de registro:"
+        '
+        'btnterminar
+        '
+        Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnterminar.Location = New System.Drawing.Point(319, 274)
+        Me.btnterminar.Name = "btnterminar"
+        Me.btnterminar.Size = New System.Drawing.Size(105, 30)
+        Me.btnterminar.TabIndex = 25
+        Me.btnterminar.Text = "Terminar"
+        Me.btnterminar.UseVisualStyleBackColor = True
         '
         'txtconsulta
         '
@@ -150,66 +162,42 @@ Partial Class P_proveedor_C
         Me.txtconsulta.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtconsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtconsulta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.txtconsulta.Location = New System.Drawing.Point(259, 6)
+        Me.txtconsulta.Location = New System.Drawing.Point(214, 33)
         Me.txtconsulta.MaxLength = 20
         Me.txtconsulta.Name = "txtconsulta"
         Me.txtconsulta.Size = New System.Drawing.Size(123, 26)
-        Me.txtconsulta.TabIndex = 37
+        Me.txtconsulta.TabIndex = 18
         Me.txtconsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(46, 108)
+        Me.Label4.Location = New System.Drawing.Point(29, 153)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 19)
-        Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Nombre largo:"
+        Me.Label4.Size = New System.Drawing.Size(88, 19)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Dirección:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(46, 74)
+        Me.Label3.Location = New System.Drawing.Point(29, 119)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(120, 19)
-        Me.Label3.TabIndex = 35
-        Me.Label3.Text = "Nombre corto:"
+        Me.Label3.Size = New System.Drawing.Size(70, 19)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Nombre"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(46, 143)
+        Me.Label2.Location = New System.Drawing.Point(29, 188)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 19)
-        Me.Label2.TabIndex = 34
-        Me.Label2.Text = "Descripción:"
-        '
-        'dgvarticulos
-        '
-        Me.dgvarticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.dgvarticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.dgvarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvarticulos.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dgvarticulos.Location = New System.Drawing.Point(0, 227)
-        Me.dgvarticulos.MultiSelect = False
-        Me.dgvarticulos.Name = "dgvarticulos"
-        Me.dgvarticulos.ReadOnly = True
-        Me.dgvarticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvarticulos.Size = New System.Drawing.Size(646, 206)
-        Me.dgvarticulos.TabIndex = 26
-        '
-        'btnSalir
-        '
-        Me.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnSalir.Location = New System.Drawing.Point(435, 173)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(105, 30)
-        Me.btnSalir.TabIndex = 25
-        Me.btnSalir.Text = "Terminar"
-        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.Label2.Size = New System.Drawing.Size(81, 19)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Telefono:"
         '
         'Label6
         '
@@ -219,7 +207,7 @@ Partial Class P_proveedor_C
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(5, 5)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(646, 49)
+        Me.Label6.Size = New System.Drawing.Size(445, 49)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Consultar proveedor"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -228,18 +216,17 @@ Partial Class P_proveedor_C
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(656, 492)
+        Me.ClientSize = New System.Drawing.Size(455, 422)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_proveedor_C"
-        Me.Text = "P_proveedorC"
+        Me.Text = "Consultar proveedor"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.dgvarticulos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -247,17 +234,16 @@ Partial Class P_proveedor_C
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents txtFecha As System.Windows.Forms.Label
-    Friend WithEvents txtdescripcion As System.Windows.Forms.Label
-    Friend WithEvents txtnombre_largo As System.Windows.Forms.Label
-    Friend WithEvents txtnombre_corto As System.Windows.Forms.Label
-    Friend WithEvents txtIdArticulo As System.Windows.Forms.Label
+    Friend WithEvents txtTelefono As System.Windows.Forms.Label
+    Friend WithEvents txtDireccion As System.Windows.Forms.Label
+    Friend WithEvents txtNombre As System.Windows.Forms.Label
+    Friend WithEvents txtIdProveedor As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents btnterminar As System.Windows.Forms.Button
     Friend WithEvents txtconsulta As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents dgvarticulos As System.Windows.Forms.DataGridView
-    Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class
