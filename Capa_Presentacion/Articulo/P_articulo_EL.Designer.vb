@@ -25,25 +25,30 @@ Partial Class P_articulo_EL
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.txtFecha = New System.Windows.Forms.Label()
-        Me.txtdescripcion = New System.Windows.Forms.Label()
-        Me.txtnombre_largo = New System.Windows.Forms.Label()
-        Me.txtnombre_corto = New System.Windows.Forms.Label()
-        Me.txtIdArticulo = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.btnterminar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.ptrimagen = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtconsulta = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtid_articulo = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ptrimagen = New System.Windows.Forms.PictureBox()
+        Me.txtNivel_critico = New System.Windows.Forms.NumericUpDown()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtPrecio_compra = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtPrecio_venta = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtUnidad_medida = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtconsulta = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtNivel_critico, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -71,81 +76,30 @@ Partial Class P_articulo_EL
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Panel3.Controls.Add(Me.txtFecha)
-        Me.Panel3.Controls.Add(Me.txtdescripcion)
-        Me.Panel3.Controls.Add(Me.txtnombre_largo)
-        Me.Panel3.Controls.Add(Me.txtnombre_corto)
-        Me.Panel3.Controls.Add(Me.txtIdArticulo)
+        Me.Panel3.Controls.Add(Me.txtconsulta)
+        Me.Panel3.Controls.Add(Me.txtNivel_critico)
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.txtUnidad_medida)
         Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.txtPrecio_venta)
         Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.btnterminar)
-        Me.Panel3.Controls.Add(Me.btnEliminar)
+        Me.Panel3.Controls.Add(Me.txtPrecio_compra)
+        Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.ptrimagen)
         Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.txtconsulta)
+        Me.Panel3.Controls.Add(Me.txtdescripcion)
+        Me.Panel3.Controls.Add(Me.txtNombre)
+        Me.Panel3.Controls.Add(Me.txtid_articulo)
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.btnterminar)
+        Me.Panel3.Controls.Add(Me.btnEliminar)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(730, 389)
         Me.Panel3.TabIndex = 17
-        '
-        'txtFecha
-        '
-        Me.txtFecha.Location = New System.Drawing.Point(171, 227)
-        Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.Size = New System.Drawing.Size(273, 25)
-        Me.txtFecha.TabIndex = 33
-        '
-        'txtdescripcion
-        '
-        Me.txtdescripcion.Location = New System.Drawing.Point(171, 187)
-        Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(285, 25)
-        Me.txtdescripcion.TabIndex = 32
-        '
-        'txtnombre_largo
-        '
-        Me.txtnombre_largo.Location = New System.Drawing.Point(171, 152)
-        Me.txtnombre_largo.Name = "txtnombre_largo"
-        Me.txtnombre_largo.Size = New System.Drawing.Size(285, 25)
-        Me.txtnombre_largo.TabIndex = 31
-        '
-        'txtnombre_corto
-        '
-        Me.txtnombre_corto.Location = New System.Drawing.Point(171, 118)
-        Me.txtnombre_corto.Name = "txtnombre_corto"
-        Me.txtnombre_corto.Size = New System.Drawing.Size(285, 25)
-        Me.txtnombre_corto.TabIndex = 30
-        '
-        'txtIdArticulo
-        '
-        Me.txtIdArticulo.Location = New System.Drawing.Point(171, 83)
-        Me.txtIdArticulo.Name = "txtIdArticulo"
-        Me.txtIdArticulo.Size = New System.Drawing.Size(285, 25)
-        Me.txtIdArticulo.TabIndex = 29
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(29, 84)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(138, 19)
-        Me.Label8.TabIndex = 28
-        Me.Label8.Text = "Código de barra:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(29, 227)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(125, 19)
-        Me.Label7.TabIndex = 26
-        Me.Label7.Text = "Fecha registro:"
         '
         'btnterminar
         '
@@ -168,71 +122,6 @@ Partial Class P_articulo_EL
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'ptrimagen
-        '
-        Me.ptrimagen.BackColor = System.Drawing.Color.White
-        Me.ptrimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptrimagen.Location = New System.Drawing.Point(462, 79)
-        Me.ptrimagen.Name = "ptrimagen"
-        Me.ptrimagen.Size = New System.Drawing.Size(256, 170)
-        Me.ptrimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ptrimagen.TabIndex = 23
-        Me.ptrimagen.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(524, 39)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(159, 19)
-        Me.Label5.TabIndex = 22
-        Me.Label5.Text = "Imágen del articulo:"
-        '
-        'txtconsulta
-        '
-        Me.txtconsulta.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtconsulta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtconsulta.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtconsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtconsulta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.txtconsulta.Location = New System.Drawing.Point(214, 33)
-        Me.txtconsulta.MaxLength = 20
-        Me.txtconsulta.Name = "txtconsulta"
-        Me.txtconsulta.Size = New System.Drawing.Size(123, 26)
-        Me.txtconsulta.TabIndex = 18
-        Me.txtconsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(29, 153)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 19)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Nombre largo:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(29, 119)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(120, 19)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Nombre corto:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(29, 188)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 19)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Descripción:"
-        '
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -246,7 +135,191 @@ Partial Class P_articulo_EL
         Me.Label6.Text = "Eliminar articulo"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Articulo_EL
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(26, 65)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(127, 18)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Código de barra:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(26, 136)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
+        Me.Label2.TabIndex = 38
+        Me.Label2.Text = "Descripción:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(26, 99)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(72, 18)
+        Me.Label4.TabIndex = 39
+        Me.Label4.Text = "Nombre :"
+        '
+        'txtid_articulo
+        '
+        Me.txtid_articulo.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtid_articulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtid_articulo.Enabled = False
+        Me.txtid_articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtid_articulo.Location = New System.Drawing.Point(177, 62)
+        Me.txtid_articulo.MaxLength = 20
+        Me.txtid_articulo.Name = "txtid_articulo"
+        Me.txtid_articulo.Size = New System.Drawing.Size(204, 26)
+        Me.txtid_articulo.TabIndex = 40
+        Me.txtid_articulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtNombre
+        '
+        Me.txtNombre.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNombre.Enabled = False
+        Me.txtNombre.Location = New System.Drawing.Point(177, 96)
+        Me.txtNombre.MaxLength = 150
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtNombre.Size = New System.Drawing.Size(269, 26)
+        Me.txtNombre.TabIndex = 41
+        '
+        'txtdescripcion
+        '
+        Me.txtdescripcion.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtdescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtdescripcion.Enabled = False
+        Me.txtdescripcion.Location = New System.Drawing.Point(177, 133)
+        Me.txtdescripcion.MaxLength = 300
+        Me.txtdescripcion.Multiline = True
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtdescripcion.Size = New System.Drawing.Size(269, 47)
+        Me.txtdescripcion.TabIndex = 42
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(524, 29)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(142, 18)
+        Me.Label5.TabIndex = 43
+        Me.Label5.Text = "Imágen del articulo:"
+        '
+        'ptrimagen
+        '
+        Me.ptrimagen.BackColor = System.Drawing.Color.White
+        Me.ptrimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ptrimagen.Location = New System.Drawing.Point(462, 61)
+        Me.ptrimagen.Name = "ptrimagen"
+        Me.ptrimagen.Size = New System.Drawing.Size(256, 170)
+        Me.ptrimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ptrimagen.TabIndex = 44
+        Me.ptrimagen.TabStop = False
+        '
+        'txtNivel_critico
+        '
+        Me.txtNivel_critico.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtNivel_critico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNivel_critico.Enabled = False
+        Me.txtNivel_critico.Location = New System.Drawing.Point(177, 300)
+        Me.txtNivel_critico.Name = "txtNivel_critico"
+        Me.txtNivel_critico.Size = New System.Drawing.Size(78, 26)
+        Me.txtNivel_critico.TabIndex = 53
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(26, 194)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(137, 18)
+        Me.Label3.TabIndex = 46
+        Me.Label3.Text = "Precio de compra:"
+        '
+        'txtPrecio_compra
+        '
+        Me.txtPrecio_compra.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtPrecio_compra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPrecio_compra.Enabled = False
+        Me.txtPrecio_compra.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrecio_compra.Location = New System.Drawing.Point(177, 191)
+        Me.txtPrecio_compra.MaxLength = 20
+        Me.txtPrecio_compra.Name = "txtPrecio_compra"
+        Me.txtPrecio_compra.Size = New System.Drawing.Size(121, 26)
+        Me.txtPrecio_compra.TabIndex = 47
+        Me.txtPrecio_compra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(26, 230)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(121, 18)
+        Me.Label7.TabIndex = 48
+        Me.Label7.Text = "Precio de venta:"
+        '
+        'txtPrecio_venta
+        '
+        Me.txtPrecio_venta.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtPrecio_venta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtPrecio_venta.Enabled = False
+        Me.txtPrecio_venta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrecio_venta.Location = New System.Drawing.Point(177, 227)
+        Me.txtPrecio_venta.MaxLength = 20
+        Me.txtPrecio_venta.Name = "txtPrecio_venta"
+        Me.txtPrecio_venta.Size = New System.Drawing.Size(121, 26)
+        Me.txtPrecio_venta.TabIndex = 49
+        Me.txtPrecio_venta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(26, 266)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(141, 18)
+        Me.Label8.TabIndex = 50
+        Me.Label8.Text = "Unidad de medida:"
+        '
+        'txtUnidad_medida
+        '
+        Me.txtUnidad_medida.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtUnidad_medida.Enabled = False
+        Me.txtUnidad_medida.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.txtUnidad_medida.FormattingEnabled = True
+        Me.txtUnidad_medida.Items.AddRange(New Object() {"Piezas", "Metros", "Litros"})
+        Me.txtUnidad_medida.Location = New System.Drawing.Point(177, 263)
+        Me.txtUnidad_medida.Name = "txtUnidad_medida"
+        Me.txtUnidad_medida.Size = New System.Drawing.Size(121, 26)
+        Me.txtUnidad_medida.TabIndex = 51
+        Me.txtUnidad_medida.Text = "Piezas"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(26, 302)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(92, 18)
+        Me.Label9.TabIndex = 52
+        Me.Label9.Text = "Nivel critico:"
+        '
+        'txtconsulta
+        '
+        Me.txtconsulta.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.txtconsulta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtconsulta.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtconsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtconsulta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtconsulta.Location = New System.Drawing.Point(217, 27)
+        Me.txtconsulta.MaxLength = 20
+        Me.txtconsulta.Name = "txtconsulta"
+        Me.txtconsulta.Size = New System.Drawing.Size(123, 26)
+        Me.txtconsulta.TabIndex = 54
+        Me.txtconsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'P_articulo_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -256,13 +329,14 @@ Partial Class P_articulo_EL
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Articulo_EL"
+        Me.Name = "P_articulo_EL"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Eliminar Articulo"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtNivel_critico, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -271,18 +345,22 @@ Partial Class P_articulo_EL
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btnterminar As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtNivel_critico As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtUnidad_medida As System.Windows.Forms.ComboBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtPrecio_venta As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtPrecio_compra As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ptrimagen As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtFecha As System.Windows.Forms.Label
-    Friend WithEvents txtdescripcion As System.Windows.Forms.Label
-    Friend WithEvents txtnombre_largo As System.Windows.Forms.Label
-    Friend WithEvents txtnombre_corto As System.Windows.Forms.Label
-    Friend WithEvents txtIdArticulo As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtconsulta As System.Windows.Forms.TextBox
+    Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents txtNombre As System.Windows.Forms.TextBox
+    Friend WithEvents txtid_articulo As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtconsulta As System.Windows.Forms.TextBox
 End Class

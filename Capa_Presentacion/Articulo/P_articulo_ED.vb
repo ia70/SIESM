@@ -144,10 +144,6 @@ Public Class P_articulo_ED
         End If
     End Sub
 
-    Private Sub txtUnidad_medida_Click(sender As Object, e As EventArgs) Handles txtUnidad_medida.Click
-        txtNivel_critico.Focus()
-    End Sub
-
     Private Sub txtUnidad_medida_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUnidad_medida.KeyPress
         If e.KeyChar = ChrW(13) Then
             txtNivel_critico.Focus()

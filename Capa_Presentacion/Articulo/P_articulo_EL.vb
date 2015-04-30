@@ -9,16 +9,17 @@ Public Class P_articulo_EL
             If Tabla.Tables(0).Rows.Count = 0 Then
                 M("El articulo solicitado no existe", 3)
             Else
-                txtIdarticulo.Text = Tabla.Tables(0).Rows(0)(0).ToString()
-                txtnombre_corto.Text = Tabla.Tables(0).Rows(0)(1).ToString()
-                txtnombre_largo.Text = Tabla.Tables(0).Rows(0)(2).ToString()
-                txtdescripcion.Text = Tabla.Tables(0).Rows(0)(3).ToString()
+                txtid_articulo.Text = Tabla.Tables(0).Rows(0)(0).ToString()
+                txtNombre.Text = Tabla.Tables(0).Rows(0)(1).ToString()
+                txtdescripcion.Text = Tabla.Tables(0).Rows(0)(2).ToString()
+                txtNivel_critico.Text = Tabla.Tables(0).Rows(0)(3).ToString()
+                txtUnidad_medida.Text = Tabla.Tables(0).Rows(0)(4).ToString()
+                txtPrecio_compra.Text = Tabla.Tables(0).Rows(0)(5).ToString()
+                txtPrecio_venta.Text = Tabla.Tables(0).Rows(0)(6).ToString()
                 ptrimagen.Image = Nothing
                 On Error Resume Next
-                ptrimagen.Image = Bytes_Imagen(Tabla.Tables(0).Rows(0)(4))
-                txtFecha.Text = Tabla.Tables(0).Rows(0)(5).ToString()
+                ptrimagen.Image = Bytes_Imagen(Tabla.Tables(0).Rows(0)(7))
                 btnEliminar.Enabled = True
-                txtconsulta.Focus()
             End If
         Else
             Validar_Num(e)
@@ -31,14 +32,12 @@ Public Class P_articulo_EL
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Articulo.Eliminar(txtIdArticulo.Text)
+        Articulo.Eliminar(txtid_articulo.Text)
         btnEliminar.Enabled = False
-        txtIdArticulo.Text = ""
-        txtnombre_corto.Text = ""
-        txtnombre_largo.Text = ""
+        txtid_articulo.Text = ""
+        txtNombre.Text = ""
         txtdescripcion.Text = ""
         ptrimagen.Image = Nothing
-        txtFecha.Text = ""
         txtconsulta.Focus()
     End Sub
 End Class

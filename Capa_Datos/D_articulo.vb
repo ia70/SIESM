@@ -66,6 +66,17 @@ Public Class D_articulo
         QueryM("articulo_editar", _Articulo)
     End Sub
 
+    Public Function QueryC(ByVal Cadena As String) As DataSet
+        Dim ds As New DataSet
+        cn = objCon.conectar
+        da = New MySqlDataAdapter(Cadena, cn)
+        da.Fill(ds, "Articulos")
+        Return ds
+        ds.Dispose()
+        da.Dispose()
+        cn.Dispose()
+    End Function
+
     Public Sub QueryM(ByVal Cadena As String, ByVal _Articulo As E_articulo)
         Dim Estado As Integer
         cn = objCon.conectar
@@ -98,14 +109,4 @@ Public Class D_articulo
         End Try
     End Sub
 
-    Public Function QueryC(ByVal Cadena As String) As DataSet
-        Dim ds As New DataSet
-        cn = objCon.conectar
-        da = New MySqlDataAdapter(Cadena, cn)
-        da.Fill(ds, "Articulos")
-        Return ds
-        ds.Dispose()
-        da.Dispose()
-        cn.Dispose()
-    End Function
 End Class
