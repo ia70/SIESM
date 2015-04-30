@@ -1,4 +1,8 @@
-﻿Module Validacion
+﻿Imports System.IO
+
+Module Validacion
+
+#Region "Funciones de Validación de campos"
 
     'Funcion para corregir escritura a mayusculas y minusculas
     Public Function Validar_Nombres(ByVal Tx As TextBox, ByVal e As KeyPressEventArgs) As KeyPressEventArgs
@@ -79,12 +83,13 @@
 
     'Función para validacion de Números generales
     Public Function Validar_Num(ByVal e As KeyPressEventArgs) As KeyPressEventArgs
-        If (Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = ChrW(127) And Not e.KeyChar = ChrW(13) And Not e.KeyChar = ChrW(8) Then
+        If (Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = ChrW(127) And Not e.KeyChar = ChrW(13) And Not e.KeyChar = ChrW(8) And Not e.KeyChar = "." Then
             e.KeyChar = Nothing
         End If
         Return e
     End Function
 
+    'Función para enviar MsgBox con los diferentes tipos de alertas
     Public Sub M(ByVal Texto As String, ByVal Tipo As Integer)
         If Tipo = 1 Then
             MsgBox(Texto, vbInformation, "SIESM")
@@ -95,5 +100,70 @@
         End If
 
     End Sub
+
+#End Region
+#Region "Funciones de corverción de imágenes y cuadro de dialogo buscar"
+
+    'Función para convertir de Imagen a Bytes
+    Public Function Imagen_Bytes(ByVal Imagen As Image) As Byte()
+        'si hay imagen
+        If Not Imagen Is Nothing Then
+            'variable de datos binarios en stream(flujo)
+            Dim Bin As New MemoryStream
+            'convertir a bytes
+            Imagen.Save(Bin, Imaging.ImageFormat.Jpeg)
+            'retorna binario
+            Return Bin.GetBuffer
+        Else
+            Return Nothing
+        End If
+    End Function
+
+    'Funcion para convertir de Bytes a Imagen
+    Public Function Bytes_Imagen(ByVal Imagen As Byte()) As Image
+        Try
+            'si hay imagen
+            If Not Imagen Is Nothing Then
+                'caturar array con memorystream hacia Bin
+                Dim Bin As New MemoryStream(Imagen)
+                'con el método FroStream de Image obtenemos imagen
+                Dim Resultado As Image = Image.FromStream(Bin)
+                'y la retornamos
+                Return Resultado
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    'Funcion para abrir el cuadro de dialogo de "Buscar Imágenes"
+    Public Function Abrir_Imagen() As Image
+        Dim filename As String
+        Dim openfiler As New OpenFileDialog
+        'Definiendo propiedades al openfiledialog
+        With openfiler
+            'directorio inicial
+            '.InitialDirectory = "C:\"
+            'archivos que se pueden abrir
+            .Filter = "Archivos de imágen(*.jpg)|*.jpg"
+            'indice del archivo de lectura por defecto
+            .FilterIndex = 1
+            'restaurar el directorio al cerrar el dialogo
+            .RestoreDirectory = True
+        End With
+        '
+        'Evalua si el usuario hace click en el boton abrir
+        If openfiler.ShowDialog = Windows.Forms.DialogResult.OK Then
+            'Obteniendo la ruta completa del archivo xml
+            filename = openfiler.FileName
+            Return Image.FromFile(filename)
+        End If
+        Return Nothing
+    End Function
+
+#End Region
+
 
 End Module

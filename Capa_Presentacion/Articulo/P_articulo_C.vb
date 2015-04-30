@@ -1,10 +1,10 @@
 ﻿Imports Capa_Negocios
 Public Class P_articulo_C
-    Dim Articulo As New N_articulo
+    Dim Articulo As New N_Articulo
     Dim Tabla As New DataSet
     Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtconsulta.KeyPress
         If Len(txtconsulta.Text) > 4 And e.KeyChar = ChrW(13) Then
-            Tabla = Articulo.Consulta(txtconsulta.Text)
+            Tabla = Articulo.Consultar(txtconsulta.Text)
             txtconsulta.Text = ""
             If Tabla.Tables(0).Rows.Count = 0 Then
                 M("El articulo solicitado no existe", 3)
@@ -15,12 +15,10 @@ Public Class P_articulo_C
                 txtdescripcion.Text = Tabla.Tables(0).Rows(0)(3).ToString()
                 ptrimagen.Image = Nothing
                 On Error Resume Next
-                ptrimagen.Image = Articulo.Bytes_Imagen(Tabla.Tables(0).Rows(0)(4))
+                ptrimagen.Image = Bytes_Imagen(Tabla.Tables(0).Rows(0)(4))
                 txtFecha.Text = Tabla.Tables(0).Rows(0)(5).ToString()
                 txtconsulta.Focus()
             End If
-            'ElseIf (Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57) And Not Char.IsControl(e.KeyChar) Then
-            'e.KeyChar = Nothing
         Else
             Validar_Num(e)
         End If
@@ -38,7 +36,7 @@ Public Class P_articulo_C
     End Sub
 
     Sub cargaArticulos()
-        Dim capaNegocio As New N_articulo
+        Dim capaNegocio As New N_Articulo
         dgvarticulos.DataSource = capaNegocio.Listado.Tables("Articulos")
     End Sub
 
@@ -54,7 +52,7 @@ Public Class P_articulo_C
             txtdescripcion.Text = dgvarticulos.Item(3, dgvarticulos.CurrentRow.Index).Value.ToString
             txtFecha.Text = dgvarticulos.Item(5, dgvarticulos.CurrentRow.Index).Value.ToString
             ptrimagen.Image = Nothing
-            ptrimagen.Image = Articulo.Bytes_Imagen(dgvarticulos.Item(4, dgvarticulos.CurrentRow.Index).Value)
+            ptrimagen.Image = Bytes_Imagen(dgvarticulos.Item(4, dgvarticulos.CurrentRow.Index).Value)
         Catch ex As Exception
 
         End Try

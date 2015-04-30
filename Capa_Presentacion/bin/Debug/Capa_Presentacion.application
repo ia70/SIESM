@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Capa_Presentacion.exe.manifest" size="7105">
+    <dependentAssembly dependencyType="install" codebase="Capa_Presentacion.exe.manifest" size="7106">
       <assemblyIdentity name="Capa_Presentacion.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8OKUFWU1HjHzgm1lTeT8by78Pf5e7FEiZm97BL4s9lE=</dsig:DigestValue>
+        <dsig:DigestValue>PrM6rV4fDeLGIeSakXQBcE0f7VYa/V8Q+0XKQw7EdL0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

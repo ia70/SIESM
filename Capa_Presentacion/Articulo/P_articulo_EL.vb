@@ -1,10 +1,10 @@
 ﻿Imports Capa_Negocios
 Public Class P_articulo_EL
-    Dim Articulo As New N_articulo
+    Dim Articulo As New N_Articulo
     Dim Tabla As New DataSet
     Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtconsulta.KeyPress
         If Len(txtconsulta.Text) > 4 And e.KeyChar = ChrW(13) Then
-            Tabla = Articulo.Consulta(txtconsulta.Text)
+            Tabla = Articulo.Consultar(txtconsulta.Text)
             txtconsulta.Text = ""
             If Tabla.Tables(0).Rows.Count = 0 Then
                 M("El articulo solicitado no existe", 3)
@@ -15,7 +15,7 @@ Public Class P_articulo_EL
                 txtdescripcion.Text = Tabla.Tables(0).Rows(0)(3).ToString()
                 ptrimagen.Image = Nothing
                 On Error Resume Next
-                ptrimagen.Image = Articulo.Bytes_Imagen(Tabla.Tables(0).Rows(0)(4))
+                ptrimagen.Image = Bytes_Imagen(Tabla.Tables(0).Rows(0)(4))
                 txtFecha.Text = Tabla.Tables(0).Rows(0)(5).ToString()
                 btnEliminar.Enabled = True
                 txtconsulta.Focus()

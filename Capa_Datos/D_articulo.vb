@@ -4,56 +4,49 @@ Public Class D_articulo
     Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
-    Dim Query As New MySqlCommand
+    Dim Comando As New MySqlCommand
 
     Public Function Listado() As DataSet
-        Dim ds As New DataSet
-        cn = objCon.conectar
-        da = New MySqlDataAdapter("CALL articulo_mostrar", cn)
-        da.Fill(ds, "Articulos")
-        Return ds
-        ds.Dispose()
-        da.Dispose()
-        cn.Dispose()
+        Return QueryC("CALL articulo_mostrar")
     End Function
 
     Public Function Consulta(ByVal ID As String) As DataSet
-        Dim ds As New DataSet
-        cn = objCon.conectar
-        da = New MySqlDataAdapter("CALL articulo_consultar('" & ID & "')", cn)
-        da.Fill(ds, "Articulos")
-        Return ds
-        ds.Dispose()
-        da.Dispose()
-        cn.Dispose()
+        Return QueryC("CALL articulo_consultar('" & ID & "')")
+    End Function
+
+    Public Function GetInicio() As DataSet
+        Return QueryC("CALL articulo_inicio()")
+    End Function
+
+    Public Function GetFinal() As DataSet
+        Return QueryC("CALL articulo_final()")
+    End Function
+
+    Public Function GetSiguiente(ByVal ID As String) As DataSet
+        Return QueryC("CALL articulo_siguiente('" & ID & "')")
+    End Function
+
+    Public Function GetAnterior(ByVal ID As String) As DataSet
+        Return QueryC("CALL articulo_atras('" & ID & "')")
     End Function
 
     Public Function Existe(ByVal ID As String) As Boolean
-        Dim ds As New DataSet
-        Dim Valor As Boolean
-        cn = objCon.conectar
-        da = New MySqlDataAdapter("CALL articulo_consultar('" & ID & "')", cn)
-        da.Fill(ds, "Articulos")
-
-        If ds.Tables(0).Rows.Count Then
-            Valor = True
+        Dim valor As Boolean
+        If QueryC("CALL articulo_consultar('" & ID & "')").Tables(0).Rows.Count Then
+            valor = True
         Else
-            Valor = False
+            valor = False
         End If
-        ds.Dispose()
-        da.Dispose()
-        cn.Dispose()
         Return Valor
-
     End Function
 
     Public Sub Eliminar(ByVal ID As String)
         Dim Valor As Boolean
         cn = objCon.conectar
         cn.Open()
-        Query.Connection = cn
-        Query.CommandText = "CALL articulo_eliminar('" & ID & "')"
-        Valor = Query.ExecuteNonQuery()
+        Comando.Connection = cn
+        Comando.CommandText = "CALL articulo_eliminar('" & ID & "')"
+        Valor = Comando.ExecuteNonQuery()
 
         If Valor Then
             MsgBox("¡Articulo eliminado correctamente!", vbInformation, "SIESM")
@@ -65,55 +58,54 @@ Public Class D_articulo
         cn.Dispose()
     End Sub
 
-    Public Sub Insertar(ByVal objP As E_articulo)
-        Dim Exito As Integer
+    Public Sub Insertar(ByVal _Articulo As E_articulo)
+        QueryM("articulo_insertar", _Articulo)
+    End Sub
+
+    Public Sub Editar(ByVal _Articulo As E_articulo)
+        QueryM("articulo_editar", _Articulo)
+    End Sub
+
+    Public Sub QueryM(ByVal Cadena As String, ByVal _Articulo As E_articulo)
+        Dim Estado As Integer
         cn = objCon.conectar
         Try
             cn.Open()
-            da = New MySqlDataAdapter("articulo_insertar", cn)
+            da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id_art", MySqlDbType.VarChar).Value = objP.id_articulo
-                .Add("nom_cor", MySqlDbType.VarChar).Value = objP.nombre_corto
-                .Add("nom_lar", MySqlDbType.VarChar).Value = objP.nombre_largo
-                .Add("des", MySqlDbType.VarChar).Value = objP.descripcion
-                .Add("ima", MySqlDbType.LongBlob).Value = objP.imagen
-                .Add("fec_reg", MySqlDbType.Date).Value = objP.fecha_registro
+                .Add("id_art", MySqlDbType.VarChar).Value = _Articulo.id_articulo
+                .Add("nom", MySqlDbType.VarChar).Value = _Articulo.nombre
+                .Add("des", MySqlDbType.VarChar).Value = _Articulo.descripcion
+                .Add("niv_cri", MySqlDbType.Int32).Value = _Articulo.nivel_critico
+                .Add("uni_med", MySqlDbType.VarChar).Value = _Articulo.unidad_medida
+                .Add("pre_com", MySqlDbType.Decimal).Value = _Articulo.precio_compra
+                .Add("pre_ven", MySqlDbType.Decimal).Value = _Articulo.precio_venta
+                .Add("ima", MySqlDbType.LongBlob).Value = _Articulo.imagen
+                .Add("fec", MySqlDbType.Date).Value = _Articulo.fecha
             End With
-            Exito = da.SelectCommand.ExecuteNonQuery()
-            MsgBox("Registro guardado correctamente!", vbInformation + vbOKOnly, "SIESM")
+            Estado = da.SelectCommand.ExecuteNonQuery()
+            If Estado Then
+                MsgBox("Registro actualizado correctamente!", vbInformation + vbOKOnly, "SIESM")
+            Else
+                MsgBox("¡Error al actualizar articulo!", vbCritical + vbOKOnly, "SIESM")
+            End If
         Catch ex As Exception
-            MsgBox("Error al agregar articulo :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
+            MsgBox("Error al actualizar articulo :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
         Finally
             da.Dispose()
             cn.Dispose()
         End Try
-
     End Sub
 
-    Public Sub Editar(ByVal objP As E_articulo)
-        Dim Exito As Integer
+    Public Function QueryC(ByVal Cadena As String) As DataSet
+        Dim ds As New DataSet
         cn = objCon.conectar
-        Try
-            cn.Open()
-            da = New MySqlDataAdapter("articulo_editar", cn)
-            da.SelectCommand.CommandType = CommandType.StoredProcedure
-            With da.SelectCommand.Parameters
-                .Add("id_art", MySqlDbType.VarChar).Value = objP.id_articulo
-                .Add("nom_cor", MySqlDbType.VarChar).Value = objP.nombre_corto
-                .Add("nom_lar", MySqlDbType.VarChar).Value = objP.nombre_largo
-                .Add("des", MySqlDbType.VarChar).Value = objP.descripcion
-                .Add("ima", MySqlDbType.LongBlob).Value = objP.imagen
-                .Add("fec_reg", MySqlDbType.Date).Value = objP.fecha_registro
-            End With
-            Exito = da.SelectCommand.ExecuteNonQuery()
-            MsgBox("Registro modificado correctamente!", vbInformation + vbOKOnly, "SIESM")
-        Catch ex As Exception
-            MsgBox("Error al intentar modificar el articulo :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
-        Finally
-            da.Dispose()
-            cn.Dispose()
-        End Try
-
-    End Sub
+        da = New MySqlDataAdapter(Cadena, cn)
+        da.Fill(ds, "Articulos")
+        Return ds
+        ds.Dispose()
+        da.Dispose()
+        cn.Dispose()
+    End Function
 End Class
