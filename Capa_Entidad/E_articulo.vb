@@ -4,8 +4,8 @@
     Private _descripcion As String
     Private _nivel_critico As Integer
     Private _unidad_medida As String
-    Private _precio_compra As Decimal
-    Private _precio_venta As Decimal
+    Private _precio_compra As String
+    Private _precio_venta As String
     Private _imagen As Byte()
     Private _fecha As String
 
@@ -49,20 +49,28 @@
             _unidad_medida = value
         End Set
     End Property
-    Public Property precio_compra As Decimal
+    Public Property precio_compra As String
         Get
             Return _precio_compra
         End Get
-        Set(value As Decimal)
-            _precio_compra = value
+        Set(value As String)
+            If Not Len(value) > 0 Then
+                _precio_compra = "0.00"
+            Else
+                _precio_compra = value
+            End If
         End Set
     End Property
-    Public Property precio_venta As Decimal
+    Public Property precio_venta As String
         Get
             Return _precio_venta
         End Get
-        Set(value As Decimal)
-            _precio_venta = value
+        Set(value As String)
+            If Not Len(value) > 0 Then
+                _precio_venta = "0.00"
+            Else
+                _precio_venta = value
+            End If
         End Set
     End Property
     Public Property imagen As Byte()
@@ -81,6 +89,4 @@
             _fecha = value
         End Set
     End Property
-
-
 End Class

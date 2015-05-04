@@ -25,11 +25,11 @@ Public Class P_articulo_N
         Return txtUnidad_medida.Text
     End Function
 
-    Public Function getPrecio_Compra() As Decimal
+    Public Function getPrecio_Compra() As String
         Return txtPrecio_compra.Text
     End Function
 
-    Public Function getPrecio_Venta() As Decimal
+    Public Function getPrecio_Venta() As String
         Return txtPrecio_venta.Text
     End Function
 
@@ -60,7 +60,11 @@ Public Class P_articulo_N
         _Articulo.precio_venta = getPrecio_Venta()
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = Date.Today.Date.ToString("yyyy.MM.dd")
-        Articulo.Insertar(_Articulo)
+        If Articulo.Insertar(_Articulo) Then
+            M("¡El articulo ha sido guardado con exito!", 1)
+        Else
+            M("¡No se ha podido guardar el articulo!", 3)
+        End If
         Call btnlimpiar_campos_Click(sender, e)
         Campos(False)
     End Sub
@@ -155,14 +159,15 @@ Public Class P_articulo_N
 
 #End Region
 
-    Private Sub txtUnidad_medida_Click(sender As Object, e As EventArgs) Handles txtUnidad_medida.Click
-        txtNivel_critico.Focus()
-    End Sub
 
     Private Sub txtUnidad_medida_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUnidad_medida.KeyPress
         If e.KeyChar = ChrW(13) Then
             txtNivel_critico.Focus()
         End If
+    End Sub
+
+    Private Sub txtUnidad_medida_TextChanged(sender As Object, e As EventArgs) Handles txtUnidad_medida.TextChanged
+        txtNivel_critico.Focus()
     End Sub
 
     Private Sub txtNivel_critico_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNivel_critico.KeyPress

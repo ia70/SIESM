@@ -1,6 +1,4 @@
 ﻿Imports Capa_Datos
-'Imports System.Drawing
-'Imports System.Windows.Forms
 Imports Capa_Entidad
 Public Class N_Articulo
 
@@ -9,9 +7,9 @@ Public Class N_Articulo
         Return Articulo.Listado()
     End Function
 
-    Public Sub Insertar(ByVal E_Articulo As E_articulo)
-        Articulo.Insertar(E_Articulo)
-    End Sub
+    Public Function Insertar(ByVal _Articulo As E_articulo) As Boolean
+        Return Articulo.Insertar(_Articulo)
+    End Function
 
     Public Function Consultar(ByVal ID As String) As DataSet
         Return Articulo.Consulta(ID)
@@ -36,12 +34,16 @@ Public Class N_Articulo
         Articulo.Eliminar(ID)
     End Sub
 
-    Public Sub Editar(ByVal E_Articulo As E_articulo)
-        Articulo.Editar(E_Articulo)
-    End Sub
+    Public Function Editar(ByVal _Articulo As E_articulo) As Boolean
+        Return Articulo.Editar(_Articulo)
+    End Function
 
     Public Function Existe(ByVal ID As String) As Boolean
         Return Articulo.Existe(ID)
     End Function
 
-   End Class
+    Public Function Filtrar(ByVal ID As String) As DataSet
+        Return Articulo.Filtrar(ID)
+    End Function
+
+End Class

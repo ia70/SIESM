@@ -145,6 +145,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Principal\ImagenViewer.Designer.vb">
+      <DependentUpon>ImagenViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\ImagenViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\PantallaOscora.Designer.vb">
+      <DependentUpon>PantallaOscora.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\PantallaOscora.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\P_puntoVenta.Designer.vb">
       <DependentUpon>P_puntoVenta.vb</DependentUpon>
     </Compile>
@@ -195,6 +207,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\ImagenViewer.resx">
+      <DependentUpon>ImagenViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\PantallaOscora.resx">
+      <DependentUpon>PantallaOscora.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\P_puntoVenta.resx">
       <DependentUpon>P_puntoVenta.vb</DependentUpon>
@@ -265,6 +283,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSC02120.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
