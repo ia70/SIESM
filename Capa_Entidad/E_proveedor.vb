@@ -3,7 +3,7 @@
     Private _direccion As String
     Private _descripcion As String
     Private _telefono As String
-    Private _fecha_registro As String
+    Private _fecha As String
 
     Public Property nombre As String
         Get
@@ -37,12 +37,12 @@
             _telefono = value
         End Set
     End Property
-    Public Property fecha_registro As String
+    Public Property fecha As String
         Get
-            Return _fecha_registro
+            Return _fecha
         End Get
         Set(value As String)
-            _fecha_registro = value
+            _fecha = value
         End Set
     End Property
 End Class

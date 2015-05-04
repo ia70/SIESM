@@ -72,8 +72,9 @@ Public Class P_articulo_ED
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = Date.Today.Date.ToString("yyyy.MM.dd")
         Articulo.Editar(_Articulo)
-        Call btnlimpiar_campos_Click(sender, e)
+        'Call btnlimpiar_campos_Click(sender, e)
         Campos(False)
+        txtConsulta.Focus()
     End Sub
 
     Private Sub btnlimpiar_campos_Click(sender As Object, e As EventArgs) Handles btnlimpiar_campos.Click
@@ -229,7 +230,7 @@ Public Class P_articulo_ED
     Private Sub ptrimagen_Click(sender As Object, e As EventArgs) Handles ptrimagen.Click
         If Not IsNothing(ptrimagen.Image) Then
             ImagenViewer.PictureBox1.Image = ptrimagen.Image
-            Popup.FrmPopup(ImagenViewer, 0)
+            Popup.PopupFrm(ImagenViewer, 0)
         End If
     End Sub
 End Class

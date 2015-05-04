@@ -117,7 +117,7 @@ Public Class P_articulo_EL
     Private Sub ptrimagen_Click(sender As Object, e As EventArgs) Handles ptrimagen.Click
         If Not IsNothing(ptrimagen.Image) Then
             ImagenViewer.PictureBox1.Image = ptrimagen.Image
-            Popup.FrmPopup(ImagenViewer, 0)
+            Popup.PopupFrm(ImagenViewer, 0)
         End If
     End Sub
 End Class

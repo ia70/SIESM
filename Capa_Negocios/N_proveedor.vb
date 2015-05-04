@@ -4,29 +4,29 @@ Imports System.IO
 Imports System.Windows.Forms
 Imports Capa_Entidad
 Public Class N_proveedor
-    Dim objArt As New D_proveedor
+    Dim Proveedor As New D_proveedor
     Public Function Listado() As DataSet
-        Return objArt.Listado()
+        Return Proveedor.Listado()
     End Function
 
-    Public Sub Insertar(ByVal objP As E_proveedor)
-        objArt.Insertar(objP)
+    Public Sub Insertar(ByVal _Proveedor As E_proveedor)
+        Proveedor.Insertar(_Proveedor)
     End Sub
 
     Public Function Consulta(ByVal ID As String) As DataSet
-        Return objArt.Consulta(ID)
+        Return Proveedor.Consulta(ID)
     End Function
 
     Public Sub Eliminar(ByVal ID As String)
-        objArt.Eliminar(ID)
+        Proveedor.Eliminar(ID)
     End Sub
 
-    Public Sub Editar(ByVal objP As E_proveedor)
-        objArt.Editar(objP)
+    Public Sub Editar(ByVal _Proveedor As E_proveedor)
+        Proveedor.Editar(_Proveedor)
     End Sub
 
     Public Function Existe(ByVal ID As String) As Boolean
-        Return objArt.Existe(ID)
+        Return Proveedor.Existe(ID)
     End Function
 
 End Class

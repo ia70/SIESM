@@ -8,7 +8,7 @@
 
     End Sub
 
-    Public Sub FrmPopup(ByVal Frm As Form, ByVal Valor As Integer)
+    Public Sub PopupFrm(ByVal Frm As Form, ByVal Valor As Integer)
         Me.Show()
         If Not Valor Then
             Valor_estate = 0
