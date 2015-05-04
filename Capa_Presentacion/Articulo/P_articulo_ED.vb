@@ -3,6 +3,17 @@ Imports Capa_Entidad
 Public Class P_articulo_ED
     Dim Articulo As New Capa_Negocios.N_Articulo
     Dim Tabla As New DataSet
+
+    Private Sub P_articulo_ED_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        txtConsulta.Focus()
+        txtUnidad_medida.Text = "Piezas"
+    End Sub
+
+    Private Sub dgvTabla_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTabla.CellContentClick
+        Tabla = Articulo.Consultar(dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value)
+        LlenarCampos()
+    End Sub
+
     'Funciones de captura de valores
 #Region "Funciones de obtencion de valores de campos"
     Public Function getId_Articulo() As String
@@ -25,11 +36,11 @@ Public Class P_articulo_ED
         Return txtUnidad_medida.Text
     End Function
 
-    Public Function getPrecio_Compra() As Decimal
+    Public Function getPrecio_Compra() As String
         Return txtPrecio_compra.Text
     End Function
 
-    Public Function getPrecio_Venta() As Decimal
+    Public Function getPrecio_Venta() As String
         Return txtPrecio_venta.Text
     End Function
 
@@ -60,7 +71,7 @@ Public Class P_articulo_ED
         _Articulo.precio_venta = getPrecio_Venta()
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = Date.Today.Date.ToString("yyyy.MM.dd")
-        Articulo.Insertar(_Articulo)
+        Articulo.Editar(_Articulo)
         Call btnlimpiar_campos_Click(sender, e)
         Campos(False)
     End Sub
@@ -74,21 +85,21 @@ Public Class P_articulo_ED
     End Sub
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        If txtConsulta.Text = "" Or Len(txtConsulta.Text) < 5 Or txtConsulta.Text = Articulo.Inicio.Tables(0).Rows(0)(0).ToString() Then
+        If txtid_articulo.Text = "" Or Len(txtid_articulo.Text) < 5 Or txtid_articulo.Text = Articulo.Inicio.Tables(0).Rows(0)(0).ToString() Then
             Tabla = Articulo.Final()
             LlenarCampos()
-        ElseIf Articulo.Existe(txtConsulta.Text) Then
-            Tabla = Articulo.Atras(txtConsulta.Text)
+        ElseIf Articulo.Existe(txtid_articulo.Text) Then
+            Tabla = Articulo.Atras(txtid_articulo.Text)
             LlenarCampos()
         End If
     End Sub
 
     Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
-        If txtConsulta.Text = "" Or Len(txtConsulta.Text) < 5 Or txtConsulta.Text = Articulo.Final.Tables(0).Rows(0)(0).ToString() Then
+        If txtid_articulo.Text = "" Or Len(txtid_articulo.Text) < 5 Or txtid_articulo.Text = Articulo.Final.Tables(0).Rows(0)(0).ToString() Then
             Tabla = Articulo.Inicio()
             LlenarCampos()
-        ElseIf Articulo.Existe(txtConsulta.Text) Then
-            Tabla = Articulo.Siguiente(txtConsulta.Text)
+        ElseIf Articulo.Existe(txtid_articulo.Text) Then
+            Tabla = Articulo.Siguiente(txtid_articulo.Text)
             LlenarCampos()
         End If
     End Sub
@@ -105,6 +116,7 @@ Public Class P_articulo_ED
                     txtConsulta.Text = ""
                     txtConsulta.Focus()
                 Else
+                    txtConsulta.Text = ""
                     LlenarCampos()
                 End If
             Else
@@ -114,8 +126,10 @@ Public Class P_articulo_ED
     End Sub
 
     Private Sub txtConsulta_TextChanged(sender As Object, e As EventArgs) Handles txtConsulta.TextChanged
-        If Not IsNumeric(txtConsulta.Text) Then
+        If Not IsNumeric(txtConsulta.Text) And Not txtConsulta.Text = "" Then
             dgvTabla.DataSource = Articulo.Filtrar(txtConsulta.Text).Tables(0)
+        ElseIf txtConsulta.Text = "" Then
+            dgvTabla.DataSource = ""
         End If
     End Sub
 
@@ -169,7 +183,7 @@ Public Class P_articulo_ED
 
 #Region "Funciones de validacion de campos"
     Sub Campos(ByVal Valor As Boolean)
-        txtConsulta.Enabled = Not Valor
+        'txtConsulta.Enabled = Not Valor
         txtNombre.Enabled = Valor
         txtdescripcion.Enabled = Valor
         txtPrecio_compra.Enabled = Valor
@@ -179,23 +193,24 @@ Public Class P_articulo_ED
         btnlimpiar_campos.Enabled = Valor
         btnguardar.Enabled = Valor
         btnbuscar_imagen.Enabled = Valor
+        txtConsulta.Focus()
     End Sub
 
     Sub LimpiarCampos()
         txtConsulta.Text = ""
+        txtid_articulo.Text = ""
         txtNombre.Text = ""
         txtdescripcion.Text = ""
         txtPrecio_compra.Text = ""
         txtPrecio_venta.Text = ""
-        txtUnidad_medida.Text = ""
-        'txtNivel_critico.Value = 0
+        'txtUnidad_medida.Text = ""
         ptrimagen.Image = Nothing
         Campos(False)
         txtConsulta.Focus()
     End Sub
 
     Private Sub LlenarCampos()
-        txtConsulta.Text = Tabla.Tables(0).Rows(0)(0).ToString()
+        txtid_articulo.Text = Tabla.Tables(0).Rows(0)(0).ToString()
         txtNombre.Text = Tabla.Tables(0).Rows(0)(1).ToString()
         txtdescripcion.Text = Tabla.Tables(0).Rows(0)(2).ToString()
         txtNivel_critico.Text = Tabla.Tables(0).Rows(0)(3).ToString()
@@ -211,5 +226,10 @@ Public Class P_articulo_ED
 
 #End Region
 
-
+    Private Sub ptrimagen_Click(sender As Object, e As EventArgs) Handles ptrimagen.Click
+        If Not IsNothing(ptrimagen.Image) Then
+            ImagenViewer.PictureBox1.Image = ptrimagen.Image
+            Popup.FrmPopup(ImagenViewer, 0)
+        End If
+    End Sub
 End Class

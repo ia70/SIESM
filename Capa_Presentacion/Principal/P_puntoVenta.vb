@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        PantallaOscora.Show()
-        PantallaOscora.Formulario(ImagenViewer, 1)
+        Popup.Show()
+        Popup.FrmPopup(ImagenViewer, 1)
     End Sub
 End Class

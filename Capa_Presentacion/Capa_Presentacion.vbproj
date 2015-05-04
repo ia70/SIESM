@@ -151,10 +151,10 @@
     <Compile Include="Principal\ImagenViewer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\PantallaOscora.Designer.vb">
-      <DependentUpon>PantallaOscora.vb</DependentUpon>
+    <Compile Include="Principal\Popup.Designer.vb">
+      <DependentUpon>Popup.vb</DependentUpon>
     </Compile>
-    <Compile Include="Principal\PantallaOscora.vb">
+    <Compile Include="Principal\Popup.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principal\P_puntoVenta.Designer.vb">
@@ -211,8 +211,8 @@
     <EmbeddedResource Include="Principal\ImagenViewer.resx">
       <DependentUpon>ImagenViewer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal\PantallaOscora.resx">
-      <DependentUpon>PantallaOscora.vb</DependentUpon>
+    <EmbeddedResource Include="Principal\Popup.resx">
+      <DependentUpon>Popup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\P_puntoVenta.resx">
       <DependentUpon>P_puntoVenta.vb</DependentUpon>

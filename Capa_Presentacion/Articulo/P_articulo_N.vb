@@ -178,4 +178,10 @@ Public Class P_articulo_N
         End If
     End Sub
 
+    Private Sub ptrimagen_Click(sender As Object, e As EventArgs) Handles ptrimagen.Click
+        If Not IsNothing(ptrimagen.Image) Then
+            ImagenViewer.PictureBox1.Image = ptrimagen.Image
+            Popup.FrmPopup(ImagenViewer, 0)
+        End If
+    End Sub
 End Class

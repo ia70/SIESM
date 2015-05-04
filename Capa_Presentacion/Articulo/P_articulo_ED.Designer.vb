@@ -25,6 +25,7 @@ Partial Class P_articulo_ED
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.txtConsulta = New System.Windows.Forms.TextBox()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
         Me.txtid_articulo = New System.Windows.Forms.TextBox()
@@ -67,14 +68,14 @@ Partial Class P_articulo_ED
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(740, 567)
+        Me.Panel1.Size = New System.Drawing.Size(740, 601)
         Me.Panel1.TabIndex = 1
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(5, 516)
+        Me.Panel2.Location = New System.Drawing.Point(5, 550)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(730, 46)
         Me.Panel2.TabIndex = 18
@@ -82,6 +83,7 @@ Partial Class P_articulo_ED
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.txtConsulta)
         Me.Panel3.Controls.Add(Me.dgvTabla)
         Me.Panel3.Controls.Add(Me.txtid_articulo)
@@ -109,15 +111,27 @@ Partial Class P_articulo_ED
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(730, 508)
+        Me.Panel3.Size = New System.Drawing.Size(730, 542)
         Me.Panel3.TabIndex = 17
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label10.Location = New System.Drawing.Point(28, 163)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(691, 10)
+        Me.Label10.TabIndex = 82
         '
         'txtConsulta
         '
+        Me.txtConsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtConsulta.ForeColor = System.Drawing.Color.Green
         Me.txtConsulta.Location = New System.Drawing.Point(277, 6)
         Me.txtConsulta.Name = "txtConsulta"
         Me.txtConsulta.Size = New System.Drawing.Size(174, 26)
         Me.txtConsulta.TabIndex = 81
+        Me.txtConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'dgvTabla
         '
@@ -132,16 +146,15 @@ Partial Class P_articulo_ED
         Me.dgvTabla.ReadOnly = True
         Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTabla.Size = New System.Drawing.Size(667, 113)
+        Me.dgvTabla.Size = New System.Drawing.Size(691, 113)
         Me.dgvTabla.TabIndex = 80
         '
         'txtid_articulo
         '
         Me.txtid_articulo.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtid_articulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtid_articulo.Enabled = False
         Me.txtid_articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid_articulo.Location = New System.Drawing.Point(173, 154)
+        Me.txtid_articulo.Location = New System.Drawing.Point(173, 189)
         Me.txtid_articulo.MaxLength = 20
         Me.txtid_articulo.Name = "txtid_articulo"
         Me.txtid_articulo.Size = New System.Drawing.Size(204, 26)
@@ -151,7 +164,7 @@ Partial Class P_articulo_ED
         'btnSiguiente
         '
         Me.btnSiguiente.Image = Global.Capa_Presentacion.My.Resources.Resources.Forward
-        Me.btnSiguiente.Location = New System.Drawing.Point(98, 419)
+        Me.btnSiguiente.Location = New System.Drawing.Point(98, 454)
         Me.btnSiguiente.Name = "btnSiguiente"
         Me.btnSiguiente.Size = New System.Drawing.Size(42, 36)
         Me.btnSiguiente.TabIndex = 59
@@ -160,7 +173,7 @@ Partial Class P_articulo_ED
         'btnAtras
         '
         Me.btnAtras.Image = Global.Capa_Presentacion.My.Resources.Resources.Back2
-        Me.btnAtras.Location = New System.Drawing.Point(33, 419)
+        Me.btnAtras.Location = New System.Drawing.Point(33, 454)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(42, 36)
         Me.btnAtras.TabIndex = 58
@@ -169,7 +182,7 @@ Partial Class P_articulo_ED
         'txtNivel_critico
         '
         Me.txtNivel_critico.Enabled = False
-        Me.txtNivel_critico.Location = New System.Drawing.Point(173, 391)
+        Me.txtNivel_critico.Location = New System.Drawing.Point(173, 426)
         Me.txtNivel_critico.Name = "txtNivel_critico"
         Me.txtNivel_critico.Size = New System.Drawing.Size(78, 26)
         Me.txtNivel_critico.TabIndex = 56
@@ -177,7 +190,7 @@ Partial Class P_articulo_ED
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(30, 393)
+        Me.Label9.Location = New System.Drawing.Point(30, 428)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(92, 18)
         Me.Label9.TabIndex = 55
@@ -188,7 +201,7 @@ Partial Class P_articulo_ED
         Me.txtUnidad_medida.Enabled = False
         Me.txtUnidad_medida.FormattingEnabled = True
         Me.txtUnidad_medida.Items.AddRange(New Object() {"Piezas", "Metros", "Litros"})
-        Me.txtUnidad_medida.Location = New System.Drawing.Point(173, 354)
+        Me.txtUnidad_medida.Location = New System.Drawing.Point(173, 389)
         Me.txtUnidad_medida.Name = "txtUnidad_medida"
         Me.txtUnidad_medida.Size = New System.Drawing.Size(121, 26)
         Me.txtUnidad_medida.TabIndex = 54
@@ -197,7 +210,7 @@ Partial Class P_articulo_ED
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(30, 357)
+        Me.Label8.Location = New System.Drawing.Point(30, 392)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(141, 18)
         Me.Label8.TabIndex = 53
@@ -207,7 +220,7 @@ Partial Class P_articulo_ED
         '
         Me.txtPrecio_venta.Enabled = False
         Me.txtPrecio_venta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrecio_venta.Location = New System.Drawing.Point(173, 318)
+        Me.txtPrecio_venta.Location = New System.Drawing.Point(173, 353)
         Me.txtPrecio_venta.MaxLength = 20
         Me.txtPrecio_venta.Name = "txtPrecio_venta"
         Me.txtPrecio_venta.Size = New System.Drawing.Size(121, 26)
@@ -217,7 +230,7 @@ Partial Class P_articulo_ED
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(30, 321)
+        Me.Label7.Location = New System.Drawing.Point(30, 356)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(121, 18)
         Me.Label7.TabIndex = 51
@@ -227,7 +240,7 @@ Partial Class P_articulo_ED
         '
         Me.txtPrecio_compra.Enabled = False
         Me.txtPrecio_compra.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrecio_compra.Location = New System.Drawing.Point(173, 282)
+        Me.txtPrecio_compra.Location = New System.Drawing.Point(173, 317)
         Me.txtPrecio_compra.MaxLength = 20
         Me.txtPrecio_compra.Name = "txtPrecio_compra"
         Me.txtPrecio_compra.Size = New System.Drawing.Size(121, 26)
@@ -237,7 +250,7 @@ Partial Class P_articulo_ED
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(30, 285)
+        Me.Label3.Location = New System.Drawing.Point(30, 320)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(137, 18)
         Me.Label3.TabIndex = 49
@@ -246,7 +259,7 @@ Partial Class P_articulo_ED
         'btnbuscar_imagen
         '
         Me.btnbuscar_imagen.Enabled = False
-        Me.btnbuscar_imagen.Location = New System.Drawing.Point(466, 370)
+        Me.btnbuscar_imagen.Location = New System.Drawing.Point(466, 405)
         Me.btnbuscar_imagen.Name = "btnbuscar_imagen"
         Me.btnbuscar_imagen.Size = New System.Drawing.Size(253, 30)
         Me.btnbuscar_imagen.TabIndex = 48
@@ -256,7 +269,7 @@ Partial Class P_articulo_ED
         'btnlimpiar_campos
         '
         Me.btnlimpiar_campos.Enabled = False
-        Me.btnlimpiar_campos.Location = New System.Drawing.Point(359, 426)
+        Me.btnlimpiar_campos.Location = New System.Drawing.Point(359, 461)
         Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
         Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
         Me.btnlimpiar_campos.TabIndex = 47
@@ -266,7 +279,7 @@ Partial Class P_articulo_ED
         'btnterminar
         '
         Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnterminar.Location = New System.Drawing.Point(614, 426)
+        Me.btnterminar.Location = New System.Drawing.Point(614, 461)
         Me.btnterminar.Name = "btnterminar"
         Me.btnterminar.Size = New System.Drawing.Size(105, 30)
         Me.btnterminar.TabIndex = 46
@@ -277,7 +290,7 @@ Partial Class P_articulo_ED
         '
         Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnguardar.Enabled = False
-        Me.btnguardar.Location = New System.Drawing.Point(503, 426)
+        Me.btnguardar.Location = New System.Drawing.Point(503, 461)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(105, 30)
         Me.btnguardar.TabIndex = 45
@@ -288,7 +301,7 @@ Partial Class P_articulo_ED
         '
         Me.ptrimagen.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ptrimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptrimagen.Location = New System.Drawing.Point(463, 188)
+        Me.ptrimagen.Location = New System.Drawing.Point(463, 223)
         Me.ptrimagen.Name = "ptrimagen"
         Me.ptrimagen.Size = New System.Drawing.Size(256, 170)
         Me.ptrimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -298,7 +311,7 @@ Partial Class P_articulo_ED
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(525, 156)
+        Me.Label5.Location = New System.Drawing.Point(525, 191)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(142, 18)
         Me.Label5.TabIndex = 43
@@ -307,7 +320,7 @@ Partial Class P_articulo_ED
         'txtdescripcion
         '
         Me.txtdescripcion.Enabled = False
-        Me.txtdescripcion.Location = New System.Drawing.Point(173, 224)
+        Me.txtdescripcion.Location = New System.Drawing.Point(173, 259)
         Me.txtdescripcion.MaxLength = 300
         Me.txtdescripcion.Multiline = True
         Me.txtdescripcion.Name = "txtdescripcion"
@@ -318,7 +331,7 @@ Partial Class P_articulo_ED
         'txtNombre
         '
         Me.txtNombre.Enabled = False
-        Me.txtNombre.Location = New System.Drawing.Point(173, 187)
+        Me.txtNombre.Location = New System.Drawing.Point(173, 222)
         Me.txtNombre.MaxLength = 150
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
@@ -328,7 +341,7 @@ Partial Class P_articulo_ED
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(30, 190)
+        Me.Label4.Location = New System.Drawing.Point(30, 225)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 18)
         Me.Label4.TabIndex = 39
@@ -337,7 +350,7 @@ Partial Class P_articulo_ED
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(30, 227)
+        Me.Label2.Location = New System.Drawing.Point(30, 262)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 18)
         Me.Label2.TabIndex = 38
@@ -346,7 +359,7 @@ Partial Class P_articulo_ED
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(30, 156)
+        Me.Label1.Location = New System.Drawing.Point(30, 191)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(127, 18)
         Me.Label1.TabIndex = 37
@@ -369,7 +382,7 @@ Partial Class P_articulo_ED
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(740, 567)
+        Me.ClientSize = New System.Drawing.Size(740, 601)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -415,4 +428,5 @@ Partial Class P_articulo_ED
     Friend WithEvents txtid_articulo As System.Windows.Forms.TextBox
     Friend WithEvents txtConsulta As System.Windows.Forms.TextBox
     Friend WithEvents dgvTabla As System.Windows.Forms.DataGridView
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class
