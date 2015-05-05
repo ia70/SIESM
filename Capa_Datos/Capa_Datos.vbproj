@@ -66,7 +66,13 @@
   <ItemGroup>
     <Compile Include="Conexion.vb" />
     <Compile Include="D_articulo.vb" />
+    <Compile Include="D_devolucion.vb" />
+    <Compile Include="D_inventario.vb" />
+    <Compile Include="D_merma.vb" />
     <Compile Include="D_proveedor.vb" />
+    <Compile Include="D_sucursal.vb" />
+    <Compile Include="D_usuario.vb" />
+    <Compile Include="D_ventas.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

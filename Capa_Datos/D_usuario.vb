@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Capa_Entidad
-Public Class D_proveedor
+Public Class D_usuario
     Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
@@ -8,38 +8,38 @@ Public Class D_proveedor
 
     'Obtiene el listado de todos los articulos en la tabla articulo
     Public Function Listado() As DataSet
-        Return QueryC("CALL proveedor_mostrar")
+        Return QueryC("CALL usuario_mostrar")
     End Function
 
     'Devuelve la consulta de un articulo en especifico
     Public Function Consulta(ByVal ID As String) As DataSet
-        Return QueryC("CALL proveedor_consultar('" & ID & "')")
+        Return QueryC("CALL usuario_consultar('" & ID & "')")
     End Function
 
     'Devuelve el primer articulo que aparece en la tabla de articulos
     Public Function GetInicio() As DataSet
-        Return QueryC("CALL proveedor_inicio()")
+        Return QueryC("CALL usuario_inicio()")
     End Function
 
     'Devuelve el ultimo articulo que aparece en la tabla articulo
     Public Function GetFinal() As DataSet
-        Return QueryC("CALL proveedor_final()")
+        Return QueryC("CALL usuario_final()")
     End Function
 
     'Devuelve el siguiente articulo en la tabla articulo en base al que se especifica
     Public Function GetSiguiente(ByVal ID As String) As DataSet
-        Return QueryC("CALL proveedor_siguiente('" & ID & "')")
+        Return QueryC("CALL usuario_siguiente('" & ID & "')")
     End Function
 
     'Devuelve el articulo anterior en la tabla articulo en base al que se especifica
     Public Function GetAnterior(ByVal ID As String) As DataSet
-        Return QueryC("CALL proveedor_atras('" & ID & "')")
+        Return QueryC("CALL usuario_atras('" & ID & "')")
     End Function
 
     'Consulta la existencia de un articulo y devuelve SI o No 
     Public Function Existe(ByVal ID As String) As Boolean
         Dim valor As Boolean = False
-        If QueryC("CALL proveedor_consultar('" & ID & "')").Tables(0).Rows.Count Then
+        If QueryC("CALL usuario_consultar('" & ID & "')").Tables(0).Rows.Count Then
             valor = True
         End If
         Return Valor
@@ -47,23 +47,23 @@ Public Class D_proveedor
 
     'Elimina un articulo especificado
     Public Sub Eliminar(ByVal ID As String)
-        QueryC("CALL proveedor_eliminar('" & ID & "')")
-        MsgBox("Proveedor eliminado correctamente!", vbOKOnly + vbInformation, "SIESM")
+        QueryC("CALL usuario_eliminar('" & ID & "')")
+        MsgBox("Usuario eliminado correctamente!", vbOKOnly + vbInformation, "SIESM")
     End Sub
 
     'Inserta un articulo en la base de datos
     Public Function Insertar(ByVal _Proveedor As E_proveedor) As Boolean
-        Return QueryM("proveedor_insertar", _Proveedor)
+        Return QueryM("usuario_insertar", _Proveedor)
     End Function
 
     'Edita un articulo
     Public Function Editar(ByVal _Articulo As E_proveedor) As Boolean
-        Return QueryM("proveedor_editar", _Articulo)
+        Return QueryM("usuario_editar", _Articulo)
     End Function
 
     'Devuelve los primeros 5 registros que coinciden con el filtro/busqueda
     Public Function Filtrar(ByVal Cadena As String) As DataSet
-        Return QueryC("CALL proveedor_filtrar('" & Cadena.Replace(" ", "%").ToString & "')")
+        Return QueryC("CALL usuario_filtrar('" & Cadena.Replace(" ", "%").ToString & "')")
     End Function
 
     'Esta funcion contiene los datos de coneccion y consulta a la Base de datos
@@ -73,7 +73,7 @@ Public Class D_proveedor
             cn = objCon.conectar
             cn.Open()
             da = New MySqlDataAdapter(Cadena, cn)
-            da.Fill(ds, "Proveedor")
+            da.Fill(ds, "Usuario")
             da.Dispose()
             cn.Close()
             cn.Dispose()

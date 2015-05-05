@@ -1,7 +1,4 @@
 ﻿Imports Capa_Datos
-Imports System.Drawing
-Imports System.IO
-Imports System.Windows.Forms
 Imports Capa_Entidad
 Public Class N_proveedor
     Dim Proveedor As New D_proveedor
