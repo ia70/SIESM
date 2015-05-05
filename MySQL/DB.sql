@@ -536,7 +536,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS sucursal_filtrar;
  DELIMITER //
 CREATE PROCEDURE sucursal_filtrar(
-	IN nom VARCHAR(150)
+	IN nom VARCHAR(100)
 )
    BEGIN
 		SELECT 
@@ -713,8 +713,8 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS proveedor_filtrar;
  DELIMITER //
-CREATE PROCEDURE provedor_filtrar(
-	IN nom VARCHAR(150)
+CREATE PROCEDURE proveedor_filtrar(
+	IN nom VARCHAR(30)
 )
    BEGIN
 		SELECT 
@@ -918,7 +918,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS usuario_filtrar;
  DELIMITER //
 CREATE PROCEDURE usuario_filtrar(
-	IN nom VARCHAR(150)
+	IN nom VARCHAR(20)
 )
    BEGIN
 		SELECT 

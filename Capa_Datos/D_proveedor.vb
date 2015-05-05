@@ -95,6 +95,7 @@ Public Class D_proveedor
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
+                .Add("id", MySqlDbType.Int32).Value = _Proveedor.id_proveedor
                 .Add("nom", MySqlDbType.VarChar).Value = _Proveedor.nombre
                 .Add("dir", MySqlDbType.VarChar).Value = _Proveedor.direccion
                 .Add("des", MySqlDbType.VarChar).Value = _Proveedor.descripcion

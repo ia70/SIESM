@@ -25,6 +25,10 @@ Partial Class P_proveedor_ED
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnSiguiente = New System.Windows.Forms.Button()
+        Me.btnAtras = New System.Windows.Forms.Button()
+        Me.txtConsulta = New System.Windows.Forms.TextBox()
+        Me.dgvTabla = New System.Windows.Forms.DataGridView()
         Me.btnlimpiar_campos = New System.Windows.Forms.Button()
         Me.btnterminar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
@@ -39,6 +43,7 @@ Partial Class P_proveedor_ED
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -51,21 +56,25 @@ Partial Class P_proveedor_ED
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(455, 422)
+        Me.Panel1.Size = New System.Drawing.Size(434, 524)
         Me.Panel1.TabIndex = 2
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(5, 371)
+        Me.Panel2.Location = New System.Drawing.Point(5, 473)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(445, 46)
+        Me.Panel2.Size = New System.Drawing.Size(424, 46)
         Me.Panel2.TabIndex = 18
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.btnSiguiente)
+        Me.Panel3.Controls.Add(Me.btnAtras)
+        Me.Panel3.Controls.Add(Me.txtConsulta)
+        Me.Panel3.Controls.Add(Me.dgvTabla)
         Me.Panel3.Controls.Add(Me.btnlimpiar_campos)
         Me.Panel3.Controls.Add(Me.btnterminar)
         Me.Panel3.Controls.Add(Me.btnguardar)
@@ -80,13 +89,57 @@ Partial Class P_proveedor_ED
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(445, 363)
+        Me.Panel3.Size = New System.Drawing.Size(424, 465)
         Me.Panel3.TabIndex = 17
+        '
+        'btnSiguiente
+        '
+        Me.btnSiguiente.Image = Global.Capa_Presentacion.My.Resources.Resources.Forward
+        Me.btnSiguiente.Location = New System.Drawing.Point(81, 338)
+        Me.btnSiguiente.Name = "btnSiguiente"
+        Me.btnSiguiente.Size = New System.Drawing.Size(42, 36)
+        Me.btnSiguiente.TabIndex = 84
+        Me.btnSiguiente.UseVisualStyleBackColor = True
+        '
+        'btnAtras
+        '
+        Me.btnAtras.Image = Global.Capa_Presentacion.My.Resources.Resources.Back2
+        Me.btnAtras.Location = New System.Drawing.Point(28, 338)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(42, 36)
+        Me.btnAtras.TabIndex = 83
+        Me.btnAtras.UseVisualStyleBackColor = True
+        '
+        'txtConsulta
+        '
+        Me.txtConsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtConsulta.ForeColor = System.Drawing.Color.Green
+        Me.txtConsulta.Location = New System.Drawing.Point(129, 18)
+        Me.txtConsulta.Name = "txtConsulta"
+        Me.txtConsulta.Size = New System.Drawing.Size(174, 26)
+        Me.txtConsulta.TabIndex = 82
+        Me.txtConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'dgvTabla
+        '
+        Me.dgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvTabla.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.dgvTabla.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTabla.Location = New System.Drawing.Point(28, 50)
+        Me.dgvTabla.MultiSelect = False
+        Me.dgvTabla.Name = "dgvTabla"
+        Me.dgvTabla.ReadOnly = True
+        Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvTabla.Size = New System.Drawing.Size(370, 99)
+        Me.dgvTabla.TabIndex = 81
         '
         'btnlimpiar_campos
         '
         Me.btnlimpiar_campos.Enabled = False
-        Me.btnlimpiar_campos.Location = New System.Drawing.Point(53, 272)
+        Me.btnlimpiar_campos.Location = New System.Drawing.Point(42, 380)
         Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
         Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
         Me.btnlimpiar_campos.TabIndex = 26
@@ -96,7 +149,7 @@ Partial Class P_proveedor_ED
         'btnterminar
         '
         Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnterminar.Location = New System.Drawing.Point(308, 272)
+        Me.btnterminar.Location = New System.Drawing.Point(297, 380)
         Me.btnterminar.Name = "btnterminar"
         Me.btnterminar.Size = New System.Drawing.Size(105, 30)
         Me.btnterminar.TabIndex = 25
@@ -107,7 +160,7 @@ Partial Class P_proveedor_ED
         '
         Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnguardar.Enabled = False
-        Me.btnguardar.Location = New System.Drawing.Point(197, 272)
+        Me.btnguardar.Location = New System.Drawing.Point(186, 380)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(105, 30)
         Me.btnguardar.TabIndex = 24
@@ -117,7 +170,7 @@ Partial Class P_proveedor_ED
         'txtDescripcion
         '
         Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(140, 134)
+        Me.txtDescripcion.Location = New System.Drawing.Point(129, 269)
         Me.txtDescripcion.MaxLength = 120
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
@@ -128,7 +181,7 @@ Partial Class P_proveedor_ED
         'txtTelefono
         '
         Me.txtTelefono.Enabled = False
-        Me.txtTelefono.Location = New System.Drawing.Point(140, 100)
+        Me.txtTelefono.Location = New System.Drawing.Point(129, 235)
         Me.txtTelefono.MaxLength = 30
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(269, 26)
@@ -137,7 +190,7 @@ Partial Class P_proveedor_ED
         'txtDireccion
         '
         Me.txtDireccion.Enabled = False
-        Me.txtDireccion.Location = New System.Drawing.Point(140, 65)
+        Me.txtDireccion.Location = New System.Drawing.Point(129, 200)
         Me.txtDireccion.MaxLength = 15
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(204, 26)
@@ -145,8 +198,9 @@ Partial Class P_proveedor_ED
         '
         'txtNombre
         '
+        Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(140, 30)
+        Me.txtNombre.Location = New System.Drawing.Point(129, 165)
         Me.txtNombre.MaxLength = 20
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(204, 26)
@@ -156,7 +210,7 @@ Partial Class P_proveedor_ED
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(36, 137)
+        Me.Label4.Location = New System.Drawing.Point(25, 272)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(96, 18)
         Me.Label4.TabIndex = 17
@@ -165,7 +219,7 @@ Partial Class P_proveedor_ED
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(36, 68)
+        Me.Label3.Location = New System.Drawing.Point(25, 203)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(79, 18)
         Me.Label3.TabIndex = 16
@@ -174,7 +228,7 @@ Partial Class P_proveedor_ED
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 103)
+        Me.Label2.Location = New System.Drawing.Point(25, 238)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 18)
         Me.Label2.TabIndex = 15
@@ -183,7 +237,7 @@ Partial Class P_proveedor_ED
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 33)
+        Me.Label1.Location = New System.Drawing.Point(25, 168)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 18)
         Me.Label1.TabIndex = 14
@@ -197,7 +251,7 @@ Partial Class P_proveedor_ED
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(5, 5)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(445, 49)
+        Me.Label6.Size = New System.Drawing.Size(424, 49)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Editar proveedor"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -206,7 +260,7 @@ Partial Class P_proveedor_ED
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(455, 422)
+        Me.ClientSize = New System.Drawing.Size(434, 524)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -218,6 +272,7 @@ Partial Class P_proveedor_ED
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -236,4 +291,8 @@ Partial Class P_proveedor_ED
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents dgvTabla As System.Windows.Forms.DataGridView
+    Friend WithEvents txtConsulta As System.Windows.Forms.TextBox
+    Friend WithEvents btnSiguiente As System.Windows.Forms.Button
+    Friend WithEvents btnAtras As System.Windows.Forms.Button
 End Class
