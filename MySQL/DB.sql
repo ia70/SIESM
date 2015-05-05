@@ -321,7 +321,7 @@ CREATE PROCEDURE articulo_filtrar(
 	IN nom VARCHAR(150)
 )
    BEGIN
-		select 
+		SELECT 
 			id_articulo 	AS 	"ID",
 			nombre			AS 	"Nombre del articulo",
             descripcion 	AS  "Descripción"
@@ -533,6 +533,20 @@ CREATE PROCEDURE sucursal_atras(
 DELIMITER ;
 
 
+DROP PROCEDURE IF EXISTS sucursal_filtrar;
+ DELIMITER //
+CREATE PROCEDURE sucursal_filtrar(
+	IN nom VARCHAR(150)
+)
+   BEGIN
+		SELECT 
+			id_sucursal 	AS 	"ID",
+			nombre			AS 	"Nombre de la sucursal"
+        FROM sucursal WHERE nombre LIKE CONCAT('%',nom,'%') LIMIT 5;
+   END //
+DELIMITER ;
+
+
 #TABLA PROVEEDOR ***********TABLA PROVEEDOR*************TABLA PROVEEDOR******************************************************************************
 
 
@@ -572,7 +586,6 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS proveedor_insertar;
  DELIMITER //
 CREATE PROCEDURE proveedor_insertar(
-	IN id_prov	INT,
     IN nom 		VARCHAR(30),
     IN dir 		VARCHAR(500),
     IN des 		VARCHAR(300),
@@ -581,7 +594,6 @@ CREATE PROCEDURE proveedor_insertar(
 )
    BEGIN
 		INSERT INTO proveedor(
-			id_proveedor, 
             nombre, 
             direccion, 
             descripcion, 
@@ -589,7 +601,6 @@ CREATE PROCEDURE proveedor_insertar(
             fecha
 		) 
 		VALUES(
-			id_pro, 
             nom, 
             dir, 
             des, 
@@ -699,6 +710,19 @@ CREATE PROCEDURE proveedor_atras(
    END //
 DELIMITER ;
 
+
+DROP PROCEDURE IF EXISTS proveedor_filtrar;
+ DELIMITER //
+CREATE PROCEDURE provedor_filtrar(
+	IN nom VARCHAR(150)
+)
+   BEGIN
+		SELECT 
+			id_proveedor 	AS 	"ID",
+			nombre			AS 	"Nombre del proveedor"
+        FROM proveedor WHERE nombre LIKE CONCAT('%',nom,'%') LIMIT 5;
+   END //
+DELIMITER ;
 
 
 #TABLA USUARIO ***********TABLA USUARIO*************TABLA USUARIO************************************************************************************
@@ -891,6 +915,21 @@ CREATE PROCEDURE usuario_atras(
 DELIMITER ;
 
 
+DROP PROCEDURE IF EXISTS usuario_filtrar;
+ DELIMITER //
+CREATE PROCEDURE usuario_filtrar(
+	IN nom VARCHAR(150)
+)
+   BEGIN
+		SELECT 
+			id_usuario 	AS 	"ID",
+			nombre		AS 	"Nombre del articulo",
+            apellidos 	AS 	"Apellidos"
+        FROM usuario WHERE nombre LIKE CONCAT('%',nom,'%') LIMIT 5;
+   END //
+DELIMITER ;
+
+
 
 #TABLA MERMA************************************ #TABLA MERMA***************************************************** #TABLA MERMA***************************
 
@@ -1068,7 +1107,6 @@ CREATE PROCEDURE merma_atras(
 		FROM merma WHERE id_merma > id_mer ORDER BY id_merma ASC LIMIT 1;
    END //
 DELIMITER ;
-
 
 
 # TABLA VENTA ************************************ #TABLA VENTA*****************************************************************
