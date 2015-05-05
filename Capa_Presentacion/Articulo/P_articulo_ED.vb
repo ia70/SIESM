@@ -44,14 +44,6 @@ Public Class P_articulo_ED
         Return txtPrecio_venta.Text
     End Function
 
-    Public Function getImagen() As String
-        Return txtConsulta.Text
-    End Function
-
-    Public Function getFecha_Registro() As String
-        Return Date.Today.ToString
-    End Function
-
 #End Region
     'Funciones de control de datos y funcionamiento
 
@@ -70,7 +62,7 @@ Public Class P_articulo_ED
         _Articulo.precio_compra = getPrecio_Compra()
         _Articulo.precio_venta = getPrecio_Venta()
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
-        _Articulo.fecha = Date.Today.Date.ToString("yyyy.MM.dd")
+        _Articulo.fecha = getFecha()
         Articulo.Editar(_Articulo)
         'Call btnlimpiar_campos_Click(sender, e)
         Campos(False)

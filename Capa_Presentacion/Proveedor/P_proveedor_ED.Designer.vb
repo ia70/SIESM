@@ -199,7 +199,7 @@ Partial Class P_proveedor_ED
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(445, 49)
         Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Agregar proveedor"
+        Me.Label6.Text = "Editar proveedor"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'P_proveedor_ED
@@ -213,6 +213,7 @@ Partial Class P_proveedor_ED
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_proveedor_ED"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Editar proveedor"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)

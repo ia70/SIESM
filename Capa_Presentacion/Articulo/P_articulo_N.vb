@@ -33,14 +33,6 @@ Public Class P_articulo_N
         Return txtPrecio_venta.Text
     End Function
 
-    Public Function getImagen() As String
-        Return txtid_articulo.Text
-    End Function
-
-    Public Function getFecha_Registro() As String
-        Return Date.Today.ToString
-    End Function
-
 #End Region
     'Funciones de control de datos y funcionamiento
 
@@ -59,7 +51,7 @@ Public Class P_articulo_N
         _Articulo.precio_compra = getPrecio_Compra()
         _Articulo.precio_venta = getPrecio_Venta()
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
-        _Articulo.fecha = Date.Today.Date.ToString("yyyy.MM.dd")
+        _Articulo.fecha = getFecha()
         If Articulo.Insertar(_Articulo) Then
             M("¡El articulo ha sido guardado con exito!", 1)
         Else

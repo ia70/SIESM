@@ -176,6 +176,10 @@ Module Validacion
     End Function
 
 #End Region
-
+#Region "Obtencion de valores globales"
+    Public Function getFecha() As String
+        Return Date.Today.Date.ToString("yyyy.MM.dd")
+    End Function
+#End Region
 
 End Module

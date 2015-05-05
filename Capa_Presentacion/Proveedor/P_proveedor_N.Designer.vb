@@ -118,7 +118,7 @@ Partial Class P_proveedor_N
         '
         Me.txtDescripcion.Enabled = False
         Me.txtDescripcion.Location = New System.Drawing.Point(140, 134)
-        Me.txtDescripcion.MaxLength = 120
+        Me.txtDescripcion.MaxLength = 300
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -129,7 +129,7 @@ Partial Class P_proveedor_N
         '
         Me.txtTelefono.Enabled = False
         Me.txtTelefono.Location = New System.Drawing.Point(140, 100)
-        Me.txtTelefono.MaxLength = 30
+        Me.txtTelefono.MaxLength = 12
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(269, 26)
         Me.txtTelefono.TabIndex = 20
@@ -138,7 +138,7 @@ Partial Class P_proveedor_N
         '
         Me.txtDireccion.Enabled = False
         Me.txtDireccion.Location = New System.Drawing.Point(140, 65)
-        Me.txtDireccion.MaxLength = 15
+        Me.txtDireccion.MaxLength = 500
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(204, 26)
         Me.txtDireccion.TabIndex = 19
@@ -147,7 +147,7 @@ Partial Class P_proveedor_N
         '
         Me.txtNombre.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(140, 30)
-        Me.txtNombre.MaxLength = 20
+        Me.txtNombre.MaxLength = 30
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(204, 26)
         Me.txtNombre.TabIndex = 18

@@ -11,7 +11,7 @@ Public Class P_proveedor_N
         _Proveedor.direccion = txtDireccion.Text
         _Proveedor.descripcion = txtDescripcion.Text
         _Proveedor.telefono = txtTelefono.Text
-        _Proveedor.fecha = Date.Today.ToString
+        _Proveedor.fecha = getFecha()
         If Proveedor.Insertar(_Proveedor) Then
             M("¡El proveedor ha sido guardado con exito!", 1)
         Else
@@ -54,11 +54,36 @@ Public Class P_proveedor_N
 
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
-        If e.KeyChar = ChrW(13) And Len(txtNombre.Text) > 4 Then
+        If e.KeyChar = ChrW(13) And Len(txtNombre.Text) > 2 Then
             Campos(True)
             txtDireccion.Focus()
         Else
             Validar_Nombres(txtNombre, e)
         End If
     End Sub
+
+    Private Sub txtDireccion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDireccion.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            txtTelefono.Focus()
+        Else
+            Validar_Nombres(txtDireccion, e)
+        End If
+    End Sub
+
+    Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            txtDescripcion.Focus()
+        Else
+            Validar_Num(e)
+        End If
+    End Sub
+
+    Private Sub txtDescripcion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDescripcion.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            btnguardar.Focus()
+        Else
+            Validar_Texto(txtDescripcion, e)
+        End If
+    End Sub
+
 End Class
