@@ -128,6 +128,32 @@ Public Class P_articulo_N
         End If
     End Sub
 
+
+    Private Sub txtUnidad_medida_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUnidad_medida.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            txtNivel_critico.Focus()
+        End If
+    End Sub
+
+    Private Sub txtUnidad_medida_TextChanged(sender As Object, e As EventArgs) Handles txtUnidad_medida.TextChanged
+        txtNivel_critico.Focus()
+    End Sub
+
+    Private Sub txtNivel_critico_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNivel_critico.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            btnguardar.Focus()
+        Else
+            Validar_Num(e)
+        End If
+    End Sub
+
+    Private Sub ptrimagen_Click(sender As Object, e As EventArgs) Handles ptrimagen.Click
+        If Not IsNothing(ptrimagen.Image) Then
+            ImagenViewer.PictureBox1.Image = ptrimagen.Image
+            Popup.PopupFrm(ImagenViewer, 0)
+        End If
+    End Sub
+
 #End Region
 
 #Region "Funciones de validacion de campos"
@@ -159,29 +185,4 @@ Public Class P_articulo_N
 
 #End Region
 
-
-    Private Sub txtUnidad_medida_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUnidad_medida.KeyPress
-        If e.KeyChar = ChrW(13) Then
-            txtNivel_critico.Focus()
-        End If
-    End Sub
-
-    Private Sub txtUnidad_medida_TextChanged(sender As Object, e As EventArgs) Handles txtUnidad_medida.TextChanged
-        txtNivel_critico.Focus()
-    End Sub
-
-    Private Sub txtNivel_critico_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNivel_critico.KeyPress
-        If e.KeyChar = ChrW(13) Then
-            btnguardar.Focus()
-        Else
-            Validar_Num(e)
-        End If
-    End Sub
-
-    Private Sub ptrimagen_Click(sender As Object, e As EventArgs) Handles ptrimagen.Click
-        If Not IsNothing(ptrimagen.Image) Then
-            ImagenViewer.PictureBox1.Image = ptrimagen.Image
-            Popup.PopupFrm(ImagenViewer, 0)
-        End If
-    End Sub
 End Class

@@ -9,6 +9,10 @@ Module Validacion
         Dim Old As Char
         Dim Tm As Integer
 
+        If Char.IsControl(e.KeyChar) Then
+            Return e
+        End If
+
         Tm = Len(Tx.Text)
         If Tm = 0 And Not Char.IsLetter(e.KeyChar) Then
             e.KeyChar = Nothing
@@ -44,6 +48,10 @@ Module Validacion
         Dim Old As Char
         Dim Old2 As Char
         Dim Tm As Integer
+
+        If Char.IsControl(e.KeyChar) Then
+            Return e
+        End If
 
         Tm = Len(Tx.Text)
         If Tm = 0 And Not Char.IsLetter(e.KeyChar) Then
@@ -83,6 +91,10 @@ Module Validacion
 
     'Función para validacion de Números generales
     Public Function Validar_Num(ByVal e As KeyPressEventArgs) As KeyPressEventArgs
+        If Char.IsControl(e.KeyChar) Then
+            Return e
+        End If
+
         If (Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = ChrW(127) And Not e.KeyChar = ChrW(13) And Not e.KeyChar = ChrW(8) And Not e.KeyChar = "." Then
             e.KeyChar = Nothing
         End If

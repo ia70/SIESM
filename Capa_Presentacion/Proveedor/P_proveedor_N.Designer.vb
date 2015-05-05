@@ -213,6 +213,7 @@ Partial Class P_proveedor_N
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_proveedor_N"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar proveedor"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
