@@ -586,6 +586,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS proveedor_insertar;
  DELIMITER //
 CREATE PROCEDURE proveedor_insertar(
+	IN id		INT,
     IN nom 		VARCHAR(30),
     IN dir 		VARCHAR(500),
     IN des 		VARCHAR(300),
@@ -614,7 +615,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS proveedor_editar;
  DELIMITER //
 CREATE PROCEDURE proveedor_editar(
-	IN id_prov	INT,
+	IN id		INT,
     IN nom 		VARCHAR(30),
     IN dir 		VARCHAR(500),
     IN des 		VARCHAR(300),
@@ -625,19 +626,19 @@ CREATE PROCEDURE proveedor_editar(
 		UPDATE proveedor SET 
 			nombre		=	nom, 
 			direccion	=	dir, 
-            descricion	=	dir,  
+            descripcion	=	des,  
 			telefono	=	tel, 
 			fecha		=	fec
-		WHERE id_proveedor = id_pro;
+		WHERE id_proveedor = id;
    END //
 DELIMITER ;
 
 
 DROP PROCEDURE IF EXISTS proveedor_eliminar;
  DELIMITER //
-CREATE PROCEDURE proveedor_eliminar(IN proveedor INT)
+CREATE PROCEDURE proveedor_eliminar(IN ID INT)
    BEGIN
-		DELETE FROM proveedor WHERE id_proveedor=proveedor;
+		DELETE FROM proveedor WHERE id_proveedor=ID;
    END //
 DELIMITER ;
 
@@ -647,7 +648,7 @@ DROP PROCEDURE IF EXISTS proveedor_inicio;
 CREATE PROCEDURE proveedor_inicio()
    BEGIN
 		SELECT 
-        id_proveedor 		AS	 'ID',
+			id_proveedor 		AS	 'ID',
 			nombre 				AS	 'Proveedor',
 			direccion 			AS	 'Dirección',
 			descripcion 		AS	 'Descripción',
@@ -687,7 +688,8 @@ CREATE PROCEDURE proveedor_siguiente(
 			direccion 			AS	 'Dirección',
 			descripcion 		AS	 'Descripción',
 			telefono 			AS	 'Teléfono',
-			CAST(fecha AS char) AS	 'Fecha en que se registró'
+			CAST(fecha AS char) AS
+	 'Fecha en que se registró'
         FROM proveedor WHERE id_proveedor > id_prov ORDER BY id_proveedor ASC LIMIT 1;
    END //
 DELIMITER ;

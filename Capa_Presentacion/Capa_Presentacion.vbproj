@@ -287,6 +287,13 @@
   <ItemGroup>
     <None Include="Resources\DSC02120.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Devolucion\" />
+    <Folder Include="Inventario\" />
+    <Folder Include="Merma\" />
+    <Folder Include="Sucursal\" />
+    <Folder Include="Usuario\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
