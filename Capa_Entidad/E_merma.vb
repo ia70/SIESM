@@ -7,7 +7,6 @@
     Private _fecha As String
     Private _hora As String
     
-
     Public Property id_merma As String
         Get
             Return _id_merma
@@ -16,8 +15,6 @@
             _id_merma = value
         End Set
     End Property
-
-
     Public Property id_usuario As String
         Get
             Return _id_usuario
@@ -26,7 +23,6 @@
             _id_usuario = value
         End Set
     End Property
-
     Public Property id_articulo As String
         Get
             Return _id_articulo
@@ -35,8 +31,6 @@
             _id_articulo = value
         End Set
     End Property
-
-
     Public Property motivo As String
         Get
             Return _motivo
@@ -45,8 +39,6 @@
             _motivo = value
         End Set
     End Property
-
-
     Public Property cantidad As String
         Get
             Return _cantidad
@@ -55,7 +47,6 @@
             _cantidad = value
         End Set
     End Property
-
     Public Property fecha As String
         Get
             Return _fecha
@@ -64,7 +55,6 @@
             _fecha = value
         End Set
     End Property
-
     Public Property hora As String
         Get
             Return _hora

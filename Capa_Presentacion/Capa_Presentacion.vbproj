@@ -349,6 +349,9 @@
     <EmbeddedResource Include="Proveedor\P_proveedor_N.resx">
       <DependentUpon>P_proveedor_N.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sucursal\P_sucursal_N.resx">
+      <DependentUpon>P_sucursal_N.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\app.manifest" />

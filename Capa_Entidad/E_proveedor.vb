@@ -14,7 +14,6 @@
             _id_proveedor = value
         End Set
     End Property
-
     Public Property nombre As String
         Get
             Return _nombre

@@ -17,7 +17,6 @@
             _id_usuario = value
         End Set
     End Property
-
     Public Property contraseña As String
         Get
             Return _contraseña
@@ -26,7 +25,6 @@
             _contraseña = value
         End Set
     End Property
-
     Public Property nombre As String
         Get
             Return _nombre
@@ -35,7 +33,6 @@
             _nombre = value
         End Set
     End Property
-
     Public Property apellidos As String
         Get
             Return _apellidos
@@ -44,7 +41,6 @@
             _apellidos = value
         End Set
     End Property
-
     Public Property sexo As String
         Get
             Return _sexo
@@ -53,7 +49,6 @@
             _sexo = value
         End Set
     End Property
-
     Public Property tipo As String
         Get
             Return _tipo
@@ -62,7 +57,6 @@
             _tipo = value
         End Set
     End Property
-
     Public Property imagen As Byte()
         Get
             Return _imagen
@@ -71,8 +65,6 @@
             _imagen = value
         End Set
     End Property
-
-
     Public Property fecha As String
         Get
             Return _fecha
@@ -81,7 +73,6 @@
             _fecha = value
         End Set
     End Property
-
 
 End Class
 

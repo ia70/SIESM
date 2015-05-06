@@ -10,7 +10,6 @@
     Private _fecha As String
     Private _hora As String
 
-
     Public Property id_registro As String
         Get
             Return _id_registro
@@ -19,8 +18,6 @@
             _id_registro = value
         End Set
     End Property
-
-
     Public Property id_venta As String
         Get
             Return _id_venta
@@ -29,9 +26,6 @@
             _id_venta = value
         End Set
     End Property
-
-
-
     Public Property id_usuario As String
         Get
             Return _id_usuario
@@ -48,7 +42,6 @@
             _id_articulo = value
         End Set
     End Property
-
     Public Property motivo As String
         Get
             Return _motivo
@@ -57,7 +50,6 @@
             _motivo = value
         End Set
     End Property
-
     Public Property accion As String
         Get
             Return _accion
@@ -66,7 +58,6 @@
             _accion = value
         End Set
     End Property
-
     Public Property descripcion As String
         Get
             Return _descripcion
@@ -75,7 +66,6 @@
             _descripcion = value
         End Set
     End Property
-
     Public Property cantidad As String
         Get
             Return _cantidad
@@ -84,7 +74,6 @@
             _cantidad = value
         End Set
     End Property
-
     Public Property fecha As String
         Get
             Return _fecha
@@ -93,7 +82,6 @@
             _fecha = value
         End Set
     End Property
-
     Public Property hora As String
         Get
             Return _hora
