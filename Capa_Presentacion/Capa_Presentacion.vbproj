@@ -352,6 +352,12 @@
     <EmbeddedResource Include="Sucursal\P_sucursal_N.resx">
       <DependentUpon>P_sucursal_N.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\P_usuario_ED.resx">
+      <DependentUpon>P_usuario_ED.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\P_usuario_N.resx">
+      <DependentUpon>P_usuario_N.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\app.manifest" />
