@@ -10,3 +10,15 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.d
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.pdb
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.xml
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.Resources.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbproj.GenerateResource.Cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.pdb

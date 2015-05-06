@@ -1,21 +1,20 @@
 ﻿Public Class E_inventario
-    Private _id_registro As Integer
+    Private _id_inventario As Integer
     Private _id_sucursal As Integer
     Private _id_proveedor As Integer
+    Private _id_usuario As String
     Private _id_articulo As String
-    Private _unidad_medida As String
     Private _existencia As Decimal
-    Private _nivel_critico As Integer
-    Private _precio_compra As Decimal
-    Private _precio_venta As Decimal
-    Private _fecha_surtido As String
+    Private _condicion As String
+    Private _fecha As Date
 
-    Public Property id_registro As Integer
+
+    Public Property id_inventario As Integer
         Get
-            Return _id_registro
+            Return _id_inventario
         End Get
         Set(value As Integer)
-            _id_registro = value
+            _id_inventario = value
         End Set
     End Property
     Public Property id_sucursal As Integer
@@ -34,22 +33,24 @@
             _id_proveedor = value
         End Set
     End Property
+
+    Public Property id_usuario As String
+        Get
+            Return _id_usuario
+        End Get
+        Set(value As String)
+            _id_usuario = value
+        End Set
+    End Property
     Public Property id_articulo As String
         Get
-            Return _id_articulo
+            Return _id_usuario
         End Get
         Set(value As String)
-            _id_articulo = value
+            _id_usuario = value
         End Set
     End Property
-    Public Property unidad_medida As String
-        Get
-            Return _unidad_medida
-        End Get
-        Set(value As String)
-            _unidad_medida = value
-        End Set
-    End Property
+   
     Public Property existencia As Decimal
         Get
             Return _existencia
@@ -58,36 +59,21 @@
             _existencia = value
         End Set
     End Property
-    Public Property nivel_critico As Integer
+    Public Property condicion As String
         Get
-            Return _nivel_critico
-        End Get
-        Set(value As Integer)
-            _nivel_critico = value
-        End Set
-    End Property
-    Public Property precio_compra As Decimal
-        Get
-            Return _precio_compra
-        End Get
-        Set(value As Decimal)
-            _precio_compra = value
-        End Set
-    End Property
-    Public Property precio_venta As Decimal
-        Get
-            Return _precio_venta
-        End Get
-        Set(value As Decimal)
-            _precio_venta = value
-        End Set
-    End Property
-    Public Property fecha_surtido As String
-        Get
-            Return _fecha_surtido
+            Return _condicion
         End Get
         Set(value As String)
-            _fecha_surtido = value
+            _condicion = value
+        End Set
+    End Property
+   
+    Public Property fecha As Date
+        Get
+            Return _fecha
+        End Get
+        Set(value As Date)
+            _fecha = value
         End Set
     End Property
 

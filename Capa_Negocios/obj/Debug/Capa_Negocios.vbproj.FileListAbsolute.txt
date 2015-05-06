@@ -13,3 +13,18 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.pdb
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.xml
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbprojResolveAssemblyReference.cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbprojResolveAssemblyReference.cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.Resources.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.GenerateResource.Cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.pdb

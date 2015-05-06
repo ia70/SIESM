@@ -33,3 +33,38 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Pr
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.ImagenViewer.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Popup.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_sucursal_N.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.manifest
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.application
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Presentacion.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Entidad.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Negocios.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Negocios.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\bin\Debug\Capa_Datos.xml
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbprojResolveAssemblyReference.cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_C.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_ED.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_EL.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_articulo_N.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Resources.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.ImagenViewer.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Popup.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_puntoVenta.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_proveedor_C.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_proveedor_ED.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_proveedor_EL.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_proveedor_N.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_sucursal_N.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.Cache
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe.manifest
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.application
