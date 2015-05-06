@@ -5,6 +5,7 @@
     Private _descripcion As String
     Private _telefono As String
     Private _imagen As Byte()
+    Private _tipo As String
     Private _fecha As String
 
     Public Property id_sucursal As Integer
@@ -53,6 +54,14 @@
         End Get
         Set(value As Byte())
             _imagen = value
+        End Set
+    End Property
+    Public Property tipo As String
+        Get
+            Return _tipo
+        End Get
+        Set(value As String)
+            _tipo = value
         End Set
     End Property
     Public Property fecha As String
