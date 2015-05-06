@@ -1,49 +1,49 @@
 ﻿Imports Capa_Datos
 Imports Capa_Entidad
 Public Class N_Articulo
+    Dim Elemento As New D_articulo
 
-    Dim Articulo As New D_articulo
-    Public Function Listado() As DataSet
-        Return Articulo.Listado()
+    Public Function Insertar(ByVal _Elemento As E_articulo) As Boolean
+        Return Elemento.Insertar(_Elemento)
     End Function
 
-    Public Function Insertar(ByVal _Articulo As E_articulo) As Boolean
-        Return Articulo.Insertar(_Articulo)
+    Public Function Editar(ByVal _Elemento As E_articulo) As Boolean
+        Return Elemento.Editar(_Elemento)
+    End Function
+
+    Public Function Listado() As DataSet
+        Return Elemento.Listado()
     End Function
 
     Public Function Consultar(ByVal ID As String) As DataSet
-        Return Articulo.Consulta(ID)
+        Return Elemento.Consulta(ID)
     End Function
 
     Public Function Inicio() As DataSet
-        Return Articulo.GetInicio()
+        Return Elemento.GetInicio()
     End Function
 
     Public Function Final() As DataSet
-        Return Articulo.GetFinal()
+        Return Elemento.GetFinal()
     End Function
 
     Public Function Siguiente(ByVal ID As String) As DataSet
-        Return Articulo.GetSiguiente(ID)
+        Return Elemento.GetSiguiente(ID)
     End Function
 
     Public Function Atras(ByVal ID As String) As DataSet
-        Return Articulo.GetAnterior(ID)
+        Return Elemento.GetAnterior(ID)
     End Function
     Public Sub Eliminar(ByVal ID As String)
-        Articulo.Eliminar(ID)
+        Elemento.Eliminar(ID)
     End Sub
 
-    Public Function Editar(ByVal _Articulo As E_articulo) As Boolean
-        Return Articulo.Editar(_Articulo)
-    End Function
-
     Public Function Existe(ByVal ID As String) As Boolean
-        Return Articulo.Existe(ID)
+        Return Elemento.Existe(ID)
     End Function
 
     Public Function Filtrar(ByVal ID As String) As DataSet
-        Return Articulo.Filtrar(ID)
+        Return Elemento.Filtrar(ID)
     End Function
 
 End Class

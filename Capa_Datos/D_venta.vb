@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Capa_Entidad
-Public Class D_ventas
+Public Class D_venta
     Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter

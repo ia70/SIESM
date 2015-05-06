@@ -75,7 +75,7 @@
     <Compile Include="D_proveedor.vb" />
     <Compile Include="D_sucursal.vb" />
     <Compile Include="D_usuario.vb" />
-    <Compile Include="D_ventas.vb" />
+    <Compile Include="D_venta.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
