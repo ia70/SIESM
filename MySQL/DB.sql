@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS sucursal (
 		descripcion 	VARCHAR(300),
 		telefono 		VARCHAR(12),
 		imagen 			LONGBLOB,
+        tipo			VARCHAR(10),
 		fecha 			DATE NOT NULL,
     PRIMARY KEY (id_sucursal)
 );
@@ -161,7 +162,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS articulo_insertar;
  DELIMITER //
 CREATE PROCEDURE articulo_insertar(
-	IN id_art 	VARCHAR(20), 
+	IN id   	VARCHAR(20), 
     IN nom	 	VARCHAR(150),
     IN des 		VARCHAR(300),
 	IN niv_cri 	INT,
@@ -184,7 +185,7 @@ CREATE PROCEDURE articulo_insertar(
 			fecha
             ) 
 		VALUES(
-			id_art, 
+			id, 
 			nom, 
 			des, 
 			niv_cri, 
@@ -201,7 +202,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS articulo_editar;
  DELIMITER //
 CREATE PROCEDURE articulo_editar(
-	IN id_art 	VARCHAR(20), 
+	IN id   	VARCHAR(20), 
     IN nom	 	VARCHAR(150),
     IN des 		VARCHAR(300),
 	IN niv_cri 	INT,
@@ -221,16 +222,16 @@ CREATE PROCEDURE articulo_editar(
 			precio_venta 	= 	pre_ven,
 			imagen 			= 	ima, 
 			fecha		 	= 	fec
-		WHERE id_articulo = id_art;
+		WHERE id_arituculo  = id;
    END //
 DELIMITER ;
 
 
 DROP PROCEDURE IF EXISTS articulo_eliminar;
  DELIMITER //
-CREATE PROCEDURE articulo_eliminar(IN articulo VARCHAR(20))
+CREATE PROCEDURE articulo_eliminar(IN ID VARCHAR(20))
    BEGIN
-		DELETE FROM articulo WHERE id_articulo = articulo;
+		DELETE FROM articulo WHERE id_articulo = ID;
    END //
 DELIMITER ;
 
@@ -335,9 +336,9 @@ DELIMITER ;
 #TABLA INVENTARIO ***********TABLA INVENTARIO************TABLA INVENTARIO****************************************************************************
 
 
-DROP PROCEDURE IF EXISTS inventario_mostrar;
+DROP PROCEDURE IF EXISTS inf_inventario_mostrar;
  DELIMITER //
-CREATE PROCEDURE inventario_mostrar(IN Sucursal INT)
+CREATE PROCEDURE inf_inventario_mostrar(IN ID INT)
    BEGIN
 		SELECT 
 			inventario.id_articulo	AS	 'ID', 
@@ -349,9 +350,192 @@ CREATE PROCEDURE inventario_mostrar(IN Sucursal INT)
 			CAST(inventario.fecha AS char) 	AS	 'Fecha de surtido' 
 		FROM inventario
         INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo
-        WHERE inventario.id_sucursal = Sucursal;
+        WHERE inventario.id_sucursal = ID;
    END //
 DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS inventario_mostrar;
+ DELIMITER //
+CREATE PROCEDURE inventario_mostrar(IN ID INT)
+   BEGIN
+		SELECT 
+			id_inventario		AS  'ID',
+			id_sucursal			AS  'Sucursal',
+			id_pro 				AS  'Proveedor',
+			id_usu				AS  'Usuario',
+			id_art				AS  'Articulo',
+			exi					AS  'Existencia',
+			con					AS  'Condición',
+			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+		FROM inventario;
+   END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS inventario_consultar;
+ DELIMITER //
+CREATE PROCEDURE inventario_consultar(IN ID INT)
+   BEGIN
+		SELECT 
+			id_inventario		AS  'ID',
+			id_sucursal			AS  'Sucursal',
+			id_pro 				AS  'Proveedor',
+			id_usu				AS  'Usuario',
+			id_art				AS  'Articulo',
+			exi					AS  'Existencia',
+			con					AS  'Condición',
+			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+		FROM inventario
+        WHERE id_inventario = ID;
+   END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS inventario_insertar;
+ DELIMITER //
+CREATE PROCEDURE inventario_insertar(
+	IN id   	INT,
+    IN id_suc 	INT,
+    IN id_pro 	INT,
+    IN id_usu	VARCHAR(15),
+    IN id_art	VARCHAR(20),
+    IN exi	    DEC(10,2),
+    IN con 		VARCHAR(16),
+    IN fech 	DATE
+)
+   BEGIN
+		INSERT INTO inventario(
+			id_sucursal, 
+			id_proveedor, 
+			id_usuario, 
+			id_articulo, 
+			existencia,
+            condicion,
+			fecha
+        ) 
+		VALUES(
+            id_suc, 
+            id_pro, 
+            id_usu, 
+            id_art, 
+            exi, 
+            con,
+            fec
+		);
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS inventario_editar;
+ DELIMITER //
+CREATE PROCEDURE inventario_editar(
+	IN id   	INT, 
+    IN id_suc 	INT,
+    IN id_pro	INT,
+    IN id_usu	VARCHAR(15),
+    IN id_art	VARCHAR(20),
+    IN exi	    DEC(10,2),
+    IN con 		VARCHAR(16),
+    IN fec 		DATE
+)
+   BEGIN
+		UPDATE inventario SET 
+			id_sucursal		    =	id_suc, 
+            id_proveedor	    =	id_pro,
+			id_usuario	        =	id_usu,
+            id_articulo		    =   id_art,
+			existencia			=	exi, 
+			condicion			=	con,
+            fecha               =	fec
+		WHERE id_inventario = id;
+   END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS inventario_eliminar;
+ DELIMITER //
+CREATE PROCEDURE inventario_eliminar(IN ID VARCHAR(20))
+   BEGIN
+		DELETE FROM inventario WHERE id_inventario = ID;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS inventario_inicio;
+ DELIMITER //
+CREATE PROCEDURE inventario_inicio()
+   BEGIN
+		SELECT 
+			id_inventario		AS  'ID',
+			id_sucursal			AS  'Sucursal',
+			id_pro 				AS  'Proveedor',
+			id_usu				AS  'Usuario',
+			id_art				AS  'Articulo',
+			exi					AS  'Existencia',
+			con					AS  'Condición',
+			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+		FROM inventario LIMIT 0,1;
+
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS inventario_final;
+ DELIMITER //
+CREATE PROCEDURE inventario_final()
+   BEGIN
+		SELECT 
+			id_inventario		AS  'ID',
+			id_sucursal			AS  'Sucursal',
+			id_pro 				AS  'Proveedor',
+			id_usu				AS  'Usuario',
+			id_art				AS  'Articulo',
+			exi					AS  'Existencia',
+			con					AS  'Condición',
+			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+		FROM inventario ORDER BY id_articulo DESC LIMIT 1;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS inventario_siguiente;
+ DELIMITER //
+CREATE PROCEDURE inventario_siguiente(
+	IN ID INT
+)
+   BEGIN
+		SELECT 
+			id_inventario		AS  'ID',
+			id_sucursal			AS  'Sucursal',
+			id_pro 				AS  'Proveedor',
+			id_usu				AS  'Usuario',
+			id_art				AS  'Articulo',
+			exi					AS  'Existencia',
+			con					AS  'Condición',
+			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+		FROM inventario WHERE id_inventario > ID ORDER BY id_inventario ASC LIMIT 1;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS inventario_atras;
+ DELIMITER //
+CREATE PROCEDURE inventario_atras(
+	IN ID INT
+)
+   BEGIN
+		SELECT 
+			id_inventario		AS  'ID',
+			id_sucursal			AS  'Sucursal',
+			id_pro 				AS  'Proveedor',
+			id_usu				AS  'Usuario',
+			id_art				AS  'Articulo',
+			exi					AS  'Existencia',
+			con					AS  'Condición',
+			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+		FROM inventario WHERE id_inventario < ID ORDER BY id_inventario DESC LIMIT 1;
+   END //
+DELIMITER ;
+
+
 
 
 
@@ -364,12 +548,13 @@ CREATE PROCEDURE sucursal_mostrar()
    BEGIN
 		SELECT 
 			id_sucursal		AS	 'ID',
-			nombre 			AS	 'Sucursal',
+			nombre 			AS	 'Nombre',
 			direccion 		AS	 'Dirección',
 			descripcion 	AS	 'Descripción',
 			telefono 		AS	 'Teléfono',
 			imagen 			AS	 'Imagen',
-			CAST(fecha AS char) 	AS	 'Fecha en que se registró'
+            tipo			AS 	 'Tipo',
+			CAST(fecha AS char) 	AS	 'Fecha de registró'
 		FROM sucursal;
    END //
 DELIMITER ;
@@ -386,6 +571,7 @@ CREATE PROCEDURE sucursal_consultar(IN id INT)
 			descripcion 	AS	'Descripción',
 			telefono 		AS	'Teléfono',
             imagen			AS	'Imagen',
+			tipo			AS 	 'Tipo',
 			CAST(fecha AS char) 	AS	 'Fecha en que se registró'
 		FROM sucursal
         WHERE id_sucursal = id;
@@ -396,31 +582,32 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS sucursal_insertar;
  DELIMITER //
 CREATE PROCEDURE sucursal_insertar(
-	IN id_suc 	INT,
+	IN id   	INT,
     IN nom 		VARCHAR(30),
     IN dir 		VARCHAR(500),
     IN des 		VARCHAR(300),
     IN tel 		VARCHAR(12),
     IN ima 		LONGBLOB,
+    IN tip		VARCHAR(10),
     IN fec 		DATE
 )
    BEGIN
 		INSERT INTO sucursal(
-			id_sucursal, 
 			nombre, 
 			direccion, 
 			descripcin, 
 			telefono, 
 			imagen, 
+            tipo,
 			fecha
         ) 
 		VALUES(
-			id_suc, 
             nom, 
             dir, 
             des, 
             tel, 
             ima, 
+            tip,
             fec
 		);
    END //
@@ -430,33 +617,34 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS sucursal_editar;
  DELIMITER //
 CREATE PROCEDURE sucursal_editar(
-	IN id_suc 	INT, 
+	IN id 		INT, 
     IN nom	 	VARCHAR(100),
     IN dir 		VARCHAR(500),
     IN des 		VARCHAR(300),
     IN tel		VARCHAR(12),
     IN ima 		LONGBLOB,
+    IN tip		VARCHAR(10),
     IN fec 		DATE
 )
    BEGIN
 		UPDATE sucursal SET 
-			id_sucursal		=	nom_cor, 
 			nombre			=	nom_lar, 
             direccion		=	dir,
 			descripcion		=	des,
             telefono		=	tel,
 			imagen			=	ima, 
+            tipo			=	tip,
 			fecha			=	fec
-		WHERE id_sucursal = id_suc;
+		WHERE id_sucursal = id;
    END //
 DELIMITER ;
 
 
 DROP PROCEDURE IF EXISTS sucursal_eliminar;
  DELIMITER //
-CREATE PROCEDURE sucursal_eliminar(IN Sucursal INT)
+CREATE PROCEDURE sucursal_eliminar(IN ID INT)
    BEGIN
-		DELETE FROM sucursal WHERE id_sucursal = Sucursal;
+		DELETE FROM sucursal WHERE id_sucursal = ID;
    END //
 DELIMITER ;
 
@@ -770,14 +958,14 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS usuario_insertar;
  DELIMITER //
 CREATE PROCEDURE usuario_insertar(
-	IN id_usu 	VARCHAR(15), 
+	IN id   	VARCHAR(15), 
     IN contr 	VARCHAR(15),
     IN nom   	VARCHAR(20),
     IN apell	VARCHAR(30),
 	IN sex   	VARCHAR(2),
     IN tip  	INT,
     IN ima 		LONGBLOB,
-    IN fec_reg 	DATE
+    IN fec 	DATE
 )
    BEGIN
 		INSERT INTO usuario(
@@ -788,17 +976,17 @@ CREATE PROCEDURE usuario_insertar(
 			sexo, 
 			tipo, 
 			imagen, 
-			fecha_registro
+			fecha
             ) 
 		VALUES(
-			id_usu, 
+			id, 
 			contr, 
 			usu, 
 		    apell, 
 			sex, 
 			tip, 
 			ima, 
-			fec_reg
+			fec
             );
    END //
 DELIMITER ;
@@ -807,7 +995,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS usuario_editar;
  DELIMITER //
 CREATE PROCEDURE usuario_editar(
-	IN id_usu 	VARCHAR(15), 
+	IN id       VARCHAR(15), 
     IN contr 	VARCHAR(15),
     IN nom   	VARCHAR(20),
     IN apell	VARCHAR(30),
@@ -825,17 +1013,17 @@ CREATE PROCEDURE usuario_editar(
 			sexo        	= 	sex,
 			tipo        	= 	tip,
 			imagen 			= 	ima, 
-			fecha_registro 	= 	fec_reg
-		WHERE id_usuario = id_usu;
+			fecha		 	= 	fec
+		WHERE id_usurio = id;
    END //
 DELIMITER ;
 
 
 DROP PROCEDURE IF EXISTS usuario_eliminar;
  DELIMITER //
-CREATE PROCEDURE usuario_eliminar(IN usuario VARCHAR(15))
+CREATE PROCEDURE usuario_eliminar(IN ID VARCHAR(15))
    BEGIN
-		DELETE FROM usuario WHERE id_usuario = usuario;
+		DELETE FROM usuario WHERE id_usuario = ID;
    END //
 DELIMITER ;
 
@@ -964,7 +1152,7 @@ CREATE PROCEDURE merma_consultar(IN id_mer INT)
 			motivo      	AS	 'motivo de entrada a merma',
 			cantidad	    AS	 'cantidad de articulos',
 			hora 			AS	 'hora de registro',
-			CAST(fecha_registro AS char) 	AS	 'Fecha de registro'
+			CAST(fecha AS char) 	AS	 'Fecha de registro'
 		FROM merma 
         WHERE id_merma = id_mer;
    END //
@@ -974,17 +1162,16 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS merma_insertar;
  DELIMITER //
 CREATE PROCEDURE merma_insertar(
-	IN id_mer  	INT,
+	IN id 		INT,
     IN id_usu	VARCHAR(15),
     IN id_art   VARCHAR(20),
     IN mot 		VARCHAR(500),
     IN cant     DECIMAL(10,4),
     IN hor 		VARCHAR(15),
-    IN fecha    DATE
+    IN fec    DATE
 )
    BEGIN
 		INSERT INTO merma(
-			id_merma, 
 			id_sucursal, 
 			id_art, 
 			motivo, 
@@ -993,7 +1180,6 @@ CREATE PROCEDURE merma_insertar(
 			hora
         ) 
 		VALUES(
-			id_mer, 
             id_suc, 
             id_art, 
             mot, 
@@ -1008,7 +1194,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS merma_editar;
  DELIMITER //
 CREATE PROCEDURE merma_editar(
-	IN id_mer  	INT,
+	IN id    	INT,
     IN id_usu	VARCHAR(15),
     IN id_art   VARCHAR(20),
     IN mot 		VARCHAR(500),
@@ -1018,14 +1204,13 @@ CREATE PROCEDURE merma_editar(
 )
    BEGIN
 		UPDATE merma SET 
-			id_merma    	=	id_mer, 
 			id_usuario		=	id_usu, 
             id_articulo		=	id_art,
 			motivo   		=	mot,
             cantidad 		=	cant,
 			hora			=	hor,
             fecha			=	fec
-            WHERE id_merma = id_mer;
+            WHERE id_merma = id;
 
    END //
 DELIMITER ;
@@ -1033,9 +1218,9 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS merma_eliminar;
  DELIMITER //
-CREATE PROCEDURE merma_eliminar(IN merma INT)
+CREATE PROCEDURE merma_eliminar(IN ID INT)
    BEGIN
-		DELETE FROM merma WHERE id_merma = merma;
+		DELETE FROM merma WHERE id_merma = ID;
    END //
 DELIMITER ;
 
@@ -1051,7 +1236,7 @@ CREATE PROCEDURE merma_inicio()
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
-			CAST(fecha_registro AS char) 	AS	 'Fecha de registro'
+			CAST(fecha AS char) 	AS	 'Fecha de registro'
 		FROM merma
         LIMIT 0,1;
    END //
@@ -1069,7 +1254,7 @@ CREATE PROCEDURE merma_final()
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
-			CAST(fecha_registro AS char) 	AS	 'Fecha de registro'
+			CAST(fecha AS char) 	AS	 'Fecha de registro'
 		FROM merma WHERE id_merma > id_mer ORDER BY id_merma ASC LIMIT 1;
    END //
 DELIMITER ;
@@ -1087,7 +1272,7 @@ CREATE PROCEDURE merma_siguiente(
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
-			CAST(fecha_registro AS char) 	AS	 'Fecha de registro'
+			CAST(fecha AS char) 	AS	 'Fecha de registro'
 		FROM merma WHERE id_merma > id_mer ORDER BY id_merma ASC LIMIT 1;
    END //
 DELIMITER ;
@@ -1096,7 +1281,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS merma_atras;
  DELIMITER //
 CREATE PROCEDURE merma_atras(
-	IN id_mer INT
+	IN id INT
 )
    BEGIN
 		SELECT 
@@ -1105,8 +1290,8 @@ CREATE PROCEDURE merma_atras(
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
-			CAST(fecha_registro AS char) 	AS	 'Fecha de registro'
-		FROM merma WHERE id_merma > id_mer ORDER BY id_merma ASC LIMIT 1;
+			CAST(fecha AS char) 	AS	 'Fecha de registro'
+		FROM merma WHERE id_merma > id ORDER BY id_merma ASC LIMIT 1;
    END //
 DELIMITER ;
 
@@ -1156,7 +1341,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS venta_insertar;
  DELIMITER //
 CREATE PROCEDURE venta_insertar(
-	IN id_reg    	INT,
+	IN id    	  INT,
     IN id_ven	  VARCHAR(12),
     IN id_usu     VARCHAR(15),
     IN id_art 	  VARCHAR(20),
@@ -1168,7 +1353,6 @@ CREATE PROCEDURE venta_insertar(
 )
    BEGIN
 		INSERT INTO venta(
-			id_registro, 
 			id_venta, 
 			id_usuario, 
             id_articulo,
@@ -1179,7 +1363,6 @@ CREATE PROCEDURE venta_insertar(
 			hora
         ) 
 		VALUES(
-			id_reg, 
             id_ven, 
             id_usu,
             id_art,
@@ -1196,7 +1379,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS venta_editar;
  DELIMITER //
 CREATE PROCEDURE venta_editar(
-	IN id_reg    	INT,
+	IN id   	  INT,
     IN id_ven	  VARCHAR(12),
     IN id_usu     VARCHAR(15),
     IN id_art 	  VARCHAR(20),
@@ -1208,7 +1391,6 @@ CREATE PROCEDURE venta_editar(
 )
    BEGIN
 		UPDATE venta SET 
-			id_registro    	=	id_reg, 
 			id_venta		=	id_ven, 
             id_usuario      =   id_usu,
             id_articulo 	=	id_art,
@@ -1217,7 +1399,7 @@ CREATE PROCEDURE venta_editar(
 			precio_venta	=	pre_ven, 
             fecha           =   fec,
 			hora			=	hor
-		WHERE id_venta = id_ven;
+		WHERE id_venta = id;
    END //
 DELIMITER ;
 
@@ -1360,7 +1542,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS devolucion_insertar;
  DELIMITER //
 CREATE PROCEDURE devolucion_insertar(
-	IN id_reg    	INT,
+	IN id       	INT,
     IN id_ven	  VARCHAR(12),
     IN id_usu     VARCHAR(15),
     IN id_art 	  VARCHAR(20),
@@ -1373,7 +1555,6 @@ CREATE PROCEDURE devolucion_insertar(
 )
    BEGIN
 		INSERT INTO devolucion(
-			id_registro, 
 			id_venta, 
 			id_usuario, 
             id_articulo,
@@ -1385,7 +1566,6 @@ CREATE PROCEDURE devolucion_insertar(
 			hora
         ) 
 		VALUES(
-			id_reg, 
             id_ven, 
             id_usu, 
             id_art,
@@ -1403,7 +1583,7 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS devolucion_editar;
  DELIMITER //
 CREATE PROCEDURE devolucion_editar(
-	IN id_reg    	INT,
+	IN id         INT,
     IN id_ven	  VARCHAR(12),
     IN id_usu     VARCHAR(15),
     IN id_art 	  VARCHAR(20),
@@ -1416,7 +1596,6 @@ CREATE PROCEDURE devolucion_editar(
 )
    BEGIN
 		UPDATE devolucion SET 
-			id_registro    	=	id_reg, 
 			id_venta		=	id_ven, 
             id_usuario      =   id_usu,
             id_articulo 	=	id_art,
@@ -1426,16 +1605,16 @@ CREATE PROCEDURE devolucion_editar(
             cantidad        =   can,
             fecha           =   fec,
 			hora			=	hor
-		WHERE id_devolucion = id_dev;
+		WHERE id_devolucion = id;
    END //
 DELIMITER ;
 
 
 DROP PROCEDURE IF EXISTS devolucion_eliminar;
  DELIMITER //
-CREATE PROCEDURE devolucion_eliminar(IN devolucion INT)
+CREATE PROCEDURE devolucion_eliminar(IN ID INT)
    BEGIN
-		DELETE FROM devolucion WHERE id_devolucion = devolucion;
+		DELETE FROM devolucion WHERE id_devolucion = ID;
    END //
 DELIMITER ;
 
@@ -1445,7 +1624,7 @@ DROP PROCEDURE IF EXISTS devolucion_inicio;
 CREATE PROCEDURE devolucion_inicio()
    BEGIN 
 		SELECT
-           id_reg          AS	 'ID',
+            id_reg          AS	 'ID',
 			id_venta        AS	 'ID',
             id_usuario      AS   'ID',
             id_articulo     AS   'ID',
