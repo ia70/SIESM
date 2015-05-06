@@ -1,5 +1,5 @@
 ﻿Public Class E_devolucion
-    Private _id_registro As String
+    Private _id_reg As String
     Private _id_venta As String
     Private _id_usuario As String
     Private _id_articulo As String
@@ -10,12 +10,12 @@
     Private _fecha As String
     Private _hora As String
 
-    Public Property id_registro As String
+    Public Property id_reg As String
         Get
-            Return _id_registro
+            Return _id_reg
         End Get
         Set(value As String)
-            _id_registro = value
+            _id_reg = value
         End Set
     End Property
     Public Property id_venta As String
