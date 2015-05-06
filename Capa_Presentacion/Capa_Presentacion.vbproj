@@ -130,6 +130,78 @@
     <Compile Include="Articulo\P_articulo_N.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Devolucion\P_devol_C.Designer.vb">
+      <DependentUpon>P_devol_C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devolucion\P_devol_C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devolucion\P_devol_ED.Designer.vb">
+      <DependentUpon>P_devol_ED.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devolucion\P_devol_ED.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devolucion\P_devol_EL.Designer.vb">
+      <DependentUpon>P_devol_EL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devolucion\P_devol_EL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devolucion\P_devol_N.Designer.vb">
+      <DependentUpon>P_devol_N.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devolucion\P_devol_N.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\P_invent_C.Designer.vb">
+      <DependentUpon>P_invent_C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\P_invent_C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\P_invent_ED.Designer.vb">
+      <DependentUpon>P_invent_ED.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\P_invent_ED.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\P_invent_EL.Designer.vb">
+      <DependentUpon>P_invent_EL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\P_invent_EL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\P_invent_N.Designer.vb">
+      <DependentUpon>P_invent_N.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\P_invent_N.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Merma\P_merma_C.Designer.vb">
+      <DependentUpon>P_merma_C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Merma\P_merma_C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Merma\P_merma_ED.Designer.vb">
+      <DependentUpon>P_merma_ED.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Merma\P_merma_ED.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Merma\P_merma_EL.Designer.vb">
+      <DependentUpon>P_merma_EL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Merma\P_merma_EL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Merma\P_merma_N.Designer.vb">
+      <DependentUpon>P_merma_N.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Merma\P_merma_N.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -188,6 +260,54 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conf\Validacion.vb" />
+    <Compile Include="Sucursal\P_sucursal_C.Designer.vb">
+      <DependentUpon>P_sucursal_C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal\P_sucursal_C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursal\P_sucursal_ED.Designer.vb">
+      <DependentUpon>P_sucursal_ED.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal\P_sucursal_ED.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursal\P_sucursal_EL.Designer.vb">
+      <DependentUpon>P_sucursal_EL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal\P_sucursal_EL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sucursal\P_sucursal_N.Designer.vb">
+      <DependentUpon>P_sucursal_N.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sucursal\P_sucursal_N.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_C.Designer.vb">
+      <DependentUpon>P_usuario_C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_ED.Designer.vb">
+      <DependentUpon>P_usuario_ED.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_ED.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_EL.Designer.vb">
+      <DependentUpon>P_usuario_EL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_EL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_N.Designer.vb">
+      <DependentUpon>P_usuario_N.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\P_usuario_N.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Articulo\P_articulo_C.resx">
@@ -287,13 +407,7 @@
   <ItemGroup>
     <None Include="Resources\DSC02120.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Devolucion\" />
-    <Folder Include="Inventario\" />
-    <Folder Include="Merma\" />
-    <Folder Include="Sucursal\" />
-    <Folder Include="Usuario\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
