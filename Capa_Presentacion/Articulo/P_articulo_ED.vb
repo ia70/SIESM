@@ -225,4 +225,8 @@ Public Class P_articulo_ED
             Popup.PopupFrm(ImagenViewer, 0)
         End If
     End Sub
+
+    Private Sub P_articulo_ED_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

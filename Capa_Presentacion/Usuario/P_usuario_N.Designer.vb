@@ -25,21 +25,21 @@ Partial Class P_usuario_N
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtDireccion = New System.Windows.Forms.TextBox()
-        Me.txtTelefono = New System.Windows.Forms.TextBox()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.btnguardar = New System.Windows.Forms.Button()
-        Me.btnterminar = New System.Windows.Forms.Button()
-        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
         Me.btnbuscar_imagen = New System.Windows.Forms.Button()
         Me.ptrimagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
+        Me.btnterminar = New System.Windows.Forms.Button()
+        Me.btnguardar = New System.Windows.Forms.Button()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtapellidos = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,7 +78,7 @@ Partial Class P_usuario_N
         Me.Panel3.Controls.Add(Me.btnguardar)
         Me.Panel3.Controls.Add(Me.txtDescripcion)
         Me.Panel3.Controls.Add(Me.txtTelefono)
-        Me.Panel3.Controls.Add(Me.txtDireccion)
+        Me.Panel3.Controls.Add(Me.txtapellidos)
         Me.Panel3.Controls.Add(Me.txtNombre)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
@@ -89,125 +89,6 @@ Partial Class P_usuario_N
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(696, 363)
         Me.Panel3.TabIndex = 17
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(5, 5)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(696, 49)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Agregar usuario"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 18)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Nombre:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 103)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 18)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Telefono:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(36, 68)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 18)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Apellidos:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(36, 137)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(96, 18)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Descripción:"
-        '
-        'txtNombre
-        '
-        Me.txtNombre.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(140, 30)
-        Me.txtNombre.MaxLength = 30
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(204, 26)
-        Me.txtNombre.TabIndex = 18
-        Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtDireccion
-        '
-        Me.txtDireccion.Enabled = False
-        Me.txtDireccion.Location = New System.Drawing.Point(140, 65)
-        Me.txtDireccion.MaxLength = 500
-        Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(204, 26)
-        Me.txtDireccion.TabIndex = 19
-        '
-        'txtTelefono
-        '
-        Me.txtTelefono.Enabled = False
-        Me.txtTelefono.Location = New System.Drawing.Point(140, 100)
-        Me.txtTelefono.MaxLength = 12
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(269, 26)
-        Me.txtTelefono.TabIndex = 20
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(140, 134)
-        Me.txtDescripcion.MaxLength = 300
-        Me.txtDescripcion.Multiline = True
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtDescripcion.Size = New System.Drawing.Size(269, 101)
-        Me.txtDescripcion.TabIndex = 21
-        '
-        'btnguardar
-        '
-        Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnguardar.Enabled = False
-        Me.btnguardar.Location = New System.Drawing.Point(466, 273)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(105, 30)
-        Me.btnguardar.TabIndex = 24
-        Me.btnguardar.Text = "Guardar"
-        Me.btnguardar.UseVisualStyleBackColor = True
-        '
-        'btnterminar
-        '
-        Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnterminar.Location = New System.Drawing.Point(577, 273)
-        Me.btnterminar.Name = "btnterminar"
-        Me.btnterminar.Size = New System.Drawing.Size(105, 30)
-        Me.btnterminar.TabIndex = 25
-        Me.btnterminar.Text = "Terminar"
-        Me.btnterminar.UseVisualStyleBackColor = True
-        '
-        'btnlimpiar_campos
-        '
-        Me.btnlimpiar_campos.Enabled = False
-        Me.btnlimpiar_campos.Location = New System.Drawing.Point(322, 273)
-        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
-        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
-        Me.btnlimpiar_campos.TabIndex = 26
-        Me.btnlimpiar_campos.Text = "Limpiar campos"
-        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
         '
         'btnbuscar_imagen
         '
@@ -239,6 +120,125 @@ Partial Class P_usuario_N
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Imágen del articulo:"
         '
+        'btnlimpiar_campos
+        '
+        Me.btnlimpiar_campos.Enabled = False
+        Me.btnlimpiar_campos.Location = New System.Drawing.Point(322, 273)
+        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
+        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
+        Me.btnlimpiar_campos.TabIndex = 26
+        Me.btnlimpiar_campos.Text = "Limpiar campos"
+        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
+        '
+        'btnterminar
+        '
+        Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnterminar.Location = New System.Drawing.Point(577, 273)
+        Me.btnterminar.Name = "btnterminar"
+        Me.btnterminar.Size = New System.Drawing.Size(105, 30)
+        Me.btnterminar.TabIndex = 25
+        Me.btnterminar.Text = "Terminar"
+        Me.btnterminar.UseVisualStyleBackColor = True
+        '
+        'btnguardar
+        '
+        Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnguardar.Enabled = False
+        Me.btnguardar.Location = New System.Drawing.Point(466, 273)
+        Me.btnguardar.Name = "btnguardar"
+        Me.btnguardar.Size = New System.Drawing.Size(105, 30)
+        Me.btnguardar.TabIndex = 24
+        Me.btnguardar.Text = "Guardar"
+        Me.btnguardar.UseVisualStyleBackColor = True
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Enabled = False
+        Me.txtDescripcion.Location = New System.Drawing.Point(140, 134)
+        Me.txtDescripcion.MaxLength = 300
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txtDescripcion.Size = New System.Drawing.Size(269, 101)
+        Me.txtDescripcion.TabIndex = 21
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.Enabled = False
+        Me.txtTelefono.Location = New System.Drawing.Point(140, 100)
+        Me.txtTelefono.MaxLength = 12
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(269, 26)
+        Me.txtTelefono.TabIndex = 20
+        '
+        'txtapellidos
+        '
+        Me.txtapellidos.Enabled = False
+        Me.txtapellidos.Location = New System.Drawing.Point(140, 65)
+        Me.txtapellidos.MaxLength = 500
+        Me.txtapellidos.Name = "txtapellidos"
+        Me.txtapellidos.Size = New System.Drawing.Size(204, 26)
+        Me.txtapellidos.TabIndex = 19
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(140, 30)
+        Me.txtNombre.MaxLength = 30
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(204, 26)
+        Me.txtNombre.TabIndex = 18
+        Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(36, 137)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(96, 18)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Descripción:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(36, 68)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 18)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Apellidos:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(36, 103)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 18)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Telefono:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(36, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(68, 18)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Nombre:"
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(5, 5)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(696, 49)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Agregar usuario"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'P_usuario_N
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -246,7 +246,7 @@ Partial Class P_usuario_N
         Me.ClientSize = New System.Drawing.Size(706, 422)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_usuario_N"
         Me.Text = "Agregar usuario"
         Me.Panel1.ResumeLayout(False)
@@ -265,7 +265,7 @@ Partial Class P_usuario_N
     Friend WithEvents btnguardar As System.Windows.Forms.Button
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
     Friend WithEvents txtTelefono As System.Windows.Forms.TextBox
-    Friend WithEvents txtDireccion As System.Windows.Forms.TextBox
+    Friend WithEvents txtapellidos As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label

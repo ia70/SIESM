@@ -120,4 +120,8 @@ Public Class P_articulo_EL
             Popup.PopupFrm(ImagenViewer, 0)
         End If
     End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class
