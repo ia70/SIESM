@@ -29,13 +29,9 @@ Public Class D_usuario
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id", MySqlDbType.VarChar).Value = _Elemento.id_articulo
+
                 .Add("nom", MySqlDbType.VarChar).Value = _Elemento.nombre
-                .Add("des", MySqlDbType.VarChar).Value = _Elemento.descripcion
-                .Add("niv_cri", MySqlDbType.Int32).Value = _Elemento.nivel_critico
-                .Add("uni_med", MySqlDbType.VarChar).Value = _Elemento.unidad_medida
-                .Add("pre_com", MySqlDbType.Decimal).Value = _Elemento.precio_compra
-                .Add("pre_ven", MySqlDbType.Decimal).Value = _Elemento.precio_venta
+
                 .Add("ima", MySqlDbType.LongBlob).Value = _Elemento.imagen
                 .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
             End With

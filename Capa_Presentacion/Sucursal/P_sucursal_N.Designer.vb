@@ -25,6 +25,8 @@ Partial Class P_sucursal_N
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtTipo = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.btnBuscar_imagen = New System.Windows.Forms.Button()
         Me.ptrImagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -70,6 +72,8 @@ Partial Class P_sucursal_N
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.txtTipo)
+        Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.btnBuscar_imagen)
         Me.Panel3.Controls.Add(Me.ptrImagen)
         Me.Panel3.Controls.Add(Me.Label5)
@@ -89,6 +93,26 @@ Partial Class P_sucursal_N
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(710, 364)
         Me.Panel3.TabIndex = 17
+        '
+        'txtTipo
+        '
+        Me.txtTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txtTipo.Enabled = False
+        Me.txtTipo.FormattingEnabled = True
+        Me.txtTipo.Items.AddRange(New Object() {"Sucursal", "Bodega"})
+        Me.txtTipo.Location = New System.Drawing.Point(140, 204)
+        Me.txtTipo.Name = "txtTipo"
+        Me.txtTipo.Size = New System.Drawing.Size(172, 26)
+        Me.txtTipo.TabIndex = 32
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(36, 207)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(42, 18)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Tipo:"
         '
         'btnBuscar_imagen
         '
@@ -114,11 +138,11 @@ Partial Class P_sucursal_N
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(495, 10)
+        Me.Label5.Location = New System.Drawing.Point(481, 10)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 18)
+        Me.Label5.Size = New System.Drawing.Size(158, 18)
         Me.Label5.TabIndex = 28
-        Me.Label5.Text = "Imágen del articulo:"
+        Me.Label5.Text = "Imágen de la sucursal"
         '
         'btnlimpiar_campos
         '
@@ -154,12 +178,12 @@ Partial Class P_sucursal_N
         'txtDescripcion
         '
         Me.txtDescripcion.Enabled = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(140, 134)
+        Me.txtDescripcion.Location = New System.Drawing.Point(140, 137)
         Me.txtDescripcion.MaxLength = 300
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtDescripcion.Size = New System.Drawing.Size(269, 101)
+        Me.txtDescripcion.Size = New System.Drawing.Size(269, 57)
         Me.txtDescripcion.TabIndex = 21
         '
         'txtTelefono
@@ -193,7 +217,7 @@ Partial Class P_sucursal_N
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(36, 137)
+        Me.Label4.Location = New System.Drawing.Point(36, 140)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(96, 18)
         Me.Label4.TabIndex = 17
@@ -248,6 +272,7 @@ Partial Class P_sucursal_N
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_sucursal_N"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar sucursal"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
@@ -274,4 +299,6 @@ Partial Class P_sucursal_N
     Friend WithEvents btnBuscar_imagen As System.Windows.Forms.Button
     Friend WithEvents ptrImagen As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtTipo As System.Windows.Forms.ComboBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class

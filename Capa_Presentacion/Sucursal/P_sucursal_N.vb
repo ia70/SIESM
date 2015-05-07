@@ -1,7 +1,7 @@
 ﻿Imports Capa_Negocios
 Imports Capa_Entidad
 Public Class P_sucursal_N
-    Dim Proveedor As New Capa_Negocios.N_sucursal
+    Dim Sucursal As New Capa_Negocios.N_sucursal
     'Funciones de control de datos y funcionamiento
 
 #Region "Botones"
@@ -13,11 +13,12 @@ Public Class P_sucursal_N
         _Sucursal.telefono = txtTelefono.Text
         _Sucursal.fecha = getFecha()
         _Sucursal.imagen = Imagen_Bytes(ptrImagen.Image)
-        'If Sucursal.Insertar(_Sucursal) Then
-        M("¡El proveedor ha sido guardado con exito!", 1)
-        'Else
-        M("¡No se ha podido guardar el proveedor!", 3)
-        'End If
+        _Sucursal.tipo = txtTipo.Text
+        If Sucursal.Insertar(_Sucursal) Then
+            M("¡La sucursal ha sido guardada con exito!", 1)
+        Else
+            M("¡No se ha podido guardar la sucursal!", 3)
+        End If
         Call btnlimpiar_campos_Click(sender, e)
     End Sub
 
@@ -39,6 +40,7 @@ Public Class P_sucursal_N
         txtDireccion.Text = ""
         txtDescripcion.Text = ""
         txtTelefono.Text = ""
+        txtTipo.SelectedIndex = 0
         Campos(False)
         txtNombre.Focus()
     End Sub
@@ -50,6 +52,7 @@ Public Class P_sucursal_N
         txtTelefono.Enabled = Valor
         btnlimpiar_campos.Enabled = Valor
         btnguardar.Enabled = Valor
+        txtTipo.Enabled = Valor
     End Sub
 #End Region
 
@@ -96,5 +99,14 @@ Public Class P_sucursal_N
 
     Private Sub btnBuscar_imagen_Click(sender As Object, e As EventArgs) Handles btnBuscar_imagen.Click
         ptrImagen.Image = Abrir_Imagen()
+    End Sub
+
+    Private Sub P_sucursal_N_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        txtTipo.SelectedIndex = 0
+        txtNombre.Focus()
+    End Sub
+
+    Private Sub txtTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtTipo.SelectedIndexChanged
+        btnguardar.Focus()
     End Sub
 End Class
