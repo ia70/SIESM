@@ -284,8 +284,9 @@ Partial Class P_usuario_C
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label6)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_usuario_C"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_usuario_C"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

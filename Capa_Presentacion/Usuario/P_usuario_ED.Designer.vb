@@ -286,6 +286,7 @@ Partial Class P_usuario_ED
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_usuario_ED"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_usuario_ED"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

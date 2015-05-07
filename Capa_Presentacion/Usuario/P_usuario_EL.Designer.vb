@@ -24,6 +24,13 @@ Partial Class P_usuario_EL
     Private Sub InitializeComponent()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtfecha = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txttipo = New System.Windows.Forms.ComboBox()
+        Me.txtsexo = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Txtapellidos = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.btnbuscar_imagen = New System.Windows.Forms.Button()
         Me.ptrimagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,13 +44,6 @@ Partial Class P_usuario_EL
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Txtapellidos = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtsexo = New System.Windows.Forms.ComboBox()
-        Me.txttipo = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtfecha = New System.Windows.Forms.TextBox()
         Me.Panel3.SuspendLayout()
         CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -89,6 +89,67 @@ Partial Class P_usuario_EL
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(722, 348)
         Me.Panel3.TabIndex = 18
+        '
+        'txtfecha
+        '
+        Me.txtfecha.Enabled = False
+        Me.txtfecha.Location = New System.Drawing.Point(138, 278)
+        Me.txtfecha.MaxLength = 500
+        Me.txtfecha.Name = "txtfecha"
+        Me.txtfecha.Size = New System.Drawing.Size(204, 26)
+        Me.txtfecha.TabIndex = 37
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(42, 278)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(56, 18)
+        Me.Label9.TabIndex = 36
+        Me.Label9.Text = "Fecha:"
+        '
+        'txttipo
+        '
+        Me.txttipo.FormattingEnabled = True
+        Me.txttipo.Location = New System.Drawing.Point(138, 230)
+        Me.txttipo.Name = "txttipo"
+        Me.txttipo.Size = New System.Drawing.Size(121, 26)
+        Me.txttipo.TabIndex = 35
+        '
+        'txtsexo
+        '
+        Me.txtsexo.FormattingEnabled = True
+        Me.txtsexo.Location = New System.Drawing.Point(138, 185)
+        Me.txtsexo.Name = "txtsexo"
+        Me.txtsexo.Size = New System.Drawing.Size(121, 26)
+        Me.txtsexo.TabIndex = 34
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(36, 193)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 18)
+        Me.Label8.TabIndex = 33
+        Me.Label8.Text = "Sexo:"
+        '
+        'Txtapellidos
+        '
+        Me.Txtapellidos.Enabled = False
+        Me.Txtapellidos.Location = New System.Drawing.Point(138, 144)
+        Me.Txtapellidos.MaxLength = 12
+        Me.Txtapellidos.Name = "Txtapellidos"
+        Me.Txtapellidos.Size = New System.Drawing.Size(269, 26)
+        Me.Txtapellidos.TabIndex = 32
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(36, 144)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 18)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Apellidos:"
         '
         'btnbuscar_imagen
         '
@@ -215,67 +276,6 @@ Partial Class P_usuario_EL
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "ID:"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(36, 144)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 18)
-        Me.Label7.TabIndex = 31
-        Me.Label7.Text = "Apellidos:"
-        '
-        'Txtapellidos
-        '
-        Me.Txtapellidos.Enabled = False
-        Me.Txtapellidos.Location = New System.Drawing.Point(138, 144)
-        Me.Txtapellidos.MaxLength = 12
-        Me.Txtapellidos.Name = "Txtapellidos"
-        Me.Txtapellidos.Size = New System.Drawing.Size(269, 26)
-        Me.Txtapellidos.TabIndex = 32
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(36, 193)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 18)
-        Me.Label8.TabIndex = 33
-        Me.Label8.Text = "Sexo:"
-        '
-        'txtsexo
-        '
-        Me.txtsexo.FormattingEnabled = True
-        Me.txtsexo.Location = New System.Drawing.Point(138, 185)
-        Me.txtsexo.Name = "txtsexo"
-        Me.txtsexo.Size = New System.Drawing.Size(121, 26)
-        Me.txtsexo.TabIndex = 34
-        '
-        'txttipo
-        '
-        Me.txttipo.FormattingEnabled = True
-        Me.txttipo.Location = New System.Drawing.Point(138, 230)
-        Me.txttipo.Name = "txttipo"
-        Me.txttipo.Size = New System.Drawing.Size(121, 26)
-        Me.txttipo.TabIndex = 35
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(42, 278)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(56, 18)
-        Me.Label9.TabIndex = 36
-        Me.Label9.Text = "Fecha:"
-        '
-        'txtfecha
-        '
-        Me.txtfecha.Enabled = False
-        Me.txtfecha.Location = New System.Drawing.Point(138, 278)
-        Me.txtfecha.MaxLength = 500
-        Me.txtfecha.Name = "txtfecha"
-        Me.txtfecha.Size = New System.Drawing.Size(204, 26)
-        Me.txtfecha.TabIndex = 37
-        '
         'P_usuario_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -284,8 +284,9 @@ Partial Class P_usuario_EL
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label6)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_usuario_EL"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_usuario_EL"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

@@ -25,16 +25,21 @@ Partial Class P_sucursal_EL
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Textfecha = New System.Windows.Forms.TextBox()
+        Me.Txtdescripcion = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtConsulta = New System.Windows.Forms.TextBox()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
         Me.txtid_sucursal = New System.Windows.Forms.TextBox()
+        Me.btnSiguiente = New System.Windows.Forms.Button()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txttelefono = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnterminar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.ptrimagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -42,11 +47,6 @@ Partial Class P_sucursal_EL
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnSiguiente = New System.Windows.Forms.Button()
-        Me.btnAtras = New System.Windows.Forms.Button()
-        Me.ptrimagen = New System.Windows.Forms.PictureBox()
-        Me.Txtdescripcion = New System.Windows.Forms.TextBox()
-        Me.Textfecha = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -105,6 +105,30 @@ Partial Class P_sucursal_EL
         Me.Panel3.Size = New System.Drawing.Size(736, 514)
         Me.Panel3.TabIndex = 17
         '
+        'Textfecha
+        '
+        Me.Textfecha.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Textfecha.Enabled = False
+        Me.Textfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Textfecha.Location = New System.Drawing.Point(173, 416)
+        Me.Textfecha.MaxLength = 20
+        Me.Textfecha.Name = "Textfecha"
+        Me.Textfecha.Size = New System.Drawing.Size(121, 26)
+        Me.Textfecha.TabIndex = 84
+        Me.Textfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Txtdescripcion
+        '
+        Me.Txtdescripcion.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Txtdescripcion.Enabled = False
+        Me.Txtdescripcion.Location = New System.Drawing.Point(173, 312)
+        Me.Txtdescripcion.MaxLength = 300
+        Me.Txtdescripcion.Multiline = True
+        Me.Txtdescripcion.Name = "Txtdescripcion"
+        Me.Txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.Txtdescripcion.Size = New System.Drawing.Size(269, 47)
+        Me.Txtdescripcion.TabIndex = 83
+        '
         'Label10
         '
         Me.Label10.BackColor = System.Drawing.SystemColors.AppWorkspace
@@ -151,6 +175,24 @@ Partial Class P_sucursal_EL
         Me.txtid_sucursal.Size = New System.Drawing.Size(204, 26)
         Me.txtid_sucursal.TabIndex = 78
         Me.txtid_sucursal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnSiguiente
+        '
+        Me.btnSiguiente.Image = Global.Capa_Presentacion.My.Resources.Resources.Forward
+        Me.btnSiguiente.Location = New System.Drawing.Point(409, 419)
+        Me.btnSiguiente.Name = "btnSiguiente"
+        Me.btnSiguiente.Size = New System.Drawing.Size(42, 36)
+        Me.btnSiguiente.TabIndex = 59
+        Me.btnSiguiente.UseVisualStyleBackColor = True
+        '
+        'btnAtras
+        '
+        Me.btnAtras.Image = Global.Capa_Presentacion.My.Resources.Resources.Back2
+        Me.btnAtras.Location = New System.Drawing.Point(347, 422)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(42, 36)
+        Me.btnAtras.TabIndex = 58
+        Me.btnAtras.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -211,6 +253,17 @@ Partial Class P_sucursal_EL
         Me.btnEliminar.TabIndex = 45
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'ptrimagen
+        '
+        Me.ptrimagen.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.ptrimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ptrimagen.Location = New System.Drawing.Point(463, 223)
+        Me.ptrimagen.Name = "ptrimagen"
+        Me.ptrimagen.Size = New System.Drawing.Size(256, 170)
+        Me.ptrimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ptrimagen.TabIndex = 44
+        Me.ptrimagen.TabStop = False
         '
         'Label5
         '
@@ -284,59 +337,6 @@ Partial Class P_sucursal_EL
         Me.Label6.Text = "Eliminar Sucursal"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnSiguiente
-        '
-        Me.btnSiguiente.Image = Global.Capa_Presentacion.My.Resources.Resources.Forward
-        Me.btnSiguiente.Location = New System.Drawing.Point(409, 419)
-        Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(42, 36)
-        Me.btnSiguiente.TabIndex = 59
-        Me.btnSiguiente.UseVisualStyleBackColor = True
-        '
-        'btnAtras
-        '
-        Me.btnAtras.Image = Global.Capa_Presentacion.My.Resources.Resources.Back2
-        Me.btnAtras.Location = New System.Drawing.Point(347, 422)
-        Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(42, 36)
-        Me.btnAtras.TabIndex = 58
-        Me.btnAtras.UseVisualStyleBackColor = True
-        '
-        'ptrimagen
-        '
-        Me.ptrimagen.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.ptrimagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptrimagen.Location = New System.Drawing.Point(463, 223)
-        Me.ptrimagen.Name = "ptrimagen"
-        Me.ptrimagen.Size = New System.Drawing.Size(256, 170)
-        Me.ptrimagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ptrimagen.TabIndex = 44
-        Me.ptrimagen.TabStop = False
-        '
-        'Txtdescripcion
-        '
-        Me.Txtdescripcion.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Txtdescripcion.Enabled = False
-        Me.Txtdescripcion.Location = New System.Drawing.Point(173, 312)
-        Me.Txtdescripcion.MaxLength = 300
-        Me.Txtdescripcion.Multiline = True
-        Me.Txtdescripcion.Name = "Txtdescripcion"
-        Me.Txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.Txtdescripcion.Size = New System.Drawing.Size(269, 47)
-        Me.Txtdescripcion.TabIndex = 83
-        '
-        'Textfecha
-        '
-        Me.Textfecha.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Textfecha.Enabled = False
-        Me.Textfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Textfecha.Location = New System.Drawing.Point(173, 416)
-        Me.Textfecha.MaxLength = 20
-        Me.Textfecha.Name = "Textfecha"
-        Me.Textfecha.Size = New System.Drawing.Size(121, 26)
-        Me.Textfecha.TabIndex = 84
-        Me.Textfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'P_sucursal_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -344,8 +344,9 @@ Partial Class P_sucursal_EL
         Me.ClientSize = New System.Drawing.Size(746, 573)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_sucursal_EL"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_sucursal_EL"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
