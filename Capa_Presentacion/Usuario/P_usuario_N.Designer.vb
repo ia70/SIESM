@@ -37,7 +37,7 @@ Partial Class P_usuario_N
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txt = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -82,7 +82,7 @@ Partial Class P_usuario_N
         Me.Panel3.Controls.Add(Me.txtNombre)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.txt)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
@@ -208,14 +208,14 @@ Partial Class P_usuario_N
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Apellidos:"
         '
-        'Label2
+        'txt
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 103)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 18)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Telefono:"
+        Me.txt.AutoSize = True
+        Me.txt.Location = New System.Drawing.Point(36, 103)
+        Me.txt.Name = "txt"
+        Me.txt.Size = New System.Drawing.Size(70, 18)
+        Me.txt.TabIndex = 15
+        Me.txt.Text = "Telefono:"
         '
         'Label1
         '
@@ -270,7 +270,7 @@ Partial Class P_usuario_N
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents txt As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnbuscar_imagen As System.Windows.Forms.Button
     Friend WithEvents ptrimagen As System.Windows.Forms.PictureBox

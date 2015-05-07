@@ -1,7 +1,7 @@
 ﻿Imports Capa_Negocios
 Imports Capa_Entidad
 Public Class P_articulo_N
-    Dim Articulo As New Capa_Negocios.N_Articulo
+    Dim Elemento As New Capa_Negocios.N_Articulo
 
     'Funciones de captura de valores
 #Region "Funciones de obtencion de valores de campos"
@@ -52,7 +52,7 @@ Public Class P_articulo_N
         _Articulo.precio_venta = getPrecio_Venta()
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = getFecha()
-        If Articulo.Insertar(_Articulo) Then
+        If Elemento.Insertar(_Articulo) Then
             M("¡El articulo ha sido guardado con exito!", 1)
         Else
             M("¡No se ha podido guardar el articulo!", 3)
@@ -74,7 +74,7 @@ Public Class P_articulo_N
 #Region "Cajas de texto"
     Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtid_articulo.KeyPress
         If e.KeyChar = ChrW(13) And Len(txtid_articulo.Text) > 4 Then
-            If Articulo.Existe(txtid_articulo.Text) Then
+            If Elemento.Existe(txtid_articulo.Text) Then
                 M("¡El articulo " + txtid_articulo.Text + " ya existe!", 3)
                 txtid_articulo.Text = ""
                 txtid_articulo.Focus()

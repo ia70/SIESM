@@ -22,9 +22,12 @@ Partial Class P_sucursal_C
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Textfecha = New System.Windows.Forms.TextBox()
+        Me.txttipo = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtfecha = New System.Windows.Forms.TextBox()
         Me.Txtdescripcion = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtConsulta = New System.Windows.Forms.TextBox()
@@ -37,7 +40,6 @@ Partial Class P_sucursal_C
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnterminar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.ptrimagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
@@ -45,30 +47,32 @@ Partial Class P_sucursal_C
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label6
+        'Panel1
         '
-        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(0, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(733, 49)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "Consultar Sucursal"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Label6.UseCompatibleTextRendering = True
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
+        Me.Panel1.Size = New System.Drawing.Size(735, 572)
+        Me.Panel1.TabIndex = 0
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Panel3.Controls.Add(Me.Textfecha)
+        Me.Panel3.Controls.Add(Me.txttipo)
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.Panel2)
+        Me.Panel3.Controls.Add(Me.txtfecha)
         Me.Panel3.Controls.Add(Me.Txtdescripcion)
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.txtConsulta)
@@ -81,7 +85,6 @@ Partial Class P_sucursal_C
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.btnterminar)
-        Me.Panel3.Controls.Add(Me.btnEliminar)
         Me.Panel3.Controls.Add(Me.ptrimagen)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.txtdireccion)
@@ -90,22 +93,52 @@ Partial Class P_sucursal_C
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 49)
+        Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(733, 460)
-        Me.Panel3.TabIndex = 19
+        Me.Panel3.Size = New System.Drawing.Size(725, 513)
+        Me.Panel3.TabIndex = 21
         '
-        'Textfecha
+        'txttipo
         '
-        Me.Textfecha.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Textfecha.Enabled = False
-        Me.Textfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Textfecha.Location = New System.Drawing.Point(173, 416)
-        Me.Textfecha.MaxLength = 20
-        Me.Textfecha.Name = "Textfecha"
-        Me.Textfecha.Size = New System.Drawing.Size(121, 26)
-        Me.Textfecha.TabIndex = 84
-        Me.Textfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txttipo.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txttipo.Enabled = False
+        Me.txttipo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txttipo.Location = New System.Drawing.Point(173, 402)
+        Me.txttipo.MaxLength = 20
+        Me.txttipo.Name = "txttipo"
+        Me.txttipo.Size = New System.Drawing.Size(121, 26)
+        Me.txttipo.TabIndex = 87
+        Me.txttipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(30, 405)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(42, 18)
+        Me.Label9.TabIndex = 86
+        Me.Label9.Text = "Tipo:"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 467)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(725, 46)
+        Me.Panel2.TabIndex = 85
+        '
+        'txtfecha
+        '
+        Me.txtfecha.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtfecha.Enabled = False
+        Me.txtfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtfecha.Location = New System.Drawing.Point(173, 434)
+        Me.txtfecha.MaxLength = 20
+        Me.txtfecha.Name = "txtfecha"
+        Me.txtfecha.Size = New System.Drawing.Size(121, 26)
+        Me.txtfecha.TabIndex = 84
+        Me.txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Txtdescripcion
         '
@@ -169,7 +202,7 @@ Partial Class P_sucursal_C
         'btnSiguiente
         '
         Me.btnSiguiente.Image = Global.Capa_Presentacion.My.Resources.Resources.Forward
-        Me.btnSiguiente.Location = New System.Drawing.Point(409, 419)
+        Me.btnSiguiente.Location = New System.Drawing.Point(400, 422)
         Me.btnSiguiente.Name = "btnSiguiente"
         Me.btnSiguiente.Size = New System.Drawing.Size(42, 36)
         Me.btnSiguiente.TabIndex = 59
@@ -178,7 +211,7 @@ Partial Class P_sucursal_C
         'btnAtras
         '
         Me.btnAtras.Image = Global.Capa_Presentacion.My.Resources.Resources.Back2
-        Me.btnAtras.Location = New System.Drawing.Point(347, 422)
+        Me.btnAtras.Location = New System.Drawing.Point(338, 422)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(42, 36)
         Me.btnAtras.TabIndex = 58
@@ -187,7 +220,7 @@ Partial Class P_sucursal_C
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(30, 419)
+        Me.Label8.Location = New System.Drawing.Point(30, 437)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 18)
         Me.Label8.TabIndex = 53
@@ -198,7 +231,7 @@ Partial Class P_sucursal_C
         Me.txttelefono.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txttelefono.Enabled = False
         Me.txttelefono.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttelefono.Location = New System.Drawing.Point(173, 378)
+        Me.txttelefono.Location = New System.Drawing.Point(173, 370)
         Me.txttelefono.MaxLength = 20
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(121, 26)
@@ -208,7 +241,7 @@ Partial Class P_sucursal_C
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(30, 381)
+        Me.Label7.Location = New System.Drawing.Point(30, 373)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 18)
         Me.Label7.TabIndex = 51
@@ -217,7 +250,7 @@ Partial Class P_sucursal_C
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(30, 320)
+        Me.Label3.Location = New System.Drawing.Point(30, 315)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 18)
         Me.Label3.TabIndex = 49
@@ -232,17 +265,6 @@ Partial Class P_sucursal_C
         Me.btnterminar.TabIndex = 46
         Me.btnterminar.Text = "Terminar"
         Me.btnterminar.UseVisualStyleBackColor = True
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnEliminar.Enabled = False
-        Me.btnEliminar.Location = New System.Drawing.Point(503, 422)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(105, 30)
-        Me.btnEliminar.TabIndex = 45
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'ptrimagen
         '
@@ -268,7 +290,7 @@ Partial Class P_sucursal_C
         '
         Me.txtdireccion.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtdireccion.Enabled = False
-        Me.txtdireccion.Location = New System.Drawing.Point(173, 259)
+        Me.txtdireccion.Location = New System.Drawing.Point(173, 258)
         Me.txtdireccion.MaxLength = 300
         Me.txtdireccion.Multiline = True
         Me.txtdireccion.Name = "txtdireccion"
@@ -314,18 +336,33 @@ Partial Class P_sucursal_C
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "ID:"
         '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(5, 5)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(725, 49)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Consultar Sucursal"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label6.UseCompatibleTextRendering = True
+        '
         'P_sucursal_C
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(733, 509)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Label6)
+        Me.ClientSize = New System.Drawing.Size(735, 572)
+        Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_sucursal_C"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_sucursal_C"
+        Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
@@ -333,9 +370,12 @@ Partial Class P_sucursal_C
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Textfecha As System.Windows.Forms.TextBox
+    Friend WithEvents txttipo As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents txtfecha As System.Windows.Forms.TextBox
     Friend WithEvents Txtdescripcion As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtConsulta As System.Windows.Forms.TextBox
@@ -348,7 +388,6 @@ Partial Class P_sucursal_C
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnterminar As System.Windows.Forms.Button
-    Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents ptrimagen As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
@@ -356,4 +395,5 @@ Partial Class P_sucursal_C
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

@@ -1,7 +1,7 @@
 ﻿Imports Capa_Negocios
 Imports Capa_Entidad
 Public Class P_proveedor_ED
-    Dim Proveedor As New Capa_Negocios.N_proveedor
+    Dim Elemento As New Capa_Negocios.N_proveedor
     Dim Tabla As New DataSet
     'Funciones de control de datos y funcionamiento
 
@@ -14,7 +14,7 @@ Public Class P_proveedor_ED
         _Proveedor.descripcion = txtDescripcion.Text
         _Proveedor.telefono = txtTelefono.Text
         _Proveedor.fecha = getFecha()
-        If Proveedor.Editar(_Proveedor) Then
+        If Elemento.Editar(_Proveedor) Then
             M("¡El proveedor ha sido editado con exito!", 1)
         Else
             M("¡No se ha podido editar el proveedor!", 3)
@@ -31,21 +31,21 @@ Public Class P_proveedor_ED
     End Sub
 
     Private Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
-        If txtConsulta.Text = "" Or txtConsulta.Text = Proveedor.Inicio.Tables(0).Rows(0)(0).ToString() Then
-            Tabla = Proveedor.Final()
+        If txtConsulta.Text = "" Or txtConsulta.Text = Elemento.Inicio.Tables(0).Rows(0)(0).ToString() Then
+            Tabla = Elemento.Final()
             LlenarCampos()
-        ElseIf Proveedor.Existe(txtConsulta.Text) Then
-            Tabla = Proveedor.Atras(txtConsulta.Text)
+        ElseIf Elemento.Existe(txtConsulta.Text) Then
+            Tabla = Elemento.Atras(txtConsulta.Text)
             LlenarCampos()
         End If
     End Sub
 
     Private Sub btnSiguiente_Click(sender As Object, e As EventArgs) Handles btnSiguiente.Click
-        If txtConsulta.Text = "" Or txtConsulta.Text = Proveedor.Final.Tables(0).Rows(0)(0).ToString() Then
-            Tabla = Proveedor.Inicio()
+        If txtConsulta.Text = "" Or txtConsulta.Text = Elemento.Final.Tables(0).Rows(0)(0).ToString() Then
+            Tabla = Elemento.Inicio()
             LlenarCampos()
-        ElseIf Proveedor.Existe(txtConsulta.Text) Then
-            Tabla = Proveedor.Siguiente(txtConsulta.Text)
+        ElseIf Elemento.Existe(txtConsulta.Text) Then
+            Tabla = Elemento.Siguiente(txtConsulta.Text)
             LlenarCampos()
         End If
     End Sub
@@ -120,7 +120,7 @@ Public Class P_proveedor_ED
 
     Private Sub txtConsulta_TextChanged(sender As Object, e As EventArgs) Handles txtConsulta.TextChanged
         If Not IsNumeric(txtConsulta.Text) And Not txtConsulta.Text = "" Then
-            dgvTabla.DataSource = Proveedor.Filtrar(txtConsulta.Text).Tables(0)
+            dgvTabla.DataSource = Elemento.Filtrar(txtConsulta.Text).Tables(0)
         ElseIf txtConsulta.Text = "" Then
             dgvTabla.DataSource = ""
         End If
@@ -131,7 +131,7 @@ Public Class P_proveedor_ED
     End Sub
 
     Private Sub dgvTabla_Click(sender As Object, e As EventArgs) Handles dgvTabla.Click
-        Tabla = Proveedor.Consultar(dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value)
+        Tabla = Elemento.Consultar(dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value)
         LlenarCampos()
     End Sub
 

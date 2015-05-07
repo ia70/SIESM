@@ -44,6 +44,7 @@ Public Class D_articulo
             MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
         Finally
             da.Dispose()
+            cn.Close()
             cn.Dispose()
         End Try
         Return Estado

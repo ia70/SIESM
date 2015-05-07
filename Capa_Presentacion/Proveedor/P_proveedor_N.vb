@@ -1,7 +1,7 @@
 ﻿Imports Capa_Negocios
 Imports Capa_Entidad
 Public Class P_proveedor_N
-    Dim Proveedor As New Capa_Negocios.N_proveedor
+    Dim Elemento As New Capa_Negocios.N_proveedor
     'Funciones de control de datos y funcionamiento
 
 #Region "Botones"
@@ -12,7 +12,7 @@ Public Class P_proveedor_N
         _Proveedor.descripcion = txtDescripcion.Text
         _Proveedor.telefono = txtTelefono.Text
         _Proveedor.fecha = getFecha()
-        If Proveedor.Insertar(_Proveedor) Then
+        If Elemento.Insertar(_Proveedor) Then
             M("¡El proveedor ha sido guardado con exito!", 1)
         Else
             M("¡No se ha podido guardar el proveedor!", 3)

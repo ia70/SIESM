@@ -29,9 +29,9 @@ Public Class D_sucursal
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id", MySqlDbType.UInt32).Value = _Elemento.id_sucursal
+                .Add("id", MySqlDbType.Int32).Value = _Elemento.id_sucursal
                 .Add("nom", MySqlDbType.VarChar).Value = _Elemento.nombre
-                .Add("dir", MySqlDbType.VarChar).Value = _Elemento.direccion
+                .Add("dir", MySqlDbType.VarChar).Value = _Elemento.nombre
                 .Add("des", MySqlDbType.VarChar).Value = _Elemento.descripcion
                 .Add("tel", MySqlDbType.VarChar).Value = _Elemento.telefono
                 .Add("ima", MySqlDbType.LongBlob).Value = _Elemento.imagen
@@ -43,6 +43,7 @@ Public Class D_sucursal
             MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
         Finally
             da.Dispose()
+            cn.Close()
             cn.Dispose()
         End Try
         Return Estado

@@ -1,7 +1,7 @@
 ﻿Imports Capa_Negocios
 Imports Capa_Entidad
 Public Class P_sucursal_N
-    Dim Sucursal As New Capa_Negocios.N_sucursal
+    Dim Elemento As New Capa_Negocios.N_sucursal
     'Funciones de control de datos y funcionamiento
 
 #Region "Botones"
@@ -14,7 +14,7 @@ Public Class P_sucursal_N
         _Sucursal.fecha = getFecha()
         _Sucursal.imagen = Imagen_Bytes(ptrImagen.Image)
         _Sucursal.tipo = txtTipo.Text
-        If Sucursal.Insertar(_Sucursal) Then
+        If Elemento.Insertar(_Sucursal) Then
             M("¡La sucursal ha sido guardada con exito!", 1)
         Else
             M("¡No se ha podido guardar la sucursal!", 3)
@@ -50,6 +50,7 @@ Public Class P_sucursal_N
         txtDireccion.Enabled = Valor
         txtDescripcion.Enabled = Valor
         txtTelefono.Enabled = Valor
+        btnBuscar_imagen.Enabled = Valor
         btnlimpiar_campos.Enabled = Valor
         btnguardar.Enabled = Valor
         txtTipo.Enabled = Valor
