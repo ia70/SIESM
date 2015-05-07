@@ -58,12 +58,12 @@ Public Class P_usuario_N
 #End Region
 
 
-    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
-        If e.KeyChar = ChrW(13) And Len(txtNombre.Text) > 2 Then
+    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs)
+        If e.KeyChar = ChrW(13) And Len(txtnombre.Text) > 2 Then
             Campos(True)
             txtDireccion.Focus()
         Else
-            Validar_Nombres(txtNombre, e)
+            Validar_Nombres(txtnombre, e)
         End If
     End Sub
 
@@ -75,7 +75,7 @@ Public Class P_usuario_N
         End If
     End Sub
 
-    Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
+    Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs)
         If e.KeyChar = ChrW(13) Then
             txtDescripcion.Focus()
         Else
@@ -83,7 +83,7 @@ Public Class P_usuario_N
         End If
     End Sub
 
-    Private Sub txtDescripcion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDescripcion.KeyPress
+    Private Sub txtDescripcion_KeyPress(sender As Object, e As KeyPressEventArgs)
         If e.KeyChar = ChrW(13) Then
             btnguardar.Focus()
         Else
