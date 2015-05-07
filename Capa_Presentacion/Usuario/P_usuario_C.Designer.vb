@@ -100,7 +100,10 @@ Partial Class P_usuario_C
         '
         'txttipo
         '
+        Me.txttipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txttipo.Enabled = False
         Me.txttipo.FormattingEnabled = True
+        Me.txttipo.Items.AddRange(New Object() {"Vendedor", "Supervisor"})
         Me.txttipo.Location = New System.Drawing.Point(136, 223)
         Me.txttipo.Name = "txttipo"
         Me.txttipo.Size = New System.Drawing.Size(121, 26)
@@ -108,7 +111,10 @@ Partial Class P_usuario_C
         '
         'txtsexo
         '
+        Me.txtsexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txtsexo.Enabled = False
         Me.txtsexo.FormattingEnabled = True
+        Me.txtsexo.Items.AddRange(New Object() {"H", "M"})
         Me.txtsexo.Location = New System.Drawing.Point(136, 178)
         Me.txtsexo.Name = "txtsexo"
         Me.txtsexo.Size = New System.Drawing.Size(121, 26)
@@ -183,27 +189,27 @@ Partial Class P_usuario_C
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(34, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 18)
+        Me.Label3.Size = New System.Drawing.Size(93, 18)
         Me.Label3.TabIndex = 40
-        Me.Label3.Text = "contraseña:"
+        Me.Label3.Text = "Contraseña:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(34, 96)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 18)
+        Me.Label2.Size = New System.Drawing.Size(68, 18)
         Me.Label2.TabIndex = 39
-        Me.Label2.Text = "nombre:"
+        Me.Label2.Text = "Nombre:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(34, 26)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(27, 18)
+        Me.Label1.Size = New System.Drawing.Size(66, 18)
         Me.Label1.TabIndex = 38
-        Me.Label1.Text = "ID:"
+        Me.Label1.Text = "Usuario:"
         '
         'btnbuscar_imagen
         '
@@ -257,7 +263,6 @@ Partial Class P_usuario_C
         '
         'btnguardar
         '
-        Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnguardar.Enabled = False
         Me.btnguardar.Location = New System.Drawing.Point(466, 279)
         Me.btnguardar.Name = "btnguardar"
