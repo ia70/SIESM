@@ -25,6 +25,18 @@ Partial Class P_usuario_N
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txttipo = New System.Windows.Forms.ComboBox()
+        Me.txtsexo = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Txtapellidos = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtnombre = New System.Windows.Forms.TextBox()
+        Me.txtcontrasena = New System.Windows.Forms.TextBox()
+        Me.txtid_usuario = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnbuscar_imagen = New System.Windows.Forms.Button()
         Me.ptrimagen = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -32,18 +44,6 @@ Partial Class P_usuario_N
         Me.btnterminar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txttipo = New System.Windows.Forms.ComboBox()
-        Me.txtsexo = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Txtapellidos = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtnombre = New System.Windows.Forms.TextBox()
-        Me.txtcontraseña = New System.Windows.Forms.TextBox()
-        Me.txtid = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.ptrimagen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,8 +80,8 @@ Partial Class P_usuario_N
         Me.Panel3.Controls.Add(Me.Txtapellidos)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.txtnombre)
-        Me.Panel3.Controls.Add(Me.txtcontraseña)
-        Me.Panel3.Controls.Add(Me.txtid)
+        Me.Panel3.Controls.Add(Me.txtcontrasena)
+        Me.Panel3.Controls.Add(Me.txtid_usuario)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
@@ -97,6 +97,120 @@ Partial Class P_usuario_N
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(696, 370)
         Me.Panel3.TabIndex = 17
+        '
+        'txttipo
+        '
+        Me.txttipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txttipo.Enabled = False
+        Me.txttipo.FormattingEnabled = True
+        Me.txttipo.Items.AddRange(New Object() {"Vendedor", "Supervsior"})
+        Me.txttipo.Location = New System.Drawing.Point(136, 223)
+        Me.txttipo.Name = "txttipo"
+        Me.txttipo.Size = New System.Drawing.Size(121, 26)
+        Me.txttipo.TabIndex = 49
+        '
+        'txtsexo
+        '
+        Me.txtsexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txtsexo.Enabled = False
+        Me.txtsexo.FormattingEnabled = True
+        Me.txtsexo.Items.AddRange(New Object() {"Femenino", "Masculino"})
+        Me.txtsexo.Location = New System.Drawing.Point(136, 178)
+        Me.txtsexo.Name = "txtsexo"
+        Me.txtsexo.Size = New System.Drawing.Size(121, 26)
+        Me.txtsexo.TabIndex = 48
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(34, 186)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 18)
+        Me.Label8.TabIndex = 47
+        Me.Label8.Text = "Sexo:"
+        '
+        'Txtapellidos
+        '
+        Me.Txtapellidos.Enabled = False
+        Me.Txtapellidos.Location = New System.Drawing.Point(136, 137)
+        Me.Txtapellidos.MaxLength = 12
+        Me.Txtapellidos.Name = "Txtapellidos"
+        Me.Txtapellidos.Size = New System.Drawing.Size(269, 26)
+        Me.Txtapellidos.TabIndex = 46
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(34, 137)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 18)
+        Me.Label7.TabIndex = 45
+        Me.Label7.Text = "Apellidos:"
+        '
+        'txtnombre
+        '
+        Me.txtnombre.Enabled = False
+        Me.txtnombre.Location = New System.Drawing.Point(138, 93)
+        Me.txtnombre.MaxLength = 12
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.Size = New System.Drawing.Size(269, 26)
+        Me.txtnombre.TabIndex = 44
+        '
+        'txtcontrasena
+        '
+        Me.txtcontrasena.Enabled = False
+        Me.txtcontrasena.Location = New System.Drawing.Point(138, 58)
+        Me.txtcontrasena.MaxLength = 500
+        Me.txtcontrasena.Name = "txtcontrasena"
+        Me.txtcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtcontrasena.Size = New System.Drawing.Size(204, 26)
+        Me.txtcontrasena.TabIndex = 43
+        '
+        'txtid_usuario
+        '
+        Me.txtid_usuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtid_usuario.Location = New System.Drawing.Point(138, 23)
+        Me.txtid_usuario.MaxLength = 30
+        Me.txtid_usuario.Name = "txtid_usuario"
+        Me.txtid_usuario.Size = New System.Drawing.Size(204, 26)
+        Me.txtid_usuario.TabIndex = 42
+        Me.txtid_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(34, 223)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(42, 18)
+        Me.Label4.TabIndex = 41
+        Me.Label4.Text = "Tipo:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(34, 61)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(89, 18)
+        Me.Label3.TabIndex = 40
+        Me.Label3.Text = "contraseña:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(34, 96)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(65, 18)
+        Me.Label2.TabIndex = 39
+        Me.Label2.Text = "nombre:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(34, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(27, 18)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "ID:"
         '
         'btnbuscar_imagen
         '
@@ -172,113 +286,6 @@ Partial Class P_usuario_N
         Me.Label6.Text = "Agregar usuario"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'txttipo
-        '
-        Me.txttipo.FormattingEnabled = True
-        Me.txttipo.Location = New System.Drawing.Point(136, 223)
-        Me.txttipo.Name = "txttipo"
-        Me.txttipo.Size = New System.Drawing.Size(121, 26)
-        Me.txttipo.TabIndex = 49
-        '
-        'txtsexo
-        '
-        Me.txtsexo.FormattingEnabled = True
-        Me.txtsexo.Location = New System.Drawing.Point(136, 178)
-        Me.txtsexo.Name = "txtsexo"
-        Me.txtsexo.Size = New System.Drawing.Size(121, 26)
-        Me.txtsexo.TabIndex = 48
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(34, 186)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 18)
-        Me.Label8.TabIndex = 47
-        Me.Label8.Text = "Sexo:"
-        '
-        'Txtapellidos
-        '
-        Me.Txtapellidos.Enabled = False
-        Me.Txtapellidos.Location = New System.Drawing.Point(136, 137)
-        Me.Txtapellidos.MaxLength = 12
-        Me.Txtapellidos.Name = "Txtapellidos"
-        Me.Txtapellidos.Size = New System.Drawing.Size(269, 26)
-        Me.Txtapellidos.TabIndex = 46
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(34, 137)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 18)
-        Me.Label7.TabIndex = 45
-        Me.Label7.Text = "Apellidos:"
-        '
-        'txtnombre
-        '
-        Me.txtnombre.Enabled = False
-        Me.txtnombre.Location = New System.Drawing.Point(138, 93)
-        Me.txtnombre.MaxLength = 12
-        Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(269, 26)
-        Me.txtnombre.TabIndex = 44
-        '
-        'txtcontraseña
-        '
-        Me.txtcontraseña.Enabled = False
-        Me.txtcontraseña.Location = New System.Drawing.Point(138, 58)
-        Me.txtcontraseña.MaxLength = 500
-        Me.txtcontraseña.Name = "txtcontraseña"
-        Me.txtcontraseña.Size = New System.Drawing.Size(204, 26)
-        Me.txtcontraseña.TabIndex = 43
-        '
-        'txtid
-        '
-        Me.txtid.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(138, 23)
-        Me.txtid.MaxLength = 30
-        Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(204, 26)
-        Me.txtid.TabIndex = 42
-        Me.txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(34, 223)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 18)
-        Me.Label4.TabIndex = 41
-        Me.Label4.Text = "Tipo:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(34, 61)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 18)
-        Me.Label3.TabIndex = 40
-        Me.Label3.Text = "contraseña:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(34, 96)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 18)
-        Me.Label2.TabIndex = 39
-        Me.Label2.Text = "nombre:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(34, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(27, 18)
-        Me.Label1.TabIndex = 38
-        Me.Label1.Text = "ID:"
-        '
         'P_usuario_N
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -313,8 +320,8 @@ Partial Class P_usuario_N
     Friend WithEvents Txtapellidos As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtnombre As System.Windows.Forms.TextBox
-    Friend WithEvents txtcontraseña As System.Windows.Forms.TextBox
-    Friend WithEvents txtid As System.Windows.Forms.TextBox
+    Friend WithEvents txtcontrasena As System.Windows.Forms.TextBox
+    Friend WithEvents txtid_usuario As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label

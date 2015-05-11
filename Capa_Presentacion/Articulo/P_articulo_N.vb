@@ -180,4 +180,12 @@ Public Class P_articulo_N
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
     End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub txtUnidad_medida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtUnidad_medida.SelectedIndexChanged
+
+    End Sub
 End Class

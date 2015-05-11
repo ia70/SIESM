@@ -110,4 +110,5 @@ Public Class P_sucursal_N
     Private Sub txtTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtTipo.SelectedIndexChanged
         btnguardar.Focus()
     End Sub
+   
 End Class

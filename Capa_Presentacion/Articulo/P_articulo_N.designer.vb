@@ -256,7 +256,7 @@ Partial Class P_articulo_N
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(173, 65)
-        Me.txtNombre.MaxLength = 150
+        Me.txtNombre.MaxLength = 20
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtNombre.Size = New System.Drawing.Size(269, 26)

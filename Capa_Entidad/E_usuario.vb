@@ -1,11 +1,11 @@
 ﻿Public Class E_usuario
 
     Private _id_usuario As String
-    Private _contraseña As String
+    Private _contrasena As String
     Private _nombre As String
     Private _apellidos As String
     Private _sexo As String
-    Private _tipo As String
+    Private _tipo As Integer
     Private _imagen As Byte()
     Private _fecha As String
 
@@ -17,12 +17,12 @@
             _id_usuario = value
         End Set
     End Property
-    Public Property contraseña As String
+    Public Property contrasena As String
         Get
-            Return _contraseña
+            Return _contrasena
         End Get
         Set(value As String)
-            _contraseña = value
+            _contrasena = value
         End Set
     End Property
     Public Property nombre As String
@@ -46,14 +46,18 @@
             Return _sexo
         End Get
         Set(value As String)
-            _sexo = value
+            If value = "Femenino" Then
+                _sexo = "F"
+            Else
+                _sexo = "M"
+            End If
         End Set
     End Property
-    Public Property tipo As String
+    Public Property tipo As Integer
         Get
             Return _tipo
         End Get
-        Set(value As String)
+        Set(value As Integer)
             _tipo = value
         End Set
     End Property

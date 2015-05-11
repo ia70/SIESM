@@ -30,8 +30,12 @@ Public Class D_usuario
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
 
+                .Add("id", MySqlDbType.VarChar).Value = _Elemento.id_usuario
+                .Add("contr", MySqlDbType.VarChar).Value = _Elemento.contrasena
                 .Add("nom", MySqlDbType.VarChar).Value = _Elemento.nombre
-
+                .Add("apell", MySqlDbType.VarChar).Value = _Elemento.apellidos
+                .Add("sex", MySqlDbType.VarChar).Value = _Elemento.sexo
+                .Add("tip", MySqlDbType.Int64).Value = _Elemento.tipo
                 .Add("ima", MySqlDbType.LongBlob).Value = _Elemento.imagen
                 .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
             End With

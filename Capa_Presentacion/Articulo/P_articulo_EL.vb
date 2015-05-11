@@ -124,4 +124,8 @@ Public Class P_articulo_EL
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+    Private Sub txtUnidad_medida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtUnidad_medida.SelectedIndexChanged
+
+    End Sub
 End Class

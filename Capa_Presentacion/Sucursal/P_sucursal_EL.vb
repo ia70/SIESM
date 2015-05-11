@@ -123,4 +123,12 @@ Public Class P_sucursal_EL
             Popup.PopupFrm(ImagenViewer, 0)
         End If
     End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
 End Class
