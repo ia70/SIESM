@@ -25,6 +25,10 @@ Partial Class P_devol_N
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtcantidad = New System.Windows.Forms.NumericUpDown()
+        Me.Txtdescripcion = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Txtaccion = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnlimpiar_campos = New System.Windows.Forms.Button()
@@ -37,10 +41,6 @@ Partial Class P_devol_N
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Txtaccion = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Txtdescripcion = New System.Windows.Forms.TextBox()
-        Me.txtcantidad = New System.Windows.Forms.NumericUpDown()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,6 +91,45 @@ Partial Class P_devol_N
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(727, 375)
         Me.Panel3.TabIndex = 17
+        '
+        'txtcantidad
+        '
+        Me.txtcantidad.Enabled = False
+        Me.txtcantidad.Location = New System.Drawing.Point(173, 264)
+        Me.txtcantidad.Name = "txtcantidad"
+        Me.txtcantidad.Size = New System.Drawing.Size(78, 26)
+        Me.txtcantidad.TabIndex = 40
+        '
+        'Txtdescripcion
+        '
+        Me.Txtdescripcion.Enabled = False
+        Me.Txtdescripcion.Location = New System.Drawing.Point(173, 211)
+        Me.Txtdescripcion.MaxLength = 300
+        Me.Txtdescripcion.Multiline = True
+        Me.Txtdescripcion.Name = "Txtdescripcion"
+        Me.Txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.Txtdescripcion.Size = New System.Drawing.Size(269, 47)
+        Me.Txtdescripcion.TabIndex = 39
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(30, 224)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(96, 18)
+        Me.Label5.TabIndex = 38
+        Me.Label5.Text = "Descripción:"
+        '
+        'Txtaccion
+        '
+        Me.Txtaccion.Enabled = False
+        Me.Txtaccion.Location = New System.Drawing.Point(173, 158)
+        Me.Txtaccion.MaxLength = 300
+        Me.Txtaccion.Multiline = True
+        Me.Txtaccion.Name = "Txtaccion"
+        Me.Txtaccion.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.Txtaccion.Size = New System.Drawing.Size(269, 47)
+        Me.Txtaccion.TabIndex = 37
         '
         'Label7
         '
@@ -193,7 +232,7 @@ Partial Class P_devol_N
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(30, 34)
+        Me.Label1.Location = New System.Drawing.Point(33, 41)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(93, 18)
         Me.Label1.TabIndex = 14
@@ -212,45 +251,6 @@ Partial Class P_devol_N
         Me.Label6.Text = "Devoluciones"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Txtaccion
-        '
-        Me.Txtaccion.Enabled = False
-        Me.Txtaccion.Location = New System.Drawing.Point(173, 158)
-        Me.Txtaccion.MaxLength = 300
-        Me.Txtaccion.Multiline = True
-        Me.Txtaccion.Name = "Txtaccion"
-        Me.Txtaccion.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.Txtaccion.Size = New System.Drawing.Size(269, 47)
-        Me.Txtaccion.TabIndex = 37
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(30, 224)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(96, 18)
-        Me.Label5.TabIndex = 38
-        Me.Label5.Text = "Descripción:"
-        '
-        'Txtdescripcion
-        '
-        Me.Txtdescripcion.Enabled = False
-        Me.Txtdescripcion.Location = New System.Drawing.Point(173, 211)
-        Me.Txtdescripcion.MaxLength = 300
-        Me.Txtdescripcion.Multiline = True
-        Me.Txtdescripcion.Name = "Txtdescripcion"
-        Me.Txtdescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.Txtdescripcion.Size = New System.Drawing.Size(269, 47)
-        Me.Txtdescripcion.TabIndex = 39
-        '
-        'txtcantidad
-        '
-        Me.txtcantidad.Enabled = False
-        Me.txtcantidad.Location = New System.Drawing.Point(173, 264)
-        Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(78, 26)
-        Me.txtcantidad.TabIndex = 40
-        '
         'P_devol_N
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -258,7 +258,7 @@ Partial Class P_devol_N
         Me.ClientSize = New System.Drawing.Size(737, 434)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_devol_N"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_devol_N"

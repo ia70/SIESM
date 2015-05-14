@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EC4D854E-A851-49D5-AE2E-D149E1759828}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Capa_Presentacion.My.MyApplication</StartupObject>
+    <StartupObject>Capa_Presentacion.Login</StartupObject>
     <RootNamespace>Capa_Presentacion</RootNamespace>
     <AssemblyName>Capa_Presentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>D:\Mis Archivos\Escritorio\SIESM\</PublishUrl>
@@ -178,6 +178,12 @@
     <Compile Include="Inventario\P_invent_N.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Merma\P_merma_C.Designer.vb">
       <DependentUpon>P_merma_C.vb</DependentUpon>
     </Compile>
@@ -260,6 +266,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conf\Validacion.vb" />
+    <Compile Include="P_merma_C.Designer.vb" />
     <Compile Include="Sucursal\P_sucursal_C.Designer.vb">
       <DependentUpon>P_sucursal_C.vb</DependentUpon>
     </Compile>
@@ -345,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\P_invent_N.resx">
       <DependentUpon>P_invent_N.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Merma\P_merma_C.resx">
       <DependentUpon>P_merma_C.vb</DependentUpon>

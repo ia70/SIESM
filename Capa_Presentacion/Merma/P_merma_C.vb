@@ -1,3 +1,3 @@
-﻿Public Class P_merma_C
+﻿Public Class Form1
 
 End Class

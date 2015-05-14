@@ -25,8 +25,11 @@ Partial Class P_merma_N
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtid_sucursal = New System.Windows.Forms.ComboBox()
+        Me.Id = New System.Windows.Forms.Label()
         Me.txtcantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
         Me.btnterminar = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.txtmotivo = New System.Windows.Forms.TextBox()
@@ -34,7 +37,6 @@ Partial Class P_merma_N
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +67,8 @@ Partial Class P_merma_N
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.txtid_sucursal)
+        Me.Panel3.Controls.Add(Me.Id)
         Me.Panel3.Controls.Add(Me.txtcantidad)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.btnlimpiar_campos)
@@ -80,10 +84,27 @@ Partial Class P_merma_N
         Me.Panel3.Size = New System.Drawing.Size(565, 302)
         Me.Panel3.TabIndex = 17
         '
+        'txtid_sucursal
+        '
+        Me.txtid_sucursal.FormattingEnabled = True
+        Me.txtid_sucursal.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.txtid_sucursal.Location = New System.Drawing.Point(152, 72)
+        Me.txtid_sucursal.Name = "txtid_sucursal"
+        Me.txtid_sucursal.Size = New System.Drawing.Size(121, 26)
+        Me.txtid_sucursal.TabIndex = 38
+        '
+        'Id
+        '
+        Me.Id.AutoSize = True
+        Me.Id.Location = New System.Drawing.Point(30, 80)
+        Me.Id.Name = "Id"
+        Me.Id.Size = New System.Drawing.Size(72, 18)
+        Me.Id.TabIndex = 37
+        Me.Id.Text = "Sucursal:"
+        '
         'txtcantidad
         '
-        Me.txtcantidad.Enabled = False
-        Me.txtcantidad.Location = New System.Drawing.Point(152, 134)
+        Me.txtcantidad.Location = New System.Drawing.Point(152, 164)
         Me.txtcantidad.Name = "txtcantidad"
         Me.txtcantidad.Size = New System.Drawing.Size(78, 26)
         Me.txtcantidad.TabIndex = 36
@@ -91,11 +112,20 @@ Partial Class P_merma_N
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(30, 142)
+        Me.Label3.Location = New System.Drawing.Point(30, 166)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 18)
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "Cantidad:"
+        '
+        'btnlimpiar_campos
+        '
+        Me.btnlimpiar_campos.Location = New System.Drawing.Point(198, 216)
+        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
+        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
+        Me.btnlimpiar_campos.TabIndex = 26
+        Me.btnlimpiar_campos.Text = "Limpiar campos"
+        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
         '
         'btnterminar
         '
@@ -110,7 +140,6 @@ Partial Class P_merma_N
         'btnguardar
         '
         Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnguardar.Enabled = False
         Me.btnguardar.Location = New System.Drawing.Point(342, 216)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(105, 30)
@@ -120,8 +149,7 @@ Partial Class P_merma_N
         '
         'txtmotivo
         '
-        Me.txtmotivo.Enabled = False
-        Me.txtmotivo.Location = New System.Drawing.Point(152, 66)
+        Me.txtmotivo.Location = New System.Drawing.Point(152, 111)
         Me.txtmotivo.MaxLength = 300
         Me.txtmotivo.Multiline = True
         Me.txtmotivo.Name = "txtmotivo"
@@ -142,7 +170,7 @@ Partial Class P_merma_N
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(30, 84)
+        Me.Label4.Location = New System.Drawing.Point(30, 127)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 18)
         Me.Label4.TabIndex = 17
@@ -170,16 +198,6 @@ Partial Class P_merma_N
         Me.Label6.Text = "Agregar Articulo A Merma"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnlimpiar_campos
-        '
-        Me.btnlimpiar_campos.Enabled = False
-        Me.btnlimpiar_campos.Location = New System.Drawing.Point(198, 216)
-        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
-        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
-        Me.btnlimpiar_campos.TabIndex = 26
-        Me.btnlimpiar_campos.Text = "Limpiar campos"
-        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
-        '
         'P_merma_N
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -187,7 +205,7 @@ Partial Class P_merma_N
         Me.ClientSize = New System.Drawing.Size(575, 361)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_merma_N"
         Me.Text = "P_merma_N"
         Me.Panel1.ResumeLayout(False)
@@ -210,4 +228,6 @@ Partial Class P_merma_N
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtid_sucursal As System.Windows.Forms.ComboBox
+    Friend WithEvents Id As System.Windows.Forms.Label
 End Class

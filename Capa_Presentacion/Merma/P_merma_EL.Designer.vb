@@ -25,26 +25,32 @@ Partial Class P_merma_EL
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.txtConsulta = New System.Windows.Forms.TextBox()
+        Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.btnSiguiente = New System.Windows.Forms.Button()
+        Me.btnAtras = New System.Windows.Forms.Button()
+        Me.Txthora = New System.Windows.Forms.TextBox()
+        Me.Txtfecha = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Txtid_usuario = New System.Windows.Forms.TextBox()
+        Me.Txtid_merma = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Txtcantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
         Me.btnterminar = New System.Windows.Forms.Button()
-        Me.btnguardar = New System.Windows.Forms.Button()
         Me.Txtmotivo = New System.Windows.Forms.TextBox()
         Me.Txtid_articulo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Txtid_merma = New System.Windows.Forms.TextBox()
-        Me.Txtid_usuario = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Txtfecha = New System.Windows.Forms.TextBox()
-        Me.Txthora = New System.Windows.Forms.TextBox()
+        Me.Id = New System.Windows.Forms.Label()
+        Me.Txtid_sucursal = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,21 +64,28 @@ Partial Class P_merma_EL
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(650, 472)
+        Me.Panel1.Size = New System.Drawing.Size(653, 605)
         Me.Panel1.TabIndex = 2
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(5, 421)
+        Me.Panel2.Location = New System.Drawing.Point(5, 554)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(640, 46)
+        Me.Panel2.Size = New System.Drawing.Size(643, 46)
         Me.Panel2.TabIndex = 18
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.Txtid_sucursal)
+        Me.Panel3.Controls.Add(Me.Id)
+        Me.Panel3.Controls.Add(Me.btnEliminar)
+        Me.Panel3.Controls.Add(Me.txtConsulta)
+        Me.Panel3.Controls.Add(Me.dgvTabla)
+        Me.Panel3.Controls.Add(Me.btnSiguiente)
+        Me.Panel3.Controls.Add(Me.btnAtras)
         Me.Panel3.Controls.Add(Me.Txthora)
         Me.Panel3.Controls.Add(Me.Txtfecha)
         Me.Panel3.Controls.Add(Me.Label8)
@@ -83,9 +96,7 @@ Partial Class P_merma_EL
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Txtcantidad)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.btnlimpiar_campos)
         Me.Panel3.Controls.Add(Me.btnterminar)
-        Me.Panel3.Controls.Add(Me.btnguardar)
         Me.Panel3.Controls.Add(Me.Txtmotivo)
         Me.Panel3.Controls.Add(Me.Txtid_articulo)
         Me.Panel3.Controls.Add(Me.Label4)
@@ -93,13 +104,148 @@ Partial Class P_merma_EL
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(640, 413)
+        Me.Panel3.Size = New System.Drawing.Size(643, 546)
         Me.Panel3.TabIndex = 17
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnEliminar.Enabled = False
+        Me.btnEliminar.Location = New System.Drawing.Point(406, 464)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(105, 30)
+        Me.btnEliminar.TabIndex = 89
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'txtConsulta
+        '
+        Me.txtConsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtConsulta.ForeColor = System.Drawing.Color.Green
+        Me.txtConsulta.Location = New System.Drawing.Point(236, 15)
+        Me.txtConsulta.Name = "txtConsulta"
+        Me.txtConsulta.Size = New System.Drawing.Size(174, 26)
+        Me.txtConsulta.TabIndex = 88
+        Me.txtConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'dgvTabla
+        '
+        Me.dgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvTabla.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.dgvTabla.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTabla.Location = New System.Drawing.Point(43, 47)
+        Me.dgvTabla.MultiSelect = False
+        Me.dgvTabla.Name = "dgvTabla"
+        Me.dgvTabla.ReadOnly = True
+        Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvTabla.Size = New System.Drawing.Size(568, 99)
+        Me.dgvTabla.TabIndex = 87
+        '
+        'btnSiguiente
+        '
+        Me.btnSiguiente.Image = Global.Capa_Presentacion.My.Resources.Resources.Forward
+        Me.btnSiguiente.Location = New System.Drawing.Point(181, 458)
+        Me.btnSiguiente.Name = "btnSiguiente"
+        Me.btnSiguiente.Size = New System.Drawing.Size(42, 36)
+        Me.btnSiguiente.TabIndex = 86
+        Me.btnSiguiente.UseVisualStyleBackColor = True
+        '
+        'btnAtras
+        '
+        Me.btnAtras.Image = Global.Capa_Presentacion.My.Resources.Resources.Back2
+        Me.btnAtras.Location = New System.Drawing.Point(133, 458)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(42, 36)
+        Me.btnAtras.TabIndex = 85
+        Me.btnAtras.UseVisualStyleBackColor = True
+        '
+        'Txthora
+        '
+        Me.Txthora.Enabled = False
+        Me.Txthora.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txthora.Location = New System.Drawing.Point(119, 413)
+        Me.Txthora.MaxLength = 20
+        Me.Txthora.Name = "Txthora"
+        Me.Txthora.Size = New System.Drawing.Size(204, 26)
+        Me.Txthora.TabIndex = 44
+        Me.Txthora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Txtfecha
+        '
+        Me.Txtfecha.Enabled = False
+        Me.Txtfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtfecha.Location = New System.Drawing.Point(119, 381)
+        Me.Txtfecha.MaxLength = 20
+        Me.Txtfecha.Name = "Txtfecha"
+        Me.Txtfecha.Size = New System.Drawing.Size(204, 26)
+        Me.Txtfecha.TabIndex = 43
+        Me.Txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(40, 413)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(46, 18)
+        Me.Label8.TabIndex = 42
+        Me.Label8.Text = "Hora:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(37, 384)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(56, 18)
+        Me.Label7.TabIndex = 41
+        Me.Label7.Text = "Fecha:"
+        '
+        'Txtid_usuario
+        '
+        Me.Txtid_usuario.Enabled = False
+        Me.Txtid_usuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtid_usuario.Location = New System.Drawing.Point(119, 226)
+        Me.Txtid_usuario.MaxLength = 20
+        Me.Txtid_usuario.Name = "Txtid_usuario"
+        Me.Txtid_usuario.Size = New System.Drawing.Size(204, 26)
+        Me.Txtid_usuario.TabIndex = 40
+        Me.Txtid_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Txtid_merma
+        '
+        Me.Txtid_merma.Enabled = False
+        Me.Txtid_merma.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtid_merma.Location = New System.Drawing.Point(119, 194)
+        Me.Txtid_merma.MaxLength = 20
+        Me.Txtid_merma.Name = "Txtid_merma"
+        Me.Txtid_merma.Size = New System.Drawing.Size(204, 26)
+        Me.Txtid_merma.TabIndex = 39
+        Me.Txtid_merma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(40, 197)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 18)
+        Me.Label5.TabIndex = 38
+        Me.Label5.Text = "ID:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(37, 229)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(66, 18)
+        Me.Label2.TabIndex = 37
+        Me.Label2.Text = "Usuario:"
         '
         'Txtcantidad
         '
         Me.Txtcantidad.Enabled = False
-        Me.Txtcantidad.Location = New System.Drawing.Point(119, 187)
+        Me.Txtcantidad.Location = New System.Drawing.Point(119, 349)
         Me.Txtcantidad.Name = "Txtcantidad"
         Me.Txtcantidad.Size = New System.Drawing.Size(78, 26)
         Me.Txtcantidad.TabIndex = 36
@@ -107,47 +253,26 @@ Partial Class P_merma_EL
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(37, 187)
+        Me.Label3.Location = New System.Drawing.Point(37, 357)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 18)
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "Cantidad:"
         '
-        'btnlimpiar_campos
-        '
-        Me.btnlimpiar_campos.Enabled = False
-        Me.btnlimpiar_campos.Location = New System.Drawing.Point(262, 321)
-        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
-        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
-        Me.btnlimpiar_campos.TabIndex = 26
-        Me.btnlimpiar_campos.Text = "Limpiar campos"
-        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
-        '
         'btnterminar
         '
         Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnterminar.Location = New System.Drawing.Point(517, 321)
+        Me.btnterminar.Location = New System.Drawing.Point(517, 464)
         Me.btnterminar.Name = "btnterminar"
         Me.btnterminar.Size = New System.Drawing.Size(105, 30)
         Me.btnterminar.TabIndex = 25
         Me.btnterminar.Text = "Terminar"
         Me.btnterminar.UseVisualStyleBackColor = True
         '
-        'btnguardar
-        '
-        Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnguardar.Enabled = False
-        Me.btnguardar.Location = New System.Drawing.Point(406, 321)
-        Me.btnguardar.Name = "btnguardar"
-        Me.btnguardar.Size = New System.Drawing.Size(105, 30)
-        Me.btnguardar.TabIndex = 24
-        Me.btnguardar.Text = "Guardar"
-        Me.btnguardar.UseVisualStyleBackColor = True
-        '
         'Txtmotivo
         '
         Me.Txtmotivo.Enabled = False
-        Me.Txtmotivo.Location = New System.Drawing.Point(119, 127)
+        Me.Txtmotivo.Location = New System.Drawing.Point(119, 296)
         Me.Txtmotivo.MaxLength = 300
         Me.Txtmotivo.Multiline = True
         Me.Txtmotivo.Name = "Txtmotivo"
@@ -157,8 +282,9 @@ Partial Class P_merma_EL
         '
         'Txtid_articulo
         '
+        Me.Txtid_articulo.Enabled = False
         Me.Txtid_articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_articulo.Location = New System.Drawing.Point(119, 93)
+        Me.Txtid_articulo.Location = New System.Drawing.Point(119, 264)
         Me.Txtid_articulo.MaxLength = 20
         Me.Txtid_articulo.Name = "Txtid_articulo"
         Me.Txtid_articulo.Size = New System.Drawing.Size(204, 26)
@@ -168,7 +294,7 @@ Partial Class P_merma_EL
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(37, 127)
+        Me.Label4.Location = New System.Drawing.Point(40, 312)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 18)
         Me.Label4.TabIndex = 17
@@ -177,7 +303,7 @@ Partial Class P_merma_EL
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(37, 92)
+        Me.Label1.Location = New System.Drawing.Point(40, 272)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 18)
         Me.Label1.TabIndex = 14
@@ -191,101 +317,46 @@ Partial Class P_merma_EL
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(5, 5)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(640, 49)
+        Me.Label6.Size = New System.Drawing.Size(643, 49)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Eliminar Articulo En Merma"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'Id
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(37, 61)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 18)
-        Me.Label2.TabIndex = 37
-        Me.Label2.Text = "Usuario:"
+        Me.Id.AutoSize = True
+        Me.Id.Location = New System.Drawing.Point(37, 163)
+        Me.Id.Name = "Id"
+        Me.Id.Size = New System.Drawing.Size(72, 18)
+        Me.Id.TabIndex = 90
+        Me.Id.Text = "Sucursal:"
         '
-        'Label5
+        'Txtid_sucursal
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(37, 34)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 18)
-        Me.Label5.TabIndex = 38
-        Me.Label5.Text = "ID:"
-        '
-        'Txtid_merma
-        '
-        Me.Txtid_merma.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_merma.Location = New System.Drawing.Point(119, 26)
-        Me.Txtid_merma.MaxLength = 20
-        Me.Txtid_merma.Name = "Txtid_merma"
-        Me.Txtid_merma.Size = New System.Drawing.Size(204, 26)
-        Me.Txtid_merma.TabIndex = 39
-        Me.Txtid_merma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Txtid_usuario
-        '
-        Me.Txtid_usuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_usuario.Location = New System.Drawing.Point(119, 61)
-        Me.Txtid_usuario.MaxLength = 20
-        Me.Txtid_usuario.Name = "Txtid_usuario"
-        Me.Txtid_usuario.Size = New System.Drawing.Size(204, 26)
-        Me.Txtid_usuario.TabIndex = 40
-        Me.Txtid_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(37, 225)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 18)
-        Me.Label7.TabIndex = 41
-        Me.Label7.Text = "Fecha:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(37, 262)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(46, 18)
-        Me.Label8.TabIndex = 42
-        Me.Label8.Text = "Hora:"
-        '
-        'Txtfecha
-        '
-        Me.Txtfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtfecha.Location = New System.Drawing.Point(119, 225)
-        Me.Txtfecha.MaxLength = 20
-        Me.Txtfecha.Name = "Txtfecha"
-        Me.Txtfecha.Size = New System.Drawing.Size(204, 26)
-        Me.Txtfecha.TabIndex = 43
-        Me.Txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Txthora
-        '
-        Me.Txthora.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txthora.Location = New System.Drawing.Point(119, 267)
-        Me.Txthora.MaxLength = 20
-        Me.Txthora.Name = "Txthora"
-        Me.Txthora.Size = New System.Drawing.Size(204, 26)
-        Me.Txthora.TabIndex = 44
-        Me.Txthora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Txtid_sucursal.Enabled = False
+        Me.Txtid_sucursal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtid_sucursal.Location = New System.Drawing.Point(119, 160)
+        Me.Txtid_sucursal.MaxLength = 20
+        Me.Txtid_sucursal.Name = "Txtid_sucursal"
+        Me.Txtid_sucursal.Size = New System.Drawing.Size(204, 26)
+        Me.Txtid_sucursal.TabIndex = 91
+        Me.Txtid_sucursal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'P_merma_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(650, 472)
+        Me.ClientSize = New System.Drawing.Size(653, 605)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_merma_EL"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "P_merma_EL"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Txtcantidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -303,12 +374,17 @@ Partial Class P_merma_EL
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Txtcantidad As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnlimpiar_campos As System.Windows.Forms.Button
     Friend WithEvents btnterminar As System.Windows.Forms.Button
-    Friend WithEvents btnguardar As System.Windows.Forms.Button
     Friend WithEvents Txtmotivo As System.Windows.Forms.TextBox
     Friend WithEvents Txtid_articulo As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents btnSiguiente As System.Windows.Forms.Button
+    Friend WithEvents btnAtras As System.Windows.Forms.Button
+    Friend WithEvents dgvTabla As System.Windows.Forms.DataGridView
+    Friend WithEvents txtConsulta As System.Windows.Forms.TextBox
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
+    Friend WithEvents Txtid_sucursal As System.Windows.Forms.TextBox
+    Friend WithEvents Id As System.Windows.Forms.Label
 End Class

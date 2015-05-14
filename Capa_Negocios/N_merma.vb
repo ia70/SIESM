@@ -1,13 +1,13 @@
 ﻿Imports Capa_Datos
 Imports Capa_Entidad
 Public Class N_merma
-    Dim Elemento As New D_inventario
+    Dim Elemento As New D_merma
 
-    Public Function Insertar(ByVal _Elemento As E_inventario) As Boolean
+    Public Function Insertar(ByVal _Elemento As E_merma) As Boolean
         Return Elemento.Insertar(_Elemento)
     End Function
 
-    Public Function Editar(ByVal _Elemento As E_inventario) As Boolean
+    Public Function Editar(ByVal _Elemento As E_merma) As Boolean
         Return Elemento.Editar(_Elemento)
     End Function
 

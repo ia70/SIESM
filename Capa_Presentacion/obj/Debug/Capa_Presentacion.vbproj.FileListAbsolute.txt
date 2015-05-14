@@ -87,7 +87,6 @@ C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_invent_ED.resources
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_invent_EL.resources
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_invent_N.resources
-C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_merma_C.resources
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_merma_ED.resources
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_merma_EL.resources
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_merma_N.resources
@@ -98,3 +97,5 @@ C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_usuario_EL.resources
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_usuario_N.resources
 C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_usuario_C.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Login.resources
+C:\Users\1\Documents\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Form1.resources

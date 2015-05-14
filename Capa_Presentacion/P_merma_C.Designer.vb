@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class P_merma_ED
+Partial Class P_merma_C
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -25,10 +25,6 @@ Partial Class P_merma_ED
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btnSiguiente = New System.Windows.Forms.Button()
-        Me.btnAtras = New System.Windows.Forms.Button()
-        Me.txtConsulta = New System.Windows.Forms.TextBox()
-        Me.dgvTabla = New System.Windows.Forms.DataGridView()
         Me.Txthora = New System.Windows.Forms.TextBox()
         Me.Txtfecha = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -47,11 +43,8 @@ Partial Class P_merma_ED
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Txtid_sucursal = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,27 +58,21 @@ Partial Class P_merma_ED
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(662, 586)
-        Me.Panel1.TabIndex = 3
+        Me.Panel1.Size = New System.Drawing.Size(650, 472)
+        Me.Panel1.TabIndex = 4
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(5, 535)
+        Me.Panel2.Location = New System.Drawing.Point(5, 421)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(652, 46)
+        Me.Panel2.Size = New System.Drawing.Size(640, 46)
         Me.Panel2.TabIndex = 18
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Panel3.Controls.Add(Me.Txtid_sucursal)
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.btnSiguiente)
-        Me.Panel3.Controls.Add(Me.btnAtras)
-        Me.Panel3.Controls.Add(Me.txtConsulta)
-        Me.Panel3.Controls.Add(Me.dgvTabla)
         Me.Panel3.Controls.Add(Me.Txthora)
         Me.Panel3.Controls.Add(Me.Txtfecha)
         Me.Panel3.Controls.Add(Me.Label8)
@@ -106,57 +93,13 @@ Partial Class P_merma_ED
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(652, 527)
+        Me.Panel3.Size = New System.Drawing.Size(640, 413)
         Me.Panel3.TabIndex = 17
-        '
-        'btnSiguiente
-        '
-        Me.btnSiguiente.Image = Global.Capa_Presentacion.My.Resources.Resources.Forward
-        Me.btnSiguiente.Location = New System.Drawing.Point(232, 439)
-        Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(38, 36)
-        Me.btnSiguiente.TabIndex = 92
-        Me.btnSiguiente.UseVisualStyleBackColor = True
-        '
-        'btnAtras
-        '
-        Me.btnAtras.Image = Global.Capa_Presentacion.My.Resources.Resources.Back2
-        Me.btnAtras.Location = New System.Drawing.Point(184, 439)
-        Me.btnAtras.Name = "btnAtras"
-        Me.btnAtras.Size = New System.Drawing.Size(38, 36)
-        Me.btnAtras.TabIndex = 91
-        Me.btnAtras.UseVisualStyleBackColor = True
-        '
-        'txtConsulta
-        '
-        Me.txtConsulta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtConsulta.ForeColor = System.Drawing.Color.Green
-        Me.txtConsulta.Location = New System.Drawing.Point(253, 3)
-        Me.txtConsulta.Name = "txtConsulta"
-        Me.txtConsulta.Size = New System.Drawing.Size(174, 26)
-        Me.txtConsulta.TabIndex = 90
-        Me.txtConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'dgvTabla
-        '
-        Me.dgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.dgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgvTabla.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.dgvTabla.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTabla.Location = New System.Drawing.Point(55, 35)
-        Me.dgvTabla.MultiSelect = False
-        Me.dgvTabla.Name = "dgvTabla"
-        Me.dgvTabla.ReadOnly = True
-        Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTabla.Size = New System.Drawing.Size(568, 99)
-        Me.dgvTabla.TabIndex = 89
         '
         'Txthora
         '
         Me.Txthora.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txthora.Location = New System.Drawing.Point(122, 410)
+        Me.Txthora.Location = New System.Drawing.Point(119, 267)
         Me.Txthora.MaxLength = 20
         Me.Txthora.Name = "Txthora"
         Me.Txthora.Size = New System.Drawing.Size(204, 26)
@@ -166,7 +109,7 @@ Partial Class P_merma_ED
         'Txtfecha
         '
         Me.Txtfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtfecha.Location = New System.Drawing.Point(122, 370)
+        Me.Txtfecha.Location = New System.Drawing.Point(119, 225)
         Me.Txtfecha.MaxLength = 20
         Me.Txtfecha.Name = "Txtfecha"
         Me.Txtfecha.Size = New System.Drawing.Size(204, 26)
@@ -176,7 +119,7 @@ Partial Class P_merma_ED
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(52, 410)
+        Me.Label8.Location = New System.Drawing.Point(37, 262)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(46, 18)
         Me.Label8.TabIndex = 42
@@ -185,7 +128,7 @@ Partial Class P_merma_ED
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(40, 378)
+        Me.Label7.Location = New System.Drawing.Point(37, 225)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(56, 18)
         Me.Label7.TabIndex = 41
@@ -194,7 +137,7 @@ Partial Class P_merma_ED
         'Txtid_usuario
         '
         Me.Txtid_usuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_usuario.Location = New System.Drawing.Point(122, 214)
+        Me.Txtid_usuario.Location = New System.Drawing.Point(119, 61)
         Me.Txtid_usuario.MaxLength = 20
         Me.Txtid_usuario.Name = "Txtid_usuario"
         Me.Txtid_usuario.Size = New System.Drawing.Size(204, 26)
@@ -204,7 +147,7 @@ Partial Class P_merma_ED
         'Txtid_merma
         '
         Me.Txtid_merma.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_merma.Location = New System.Drawing.Point(122, 179)
+        Me.Txtid_merma.Location = New System.Drawing.Point(119, 26)
         Me.Txtid_merma.MaxLength = 20
         Me.Txtid_merma.Name = "Txtid_merma"
         Me.Txtid_merma.Size = New System.Drawing.Size(204, 26)
@@ -214,7 +157,7 @@ Partial Class P_merma_ED
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(40, 182)
+        Me.Label5.Location = New System.Drawing.Point(37, 34)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(27, 18)
         Me.Label5.TabIndex = 38
@@ -223,7 +166,7 @@ Partial Class P_merma_ED
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(40, 214)
+        Me.Label2.Location = New System.Drawing.Point(37, 61)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 18)
         Me.Label2.TabIndex = 37
@@ -232,7 +175,7 @@ Partial Class P_merma_ED
         'Txtcantidad
         '
         Me.Txtcantidad.Enabled = False
-        Me.Txtcantidad.Location = New System.Drawing.Point(174, 332)
+        Me.Txtcantidad.Location = New System.Drawing.Point(171, 179)
         Me.Txtcantidad.Name = "Txtcantidad"
         Me.Txtcantidad.Size = New System.Drawing.Size(78, 26)
         Me.Txtcantidad.TabIndex = 36
@@ -240,7 +183,7 @@ Partial Class P_merma_ED
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(40, 340)
+        Me.Label3.Location = New System.Drawing.Point(37, 187)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 18)
         Me.Label3.TabIndex = 28
@@ -249,7 +192,7 @@ Partial Class P_merma_ED
         'btnlimpiar_campos
         '
         Me.btnlimpiar_campos.Enabled = False
-        Me.btnlimpiar_campos.Location = New System.Drawing.Point(289, 445)
+        Me.btnlimpiar_campos.Location = New System.Drawing.Point(262, 321)
         Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
         Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
         Me.btnlimpiar_campos.TabIndex = 26
@@ -259,7 +202,7 @@ Partial Class P_merma_ED
         'btnterminar
         '
         Me.btnterminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnterminar.Location = New System.Drawing.Point(544, 445)
+        Me.btnterminar.Location = New System.Drawing.Point(517, 321)
         Me.btnterminar.Name = "btnterminar"
         Me.btnterminar.Size = New System.Drawing.Size(105, 30)
         Me.btnterminar.TabIndex = 25
@@ -270,7 +213,7 @@ Partial Class P_merma_ED
         '
         Me.btnguardar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnguardar.Enabled = False
-        Me.btnguardar.Location = New System.Drawing.Point(433, 445)
+        Me.btnguardar.Location = New System.Drawing.Point(406, 321)
         Me.btnguardar.Name = "btnguardar"
         Me.btnguardar.Size = New System.Drawing.Size(105, 30)
         Me.btnguardar.TabIndex = 24
@@ -280,7 +223,7 @@ Partial Class P_merma_ED
         'Txtmotivo
         '
         Me.Txtmotivo.Enabled = False
-        Me.Txtmotivo.Location = New System.Drawing.Point(122, 280)
+        Me.Txtmotivo.Location = New System.Drawing.Point(119, 127)
         Me.Txtmotivo.MaxLength = 300
         Me.Txtmotivo.Multiline = True
         Me.Txtmotivo.Name = "Txtmotivo"
@@ -291,7 +234,7 @@ Partial Class P_merma_ED
         'Txtid_articulo
         '
         Me.Txtid_articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_articulo.Location = New System.Drawing.Point(122, 246)
+        Me.Txtid_articulo.Location = New System.Drawing.Point(119, 93)
         Me.Txtid_articulo.MaxLength = 20
         Me.Txtid_articulo.Name = "Txtid_articulo"
         Me.Txtid_articulo.Size = New System.Drawing.Size(204, 26)
@@ -301,7 +244,7 @@ Partial Class P_merma_ED
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(40, 280)
+        Me.Label4.Location = New System.Drawing.Point(37, 127)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 18)
         Me.Label4.TabIndex = 17
@@ -310,7 +253,7 @@ Partial Class P_merma_ED
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(40, 245)
+        Me.Label1.Location = New System.Drawing.Point(37, 92)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 18)
         Me.Label1.TabIndex = 14
@@ -324,45 +267,25 @@ Partial Class P_merma_ED
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(5, 5)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(652, 49)
+        Me.Label6.Size = New System.Drawing.Size(640, 49)
         Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Editar Articulo En Merma"
+        Me.Label6.Text = "Consultar Articulo En Merma"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(40, 149)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(72, 18)
-        Me.Label9.TabIndex = 93
-        Me.Label9.Text = "Sucursal:"
-        '
-        'Txtid_sucursal
-        '
-        Me.Txtid_sucursal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_sucursal.Location = New System.Drawing.Point(122, 146)
-        Me.Txtid_sucursal.MaxLength = 20
-        Me.Txtid_sucursal.Name = "Txtid_sucursal"
-        Me.Txtid_sucursal.Size = New System.Drawing.Size(204, 26)
-        Me.Txtid_sucursal.TabIndex = 94
-        Me.Txtid_sucursal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'P_merma_ED
+        'P_merma_C
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(662, 586)
+        Me.ClientSize = New System.Drawing.Size(650, 472)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "P_merma_ED"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "P_merma_C"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P_merma_ED"
+        Me.Text = "P_merma_C"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Txtcantidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -388,10 +311,4 @@ Partial Class P_merma_ED
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtConsulta As System.Windows.Forms.TextBox
-    Friend WithEvents dgvTabla As System.Windows.Forms.DataGridView
-    Friend WithEvents btnSiguiente As System.Windows.Forms.Button
-    Friend WithEvents btnAtras As System.Windows.Forms.Button
-    Friend WithEvents Txtid_sucursal As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

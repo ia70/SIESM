@@ -29,22 +29,22 @@ Public Class D_merma
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id", MySqlDbType.VarChar).Value = _Elemento.id_merma
+                .Add("id", MySqlDbType.Int32).Value = _Elemento.id_merma
                 .Add("id_usu", MySqlDbType.VarChar).Value = _Elemento.id_usuario
                 .Add("id_art", MySqlDbType.VarChar).Value = _Elemento.id_articulo
-                .Add("mot", MySqlDbType.Int32).Value = _Elemento.motivo
-                .Add("can", MySqlDbType.VarChar).Value = _Elemento.cantidad
-                .Add("fec", MySqlDbType.Decimal).Value = _Elemento.fecha
-                .Add("hor", MySqlDbType.Decimal).Value = _Elemento.hora
+                .Add("id_suc", MySqlDbType.VarChar).Value = _Elemento.id_sucursal
+                .Add("mot", MySqlDbType.VarChar).Value = _Elemento.motivo
+                .Add("cant", MySqlDbType.Decimal).Value = _Elemento.cantidad
+                .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
+                .Add("hor", MySqlDbType.VarChar).Value = _Elemento.hora
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception
             MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
-        Finally
-            da.Dispose()
-            cn.Dispose()
         End Try
+
         Return Estado
+
     End Function
 
     'Obtiene el listado de todos los articulos en la tabla articulo
