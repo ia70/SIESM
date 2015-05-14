@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EC4D854E-A851-49D5-AE2E-D149E1759828}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Capa_Presentacion.Login</StartupObject>
+    <StartupObject>Capa_Presentacion.P_puntoVenta</StartupObject>
     <RootNamespace>Capa_Presentacion</RootNamespace>
     <AssemblyName>Capa_Presentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -130,6 +130,7 @@
     <Compile Include="Articulo\P_articulo_N.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Conf\VariablesGlobales.vb" />
     <Compile Include="Devolucion\P_devol_C.Designer.vb">
       <DependentUpon>P_devol_C.vb</DependentUpon>
     </Compile>
@@ -235,10 +236,10 @@
     <Compile Include="Principal\Popup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\P_puntoVenta.Designer.vb">
-      <DependentUpon>P_puntoVenta.vb</DependentUpon>
+    <Compile Include="Principal\P_PuntoVenta.Designer.vb">
+      <DependentUpon>P_PuntoVenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Principal\P_puntoVenta.vb">
+    <Compile Include="Principal\P_PuntoVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedor\P_proveedor_C.Designer.vb">
@@ -266,7 +267,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conf\Validacion.vb" />
-    <Compile Include="P_merma_C.Designer.vb" />
     <Compile Include="Sucursal\P_sucursal_C.Designer.vb">
       <DependentUpon>P_sucursal_C.vb</DependentUpon>
     </Compile>
@@ -380,8 +380,8 @@
     <EmbeddedResource Include="Principal\Popup.resx">
       <DependentUpon>Popup.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal\P_puntoVenta.resx">
-      <DependentUpon>P_puntoVenta.vb</DependentUpon>
+    <EmbeddedResource Include="Principal\P_PuntoVenta.resx">
+      <DependentUpon>P_PuntoVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedor\P_proveedor_C.resx">
       <DependentUpon>P_proveedor_C.vb</DependentUpon>
@@ -477,7 +477,42 @@
   <ItemGroup>
     <None Include="Resources\DSC02120.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degra1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laminas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degra7 - copia.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degra7.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\degradados-fondos-de-pantalla-textura-la-luz-patr-n-fondo-un-degradado-429735.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg117.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
