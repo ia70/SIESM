@@ -113,6 +113,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property CAJON_DINERO_FRONT_RS5158() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CAJON-DINERO-FRONT-RS5158", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Database() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Database", resourceCulture)
