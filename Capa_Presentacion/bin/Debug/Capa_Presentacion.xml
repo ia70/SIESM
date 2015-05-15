@@ -15,6 +15,10 @@ Capa_Presentacion
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.alt1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Capa_Presentacion.My.Resources.Resources.Back">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -24,6 +28,10 @@ Capa_Presentacion
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Capa_Presentacion.My.Resources.Resources.Back2">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.barras">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -39,7 +47,15 @@ Capa_Presentacion
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.CAJON_DINERO_FRONT_RS51581">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Capa_Presentacion.My.Resources.Resources.Database">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.dd1">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -63,7 +79,19 @@ Capa_Presentacion
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.fondos14">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Capa_Presentacion.My.Resources.Resources.Forward">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.GUID_7E4F80EB_CB9C_4D35_8C6C_7F414C0DDDD4">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.images">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -72,6 +100,22 @@ Capa_Presentacion
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Capa_Presentacion.My.Resources.Resources.laminas">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.Metal_Steel_Textured_White">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.metal5">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.photos_demandstudios_com_getty_article_114_171_87452002_XS">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.photos_demandstudios_com_getty_article_129_15_87466107_XS">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -84,6 +128,10 @@ Capa_Presentacion
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Capa_Presentacion.My.Resources.Resources.Tools">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.url">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

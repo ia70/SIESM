@@ -516,6 +516,42 @@
   <ItemGroup>
     <None Include="Resources\CAJON-DINERO-FRONT-RS5158.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dd1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alt1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photos.demandstudios.com_getty_article_114_171_87452002_XS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\url.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photos.demandstudios.com_getty_article_129_15_87466107_XS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metal5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GUID-7E4F80EB-CB9C-4D35-8C6C-7F414C0DDDD4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Metal_Steel_Textured_White.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondos14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAJON-DINERO-FRONT-RS5158.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
