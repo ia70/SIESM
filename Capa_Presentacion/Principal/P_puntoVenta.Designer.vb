@@ -35,6 +35,14 @@ Partial Class P_PuntoVenta
         Me.btnConsultaPrecio = New System.Windows.Forms.Button()
         Me.btnCorteCaja = New System.Windows.Forms.Button()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EliminarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BorrarTodaLaTablaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PInfoVenta = New System.Windows.Forms.Panel()
         Me.btnCobrar = New System.Windows.Forms.Button()
         Me.txtEfectivo = New System.Windows.Forms.TextBox()
@@ -55,22 +63,14 @@ Partial Class P_PuntoVenta
         Me.txtSucursal_Calle = New System.Windows.Forms.Label()
         Me.PHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EliminarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BorrarTodaLaTablaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TTCorteCaja = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.P_NavBar.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cMenu.SuspendLayout()
         Me.PInfoVenta.SuspendLayout()
         Me.PFooter.SuspendLayout()
         Me.PFecha.SuspendLayout()
         Me.PHeader.SuspendLayout()
-        Me.cMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'P_NavBar
@@ -151,11 +151,87 @@ Partial Class P_PuntoVenta
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvTabla.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTabla.Size = New System.Drawing.Size(472, 368)
         Me.dgvTabla.TabIndex = 2
         Me.TTCorteCaja.SetToolTip(Me.dgvTabla, "Listado de los articulos que se están vendiendo." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Presiona click derecho si des" & _
         "eas borrar uno o todos los registros.")
+        '
+        'ID
+        '
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ID.DefaultCellStyle = DataGridViewCellStyle1
+        Me.ID.Frozen = True
+        Me.ID.HeaderText = "ID"
+        Me.ID.MinimumWidth = 80
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Width = 80
+        '
+        'Articulo
+        '
+        Me.Articulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Articulo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Articulo.Frozen = True
+        Me.Articulo.HeaderText = "Nombre del Articulo"
+        Me.Articulo.MinimumWidth = 500
+        Me.Articulo.Name = "Articulo"
+        Me.Articulo.ReadOnly = True
+        Me.Articulo.Width = 500
+        '
+        'Cantidad
+        '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Cantidad.Frozen = True
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.MinimumWidth = 80
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.ToolTipText = "Para modificar la cantidad has doble click en el campo cantidad de la fila desead" & _
+    "a."
+        Me.Cantidad.Width = 97
+        '
+        'Precio
+        '
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Precio.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Precio.Frozen = True
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.MinimumWidth = 80
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        Me.Precio.Width = 80
+        '
+        'Subtotal
+        '
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Subtotal.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Subtotal.Frozen = True
+        Me.Subtotal.HeaderText = "Subtotal"
+        Me.Subtotal.MinimumWidth = 80
+        Me.Subtotal.Name = "Subtotal"
+        Me.Subtotal.ReadOnly = True
+        Me.Subtotal.Width = 90
+        '
+        'cMenu
+        '
+        Me.cMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarRegistroToolStripMenuItem, Me.BorrarTodaLaTablaToolStripMenuItem})
+        Me.cMenu.Name = "ContextMenuStrip1"
+        Me.cMenu.Size = New System.Drawing.Size(175, 48)
+        '
+        'EliminarRegistroToolStripMenuItem
+        '
+        Me.EliminarRegistroToolStripMenuItem.Name = "EliminarRegistroToolStripMenuItem"
+        Me.EliminarRegistroToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.EliminarRegistroToolStripMenuItem.Text = "Borrar registro"
+        '
+        'BorrarTodaLaTablaToolStripMenuItem
+        '
+        Me.BorrarTodaLaTablaToolStripMenuItem.Name = "BorrarTodaLaTablaToolStripMenuItem"
+        Me.BorrarTodaLaTablaToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.BorrarTodaLaTablaToolStripMenuItem.Text = "Borrar toda la tabla"
         '
         'PInfoVenta
         '
@@ -277,7 +353,7 @@ Partial Class P_PuntoVenta
         Me.PFooter.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PFooter.Location = New System.Drawing.Point(0, 575)
         Me.PFooter.Name = "PFooter"
-        Me.PFooter.Size = New System.Drawing.Size(850, 75)
+        Me.PFooter.Size = New System.Drawing.Size(858, 75)
         Me.PFooter.TabIndex = 4
         '
         'PFecha
@@ -286,7 +362,7 @@ Partial Class P_PuntoVenta
         Me.PFecha.Controls.Add(Me.txtFecha)
         Me.PFecha.Controls.Add(Me.txtHora)
         Me.PFecha.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PFecha.Location = New System.Drawing.Point(561, 0)
+        Me.PFecha.Location = New System.Drawing.Point(569, 0)
         Me.PFecha.Name = "PFecha"
         Me.PFecha.Size = New System.Drawing.Size(285, 71)
         Me.PFecha.TabIndex = 5
@@ -382,7 +458,7 @@ Partial Class P_PuntoVenta
         Me.PHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.PHeader.Location = New System.Drawing.Point(0, 0)
         Me.PHeader.Name = "PHeader"
-        Me.PHeader.Size = New System.Drawing.Size(850, 148)
+        Me.PHeader.Size = New System.Drawing.Size(858, 148)
         Me.PHeader.TabIndex = 7
         '
         'Label1
@@ -393,92 +469,17 @@ Partial Class P_PuntoVenta
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(850, 148)
+        Me.Label1.Size = New System.Drawing.Size(858, 148)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ACEROS INOXIDABLES, REFACCIONES Y EQUIPOS"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'cMenu
-        '
-        Me.cMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarRegistroToolStripMenuItem, Me.BorrarTodaLaTablaToolStripMenuItem})
-        Me.cMenu.Name = "ContextMenuStrip1"
-        Me.cMenu.Size = New System.Drawing.Size(175, 48)
-        '
-        'EliminarRegistroToolStripMenuItem
-        '
-        Me.EliminarRegistroToolStripMenuItem.Name = "EliminarRegistroToolStripMenuItem"
-        Me.EliminarRegistroToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.EliminarRegistroToolStripMenuItem.Text = "Borrar registro"
-        '
-        'BorrarTodaLaTablaToolStripMenuItem
-        '
-        Me.BorrarTodaLaTablaToolStripMenuItem.Name = "BorrarTodaLaTablaToolStripMenuItem"
-        Me.BorrarTodaLaTablaToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.BorrarTodaLaTablaToolStripMenuItem.Text = "Borrar toda la tabla"
-        '
-        'ID
-        '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ID.DefaultCellStyle = DataGridViewCellStyle1
-        Me.ID.Frozen = True
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 80
-        Me.ID.Name = "ID"
-        Me.ID.ReadOnly = True
-        Me.ID.Width = 80
-        '
-        'Articulo
-        '
-        Me.Articulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Articulo.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Articulo.Frozen = True
-        Me.Articulo.HeaderText = "Nombre del Articulo"
-        Me.Articulo.MinimumWidth = 300
-        Me.Articulo.Name = "Articulo"
-        Me.Articulo.ReadOnly = True
-        Me.Articulo.Width = 300
-        '
-        'Cantidad
-        '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle3
-        Me.Cantidad.Frozen = True
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.MinimumWidth = 80
-        Me.Cantidad.Name = "Cantidad"
-        Me.Cantidad.ToolTipText = "Para modificar la cantidad has doble click en el campo cantidad de la fila desead" & _
-    "a."
-        Me.Cantidad.Width = 97
-        '
-        'Precio
-        '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Precio.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Precio.Frozen = True
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.MinimumWidth = 80
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        Me.Precio.Width = 80
-        '
-        'Subtotal
-        '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Subtotal.DefaultCellStyle = DataGridViewCellStyle5
-        Me.Subtotal.Frozen = True
-        Me.Subtotal.HeaderText = "Subtotal"
-        Me.Subtotal.MinimumWidth = 80
-        Me.Subtotal.Name = "Subtotal"
-        Me.Subtotal.ReadOnly = True
-        Me.Subtotal.Width = 90
         '
         'P_PuntoVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.fondos14
-        Me.ClientSize = New System.Drawing.Size(850, 650)
+        Me.ClientSize = New System.Drawing.Size(858, 650)
         Me.Controls.Add(Me.PHeader)
         Me.Controls.Add(Me.txtArticulo)
         Me.Controls.Add(Me.Label4)
@@ -495,12 +496,12 @@ Partial Class P_PuntoVenta
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.P_NavBar.ResumeLayout(False)
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.cMenu.ResumeLayout(False)
         Me.PInfoVenta.ResumeLayout(False)
         Me.PInfoVenta.PerformLayout()
         Me.PFooter.ResumeLayout(False)
         Me.PFecha.ResumeLayout(False)
         Me.PHeader.ResumeLayout(False)
-        Me.cMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
