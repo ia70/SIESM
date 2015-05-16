@@ -33,6 +33,9 @@ Public Class P_PuntoVenta
         End With
         dgvTabla.ScrollBars = ScrollBars.Both
 
+        txtTipo_Pago.SelectedIndex = 0
+        txtTransacción.SelectedIndex = 0
+
         txtArticulo.Focus()
     End Sub
 
@@ -103,5 +106,17 @@ Public Class P_PuntoVenta
 
     Private Sub dgvTabla_LostFocus(sender As Object, e As EventArgs) Handles dgvTabla.LostFocus
 
+    End Sub
+
+    Private Sub EliminarRegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarRegistroToolStripMenuItem.Click
+        On Error Resume Next
+        dgvTabla.Rows.Remove(dgvTabla.CurrentRow)
+        Subtotales()
+    End Sub
+
+    Private Sub BorrarTodaLaTablaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BorrarTodaLaTablaToolStripMenuItem.Click
+        dgvTabla.Rows.Clear()
+        G_PuntoVenta_Total = 0
+        txtTotal.Text = "0.00"
     End Sub
 End Class
