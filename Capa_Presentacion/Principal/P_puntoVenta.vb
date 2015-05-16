@@ -44,7 +44,17 @@ Public Class P_PuntoVenta
     End Sub
 
     Private Sub txtArticulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtArticulo.KeyPress
-            If Len(txtArticulo.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtArticulo.Text) Then
+        Dim existe As Boolean = True
+        If Len(txtArticulo.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtArticulo.Text) Then
+            For i As Integer = 0 To dgvTabla.Rows.Count - 1
+                If dgvTabla.Item(0, i).Value = txtArticulo.Text Then
+                    existe = False
+                    dgvTabla.Item(2, i).Value += 1
+                    txtArticulo.Text = ""
+                    txtArticulo.Focus()
+                End If
+            Next
+            If existe Then
                 Tabla = Elemento.Consultar(txtArticulo.Text)
                 If Tabla.Tables(0).Rows.Count = 0 Then
                     M("El articulo solicitado no existe", 3)
@@ -55,8 +65,11 @@ Public Class P_PuntoVenta
                     LlenarCampos()
                 End If
             Else
-                Validar_Num(e)
+                Subtotales()
             End If
+        Else
+            Validar_Num(e)
+        End If
     End Sub
 
     Private Sub LlenarCampos()
@@ -64,6 +77,7 @@ Public Class P_PuntoVenta
         Fila = dgvTabla.Rows.Count - 1
         If Tabla.Tables(0).Rows.Count > 0 Then
             dgvTabla.Rows.Add()
+            txtCantidad.Value = 1
             dgvTabla.Item(0, Fila).Value = Tabla.Tables(0).Rows(0)(0).ToString()
             dgvTabla.Item(1, Fila).Value = Tabla.Tables(0).Rows(0)(2).ToString()
             dgvTabla.Item(2, Fila).Value = "1"
@@ -80,7 +94,7 @@ Public Class P_PuntoVenta
         For i As Integer = 0 To (Filas - 1)
             If Not dgvTabla.Item(0, i).Value = "" Then
                 If dgvTabla.Item(2, i).Value = 0 Or dgvTabla.Item(2, i).Value.ToString = "" Then
-                    dgvTabla.Item(2, i).Value = 1
+                    dgvTabla.Item(2, i).Value = "1"
                     dgvTabla.Item(4, i).Value = ToDecimal(CDec(dgvTabla.Item(2, i).Value) * CDec(dgvTabla.Item(3, i).Value)).ToString
                     G_PuntoVenta_Total += dgvTabla.Item(4, i).Value
                 Else
@@ -118,5 +132,17 @@ Public Class P_PuntoVenta
         dgvTabla.Rows.Clear()
         G_PuntoVenta_Total = 0
         txtTotal.Text = "0.00"
+    End Sub
+
+    Private Sub txtArticulo_TextChanged(sender As Object, e As EventArgs) Handles txtArticulo.TextChanged
+
+    End Sub
+
+    Private Sub txtCantidad_ValueChanged(sender As Object, e As EventArgs) Handles txtCantidad.ValueChanged
+        If dgvTabla.Rows.Count > 1 Then
+            dgvTabla.Item(2, (dgvTabla.Rows.Count - 2)).Value = txtCantidad.Value.ToString
+            Subtotales()
+        End If
+        txtArticulo.Focus()
     End Sub
 End Class

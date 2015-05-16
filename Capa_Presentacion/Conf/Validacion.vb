@@ -105,10 +105,10 @@ Module Validacion
     End Function
 
     'Función para enviar MsgBox con los diferentes tipos de alertas
-    Public Sub M(ByVal Texto As String, ByVal Tipo As Integer)
-        If Tipo = 1 Then
+    Public Sub M(ByVal Texto As String, Optional ByVal Tipo As Integer = 0)
+        If Tipo = 0 Then
             MsgBox(Texto, vbInformation, "SIESM")
-        ElseIf Tipo = 2 Then
+        ElseIf Tipo = 1 Then
             MsgBox(Texto, vbExclamation, "SIESM")
         Else
             MsgBox(Texto, vbCritical, "SIESM")

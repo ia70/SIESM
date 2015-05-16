@@ -23,12 +23,12 @@ Partial Class P_PuntoVenta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.P_NavBar = New System.Windows.Forms.Panel()
         Me.btnAdministracion = New System.Windows.Forms.Button()
         Me.btnConsultaExistencia = New System.Windows.Forms.Button()
@@ -44,6 +44,7 @@ Partial Class P_PuntoVenta
         Me.EliminarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarTodaLaTablaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PInfoVenta = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTipo_Pago = New System.Windows.Forms.ComboBox()
         Me.btnCobrar = New System.Windows.Forms.Button()
         Me.txtEfectivo = New System.Windows.Forms.TextBox()
@@ -66,7 +67,6 @@ Partial Class P_PuntoVenta
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TTCorteCaja = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTransacción = New System.Windows.Forms.ComboBox()
@@ -155,8 +155,8 @@ Partial Class P_PuntoVenta
         Me.dgvTabla.Location = New System.Drawing.Point(143, 256)
         Me.dgvTabla.MultiSelect = False
         Me.dgvTabla.Name = "dgvTabla"
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle32
         Me.dgvTabla.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -167,8 +167,8 @@ Partial Class P_PuntoVenta
         '
         'ID
         '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ID.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ID.DefaultCellStyle = DataGridViewCellStyle22
         Me.ID.Frozen = True
         Me.ID.HeaderText = "ID"
         Me.ID.MinimumWidth = 80
@@ -179,8 +179,8 @@ Partial Class P_PuntoVenta
         'Articulo
         '
         Me.Articulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Articulo.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Articulo.DefaultCellStyle = DataGridViewCellStyle28
         Me.Articulo.Frozen = True
         Me.Articulo.HeaderText = "Nombre del Articulo"
         Me.Articulo.MinimumWidth = 500
@@ -190,8 +190,8 @@ Partial Class P_PuntoVenta
         '
         'Cantidad
         '
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle29
         Me.Cantidad.Frozen = True
         Me.Cantidad.HeaderText = "Cantidad"
         Me.Cantidad.MinimumWidth = 80
@@ -202,8 +202,8 @@ Partial Class P_PuntoVenta
         '
         'Precio
         '
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Precio.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Precio.DefaultCellStyle = DataGridViewCellStyle30
         Me.Precio.Frozen = True
         Me.Precio.HeaderText = "Precio"
         Me.Precio.MinimumWidth = 80
@@ -213,8 +213,8 @@ Partial Class P_PuntoVenta
         '
         'Subtotal
         '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Subtotal.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Subtotal.DefaultCellStyle = DataGridViewCellStyle31
         Me.Subtotal.Frozen = True
         Me.Subtotal.HeaderText = "Subtotal"
         Me.Subtotal.MinimumWidth = 80
@@ -257,10 +257,23 @@ Partial Class P_PuntoVenta
         Me.PInfoVenta.Size = New System.Drawing.Size(214, 417)
         Me.PInfoVenta.TabIndex = 3
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(5, 100)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(199, 32)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "Tipo de pago:"
+        Me.TTCorteCaja.SetToolTip(Me.Label6, "Efectivo con el que está pagando el cliente")
+        '
         'txtTipo_Pago
         '
         Me.txtTipo_Pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txtTipo_Pago.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipo_Pago.ForeColor = System.Drawing.Color.DodgerBlue
         Me.txtTipo_Pago.FormattingEnabled = True
         Me.txtTipo_Pago.Items.AddRange(New Object() {"Efectivo", "Cheque"})
         Me.txtTipo_Pago.Location = New System.Drawing.Point(21, 143)
@@ -301,11 +314,11 @@ Partial Class P_PuntoVenta
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(34, 201)
+        Me.Label3.Location = New System.Drawing.Point(47, 201)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(130, 32)
+        Me.Label3.Size = New System.Drawing.Size(106, 32)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Efectivo:"
+        Me.Label3.Text = "Monto:"
         Me.TTCorteCaja.SetToolTip(Me.Label3, "Efectivo con el que está pagando el cliente")
         '
         'txtTotal
@@ -328,7 +341,7 @@ Partial Class P_PuntoVenta
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(57, 6)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 32)
+        Me.Label2.Size = New System.Drawing.Size(90, 32)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Total:"
         Me.TTCorteCaja.SetToolTip(Me.Label2, "Total de la venta")
@@ -339,16 +352,16 @@ Partial Class P_PuntoVenta
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(149, 165)
+        Me.Label4.Location = New System.Drawing.Point(149, 160)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(128, 32)
+        Me.Label4.Size = New System.Drawing.Size(129, 32)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Articulo:"
         '
         'txtArticulo
         '
         Me.txtArticulo.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtArticulo.Location = New System.Drawing.Point(143, 199)
+        Me.txtArticulo.Location = New System.Drawing.Point(143, 194)
         Me.txtArticulo.Name = "txtArticulo"
         Me.txtArticulo.Size = New System.Drawing.Size(146, 39)
         Me.txtArticulo.TabIndex = 6
@@ -374,7 +387,7 @@ Partial Class P_PuntoVenta
         Me.PFooter.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PFooter.Location = New System.Drawing.Point(0, 575)
         Me.PFooter.Name = "PFooter"
-        Me.PFooter.Size = New System.Drawing.Size(1241, 75)
+        Me.PFooter.Size = New System.Drawing.Size(1097, 75)
         Me.PFooter.TabIndex = 4
         '
         'PFecha
@@ -383,7 +396,7 @@ Partial Class P_PuntoVenta
         Me.PFecha.Controls.Add(Me.txtFecha)
         Me.PFecha.Controls.Add(Me.txtHora)
         Me.PFecha.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PFecha.Location = New System.Drawing.Point(952, 0)
+        Me.PFecha.Location = New System.Drawing.Point(808, 0)
         Me.PFecha.Name = "PFecha"
         Me.PFecha.Size = New System.Drawing.Size(285, 71)
         Me.PFecha.TabIndex = 5
@@ -479,7 +492,7 @@ Partial Class P_PuntoVenta
         Me.PHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.PHeader.Location = New System.Drawing.Point(0, 0)
         Me.PHeader.Name = "PHeader"
-        Me.PHeader.Size = New System.Drawing.Size(1241, 148)
+        Me.PHeader.Size = New System.Drawing.Size(1097, 148)
         Me.PHeader.TabIndex = 7
         '
         'Label1
@@ -490,7 +503,7 @@ Partial Class P_PuntoVenta
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1241, 148)
+        Me.Label1.Size = New System.Drawing.Size(1097, 148)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ACEROS INOXIDABLES, REFACCIONES Y EQUIPOS"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -501,28 +514,16 @@ Partial Class P_PuntoVenta
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(313, 165)
+        Me.Label5.Location = New System.Drawing.Point(313, 160)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 32)
+        Me.Label5.Size = New System.Drawing.Size(143, 32)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Cantidad:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(6, 100)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(198, 32)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Tipo de pago:"
-        Me.TTCorteCaja.SetToolTip(Me.Label6, "Efectivo con el que está pagando el cliente")
         '
         'txtCantidad
         '
         Me.txtCantidad.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantidad.Location = New System.Drawing.Point(344, 199)
+        Me.txtCantidad.Location = New System.Drawing.Point(344, 194)
         Me.txtCantidad.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.txtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtCantidad.Name = "txtCantidad"
@@ -536,9 +537,9 @@ Partial Class P_PuntoVenta
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(489, 165)
+        Me.Label7.Location = New System.Drawing.Point(490, 160)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(186, 32)
+        Me.Label7.Size = New System.Drawing.Size(187, 32)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Transacción:"
         '
@@ -548,7 +549,7 @@ Partial Class P_PuntoVenta
         Me.txtTransacción.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTransacción.FormattingEnabled = True
         Me.txtTransacción.Items.AddRange(New Object() {"Venta", "Cotización"})
-        Me.txtTransacción.Location = New System.Drawing.Point(498, 199)
+        Me.txtTransacción.Location = New System.Drawing.Point(498, 194)
         Me.txtTransacción.Name = "txtTransacción"
         Me.txtTransacción.Size = New System.Drawing.Size(166, 40)
         Me.txtTransacción.TabIndex = 11
@@ -558,7 +559,7 @@ Partial Class P_PuntoVenta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.fondos14
-        Me.ClientSize = New System.Drawing.Size(1241, 650)
+        Me.ClientSize = New System.Drawing.Size(1097, 650)
         Me.Controls.Add(Me.txtTransacción)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtCantidad)

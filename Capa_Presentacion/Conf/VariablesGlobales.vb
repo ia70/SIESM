@@ -17,9 +17,11 @@
 
     'Variables Globales Punto de Venta
     Public G_PuntoVenta_Total As Decimal
-    Public G_PuntoVenta_Efectivo As Decimal
+    Public G_PuntoVenta_Monto As Decimal
     Public G_PuntoVenta_CantdadArticulos As Integer
     Public G_PuntoVenta_NumeroTicket As String
+    Public G_PuntoVenta_Transacción As String
+    Public G_PuntoVenta_TipoPago As String
 
 
 End Module
