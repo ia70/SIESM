@@ -23,12 +23,12 @@ Partial Class P_PuntoVenta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.P_NavBar = New System.Windows.Forms.Panel()
         Me.btnAdministracion = New System.Windows.Forms.Button()
         Me.btnConsultaExistencia = New System.Windows.Forms.Button()
@@ -44,11 +44,11 @@ Partial Class P_PuntoVenta
         Me.EliminarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarTodaLaTablaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PInfoVenta = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.LblTipo_pago = New System.Windows.Forms.Label()
         Me.txtTipo_Pago = New System.Windows.Forms.ComboBox()
         Me.btnCobrar = New System.Windows.Forms.Button()
         Me.txtEfectivo = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbl_monto = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -155,8 +155,8 @@ Partial Class P_PuntoVenta
         Me.dgvTabla.Location = New System.Drawing.Point(143, 256)
         Me.dgvTabla.MultiSelect = False
         Me.dgvTabla.Name = "dgvTabla"
-        DataGridViewCellStyle32.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvTabla.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -167,8 +167,8 @@ Partial Class P_PuntoVenta
         '
         'ID
         '
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ID.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ID.DefaultCellStyle = DataGridViewCellStyle7
         Me.ID.Frozen = True
         Me.ID.HeaderText = "ID"
         Me.ID.MinimumWidth = 80
@@ -179,8 +179,8 @@ Partial Class P_PuntoVenta
         'Articulo
         '
         Me.Articulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle28.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Articulo.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Articulo.DefaultCellStyle = DataGridViewCellStyle8
         Me.Articulo.Frozen = True
         Me.Articulo.HeaderText = "Nombre del Articulo"
         Me.Articulo.MinimumWidth = 500
@@ -190,8 +190,8 @@ Partial Class P_PuntoVenta
         '
         'Cantidad
         '
-        DataGridViewCellStyle29.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle9
         Me.Cantidad.Frozen = True
         Me.Cantidad.HeaderText = "Cantidad"
         Me.Cantidad.MinimumWidth = 80
@@ -202,8 +202,8 @@ Partial Class P_PuntoVenta
         '
         'Precio
         '
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Precio.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Precio.DefaultCellStyle = DataGridViewCellStyle10
         Me.Precio.Frozen = True
         Me.Precio.HeaderText = "Precio"
         Me.Precio.MinimumWidth = 80
@@ -213,8 +213,8 @@ Partial Class P_PuntoVenta
         '
         'Subtotal
         '
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Subtotal.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Subtotal.DefaultCellStyle = DataGridViewCellStyle11
         Me.Subtotal.Frozen = True
         Me.Subtotal.HeaderText = "Subtotal"
         Me.Subtotal.MinimumWidth = 80
@@ -244,11 +244,11 @@ Partial Class P_PuntoVenta
         '
         Me.PInfoVenta.BackColor = System.Drawing.Color.WhiteSmoke
         Me.PInfoVenta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PInfoVenta.Controls.Add(Me.Label6)
+        Me.PInfoVenta.Controls.Add(Me.LblTipo_pago)
         Me.PInfoVenta.Controls.Add(Me.txtTipo_Pago)
         Me.PInfoVenta.Controls.Add(Me.btnCobrar)
         Me.PInfoVenta.Controls.Add(Me.txtEfectivo)
-        Me.PInfoVenta.Controls.Add(Me.Label3)
+        Me.PInfoVenta.Controls.Add(Me.lbl_monto)
         Me.PInfoVenta.Controls.Add(Me.txtTotal)
         Me.PInfoVenta.Controls.Add(Me.Label2)
         Me.PInfoVenta.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -257,17 +257,17 @@ Partial Class P_PuntoVenta
         Me.PInfoVenta.Size = New System.Drawing.Size(214, 417)
         Me.PInfoVenta.TabIndex = 3
         '
-        'Label6
+        'LblTipo_pago
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(5, 100)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(199, 32)
-        Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Tipo de pago:"
-        Me.TTCorteCaja.SetToolTip(Me.Label6, "Efectivo con el que está pagando el cliente")
+        Me.LblTipo_pago.AutoSize = True
+        Me.LblTipo_pago.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTipo_pago.ForeColor = System.Drawing.Color.Black
+        Me.LblTipo_pago.Location = New System.Drawing.Point(5, 100)
+        Me.LblTipo_pago.Name = "LblTipo_pago"
+        Me.LblTipo_pago.Size = New System.Drawing.Size(199, 32)
+        Me.LblTipo_pago.TabIndex = 6
+        Me.LblTipo_pago.Text = "Tipo de pago:"
+        Me.TTCorteCaja.SetToolTip(Me.LblTipo_pago, "Efectivo con el que está pagando el cliente")
         '
         'txtTipo_Pago
         '
@@ -309,17 +309,17 @@ Partial Class P_PuntoVenta
         Me.txtEfectivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.TTCorteCaja.SetToolTip(Me.txtEfectivo, "Efectivo con el que está pagando el cliente")
         '
-        'Label3
+        'lbl_monto
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(47, 201)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 32)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Monto:"
-        Me.TTCorteCaja.SetToolTip(Me.Label3, "Efectivo con el que está pagando el cliente")
+        Me.lbl_monto.AutoSize = True
+        Me.lbl_monto.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_monto.ForeColor = System.Drawing.Color.Black
+        Me.lbl_monto.Location = New System.Drawing.Point(47, 201)
+        Me.lbl_monto.Name = "lbl_monto"
+        Me.lbl_monto.Size = New System.Drawing.Size(106, 32)
+        Me.lbl_monto.TabIndex = 2
+        Me.lbl_monto.Text = "Monto:"
+        Me.TTCorteCaja.SetToolTip(Me.lbl_monto, "Efectivo con el que está pagando el cliente")
         '
         'txtTotal
         '
@@ -601,7 +601,7 @@ Partial Class P_PuntoVenta
     Friend WithEvents txtTotal As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtEfectivo As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lbl_monto As System.Windows.Forms.Label
     Friend WithEvents btnCobrar As System.Windows.Forms.Button
     Friend WithEvents PFooter As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -628,7 +628,7 @@ Partial Class P_PuntoVenta
     Friend WithEvents Subtotal As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtTipo_Pago As System.Windows.Forms.ComboBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents LblTipo_pago As System.Windows.Forms.Label
     Friend WithEvents txtCantidad As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtTransacción As System.Windows.Forms.ComboBox

@@ -236,6 +236,12 @@
     <Compile Include="Principal\Popup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Principal\P_Cobrar.Designer.vb">
+      <DependentUpon>P_Cobrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\P_Cobrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\P_PuntoVenta.Designer.vb">
       <DependentUpon>P_PuntoVenta.vb</DependentUpon>
     </Compile>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Popup.resx">
       <DependentUpon>Popup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\P_Cobrar.resx">
+      <DependentUpon>P_Cobrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\P_PuntoVenta.resx">
       <DependentUpon>P_PuntoVenta.vb</DependentUpon>

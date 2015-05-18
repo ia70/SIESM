@@ -47,7 +47,7 @@ Public Class P_PuntoVenta
         Dim existe As Boolean = True
         If Len(txtArticulo.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtArticulo.Text) Then
             For i As Integer = 0 To dgvTabla.Rows.Count - 1
-                If dgvTabla.Item(0, i).Value = txtArticulo.Text Then
+                If dgvTabla.Item(0, i).Value = txtArticulo.Text And Not txtArticulo.Text = "" Then
                     existe = False
                     dgvTabla.Item(2, i).Value += 1
                     txtArticulo.Text = ""
@@ -93,7 +93,8 @@ Public Class P_PuntoVenta
         G_PuntoVenta_Total = 0
         For i As Integer = 0 To (Filas - 1)
             If Not dgvTabla.Item(0, i).Value = "" Then
-                If dgvTabla.Item(2, i).Value = 0 Or dgvTabla.Item(2, i).Value.ToString = "" Then
+                On Error Resume Next
+                If dgvTabla.Item(2, i).Value = 0 Or dgvTabla.Item(2, i).Value.ToString = "" Or Not IsNumeric(dgvTabla.Item(2, i).Value) Then
                     dgvTabla.Item(2, i).Value = "1"
                     dgvTabla.Item(4, i).Value = ToDecimal(CDec(dgvTabla.Item(2, i).Value) * CDec(dgvTabla.Item(3, i).Value)).ToString
                     G_PuntoVenta_Total += dgvTabla.Item(4, i).Value
@@ -144,5 +145,32 @@ Public Class P_PuntoVenta
             Subtotales()
         End If
         txtArticulo.Focus()
+    End Sub
+
+    Private Sub txtTransacción_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtTransacción.SelectedIndexChanged
+        If txtTransacción.SelectedIndex = 0 Then
+            lbl_monto.Visible = True
+            LblTipo_pago.Visible = True
+            txtEfectivo.Visible = True
+            txtTipo_Pago.Visible = True
+            btnCobrar.Text = "Cobrar"
+        Else
+            lbl_monto.Visible = False
+            LblTipo_pago.Visible = False
+            txtEfectivo.Visible = False
+            txtTipo_Pago.Visible = False
+            btnCobrar.Text = "Cotizar"
+        End If
+    End Sub
+
+    Private Sub txtTipo_Pago_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtTipo_Pago.SelectedIndexChanged
+        If txtTipo_Pago.SelectedIndex = 1 Then
+            txtEfectivo.Text = txtTotal.Text
+            txtEfectivo.Enabled = False
+            btnCobrar.Focus()
+        Else
+            txtEfectivo.Enabled = True
+            txtEfectivo.Focus()
+        End If
     End Sub
 End Class
