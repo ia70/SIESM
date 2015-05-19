@@ -108,3 +108,8 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Pr
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_merma_ED.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_merma_EL.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_merma_N.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_Cobrar.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Libersoft.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\itextsharp.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Libersoft.pdb
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\Libersoft.xml

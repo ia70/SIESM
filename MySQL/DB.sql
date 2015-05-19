@@ -5,7 +5,6 @@ CREATE TABLE IF NOT EXISTS articulo (
 		id_articulo 	VARCHAR(20),
 		nombre		 	VARCHAR(150) NOT NULL,
 		descripcion 	VARCHAR(300),
-		nivel_critico 	INT,
 		unidad_medida 	VARCHAR(10),
 		precio_compra 	DEC(10,2),
 		precio_venta 	DEC(10,2) NOT NULL,
@@ -21,6 +20,7 @@ CREATE TABLE IF NOT EXISTS inventario (
 		id_usuario 		VARCHAR(15) NOT NULL,
 		id_articulo 	VARCHAR(20) NOT NULL,
 		existencia 		DEC(10,2),
+        nivel_critico 	INT,
 		condicion 		VARCHAR(16),
 		fecha 			DATE NOT NULL,
     PRIMARY KEY (id_inventario)
@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS proveedor (
 );
 
 CREATE TABLE IF NOT EXISTS usuario (
+        id_reg          INT AUTO_INCREMENT,
 		id_usuario 		VARCHAR(15),
 		contrasena 		VARCHAR(15) NOT NULL,
 		nombre 			VARCHAR(20) NOT NULL,
@@ -57,12 +58,13 @@ CREATE TABLE IF NOT EXISTS usuario (
 		tipo 			INT NOT NULL,
 		imagen 			LONGBLOB,
 		fecha 			DATE NOT NULL,
-    PRIMARY KEY (id_usuario)
+    PRIMARY KEY (id_reg)
 );
 
 CREATE TABLE IF NOT EXISTS merma (
 		id_merma 		INT AUTO_INCREMENT,
 		id_usuario 		VARCHAR(15) NOT NULL,
+        id_sucursal		INT,
 		id_articulo 	VARCHAR(20) NOT NULL,
 		motivo 			VARCHAR(500) NOT NULL,
 		cantidad 		DEC(10,2) NOT NULL,
@@ -926,9 +928,10 @@ DROP PROCEDURE IF EXISTS usuario_mostrar;
  DELIMITER //
 CREATE PROCEDURE usuario_mostrar()
    BEGIN
-		SELECT 
+		SELECT   
+			id_reg          AS	 'Registro',
 			id_usuario		AS	 'ID',
-			contraseña	    AS	 'Contraseña',
+			contrasena	    AS	 'Contraseña',
 			nombre 		    AS	 'Nombre',
 			apellidos	    AS	 'Apellidos',
             sexo            AS   'Sexo',
@@ -945,8 +948,9 @@ DROP PROCEDURE IF EXISTS usuario_consultar;
 CREATE PROCEDURE usuario_consultar(IN id VARCHAR(15))
    BEGIN
 		SELECT 
+            id_reg          AS	 'Registro',
 			id_usuario		AS	 'ID',
-			contraseña	    AS	 'Contraseña',
+			contrasena	    AS	 'Contraseña',
 			nombre 		    AS	 'Nombre',
 			apellidos	    AS	 'Apellidos',
             sexo            AS   'Sexo',
@@ -974,7 +978,7 @@ CREATE PROCEDURE usuario_insertar(
    BEGIN
 		INSERT INTO usuario(
 			id_usuario, 
-			contraseña, 
+			contrasena, 
 			nombre, 
 			apellidos, 
 			sexo, 
@@ -985,7 +989,7 @@ CREATE PROCEDURE usuario_insertar(
 		VALUES(
 			id, 
 			contr, 
-			usu, 
+			nom,
 		    apell, 
 			sex, 
 			tip, 
@@ -1010,7 +1014,7 @@ CREATE PROCEDURE usuario_editar(
 )
    BEGIN
 		UPDATE usuario SET 
-			contraseña      =   contr, 
+			contrasena      =   contr, 
             nombre      	= 	nom, 
 			apellidos   	= 	apell, 
 			nivel_critico 	= 	niv_cri,
@@ -1037,8 +1041,9 @@ DROP PROCEDURE IF EXISTS usuario_inicio;
 CREATE PROCEDURE usuario_inicio()
    BEGIN
 		SELECT 
+			id_reg      	AS	 'Registro',
 			id_usuario		AS	 'ID',
-			contraseña	    AS	 'Contraseña',
+			contrasena	    AS	 'Contraseña',
 			nombre 		    AS	 'Nombre',
 			apellidos	    AS	 'Apellidos',
             sexo            AS   'Sexo',
@@ -1056,15 +1061,16 @@ DROP PROCEDURE IF EXISTS usuario_final;
 CREATE PROCEDURE usuario_final()
    BEGIN
 		SELECT 
-			id_usuario		AS	 'ID',
-			contraseña	    AS	 'Contraseña',
+            id_reg      	AS	 'Registro',
+	 		id_usuario		AS	 'ID',
+			contrasena	    AS	 'Contraseña',
 			nombre 		    AS	 'Nombre',
 			apellidos	    AS	 'Apellidos',
             sexo            AS   'Sexo',
 			tipo 		    AS	 'Tipo',
 			imagen 			AS	 'Imagen',
 			CAST(fecha AS char) 	AS	 'Fecha en que se registró'
-        FROM usuario ORDER BY id_usuario DESC LIMIT 1;
+        FROM usuario ORDER BY id_reg DESC LIMIT 1;
    END //
 DELIMITER ;
 
@@ -1076,15 +1082,16 @@ CREATE PROCEDURE usuario_siguiente(
 )
    BEGIN
 		SELECT 
+			id_reg          AS	 'Registro',
 			id_usuario		AS	 'ID',
-			contraseña	    AS	 'Contraseña',
+			contrasena	    AS	 'Contraseña',
 			nombre 		    AS	 'Nombre',
 			apellidos	    AS	 'Apellidos',
             sexo            AS   'Sexo',
 			tipo 		    AS	 'Tipo',
 			imagen 			AS	 'Imagen',
 			CAST(fecha AS char) 	AS	 'Fecha en que se registró'
-        FROM usuario WHERE id_usuario > id ORDER BY id_usuario ASC LIMIT 1;
+        FROM usuario WHERE id_reg > id ORDER BY id_reg ASC LIMIT 1;
    END //
 DELIMITER ;
 
@@ -1096,15 +1103,16 @@ CREATE PROCEDURE usuario_atras(
 )
    BEGIN
 		SELECT 
+            id_reg          AS	 'Registro',
 			id_usuario		AS	 'ID',
-			contraseña	    AS	 'Contraseña',
+			contrasena	    AS	 'Contraseña',
 			nombre 		    AS	 'Nombre',
 			apellidos	    AS	 'Apellidos',
             sexo            AS   'Sexo',
 			tipo 		    AS	 'Tipo',
 			imagen 			AS	 'Imagen',
 			CAST(fecha AS char) 	AS	 'Fecha en que se registró'
-        FROM usuario WHERE id_usuario < id ORDER BY id_usuario DESC LIMIT 1;
+        FROM usuario WHERE id_reg < id ORDER BY id_reg DESC LIMIT 1;
    END //
 DELIMITER ;
 
@@ -1136,10 +1144,11 @@ CREATE PROCEDURE merma_mostrar()
 			id_merma     	AS	 'ID',
 			id_usuario      AS	 'ID',
             id_articulo     AS   'ID',
+            id_sucursal     AS   'ID',
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
-			CAST(fecha_registro AS char) 	AS	 'Fecha de registro'
+			CAST(fecha AS char) 	AS	 'Fecha de registro'
 		FROM merma;
    END //
 DELIMITER ;
@@ -1153,6 +1162,7 @@ CREATE PROCEDURE merma_consultar(IN id INT)
 			id_merma     	AS	 'ID',
 			id_usuario      AS	 'ID',
             id_articulo     AS   'ID',
+            id_sucursal     AS   'ID',
 			motivo      	AS	 'motivo de entrada a merma',
 			cantidad	    AS	 'cantidad de articulos',
 			hora 			AS	 'hora de registro',
@@ -1169,6 +1179,7 @@ CREATE PROCEDURE merma_insertar(
 	IN id 		INT,
     IN id_usu	VARCHAR(15),
     IN id_art   VARCHAR(20),
+    IN id_suc   INT,
     IN mot 		VARCHAR(500),
     IN cant     DECIMAL(10,4),
     IN hor 		VARCHAR(15),
@@ -1176,16 +1187,18 @@ CREATE PROCEDURE merma_insertar(
 )
    BEGIN
 		INSERT INTO merma(
-			id_sucursal, 
-			id_art, 
+			id_usuario, 
+			id_articulo, 
+            id_sucursal,
 			motivo, 
 			cantidad, 
 			fecha,
 			hora
         ) 
 		VALUES(
+            id_usu, 
+            id_art,
             id_suc, 
-            id_art, 
             mot, 
             cant, 
             fec, 
@@ -1201,6 +1214,7 @@ CREATE PROCEDURE merma_editar(
 	IN id    	INT,
     IN id_usu	VARCHAR(15),
     IN id_art   VARCHAR(20),
+    IN id_suc   VARCHAR(20),
     IN mot 		VARCHAR(500),
     IN cant     DECIMAL(10,4),
     IN hor 		VARCHAR(15),
@@ -1210,6 +1224,7 @@ CREATE PROCEDURE merma_editar(
 		UPDATE merma SET 
 			id_usuario		=	id_usu, 
             id_articulo		=	id_art,
+            id_sucursal		=	id_suc,
 			motivo   		=	mot,
             cantidad 		=	cant,
 			hora			=	hor,
@@ -1237,6 +1252,7 @@ CREATE PROCEDURE merma_inicio()
             id_merma     	AS	 'ID',
 			id_usuario      AS	 'ID',
             id_articulo     AS	 'ID',
+            id_sucursal     AS	 'ID',
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
@@ -1255,6 +1271,7 @@ CREATE PROCEDURE merma_final()
             id_merma     	AS	 'ID',
 			id_usuario      AS	 'ID',
             id_articulo     AS	 'ID',
+            id_sucursal     AS	 'ID',
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
@@ -1273,6 +1290,7 @@ CREATE PROCEDURE merma_siguiente(
 		SELECT 
             id_usuario      AS	 'ID',
             id_articulo     AS	 'ID',
+            id_sucursal     AS	 'ID',
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
@@ -1291,6 +1309,7 @@ CREATE PROCEDURE merma_atras(
 		SELECT 
             id_usuario      AS	 'ID',
             id_articulo     AS	 'ID',
+            id_sucursal     AS	 'ID', 
 			motivo      	AS	 'Motivo de entrada a merma',
 			cantidad	    AS	 'Cantidad de articulos',
 			hora 			AS	 'Hora de registro',
@@ -1298,6 +1317,33 @@ CREATE PROCEDURE merma_atras(
 		FROM merma WHERE id_merma > id ORDER BY id_merma ASC LIMIT 1;
    END //
 DELIMITER ;
+
+DROP PROCEDURE IF EXISTS merma_filtrar;
+ DELIMITER //
+CREATE PROCEDURE merma_filtrar(
+	IN id VARCHAR(20)
+)
+   BEGIN
+		SELECT 
+			id_merma     	AS	 'ID',
+			id_usuario      AS	 'ID',
+            id_articulo     AS	 'ID',
+            id_sucursal     AS	 'ID',
+			motivo      	AS	 'Motivo de entrada a merma',
+			cantidad	    AS	 'Cantidad de articulos',
+			hora 			AS	 'Hora de registro',
+			CAST(fecha AS char) 	AS	 'Fecha de registro'
+FROM merma WHERE id_merma > id ORDER BY id_merma ASC LIMIT 1;  
+   END //
+DELIMITER ;
+
+
+
+
+
+
+
+
 
 
 # TABLA VENTA ************************************ #TABLA VENTA*****************************************************************

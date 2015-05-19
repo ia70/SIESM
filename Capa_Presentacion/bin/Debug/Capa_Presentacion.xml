@@ -139,6 +139,13 @@ Capa_Presentacion
 	<summary>
   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
+</member><member name="M:Capa_Presentacion.Popup.PopupFrm(System.Windows.Forms.Form,System.Int32)">
+	<summary>
+ Muestra un formulario resaltado
+ </summary>
+	<param name="Frm">Formulario</param>
+	<param name="Valor">0 - Cerrar con clic fuera, 1- Cerrar hasta que dialogo se sierre</param>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

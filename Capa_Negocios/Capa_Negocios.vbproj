@@ -108,6 +108,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Libersoft\Libersoft\Libersoft.vbproj">
+      <Project>{9cd6b19f-7081-41c5-9d5b-14ffae70469c}</Project>
+      <Name>Libersoft</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Capa_Datos\Capa_Datos.vbproj">
       <Project>{c059f3b2-ce06-4e8a-8792-7649dd115ba6}</Project>
       <Name>Capa_Datos</Name>

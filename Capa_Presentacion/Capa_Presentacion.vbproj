@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EC4D854E-A851-49D5-AE2E-D149E1759828}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Capa_Presentacion.P_puntoVenta</StartupObject>
+    <StartupObject>Capa_Presentacion.P_invent_N</StartupObject>
     <RootNamespace>Capa_Presentacion</RootNamespace>
     <AssemblyName>Capa_Presentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -439,6 +439,10 @@
     <None Include="Conf\App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Libersoft\Libersoft\Libersoft.vbproj">
+      <Project>{9cd6b19f-7081-41c5-9d5b-14ffae70469c}</Project>
+      <Name>Libersoft</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.vbproj">
       <Project>{3982c303-342e-45a0-9e6d-2a705b618371}</Project>
       <Name>Capa_Entidad</Name>
