@@ -32,11 +32,12 @@ Public Class D_inventario
                 .Add("id", MySqlDbType.VarChar).Value = _Elemento.id_inventario
                 .Add("id_suc", MySqlDbType.VarChar).Value = _Elemento.id_sucursal
                 .Add("id_pro", MySqlDbType.VarChar).Value = _Elemento.id_proveedor
-                .Add("id_usu", MySqlDbType.Int32).Value = _Elemento.id_usuario
+                .Add("id_usu", MySqlDbType.VarChar).Value = _Elemento.id_usuario
                 .Add("id_art", MySqlDbType.VarChar).Value = _Elemento.id_articulo
                 .Add("exi", MySqlDbType.Decimal).Value = _Elemento.existencia
-                .Add("con", MySqlDbType.Decimal).Value = _Elemento.condicion
-                .Add("fec", MySqlDbType.Decimal).Value = _Elemento.fecha
+                .Add("niv_cri", MySqlDbType.Int32).Value = _Elemento.nivel_critico
+                .Add("con", MySqlDbType.VarChar).Value = _Elemento.condicion
+                .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception

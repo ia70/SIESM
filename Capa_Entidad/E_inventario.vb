@@ -1,10 +1,11 @@
 ﻿Public Class E_inventario
     Private _id_inventario As Integer
-    Private _id_sucursal As Integer
-    Private _id_proveedor As Integer
+    Private _id_sucursal As String
+    Private _id_proveedor As String
     Private _id_usuario As String
     Private _id_articulo As String
     Private _existencia As Decimal
+    Private _nivel_critico As Integer
     Private _condicion As String
     Private _fecha As Date
 
@@ -17,19 +18,27 @@
             _id_inventario = value
         End Set
     End Property
-    Public Property id_sucursal As Integer
+    Public Property nivel_critico As Integer
+        Get
+            Return _nivel_critico
+        End Get
+        Set(value As Integer)
+            _nivel_critico = value
+        End Set
+    End Property
+    Public Property id_sucursal As String
         Get
             Return _id_sucursal
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _id_sucursal = value
         End Set
     End Property
-    Public Property id_proveedor As Integer
+    Public Property id_proveedor As String
         Get
             Return _id_proveedor
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _id_proveedor = value
         End Set
     End Property

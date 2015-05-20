@@ -1,11 +1,3 @@
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.dll
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.xml
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
-D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
 C:\Users\1\Documents\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.dll
 C:\Users\1\Documents\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
 C:\Users\1\Documents\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.xml
@@ -14,3 +6,11 @@ C:\Users\1\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.Gen
 C:\Users\1\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\1\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 C:\Users\1\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
