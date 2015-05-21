@@ -1,27 +1,27 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Capa_Entidad
-Public Class D_inventario
+Public Class D_articulo_d
     Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
     Dim Comando As New MySqlCommand
 
     '--Modificar lo de abajo ******************************************************
-    Dim Tabla As String = "inventario"
+    Dim Tabla As String = "articulo_d"
 
 
     'Inserta un articulo en la base de datos
-    Public Function Insertar(ByVal _Elemento As E_inventario) As Boolean
+    Public Function Insertar(ByVal _Elemento As E_articulo_d) As Boolean
         Return QueryM(Tabla & "_insertar", _Elemento)
     End Function
 
     'Edita un articulo
-    Public Function Editar(ByVal _Elemento As E_inventario) As Boolean
+    Public Function Editar(ByVal _Elemento As E_articulo_d) As Boolean
         Return QueryM(Tabla & "_editar", _Elemento)
     End Function
 
     'Esta funcion se encarga de agregar, editar registros en la tabla articulo
-    Private Function QueryM(ByVal Cadena As String, ByVal _Elemento As E_inventario) As Boolean
+    Private Function QueryM(ByVal Cadena As String, ByVal _Elemento As E_articulo_d) As Boolean
         cn = objCon.conectar
         Dim Estado As Boolean = False
         Try
@@ -29,14 +29,12 @@ Public Class D_inventario
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id", MySqlDbType.VarChar).Value = _Elemento.id_inventario
+                .Add("id_reg", MySqlDbType.Int32).Value = _Elemento.id_reg
                 .Add("id_suc", MySqlDbType.VarChar).Value = _Elemento.id_sucursal
-                .Add("id_pro", MySqlDbType.VarChar).Value = _Elemento.id_proveedor
-                .Add("id_usu", MySqlDbType.VarChar).Value = _Elemento.id_usuario
                 .Add("id_art", MySqlDbType.VarChar).Value = _Elemento.id_articulo
-                .Add("exi", MySqlDbType.Decimal).Value = _Elemento.existencia
-                .Add("niv_cri", MySqlDbType.Int32).Value = _Elemento.nivel_critico
-                .Add("con", MySqlDbType.VarChar).Value = _Elemento.condicion
+                .Add("id_def", MySqlDbType.VarChar).Value = _Elemento.id_defectuoso
+                .Add("pre_ven", MySqlDbType.VarChar).Value = _Elemento.precio_venta
+                .Add("can", MySqlDbType.Int32).Value = _Elemento.cantidad
                 .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
@@ -44,6 +42,7 @@ Public Class D_inventario
             MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
         Finally
             da.Dispose()
+            cn.Close()
             cn.Dispose()
         End Try
         Return Estado
@@ -52,10 +51,6 @@ Public Class D_inventario
     'Obtiene el listado de todos los articulos en la tabla articulo
     Public Function Listado() As DataSet
         Return QueryC("CALL " & Tabla & "_mostrar")
-    End Function
-
-    Public Function Articulos() As DataSet
-        Return QueryC("CALL inventario_articulo")
     End Function
 
     'Devuelve la consulta de un articulo en especifico
@@ -122,4 +117,5 @@ Public Class D_inventario
         End Try
 
     End Function
+
 End Class

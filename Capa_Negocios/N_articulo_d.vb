@@ -1,22 +1,18 @@
 ﻿Imports Capa_Datos
 Imports Capa_Entidad
-Public Class N_inventario
-    Dim Elemento As New D_inventario
+Public Class N_articulo_d
+    Dim Elemento As New D_articulo_d
 
-    Public Function Insertar(ByVal _Elemento As E_inventario) As Boolean
+    Public Function Insertar(ByVal _Elemento As E_articulo_d) As Boolean
         Return Elemento.Insertar(_Elemento)
     End Function
 
-    Public Function Editar(ByVal _Elemento As E_inventario) As Boolean
+    Public Function Editar(ByVal _Elemento As E_articulo_d) As Boolean
         Return Elemento.Editar(_Elemento)
     End Function
 
     Public Function Listado() As DataSet
         Return Elemento.Listado()
-    End Function
-
-    Public Function Articulos() As DataSet
-        Return Elemento.Articulos
     End Function
 
     Public Function Consultar(ByVal ID As String) As DataSet

@@ -80,6 +80,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="N_articulo_d.vb" />
     <Compile Include="N_devolucion.vb" />
     <Compile Include="N_inventario.vb" />
     <Compile Include="N_merma.vb" />

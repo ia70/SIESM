@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="E_articulo.vb" />
+    <Compile Include="E_articulo_d.vb" />
     <Compile Include="E_devolucion.vb" />
     <Compile Include="E_inventario.vb" />
     <Compile Include="E_merma.vb" />
