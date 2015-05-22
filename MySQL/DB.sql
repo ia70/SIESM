@@ -15,13 +15,15 @@ CREATE TABLE IF NOT EXISTS articulo (
 
 CREATE TABLE IF NOT EXISTS inventario (
 		id_inventario 	INT AUTO_INCREMENT,
-		id_sucursal 	INT NOT NULL,
-		id_proveedor 	INT NOT NULL,
+		id_sucursal 	VARCHAR(100),
+		id_proveedor 	VARCHAR(30),
 		id_usuario 		VARCHAR(15) NOT NULL,
 		id_articulo 	VARCHAR(20) NOT NULL,
 		existencia 		DEC(10,2),
         nivel_critico 	INT,
+        precio_venta 	DEC(10,2),
 		condicion 		VARCHAR(16),
+        inventario      INT,
 		fecha 			DATE NOT NULL,
     PRIMARY KEY (id_inventario)
 );
@@ -100,7 +102,16 @@ CREATE TABLE IF NOT EXISTS devolucion (
     PRIMARY KEY (id_reg)
 );
 
-
+CREATE TABLE IF NOT EXISTS articulo_d (
+		id_reg		 	INT AUTO_INCREMENT,
+		id_sucursal		VARCHAR(100),
+		id_articulo		VARCHAR(20),
+		id_defectuoso 	VARCHAR(22),
+		precio_venta	DEC(10,2),
+		cantidad 		INT,
+		fecha 			DATE,
+    PRIMARY KEY (id_reg)
+);
 
 
 
@@ -113,9 +124,200 @@ CREATE TABLE IF NOT EXISTS devolucion (
 #  --------------------------------------------------------------------------------------------------------------------------------------------
 
 
+#TABLA ARTICULO_D *********** TABLA ARTICULO_D ***********TABLA ARTICULO_D*********************************************************************************
 
 
 
+DROP PROCEDURE IF EXISTS articulo_d_mostrar;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_mostrar()
+   BEGIN
+		SELECT 
+			id_reg 			AS	 '#',
+			id_sucursal		AS	 'Sucursal',
+			id_articulo 	AS	 'Articulo',
+			id_defectuoso 	AS	 'Articulo defectuoso',
+			precio_venta 	AS	 'Precio de venta',
+			cantidad 		AS	 'Cantidad',
+			CAST(fecha AS char) AS	 'Fecha de registro'
+		FROM articulo_d;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_consultar;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_consultar(IN id_art VARCHAR(20))
+   BEGIN
+		SELECT 
+			id_reg 			AS	 '#',
+			id_sucursal		AS	 'Sucursal',
+			id_articulo 	AS	 'Articulo',
+			id_defectuoso 	AS	 'Articulo defectuoso',
+			precio_venta 	AS	 'Precio de venta',
+			cantidad 		AS	 'Cantidad',
+			CAST(fecha AS char) AS	 'Fecha de registro'
+		FROM articulo_d 
+        WHERE id_articulo = id_art;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_insertar;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_insertar(
+	IN id_re   INT, 
+    IN id_suc	VARCHAR(100),
+    IN id_art 	VARCHAR(20),
+	IN is_def 	VARCHAR(22),
+    IN pre_ven 	DEC(10,2),
+    IN cant 	INT,
+    IN fec 		DATE
+)
+   BEGIN
+		INSERT INTO articulo_d(
+			id_reg, 
+			id_sucursal, 
+			id_articulo, 
+			id_defectuoso, 
+			precio_venta, 
+			cantidad, 
+			fecha
+            ) 
+		VALUES(
+			id_suc,
+            id_art,
+            id_def,
+            pre_ven,
+            can,
+            fec
+            );
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_editar;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_editar(
+	IN id_re   INT, 
+    IN id_suc	VARCHAR(100),
+    IN id_art 	VARCHAR(20),
+	IN is_def 	VARCHAR(22),
+    IN pre_ven 	DEC(10,2),
+    IN cant 	INT,
+    IN fec 		DATE
+)
+   BEGIN
+		UPDATE articulo_d SET 
+			id_sucursal 	= id_suc, 
+			id_articulo		=id_art, 
+			id_defectuoso	=id_def, 
+			precio_venta	=pre_ven, 
+			cantidad		=can, 
+			fecha			=fec
+		WHERE id_reg  = id_re;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_eliminar;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_eliminar(IN ID VARCHAR(20))
+   BEGIN
+		DELETE FROM articulo_d WHERE id_articulo = ID;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_inicio;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_inicio()
+   BEGIN
+		SELECT 
+			id_reg 			AS	 '#',
+			id_sucursal		AS	 'Sucursal',
+			id_articulo 	AS	 'Articulo',
+			id_defectuoso 	AS	 'Articulo defectuoso',
+			precio_venta 	AS	 'Precio de venta',
+			cantidad 		AS	 'Cantidad',
+			CAST(fecha AS char) AS	 'Fecha de registro'
+        FROM articulo_d LIMIT 0,1;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_final;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_final()
+   BEGIN
+		SELECT 
+			id_reg 			AS	 '#',
+			id_sucursal		AS	 'Sucursal',
+			id_articulo 	AS	 'Articulo',
+			id_defectuoso 	AS	 'Articulo defectuoso',
+			precio_venta 	AS	 'Precio de venta',
+			cantidad 		AS	 'Cantidad',
+			CAST(fecha AS char) AS	 'Fecha de registro'
+        FROM articulo_d ORDER BY id_reg DESC LIMIT 1;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_siguiente;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_siguiente(
+	IN id VARCHAR(20)
+)
+   BEGIN
+		SELECT 
+			id_reg 			AS	 '#',
+			id_sucursal		AS	 'Sucursal',
+			id_articulo 	AS	 'Articulo',
+			id_defectuoso 	AS	 'Articulo defectuoso',
+			precio_venta 	AS	 'Precio de venta',
+			cantidad 		AS	 'Cantidad',
+			CAST(fecha AS char) AS	 'Fecha de registro'
+        FROM articulo_d WHERE id_reg > id ORDER BY id_reg ASC LIMIT 1;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_atras;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_atras(
+	IN id VARCHAR(20)
+)
+   BEGIN
+		SELECT 
+			id_reg 			AS	 '#',
+			id_sucursal		AS	 'Sucursal',
+			id_articulo 	AS	 'Articulo',
+			id_defectuoso 	AS	 'Articulo defectuoso',
+			precio_venta 	AS	 'Precio de venta',
+			cantidad 		AS	 'Cantidad',
+			CAST(fecha AS char) AS	 'Fecha de registro'
+        FROM articulo_d WHERE id_reg < id ORDER BY id_reg DESC LIMIT 1;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS articulo_d_filtrar;
+ DELIMITER //
+CREATE PROCEDURE articulo_d_filtrar(
+	IN nom VARCHAR(150)
+)
+   BEGIN
+		SELECT 
+			id_reg 			AS	 '#',
+			id_sucursal		AS	 'Sucursal',
+			id_articulo 	AS	 'Articulo',
+			id_defectuoso 	AS	 'Articulo defectuoso',
+			precio_venta 	AS	 'Precio de venta',
+			cantidad 		AS	 'Cantidad',
+			CAST(fecha AS char) AS	 'Fecha de registro'
+        FROM articulo_d WHERE id_articulo LIKE CONCAT('%',nom,'%') LIMIT 5;
+   END //
+DELIMITER ;
 
 
 
@@ -337,10 +539,23 @@ DELIMITER ;
 
 #TABLA INVENTARIO ***********TABLA INVENTARIO************TABLA INVENTARIO****************************************************************************
 
+DROP PROCEDURE IF EXISTS inventario_articulo;
+ DELIMITER //
+CREATE PROCEDURE inventario_articulo(IN ID VARCHAR(100))
+   BEGIN
+   
+		SELECT 
+        id_articulo 	AS 'id_articulo',
+        descripcion 	AS 'nombre',
+		id_proveedor 	AS 'Proveedor',
+        existencia 		AS 'Existencia'
+		FROM inventario;
+   END //
+DELIMITER ;
 
 DROP PROCEDURE IF EXISTS inf_inventario_mostrar;
  DELIMITER //
-CREATE PROCEDURE inf_inventario_mostrar(IN id INT)
+CREATE PROCEDURE inf_inventario_mostrar(IN ID VARCHAR(100))
    BEGIN
 		SELECT 
 			inventario.id_articulo	AS	 'ID', 
@@ -359,34 +574,36 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS inventario_mostrar;
  DELIMITER //
-CREATE PROCEDURE inventario_mostrar()
+CREATE PROCEDURE inventario_mostrar(IN ID VARCHAR(100))
    BEGIN
 		SELECT 
-			id_inventario		AS  'ID',
-			id_sucursal			AS  'Sucursal',
-			id_pro 				AS  'Proveedor',
-			id_usu				AS  'Usuario',
-			id_art				AS  'Articulo',
-			exi					AS  'Existencia',
-			con					AS  'Condición',
-			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+			id_inventario			AS  'ID',
+			id_sucursal				AS  'Sucursal',
+			id_proveedor 			AS  'Proveedor',
+			id_usuario				AS  'Usuario',
+			id_articulo				AS  'Articulo',
+			existencia				AS  'Existencia',
+            nivel_critico			AS  'Nivel Critico',
+			condicion				AS  'Condición',
+			CAST(fecha AS CHAR) 	AS  'Fecha de registro'
 		FROM inventario;
    END //
 DELIMITER ;
 
 DROP PROCEDURE IF EXISTS inventario_consultar;
  DELIMITER //
-CREATE PROCEDURE inventario_consultar(IN id INT)
+CREATE PROCEDURE inventario_consultar(IN ID VARCHAR(100))
    BEGIN
 		SELECT 
-			id_inventario		AS  'ID',
-			id_sucursal			AS  'Sucursal',
-			id_pro 				AS  'Proveedor',
-			id_usu				AS  'Usuario',
-			id_art				AS  'Articulo',
-			exi					AS  'Existencia',
-			con					AS  'Condición',
-			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+			id_inventario			AS  'ID',
+			id_sucursal				AS  'Sucursal',
+			id_proveedor 			AS  'Proveedor',
+			id_usuario				AS  'Usuario',
+			id_articulo				AS  'Articulo',
+			existencia				AS  'Existencia',
+            nivel_critico			AS  'Nivel Critico',
+			condicion				AS  'Condición',
+			CAST(fecha AS CHAR) 	AS  'Fecha de registro'
 		FROM inventario
         WHERE id_inventario = id;
    END //
@@ -401,8 +618,9 @@ CREATE PROCEDURE inventario_insertar(
     IN id_usu	VARCHAR(15),
     IN id_art	VARCHAR(20),
     IN exi	    DEC(10,2),
+    IN niv_cri  INT,
     IN con 		VARCHAR(16),
-    IN fech 	DATE
+    IN fec	 	DATE
 )
    BEGIN
 		INSERT INTO inventario(
@@ -411,6 +629,7 @@ CREATE PROCEDURE inventario_insertar(
 			id_usuario, 
 			id_articulo, 
 			existencia,
+            nivel_critico,
             condicion,
 			fecha
         ) 
@@ -419,7 +638,8 @@ CREATE PROCEDURE inventario_insertar(
             id_pro, 
             id_usu, 
             id_art, 
-            exi, 
+            exi,
+            niv_cri,
             con,
             fec
 		);
@@ -436,6 +656,7 @@ CREATE PROCEDURE inventario_editar(
     IN id_usu	VARCHAR(15),
     IN id_art	VARCHAR(20),
     IN exi	    DEC(10,2),
+    IN niv_cri	INT,
     IN con 		VARCHAR(16),
     IN fec 		DATE
 )
@@ -446,6 +667,7 @@ CREATE PROCEDURE inventario_editar(
 			id_usuario	        =	id_usu,
             id_articulo		    =   id_art,
 			existencia			=	exi, 
+            nivel_critico		=	niv_cri,
 			condicion			=	con,
             fecha               =	fec
 		WHERE id_inventario = id;
@@ -454,7 +676,7 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS inventario_eliminar;
  DELIMITER //
-CREATE PROCEDURE inventario_eliminar(IN id VARCHAR(20))
+CREATE PROCEDURE inventario_eliminar(IN ID VARCHAR(100))
    BEGIN
 		DELETE FROM inventario WHERE id_inventario = id;
    END //
@@ -463,17 +685,18 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS inventario_inicio;
  DELIMITER //
-CREATE PROCEDURE inventario_inicio()
+CREATE PROCEDURE inventario_inicio(IN ID VARCHAR(100))
    BEGIN
 		SELECT 
-			id_inventario		AS  'ID',
-			id_sucursal			AS  'Sucursal',
-			id_pro 				AS  'Proveedor',
-			id_usu				AS  'Usuario',
-			id_art				AS  'Articulo',
-			exi					AS  'Existencia',
-			con					AS  'Condición',
-			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+			id_inventario			AS  'ID',
+			id_sucursal				AS  'Sucursal',
+			id_proveedor 			AS  'Proveedor',
+			id_usuario				AS  'Usuario',
+			id_articulo				AS  'Articulo',
+			existencia				AS  'Existencia',
+            nivel_critico			AS  'Nivel Critico',
+			condicion				AS  'Condición',
+			CAST(fecha AS CHAR) 	AS  'Fecha de registro'
 		FROM inventario LIMIT 0,1;
 
    END //
@@ -482,17 +705,18 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS inventario_final;
  DELIMITER //
-CREATE PROCEDURE inventario_final()
+CREATE PROCEDURE inventario_final(IN ID VARCHAR(100))
    BEGIN
 		SELECT 
-			id_inventario		AS  'ID',
-			id_sucursal			AS  'Sucursal',
-			id_pro 				AS  'Proveedor',
-			id_usu				AS  'Usuario',
-			id_art				AS  'Articulo',
-			exi					AS  'Existencia',
-			con					AS  'Condición',
-			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+			id_inventario			AS  'ID',
+			id_sucursal				AS  'Sucursal',
+			id_proveedor 			AS  'Proveedor',
+			id_usuario				AS  'Usuario',
+			id_articulo				AS  'Articulo',
+			existencia				AS  'Existencia',
+            nivel_critico			AS  'Nivel Critico',
+			condicion				AS  'Condición',
+			CAST(fecha AS CHAR) 	AS  'Fecha de registro'
 		FROM inventario ORDER BY id_articulo DESC LIMIT 1;
    END //
 DELIMITER ;
@@ -505,14 +729,15 @@ CREATE PROCEDURE inventario_siguiente(
 )
    BEGIN
 		SELECT 
-			id_inventario		AS  'ID',
-			id_sucursal			AS  'Sucursal',
-			id_pro 				AS  'Proveedor',
-			id_usu				AS  'Usuario',
-			id_art				AS  'Articulo',
-			exi					AS  'Existencia',
-			con					AS  'Condición',
-			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+			id_inventario			AS  'ID',
+			id_sucursal				AS  'Sucursal',
+			id_proveedor 			AS  'Proveedor',
+			id_usuario				AS  'Usuario',
+			id_articulo				AS  'Articulo',
+			existencia				AS  'Existencia',
+            nivel_critico			AS  'Nivel Critico',
+			condicion				AS  'Condición',
+			CAST(fecha AS CHAR) 	AS  'Fecha de registro'
 		FROM inventario WHERE id_inventario > ID ORDER BY id_inventario ASC LIMIT 1;
    END //
 DELIMITER ;
@@ -525,14 +750,15 @@ CREATE PROCEDURE inventario_atras(
 )
    BEGIN
 		SELECT 
-			id_inventario		AS  'ID',
-			id_sucursal			AS  'Sucursal',
-			id_pro 				AS  'Proveedor',
-			id_usu				AS  'Usuario',
-			id_art				AS  'Articulo',
-			exi					AS  'Existencia',
-			con					AS  'Condición',
-			CAST(fech AS CHAR) 	AS  'Fecha de registro'
+			id_inventario			AS  'ID',
+			id_sucursal				AS  'Sucursal',
+			id_proveedor 			AS  'Proveedor',
+			id_usuario				AS  'Usuario',
+			id_articulo				AS  'Articulo',
+			existencia				AS  'Existencia',
+            nivel_critico			AS  'Nivel Critico',
+			condicion				AS  'Condición',
+			CAST(fecha AS CHAR) 	AS  'Fecha de registro'
 		FROM inventario WHERE id_inventario < ID ORDER BY id_inventario DESC LIMIT 1;
    END //
 DELIMITER ;

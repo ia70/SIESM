@@ -21,56 +21,59 @@ Public Class P_invent_N
         txtSucursal.DisplayMember = "Nombre"
         TablaInventario = Inventario.Articulos(txtSucursal.SelectedItem.ToString)
         If TablaInventario.Tables(0).Rows.Count > 0 Then
+            dgvTabla.DataSource = TablaInventario.Tables(0)
+        Else
+            dgvTabla.DataSource = Inventario.Query("id_articulo,descripcion", "articulo").Tables(0)
+            Dim txtProveedor As New DataGridViewComboBoxColumn
+            Dim txtExistencia As New DataGridViewTextBoxColumn
+            txtProveedor.DataSource = Proveedor.Listado.Tables(0)
+            txtProveedor.DisplayMember = "Proveedor"
+            txtProveedor.DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton
+            txtExistencia.HeaderText = "Existenca"
+            Try
+                With dgvTabla
+                    .Columns.Add(txtProveedor)
+                    .Columns.Add(txtExistencia)
+                    .Columns(0).HeaderText = "ID"
+                    .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+                    .Columns(1).Width = 300
+                    .Columns(1).HeaderText = "Artículo"
+                    .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+                    .Columns(2).Width = 100
+                    .Columns(2).HeaderText = "Proveedor"
+                    .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+                    .Columns(3).Width = 100
+                    .Columns(0).ReadOnly = True
+                    .Columns(1).ReadOnly = True
 
+                End With
+                With dgvTabla.ColumnHeadersDefaultCellStyle
+                    .Font = New Font("Arial", 12, FontStyle.Bold)
+                    .ForeColor = Color.Black
+                    .BackColor = Color.LightBlue
+                    .SelectionForeColor = Color.Yellow
+                    .SelectionBackColor = Color.Black
+                End With
+                With dgvDefectuoso.ColumnHeadersDefaultCellStyle
+                    .Font = New Font("Arial", 12, FontStyle.Bold)
+                    .ForeColor = Color.Black
+                    .BackColor = Color.LightBlue
+                    .SelectionForeColor = Color.Yellow
+                    .SelectionBackColor = Color.Black
+                End With
+                dgvTabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            Catch ex As Exception
+                M("Error: " + ex.ToString, 2)
+            End Try
         End If
 
 
-        Dim txtProveedor As New DataGridViewComboBoxColumn
-        Dim txtExistencia As New DataGridViewTextBoxColumn
-        txtProveedor.DataSource = Proveedor.Listado.Tables(0)
-        txtProveedor.DisplayMember = "Proveedor"
-        txtProveedor.DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton
-        txtExistencia.HeaderText = "Existenca"
-        Try
-            With dgvTabla
-                .Columns.Add(txtProveedor)
-                .Columns.Add(txtExistencia)
-                .Columns(0).HeaderText = "ID"
-                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-                .Columns(1).Width = 300
-                .Columns(1).HeaderText = "Artículo"
-                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-                .Columns(2).Width = 100
-                .Columns(2).HeaderText = "Proveedor"
-                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-                .Columns(3).Width = 100
-                .Columns(0).ReadOnly = True
-                .Columns(1).ReadOnly = True
-
-            End With
-            With dgvTabla.ColumnHeadersDefaultCellStyle
-                .Font = New Font("Arial", 12, FontStyle.Bold)
-                .ForeColor = Color.Black
-                .BackColor = Color.LightBlue
-                .SelectionForeColor = Color.Yellow
-                .SelectionBackColor = Color.Black
-            End With
-            With dgvDefectuoso.ColumnHeadersDefaultCellStyle
-                .Font = New Font("Arial", 12, FontStyle.Bold)
-                .ForeColor = Color.Black
-                .BackColor = Color.LightBlue
-                .SelectionForeColor = Color.Yellow
-                .SelectionBackColor = Color.Black
-            End With
-            dgvTabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        Catch ex As Exception
-            M("Error: " + ex.ToString, 2)
-        End Try
+        
 
     End Sub
 
     Public Sub CargarInventario()
-        TablaInventario = Inventario.Listado
+        TablaInventario = Inventario.Listado(txtSucursal.SelectedItem.ToString)
     End Sub
     Private Sub txtPrecio_venta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio_venta.KeyPress
         e = Validar_Num(e)
