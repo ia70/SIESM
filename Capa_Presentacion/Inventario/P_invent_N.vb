@@ -1,16 +1,30 @@
 ﻿Imports Capa_Negocios
 Imports Capa_Entidad
+Imports System.Threading
 Public Class P_invent_N
     Private Inventario As New N_inventario
     Private IE As New E_inventario
     Private Sucursal As New N_sucursal
     Private Proveedor As New N_proveedor
     Private Articulo As New N_Articulo
-    Private Tabla As DataSet
+    Private TablaArticulos As DataSet
+    Private TablaInventario As DataSet
+    Private HInventario As New Thread(AddressOf CargarInventario)
+    Private Sub P_invent_N_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CheckForIllegalCrossThreadCalls = False
+    End Sub
+
+    public Sub P_invent_N_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        HInventario.Start()
+        txtSucursal.DataSource = Sucursal.Listado.Tables(0)
+        txtSucursal.ValueMember = "ID"
+        txtSucursal.DisplayMember = "Nombre"
+        TablaInventario = Inventario.Articulos(txtSucursal.SelectedItem.ToString)
+        If TablaInventario.Tables(0).Rows.Count > 0 Then
+
+        End If
 
 
-
-    Private Sub P_invent_N_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Dim txtProveedor As New DataGridViewComboBoxColumn
         Dim txtExistencia As New DataGridViewTextBoxColumn
         txtProveedor.DataSource = Proveedor.Listado.Tables(0)
@@ -18,12 +32,7 @@ Public Class P_invent_N
         txtProveedor.DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton
         txtExistencia.HeaderText = "Existenca"
         Try
-            Tabla = Sucursal.Listado
-            txtSucursal.DataSource = Tabla.Tables(0)
-            txtSucursal.ValueMember = "ID"
-            txtSucursal.DisplayMember = "Nombre"
             With dgvTabla
-                .DataSource = Inventario.Articulos.Tables(0)
                 .Columns.Add(txtProveedor)
                 .Columns.Add(txtExistencia)
                 .Columns(0).HeaderText = "ID"
@@ -57,10 +66,12 @@ Public Class P_invent_N
         Catch ex As Exception
             M("Error: " + ex.ToString, 2)
         End Try
-        
 
     End Sub
 
+    Public Sub CargarInventario()
+        TablaInventario = Inventario.Listado
+    End Sub
     Private Sub txtPrecio_venta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio_venta.KeyPress
         e = Validar_Num(e)
     End Sub
@@ -85,10 +96,10 @@ Public Class P_invent_N
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim Fila As Integer
         Fila = dgvDefectuoso.Rows.Count - 1
-        If Tabla.Tables(0).Rows.Count > 0 Then
+        If TablaArticulos.Tables(0).Rows.Count > 0 Then
             dgvDefectuoso.Rows.Add()
             dgvDefectuoso.Item(0, Fila).Value = txtID_Articulo.Text
-            dgvDefectuoso.Item(1, Fila).Value = Tabla.Tables(0).Rows(0)(2).ToString
+            dgvDefectuoso.Item(1, Fila).Value = TablaArticulos.Tables(0).Rows(0)(2).ToString
             dgvDefectuoso.Item(2, Fila).Value = ToDecimal(txtPrecio_venta.Text).ToString
             dgvDefectuoso.Item(3, Fila).Value = txtCantidad.Value.ToString
             dgvDefectuoso.Item(4, Fila).Value = txtNombreArticulo.Text
@@ -96,4 +107,6 @@ Public Class P_invent_N
 
         End If
     End Sub
+
+
 End Class

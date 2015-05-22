@@ -50,12 +50,12 @@ Public Class D_inventario
     End Function
 
     'Obtiene el listado de todos los articulos en la tabla articulo
-    Public Function Listado() As DataSet
-        Return QueryC("CALL " & Tabla & "_mostrar")
+    Public Function Listado(ByVal Sucursal As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_mostrar('" & Sucursal & "')")
     End Function
 
-    Public Function Articulos() As DataSet
-        Return QueryC("CALL inventario_articulo")
+    Public Function Articulos(ByVal Sucursal As String) As DataSet
+        Return QueryC("CALL inventario_articulo('" & Sucursal & "')")
     End Function
 
     'Devuelve la consulta de un articulo en especifico
@@ -64,13 +64,13 @@ Public Class D_inventario
     End Function
 
     'Devuelve el primer articulo que aparece en la tabla de articulos
-    Public Function GetInicio() As DataSet
-        Return QueryC("CALL " & Tabla & "_inicio()")
+    Public Function GetInicio(ByVal Sucursal As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_inicio('" & Sucursal & "')")
     End Function
 
     'Devuelve el ultimo articulo que aparece en la tabla articulo
-    Public Function GetFinal() As DataSet
-        Return QueryC("CALL " & Tabla & "_final()")
+    Public Function GetFinal(ByVal Sucursal As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_final('" & Sucursal & "')")
     End Function
 
     'Devuelve el siguiente articulo en la tabla articulo en base al que se especifica
@@ -122,4 +122,9 @@ Public Class D_inventario
         End Try
 
     End Function
+
+    Public Function Query(ByVal Cadena As String, ByVal Tabla As String) As DataSet
+        Return QueryC("SELECT " & Cadena & " FROM " & Tabla)
+    End Function
+
 End Class

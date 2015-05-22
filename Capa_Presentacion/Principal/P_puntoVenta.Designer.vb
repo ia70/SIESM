@@ -97,7 +97,6 @@ Partial Class P_PuntoVenta
         Me.btnAdministracion.BackColor = System.Drawing.Color.White
         Me.btnAdministracion.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.Tools
         Me.btnAdministracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnAdministracion.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAdministracion.Location = New System.Drawing.Point(0, 305)
         Me.btnAdministracion.Name = "btnAdministracion"
         Me.btnAdministracion.Size = New System.Drawing.Size(96, 96)
@@ -110,7 +109,6 @@ Partial Class P_PuntoVenta
         Me.btnConsultaExistencia.BackColor = System.Drawing.Color.White
         Me.btnConsultaExistencia.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.Database
         Me.btnConsultaExistencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnConsultaExistencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnConsultaExistencia.Location = New System.Drawing.Point(0, 204)
         Me.btnConsultaExistencia.Name = "btnConsultaExistencia"
         Me.btnConsultaExistencia.Size = New System.Drawing.Size(96, 96)
@@ -123,7 +121,6 @@ Partial Class P_PuntoVenta
         Me.btnConsultaPrecio.BackColor = System.Drawing.Color.White
         Me.btnConsultaPrecio.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.Search
         Me.btnConsultaPrecio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnConsultaPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnConsultaPrecio.Location = New System.Drawing.Point(0, 102)
         Me.btnConsultaPrecio.Name = "btnConsultaPrecio"
         Me.btnConsultaPrecio.Size = New System.Drawing.Size(96, 96)
@@ -136,7 +133,6 @@ Partial Class P_PuntoVenta
         Me.btnCorteCaja.BackColor = System.Drawing.Color.White
         Me.btnCorteCaja.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.Key
         Me.btnCorteCaja.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnCorteCaja.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCorteCaja.Location = New System.Drawing.Point(0, 0)
         Me.btnCorteCaja.Name = "btnCorteCaja"
         Me.btnCorteCaja.Size = New System.Drawing.Size(96, 96)
@@ -287,7 +283,6 @@ Partial Class P_PuntoVenta
         Me.btnCobrar.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.CAJON_DINERO_FRONT_RS51581
         Me.btnCobrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnCobrar.Enabled = False
-        Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCobrar.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCobrar.ForeColor = System.Drawing.Color.White
         Me.btnCobrar.Location = New System.Drawing.Point(22, 316)

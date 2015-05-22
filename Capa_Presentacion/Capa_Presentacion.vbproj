@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EC4D854E-A851-49D5-AE2E-D149E1759828}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Capa_Presentacion.P_invent_N</StartupObject>
+    <StartupObject>Capa_Presentacion.My.MyApplication</StartupObject>
     <RootNamespace>Capa_Presentacion</RootNamespace>
     <AssemblyName>Capa_Presentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>D:\Mis Archivos\Escritorio\SIESM\</PublishUrl>
@@ -564,6 +564,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CAJON-DINERO-FRONT-RS5158.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

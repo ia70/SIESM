@@ -79,6 +79,10 @@ Capa_Presentacion
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Capa_Presentacion.My.Resources.Resources.Floppy">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Capa_Presentacion.My.Resources.Resources.fondos14">
 	<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
