@@ -25,13 +25,25 @@ Partial Class P_invent_N
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.pBar = New System.Windows.Forms.ProgressBar()
-        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtCargando = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pbCargar = New System.Windows.Forms.ProgressBar()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtProveedor = New System.Windows.Forms.ComboBox()
+        Me.gbAgregar = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnAgregarArti = New System.Windows.Forms.Button()
+        Me.pbGuardar = New System.Windows.Forms.ProgressBar()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtSucursal = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreArticulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.n_Proveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.n_Critico = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.n_existencia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -48,6 +60,8 @@ Partial Class P_invent_N
         Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre_Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.gbAgregar.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -66,7 +80,7 @@ Partial Class P_invent_N
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(0, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(1313, 49)
+        Me.Label6.Size = New System.Drawing.Size(1313, 51)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Agregar Producto a Inventario"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -75,32 +89,118 @@ Partial Class P_invent_N
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 542)
+        Me.Panel1.Location = New System.Drawing.Point(0, 572)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1313, 51)
+        Me.Panel1.Size = New System.Drawing.Size(1313, 53)
         Me.Panel1.TabIndex = 18
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.pBar)
+        Me.Panel2.Controls.Add(Me.txtCargando)
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.gbAgregar)
+        Me.Panel2.Controls.Add(Me.pbGuardar)
         Me.Panel2.Controls.Add(Me.btnGuardar)
-        Me.Panel2.Controls.Add(Me.btnAgregarArti)
         Me.Panel2.Controls.Add(Me.txtSucursal)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 49)
+        Me.Panel2.Location = New System.Drawing.Point(0, 51)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1313, 57)
+        Me.Panel2.Size = New System.Drawing.Size(1313, 101)
         Me.Panel2.TabIndex = 21
         '
-        'pBar
+        'txtCargando
         '
-        Me.pBar.Location = New System.Drawing.Point(741, 15)
-        Me.pBar.Name = "pBar"
-        Me.pBar.Size = New System.Drawing.Size(502, 30)
-        Me.pBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pBar.TabIndex = 25
-        Me.pBar.Visible = False
+        Me.txtCargando.BackColor = System.Drawing.Color.Transparent
+        Me.txtCargando.Location = New System.Drawing.Point(371, 14)
+        Me.txtCargando.Name = "txtCargando"
+        Me.txtCargando.Size = New System.Drawing.Size(241, 28)
+        Me.txtCargando.TabIndex = 33
+        Me.txtCargando.Text = "Cargando datos..."
+        Me.txtCargando.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtCargando.Visible = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.pbCargar)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.txtProveedor)
+        Me.Panel3.Location = New System.Drawing.Point(0, 59)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(735, 42)
+        Me.Panel3.TabIndex = 27
+        '
+        'pbCargar
+        '
+        Me.pbCargar.Location = New System.Drawing.Point(12, 6)
+        Me.pbCargar.Name = "pbCargar"
+        Me.pbCargar.Size = New System.Drawing.Size(322, 31)
+        Me.pbCargar.Step = 1
+        Me.pbCargar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.pbCargar.TabIndex = 31
+        Me.pbCargar.Value = 1
+        Me.pbCargar.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(340, 10)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(95, 19)
+        Me.Label5.TabIndex = 30
+        Me.Label5.Text = "Proveedor:"
+        '
+        'txtProveedor
+        '
+        Me.txtProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.txtProveedor.FormattingEnabled = True
+        Me.txtProveedor.Location = New System.Drawing.Point(441, 7)
+        Me.txtProveedor.Name = "txtProveedor"
+        Me.txtProveedor.Size = New System.Drawing.Size(116, 27)
+        Me.txtProveedor.TabIndex = 29
+        '
+        'gbAgregar
+        '
+        Me.gbAgregar.Controls.Add(Me.TextBox1)
+        Me.gbAgregar.Controls.Add(Me.btnAgregarArti)
+        Me.gbAgregar.Location = New System.Drawing.Point(636, 48)
+        Me.gbAgregar.Name = "gbAgregar"
+        Me.gbAgregar.Size = New System.Drawing.Size(616, 57)
+        Me.gbAgregar.TabIndex = 26
+        Me.gbAgregar.TabStop = False
+        Me.gbAgregar.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(281, 19)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(166, 26)
+        Me.TextBox1.TabIndex = 28
+        '
+        'btnAgregarArti
+        '
+        Me.btnAgregarArti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAgregarArti.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarArti.ForeColor = System.Drawing.Color.Black
+        Me.btnAgregarArti.Location = New System.Drawing.Point(6, 14)
+        Me.btnAgregarArti.Name = "btnAgregarArti"
+        Me.btnAgregarArti.Size = New System.Drawing.Size(263, 33)
+        Me.btnAgregarArti.TabIndex = 27
+        Me.btnAgregarArti.Text = "Agregar articulo a inventario"
+        Me.btnAgregarArti.UseVisualStyleBackColor = True
+        Me.btnAgregarArti.Visible = False
+        '
+        'pbGuardar
+        '
+        Me.pbGuardar.Location = New System.Drawing.Point(741, 15)
+        Me.pbGuardar.Name = "pbGuardar"
+        Me.pbGuardar.Size = New System.Drawing.Size(502, 31)
+        Me.pbGuardar.Step = 1
+        Me.pbGuardar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.pbGuardar.TabIndex = 25
+        Me.pbGuardar.Value = 1
+        Me.pbGuardar.Visible = False
         '
         'btnGuardar
         '
@@ -109,39 +209,26 @@ Partial Class P_invent_N
         Me.btnGuardar.ForeColor = System.Drawing.Color.Black
         Me.btnGuardar.Location = New System.Drawing.Point(642, 15)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(81, 32)
+        Me.btnGuardar.Size = New System.Drawing.Size(81, 33)
         Me.btnGuardar.TabIndex = 24
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
-        '
-        'btnAgregarArti
-        '
-        Me.btnAgregarArti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnAgregarArti.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarArti.ForeColor = System.Drawing.Color.Black
-        Me.btnAgregarArti.Location = New System.Drawing.Point(347, 15)
-        Me.btnAgregarArti.Name = "btnAgregarArti"
-        Me.btnAgregarArti.Size = New System.Drawing.Size(263, 32)
-        Me.btnAgregarArti.TabIndex = 23
-        Me.btnAgregarArti.Text = "Agregar articulo a inventario"
-        Me.btnAgregarArti.UseVisualStyleBackColor = True
-        Me.btnAgregarArti.Visible = False
         '
         'txtSucursal
         '
         Me.txtSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txtSucursal.FormattingEnabled = True
-        Me.txtSucursal.Location = New System.Drawing.Point(95, 19)
+        Me.txtSucursal.Location = New System.Drawing.Point(109, 20)
         Me.txtSucursal.Name = "txtSucursal"
-        Me.txtSucursal.Size = New System.Drawing.Size(225, 26)
+        Me.txtSucursal.Size = New System.Drawing.Size(225, 27)
         Me.txtSucursal.TabIndex = 22
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 22)
+        Me.Label1.Location = New System.Drawing.Point(22, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 18)
+        Me.Label1.Size = New System.Drawing.Size(87, 19)
         Me.Label1.TabIndex = 21
         Me.Label1.Text = "Sucursal: "
         '
@@ -149,7 +236,7 @@ Partial Class P_invent_N
         '
         Me.SplitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 106)
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 152)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -162,8 +249,8 @@ Partial Class P_invent_N
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ControlLight
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
         Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(5)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1313, 436)
-        Me.SplitContainer1.SplitterDistance = 631
+        Me.SplitContainer1.Size = New System.Drawing.Size(1313, 420)
+        Me.SplitContainer1.SplitterDistance = 701
         Me.SplitContainer1.TabIndex = 22
         '
         'dgvTabla
@@ -172,11 +259,55 @@ Partial Class P_invent_N
         Me.dgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTabla.BackgroundColor = System.Drawing.Color.White
         Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTabla.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.nombreArticulo, Me.n_Proveedor, Me.n_Critico, Me.n_existencia})
         Me.dgvTabla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvTabla.Location = New System.Drawing.Point(0, 0)
         Me.dgvTabla.Name = "dgvTabla"
-        Me.dgvTabla.Size = New System.Drawing.Size(627, 432)
+        Me.dgvTabla.Size = New System.Drawing.Size(697, 416)
         Me.dgvTabla.TabIndex = 23
+        '
+        'ID
+        '
+        Me.ID.HeaderText = "ID"
+        Me.ID.MinimumWidth = 100
+        Me.ID.Name = "ID"
+        Me.ID.ReadOnly = True
+        Me.ID.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'nombreArticulo
+        '
+        Me.nombreArticulo.HeaderText = "Artículo"
+        Me.nombreArticulo.MinimumWidth = 300
+        Me.nombreArticulo.Name = "nombreArticulo"
+        Me.nombreArticulo.ReadOnly = True
+        Me.nombreArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.nombreArticulo.Width = 300
+        '
+        'n_Proveedor
+        '
+        Me.n_Proveedor.HeaderText = "Proveedor"
+        Me.n_Proveedor.MinimumWidth = 110
+        Me.n_Proveedor.Name = "n_Proveedor"
+        Me.n_Proveedor.ReadOnly = True
+        Me.n_Proveedor.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.n_Proveedor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.n_Proveedor.Width = 110
+        '
+        'n_Critico
+        '
+        Me.n_Critico.HeaderText = "N. Crit."
+        Me.n_Critico.MinimumWidth = 70
+        Me.n_Critico.Name = "n_Critico"
+        Me.n_Critico.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.n_Critico.Width = 85
+        '
+        'n_existencia
+        '
+        Me.n_existencia.HeaderText = "Exist."
+        Me.n_existencia.MinimumWidth = 70
+        Me.n_existencia.Name = "n_existencia"
+        Me.n_existencia.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.n_existencia.Width = 76
         '
         'GroupBox1
         '
@@ -193,14 +324,14 @@ Partial Class P_invent_N
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(5, 5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(664, 422)
+        Me.GroupBox1.Size = New System.Drawing.Size(594, 406)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de los artículos defectuosos"
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(154, 111)
+        Me.txtCantidad.Location = New System.Drawing.Point(154, 117)
         Me.txtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(60, 26)
@@ -210,9 +341,9 @@ Partial Class P_invent_N
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(135, 80)
+        Me.Label4.Location = New System.Drawing.Point(135, 84)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(103, 28)
+        Me.Label4.Size = New System.Drawing.Size(103, 29)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Cantidad:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -220,7 +351,7 @@ Partial Class P_invent_N
         'txtPrecio_venta
         '
         Me.txtPrecio_venta.ForeColor = System.Drawing.Color.Green
-        Me.txtPrecio_venta.Location = New System.Drawing.Point(265, 108)
+        Me.txtPrecio_venta.Location = New System.Drawing.Point(263, 115)
         Me.txtPrecio_venta.Name = "txtPrecio_venta"
         Me.txtPrecio_venta.Size = New System.Drawing.Size(118, 26)
         Me.txtPrecio_venta.TabIndex = 7
@@ -230,9 +361,9 @@ Partial Class P_invent_N
         '
         Me.txtID_Articulo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID_Articulo.ForeColor = System.Drawing.Color.Red
-        Me.txtID_Articulo.Location = New System.Drawing.Point(26, 108)
+        Me.txtID_Articulo.Location = New System.Drawing.Point(26, 113)
         Me.txtID_Articulo.Name = "txtID_Articulo"
-        Me.txtID_Articulo.Size = New System.Drawing.Size(103, 28)
+        Me.txtID_Articulo.Size = New System.Drawing.Size(103, 29)
         Me.txtID_Articulo.TabIndex = 6
         Me.txtID_Articulo.Text = "."
         Me.txtID_Articulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -240,9 +371,9 @@ Partial Class P_invent_N
         'btnAgregar
         '
         Me.btnAgregar.Enabled = False
-        Me.btnAgregar.Location = New System.Drawing.Point(404, 106)
+        Me.btnAgregar.Location = New System.Drawing.Point(404, 111)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(165, 33)
+        Me.btnAgregar.Size = New System.Drawing.Size(165, 34)
         Me.btnAgregar.TabIndex = 5
         Me.btnAgregar.Text = "Agregar defectuoso"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -250,9 +381,9 @@ Partial Class P_invent_N
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(250, 80)
+        Me.Label3.Location = New System.Drawing.Point(250, 84)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(148, 28)
+        Me.Label3.Size = New System.Drawing.Size(148, 29)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Precio de venta:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -260,21 +391,20 @@ Partial Class P_invent_N
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(26, 80)
+        Me.Label2.Location = New System.Drawing.Point(26, 84)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 28)
+        Me.Label2.Size = New System.Drawing.Size(103, 29)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "ID Articulo:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtNombreArticulo
         '
-        Me.txtNombreArticulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.txtNombreArticulo.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombreArticulo.ForeColor = System.Drawing.Color.Blue
-        Me.txtNombreArticulo.Location = New System.Drawing.Point(3, 22)
+        Me.txtNombreArticulo.Location = New System.Drawing.Point(3, 23)
         Me.txtNombreArticulo.Name = "txtNombreArticulo"
-        Me.txtNombreArticulo.Size = New System.Drawing.Size(658, 58)
+        Me.txtNombreArticulo.Size = New System.Drawing.Size(658, 61)
         Me.txtNombreArticulo.TabIndex = 2
         Me.txtNombreArticulo.Text = "Nombre del articulo"
         Me.txtNombreArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -283,11 +413,12 @@ Partial Class P_invent_N
         '
         Me.dgvDefectuoso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDefectuoso.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_Articulo, Me.ID_Defectuso, Me.Precio_Venta, Me.Cantidad, Me.Nombre_Articulo})
-        Me.dgvDefectuoso.Location = New System.Drawing.Point(9, 164)
+        Me.dgvDefectuoso.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvDefectuoso.Location = New System.Drawing.Point(3, 124)
         Me.dgvDefectuoso.Name = "dgvDefectuoso"
         Me.dgvDefectuoso.ReadOnly = True
         Me.dgvDefectuoso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDefectuoso.Size = New System.Drawing.Size(643, 265)
+        Me.dgvDefectuoso.Size = New System.Drawing.Size(588, 279)
         Me.dgvDefectuoso.TabIndex = 0
         '
         'ID_Articulo
@@ -325,14 +456,14 @@ Partial Class P_invent_N
         '
         'P_invent_N
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1313, 593)
+        Me.ClientSize = New System.Drawing.Size(1313, 625)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label6)
-        Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_invent_N"
@@ -341,6 +472,10 @@ Partial Class P_invent_N
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.gbAgregar.ResumeLayout(False)
+        Me.gbAgregar.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -362,20 +497,32 @@ Partial Class P_invent_N
     Friend WithEvents dgvTabla As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents dgvDefectuoso As System.Windows.Forms.DataGridView
-    Friend WithEvents txtNombreArticulo As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents btnAgregar As System.Windows.Forms.Button
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtID_Articulo As System.Windows.Forms.Label
-    Friend WithEvents txtPrecio_venta As System.Windows.Forms.TextBox
-    Friend WithEvents txtCantidad As System.Windows.Forms.NumericUpDown
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ID_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ID_Defectuso As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Precio_Venta As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Nombre_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents btnAgregarArti As System.Windows.Forms.Button
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
-    Friend WithEvents pBar As System.Windows.Forms.ProgressBar
+    Friend WithEvents pbGuardar As System.Windows.Forms.ProgressBar
+    Friend WithEvents gbAgregar As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents btnAgregarArti As System.Windows.Forms.Button
+    Friend WithEvents txtCantidad As System.Windows.Forms.NumericUpDown
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txtPrecio_venta As System.Windows.Forms.TextBox
+    Friend WithEvents txtID_Articulo As System.Windows.Forms.Label
+    Friend WithEvents btnAgregar As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents txtNombreArticulo As System.Windows.Forms.Label
+    Friend WithEvents ID As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nombreArticulo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents n_Proveedor As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents n_Critico As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents n_existencia As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtProveedor As System.Windows.Forms.ComboBox
+    Friend WithEvents pbCargar As System.Windows.Forms.ProgressBar
+    Friend WithEvents txtCargando As System.Windows.Forms.Label
 End Class

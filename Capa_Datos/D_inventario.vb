@@ -29,7 +29,7 @@ Public Class D_inventario
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id", MySqlDbType.VarChar).Value = _Elemento.id_inventario
+                .Add("id", MySqlDbType.Int32).Value = _Elemento.id_inventario
                 .Add("id_suc", MySqlDbType.VarChar).Value = _Elemento.id_sucursal
                 .Add("id_pro", MySqlDbType.VarChar).Value = _Elemento.id_proveedor
                 .Add("id_usu", MySqlDbType.VarChar).Value = _Elemento.id_usuario
@@ -123,8 +123,23 @@ Public Class D_inventario
 
     End Function
 
-    Public Function Query(ByVal Cadena As String, ByVal Tabla As String) As DataSet
-        Return QueryC("SELECT " & Cadena & " FROM " & Tabla)
+    Public Function Query(ByVal Cadena As String) As DataSet
+        Dim ds As New DataSet
+        Try
+
+            cn = objCon.conectar
+            cn.Open()
+            da = New MySqlDataAdapter(Cadena, cn)
+            da.Fill(ds, "Tabla")
+            da.Dispose()
+            cn.Close()
+            cn.Dispose()
+            Return ds
+            ds.Dispose()
+        Catch ex As Exception
+            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, "SIESM")
+            Return Nothing
+        End Try
     End Function
 
 End Class

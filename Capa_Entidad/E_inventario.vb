@@ -1,13 +1,13 @@
 ﻿Public Class E_inventario
-    Private _id_inventario As Integer
-    Private _id_sucursal As String
-    Private _id_proveedor As String
-    Private _id_usuario As String
-    Private _id_articulo As String
-    Private _existencia As Decimal
-    Private _nivel_critico As Integer
-    Private _condicion As String
-    Private _fecha As Date
+    Private _id_inventario As Integer = "1"
+    Private _id_sucursal As String = "Prueba"
+    Private _id_proveedor As String = "Pureba"
+    Private _id_usuario As String = "Prueba"
+    Private _id_articulo As String = "12345"
+    Private _existencia As Decimal = 12.32
+    Private _nivel_critico As Integer = 11
+    Private _condicion As String = "Buen estado"
+    Private _fecha As Date = "2015.05.23"
 
 
     Public Property id_inventario As Integer
@@ -53,10 +53,10 @@
     End Property
     Public Property id_articulo As String
         Get
-            Return _id_usuario
+            Return _id_articulo
         End Get
         Set(value As String)
-            _id_usuario = value
+            _id_articulo = value
         End Set
     End Property
    

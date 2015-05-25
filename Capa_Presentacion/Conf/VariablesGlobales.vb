@@ -9,7 +9,7 @@
     Public G_Sucursal_Colonia As String
 
     'Variables Globales Usuario
-    Public G_Usuario_id As String
+    Public G_Usuario_id As String = "Daniel"
     Public G_Usuario_Nombre As String
     Public G_Usuario_Apellidos As String
     Public G_Usuario_Imagen As Image

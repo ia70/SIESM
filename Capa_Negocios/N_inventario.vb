@@ -49,7 +49,7 @@ Public Class N_inventario
     Public Function Filtrar(ByVal ID As String) As DataSet
         Return Elemento.Filtrar(ID)
     End Function
-    Public Function Query(ByVal Cadena As String, ByVal Tabla As String) As DataSet
-        Return Elemento.Query(Cadena, Tabla)
+    Public Function Query(ByVal Cadena As String) As DataSet
+        Return Elemento.Query(Cadena)
     End Function
 End Class

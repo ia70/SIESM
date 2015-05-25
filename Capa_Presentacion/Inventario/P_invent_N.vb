@@ -9,71 +9,103 @@ Public Class P_invent_N
     Private Articulo As New N_Articulo
     Private TablaArticulos As DataSet
     Private TablaInventario As DataSet
-    Private HInventario As New Thread(AddressOf CargarInventario)
+    Private HCargarDatos As New Thread(AddressOf Llenar_Tabla)
+    Private cargaCompleta As Boolean = False
     Private Sub P_invent_N_Load(sender As Object, e As EventArgs) Handles Me.Load
         CheckForIllegalCrossThreadCalls = False
     End Sub
 
-    public Sub P_invent_N_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        HInventario.Start()
-        txtSucursal.DataSource = Sucursal.Listado.Tables(0)
-        txtSucursal.ValueMember = "ID"
-        txtSucursal.DisplayMember = "Nombre"
-        TablaInventario = Inventario.Articulos(txtSucursal.SelectedItem.ToString)
-        If TablaInventario.Tables(0).Rows.Count > 0 Then
-            dgvTabla.DataSource = TablaInventario.Tables(0)
-        Else
-            dgvTabla.DataSource = Inventario.Query("id_articulo,descripcion", "articulo").Tables(0)
-            Dim txtProveedor As New DataGridViewComboBoxColumn
-            Dim txtExistencia As New DataGridViewTextBoxColumn
+    Public Sub P_invent_N_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Try
+            txtSucursal.DataSource = Sucursal.Listado.Tables(0)
+            txtSucursal.ValueMember = "ID"
+            txtSucursal.DisplayMember = "Nombre"
+
             txtProveedor.DataSource = Proveedor.Listado.Tables(0)
+            txtProveedor.ValueMember = "ID"
             txtProveedor.DisplayMember = "Proveedor"
-            txtProveedor.DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton
-            txtExistencia.HeaderText = "Existenca"
-            Try
-                With dgvTabla
-                    .Columns.Add(txtProveedor)
-                    .Columns.Add(txtExistencia)
-                    .Columns(0).HeaderText = "ID"
-                    .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-                    .Columns(1).Width = 300
-                    .Columns(1).HeaderText = "Artículo"
-                    .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-                    .Columns(2).Width = 100
-                    .Columns(2).HeaderText = "Proveedor"
-                    .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-                    .Columns(3).Width = 100
-                    .Columns(0).ReadOnly = True
-                    .Columns(1).ReadOnly = True
-
-                End With
-                With dgvTabla.ColumnHeadersDefaultCellStyle
-                    .Font = New Font("Arial", 12, FontStyle.Bold)
-                    .ForeColor = Color.Black
-                    .BackColor = Color.LightBlue
-                    .SelectionForeColor = Color.Yellow
-                    .SelectionBackColor = Color.Black
-                End With
-                With dgvDefectuoso.ColumnHeadersDefaultCellStyle
-                    .Font = New Font("Arial", 12, FontStyle.Bold)
-                    .ForeColor = Color.Black
-                    .BackColor = Color.LightBlue
-                    .SelectionForeColor = Color.Yellow
-                    .SelectionBackColor = Color.Black
-                End With
-                dgvTabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-            Catch ex As Exception
-                M("Error: " + ex.ToString, 2)
-            End Try
-        End If
+        Catch ex As Exception
+            M("Error: " + ex.ToString)
+        End Try
 
 
-        
+        With dgvTabla.ColumnHeadersDefaultCellStyle
+            .Font = New Font("Arial", 12, FontStyle.Bold)
+            .ForeColor = Color.Black
+            .BackColor = Color.LightBlue
+            .SelectionForeColor = Color.Yellow
+            .SelectionBackColor = Color.Black
+        End With
+
+        With dgvDefectuoso.ColumnHeadersDefaultCellStyle
+            .Font = New Font("Arial", 12, FontStyle.Bold)
+            .ForeColor = Color.Black
+            .BackColor = Color.LightBlue
+            .SelectionForeColor = Color.Yellow
+            .SelectionBackColor = Color.Black
+        End With
+        dgvTabla.Columns(3).Width = 70
+        dgvTabla.Columns(4).Width = 70
+        dgvTabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Llenar_Tabla()
+        cargaCompleta = True
+        'HCargarDatos.Start()
 
     End Sub
 
-    Public Sub CargarInventario()
-        TablaInventario = Inventario.Listado(txtSucursal.SelectedItem.ToString)
+    Private Sub Llenar_Tabla()
+        Dim TotalFilas As Integer
+
+        TablaArticulos = Inventario.Articulos(txtSucursal.Text)
+        TotalFilas = TablaArticulos.Tables(0).Rows.Count
+        dgvTabla.Rows.Clear()
+        If TotalFilas > 0 Then
+            pbCargar.Value = 0
+            txtCargando.Visible = True
+            pbCargar.Visible = True
+
+            For i As Integer = 0 To TotalFilas - 1
+
+                If (i + 1) >= pbCargar.Maximum Then
+                    pbCargar.Value = pbCargar.Maximum
+                    txtCargando.Text = "Carga completada"
+                Else
+                    pbCargar.Value = i + 1
+                End If
+
+                dgvTabla.Rows.Add()
+                dgvTabla.Item(0, i).Value = TablaArticulos.Tables(0).Rows(i)(0).ToString()
+                dgvTabla.Item(1, i).Value = TablaArticulos.Tables(0).Rows(i)(1).ToString()
+                dgvTabla.Item(2, i).Value = TablaArticulos.Tables(0).Rows(i)(2).ToString()
+                dgvTabla.Item(3, i).Value = TablaArticulos.Tables(0).Rows(i)(3).ToString()
+                dgvTabla.Item(4, i).Value = TablaArticulos.Tables(0).Rows(i)(4).ToString()
+            Next
+        Else
+            pbCargar.Value = 0
+            txtCargando.Visible = True
+            pbCargar.Visible = True
+
+            TablaArticulos = Inventario.Query("SELECT id_articulo,descripcion FROM articulo")
+            TotalFilas = TablaArticulos.Tables(0).Rows.Count
+            If TotalFilas > 0 Then
+                For i As Integer = 0 To TotalFilas - 1
+                    If (i + 1) >= pbCargar.Maximum Then
+                        pbCargar.Value = pbCargar.Maximum
+                        txtCargando.Text = "Carga completada"
+                    Else
+                        pbCargar.Value = i + 1
+                    End If
+
+                    dgvTabla.Rows.Add()
+                    dgvTabla.Item(0, i).Value = TablaArticulos.Tables(0).Rows(i)(0).ToString()
+                    dgvTabla.Item(1, i).Value = TablaArticulos.Tables(0).Rows(i)(1).ToString()
+                    dgvTabla.Item(2, i).Value = txtProveedor.Text
+                    dgvTabla.Item(3, i).Value = "5"
+                    dgvTabla.Item(4, i).Value = "X"
+                    'M(dgvTabla.Item(1, i).Value.ToString)
+                Next
+            End If
+        End If
     End Sub
     Private Sub txtPrecio_venta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio_venta.KeyPress
         e = Validar_Num(e)
@@ -87,10 +119,6 @@ Public Class P_invent_N
         End If
     End Sub
 
-    Private Sub dgvTabla_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTabla.CellContentClick
-
-    End Sub
-
     Private Sub dgvTabla_Click(sender As Object, e As EventArgs) Handles dgvTabla.Click
         txtNombreArticulo.Text = dgvTabla.Item(1, dgvTabla.CurrentRow.Index).Value
         txtID_Articulo.Text = dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value
@@ -99,17 +127,59 @@ Public Class P_invent_N
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim Fila As Integer
         Fila = dgvDefectuoso.Rows.Count - 1
-        If TablaArticulos.Tables(0).Rows.Count > 0 Then
-            dgvDefectuoso.Rows.Add()
-            dgvDefectuoso.Item(0, Fila).Value = txtID_Articulo.Text
-            dgvDefectuoso.Item(1, Fila).Value = TablaArticulos.Tables(0).Rows(0)(2).ToString
-            dgvDefectuoso.Item(2, Fila).Value = ToDecimal(txtPrecio_venta.Text).ToString
-            dgvDefectuoso.Item(3, Fila).Value = txtCantidad.Value.ToString
-            dgvDefectuoso.Item(4, Fila).Value = txtNombreArticulo.Text
-            txtPrecio_venta.Text = ""
 
-        End If
+        dgvDefectuoso.Rows.Add()
+        dgvDefectuoso.Item(0, Fila).Value = txtID_Articulo.Text
+        dgvDefectuoso.Item(1, Fila).Value = "1234567"
+        dgvDefectuoso.Item(2, Fila).Value = ToDecimal(txtPrecio_venta.Text).ToString
+        dgvDefectuoso.Item(3, Fila).Value = txtCantidad.Value.ToString
+        dgvDefectuoso.Item(4, Fila).Value = txtNombreArticulo.Text
+        txtPrecio_venta.Text = ""
+
     End Sub
 
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Dim TotalElementos As Integer = 0
 
+        'Obtener Total 
+        For Each Fila As DataGridViewRow In dgvTabla.Rows
+            On Error Resume Next
+            If Not Fila.Cells(4).Value = "X" And Not Fila.Cells(4).Value = "x" Then
+                TotalElementos += 1
+            End If
+        Next
+        pbGuardar.Maximum = TotalElementos
+        pbGuardar.Visible = True
+        Inventario.Query("DELETE FROM inventario WHERE id_sucursal= '" & txtSucursal.Text & "'")
+        pbGuardar.Value = 1
+        For Each Fila As DataGridViewRow In dgvTabla.Rows
+            If Not Char.ToUpper(Fila.Cells(4).Value.ToString) = Char.ToUpper("x") Then
+                IE.condicion = "Buena Condición"
+                IE.existencia = Fila.Cells(3).Value
+                IE.fecha = getFecha()
+                IE.id_articulo = Fila.Cells(0).Value.ToString
+                IE.id_inventario = 0
+                IE.id_proveedor = Fila.Cells(2).Value.ToString
+                IE.id_sucursal = txtSucursal.Text
+                IE.id_usuario = G_Usuario_id
+                IE.nivel_critico = Fila.Cells(3).Value
+
+                If Inventario.Insertar(IE) Then
+                    pbGuardar.Value += 1
+                Else
+                    M("No se pudo insertar elemento: " + Fila.Cells(0).Value.ToString, 2)
+                    Exit Sub
+                End If
+            End If
+        Next
+
+        M("Registros guardados correctamente!")
+    End Sub
+
+    Private Sub txtSucursal_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtSucursal.SelectedIndexChanged
+        If cargaCompleta = True Then
+            'Llenar_Tabla()
+            HCargarDatos.Start()
+        End If
+    End Sub
 End Class
