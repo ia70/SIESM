@@ -180,7 +180,9 @@ Public Class P_invent_N
         Try
             txtNombreArticulo.Text = dgvTabla.Item(1, dgvTabla.CurrentRow.Index).Value
             txtID_Articulo.Text = dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value
-            txtProveedor.Text = dgvTabla.Item(2, dgvTabla.CurrentRow.Index).Value
+            If Not dgvTabla.Item(2, dgvTabla.CurrentRow.Index).Value.ToString = "" Then
+                txtProveedor.Text = dgvTabla.Item(2, dgvTabla.CurrentRow.Index).Value
+            End If
         Catch ex As Exception
 
         End Try

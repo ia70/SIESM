@@ -427,7 +427,7 @@ Partial Class P_invent_N
         '
         'P_invent_N
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1313, 625)
         Me.Controls.Add(Me.SplitContainer1)
