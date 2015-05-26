@@ -60,18 +60,8 @@ Public Class P_invent_N
         TotalFilas = TablaArticulos.Tables(0).Rows.Count
         dgvTabla.Rows.Clear()
         If TotalFilas > 0 Then
-            pbCargar.Value = 0
-            txtCargando.Visible = True
-            pbCargar.Visible = True
-
+            gbAgregar.Visible = True
             For i As Integer = 0 To TotalFilas - 1
-
-                If (i + 1) >= pbCargar.Maximum Then
-                    pbCargar.Value = pbCargar.Maximum
-                    txtCargando.Text = "Carga completada"
-                Else
-                    pbCargar.Value = i + 1
-                End If
 
                 dgvTabla.Rows.Add()
                 dgvTabla.Item(0, i).Value = TablaArticulos.Tables(0).Rows(i)(0).ToString()
@@ -81,20 +71,11 @@ Public Class P_invent_N
                 dgvTabla.Item(4, i).Value = TablaArticulos.Tables(0).Rows(i)(4).ToString()
             Next
         Else
-            pbCargar.Value = 0
-            txtCargando.Visible = True
-            pbCargar.Visible = True
-
+            gbAgregar.Visible = False
             TablaArticulos = Inventario.Query("SELECT id_articulo,descripcion FROM articulo")
             TotalFilas = TablaArticulos.Tables(0).Rows.Count
             If TotalFilas > 0 Then
                 For i As Integer = 0 To TotalFilas - 1
-                    If (i + 1) >= pbCargar.Maximum Then
-                        pbCargar.Value = pbCargar.Maximum
-                        txtCargando.Text = "Carga completada"
-                    Else
-                        pbCargar.Value = i + 1
-                    End If
 
                     dgvTabla.Rows.Add()
                     dgvTabla.Item(0, i).Value = TablaArticulos.Tables(0).Rows(i)(0).ToString()
@@ -106,6 +87,7 @@ Public Class P_invent_N
                 Next
             End If
         End If
+        HCargarDatos.Abort()
     End Sub
     Private Sub txtPrecio_venta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio_venta.KeyPress
         e = Validar_Num(e)
@@ -117,11 +99,6 @@ Public Class P_invent_N
         Else
             btnAgregar.Enabled = False
         End If
-    End Sub
-
-    Private Sub dgvTabla_Click(sender As Object, e As EventArgs) Handles dgvTabla.Click
-        txtNombreArticulo.Text = dgvTabla.Item(1, dgvTabla.CurrentRow.Index).Value
-        txtID_Articulo.Text = dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
@@ -140,18 +117,21 @@ Public Class P_invent_N
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim TotalElementos As Integer = 0
-
+        Try
         'Obtener Total 
         For Each Fila As DataGridViewRow In dgvTabla.Rows
-            On Error Resume Next
+
             If Not Fila.Cells(4).Value = "X" And Not Fila.Cells(4).Value = "x" Then
                 TotalElementos += 1
             End If
         Next
-        pbGuardar.Maximum = TotalElementos
-        pbGuardar.Visible = True
+            If Not TotalElementos Then
+                Inventario.Query("DELETE FROM inventario WHERE id_sucursal= '" & txtSucursal.Text & "'")
+                M("Inventario eliminado correctamente!")
+                Llenar_Tabla()
+                Exit Sub
+            End If
         Inventario.Query("DELETE FROM inventario WHERE id_sucursal= '" & txtSucursal.Text & "'")
-        pbGuardar.Value = 1
         For Each Fila As DataGridViewRow In dgvTabla.Rows
             If Not Char.ToUpper(Fila.Cells(4).Value.ToString) = Char.ToUpper("x") Then
                 IE.condicion = "Buena Condición"
@@ -165,7 +145,7 @@ Public Class P_invent_N
                 IE.nivel_critico = Fila.Cells(3).Value
 
                 If Inventario.Insertar(IE) Then
-                    pbGuardar.Value += 1
+
                 Else
                     M("No se pudo insertar elemento: " + Fila.Cells(0).Value.ToString, 2)
                     Exit Sub
@@ -173,13 +153,33 @@ Public Class P_invent_N
             End If
         Next
 
-        M("Registros guardados correctamente!")
+            M("Registros guardados correctamente!")
+        Catch ex As Exception
+            M("Error: " + ex.ToString, 2)
+        End Try
     End Sub
 
     Private Sub txtSucursal_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtSucursal.SelectedIndexChanged
         If cargaCompleta = True Then
-            'Llenar_Tabla()
-            HCargarDatos.Start()
+            Llenar_Tabla()
+            dgvTabla.Focus()
         End If
+    End Sub
+
+    Private Sub txtProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtProveedor.SelectedIndexChanged
+        If cargaCompleta Then
+            dgvTabla.Item(2, dgvTabla.CurrentRow.Index).Value = txtProveedor.Text
+        End If
+    End Sub
+
+    Private Sub dgvTabla_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTabla.CellContentClick
+
+    End Sub
+
+    Private Sub dgvTabla_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvTabla.CurrentCellChanged
+        txtNombreArticulo.Text = dgvTabla.Item(1, dgvTabla.CurrentRow.Index).Value
+        txtID_Articulo.Text = dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value
+        On Error Resume Next
+        txtProveedor.Text = dgvTabla.Item(2, dgvTabla.CurrentRow.Index).Value
     End Sub
 End Class

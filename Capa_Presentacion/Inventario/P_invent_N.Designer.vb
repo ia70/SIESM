@@ -25,15 +25,13 @@ Partial Class P_invent_N
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtCargando = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.pbCargar = New System.Windows.Forms.ProgressBar()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtProveedor = New System.Windows.Forms.ComboBox()
         Me.gbAgregar = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnAgregarArti = New System.Windows.Forms.Button()
-        Me.pbGuardar = New System.Windows.Forms.ProgressBar()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtSucursal = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -96,10 +94,8 @@ Partial Class P_invent_N
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.txtCargando)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.gbAgregar)
-        Me.Panel2.Controls.Add(Me.pbGuardar)
         Me.Panel2.Controls.Add(Me.btnGuardar)
         Me.Panel2.Controls.Add(Me.txtSucursal)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -109,21 +105,10 @@ Partial Class P_invent_N
         Me.Panel2.Size = New System.Drawing.Size(1313, 101)
         Me.Panel2.TabIndex = 21
         '
-        'txtCargando
-        '
-        Me.txtCargando.BackColor = System.Drawing.Color.Transparent
-        Me.txtCargando.Location = New System.Drawing.Point(371, 14)
-        Me.txtCargando.Name = "txtCargando"
-        Me.txtCargando.Size = New System.Drawing.Size(241, 28)
-        Me.txtCargando.TabIndex = 33
-        Me.txtCargando.Text = "Cargando datos..."
-        Me.txtCargando.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.txtCargando.Visible = False
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.pbCargar)
+        Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.txtProveedor)
         Me.Panel3.Location = New System.Drawing.Point(0, 59)
@@ -131,16 +116,14 @@ Partial Class P_invent_N
         Me.Panel3.Size = New System.Drawing.Size(735, 42)
         Me.Panel3.TabIndex = 27
         '
-        'pbCargar
+        'Label7
         '
-        Me.pbCargar.Location = New System.Drawing.Point(12, 6)
-        Me.pbCargar.Name = "pbCargar"
-        Me.pbCargar.Size = New System.Drawing.Size(322, 31)
-        Me.pbCargar.Step = 1
-        Me.pbCargar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pbCargar.TabIndex = 31
-        Me.pbCargar.Value = 1
-        Me.pbCargar.Visible = False
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Location = New System.Drawing.Point(22, 1)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(286, 42)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Escriba X en el campo existencia para eliminar artículo del inventario."
         '
         'Label5
         '
@@ -173,34 +156,23 @@ Partial Class P_invent_N
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(281, 19)
+        Me.TextBox1.Location = New System.Drawing.Point(412, 19)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(166, 26)
         Me.TextBox1.TabIndex = 28
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnAgregarArti
         '
         Me.btnAgregarArti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnAgregarArti.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarArti.ForeColor = System.Drawing.Color.Black
-        Me.btnAgregarArti.Location = New System.Drawing.Point(6, 14)
+        Me.btnAgregarArti.Location = New System.Drawing.Point(137, 14)
         Me.btnAgregarArti.Name = "btnAgregarArti"
         Me.btnAgregarArti.Size = New System.Drawing.Size(263, 33)
         Me.btnAgregarArti.TabIndex = 27
         Me.btnAgregarArti.Text = "Agregar articulo a inventario"
         Me.btnAgregarArti.UseVisualStyleBackColor = True
-        Me.btnAgregarArti.Visible = False
-        '
-        'pbGuardar
-        '
-        Me.pbGuardar.Location = New System.Drawing.Point(741, 15)
-        Me.pbGuardar.Name = "pbGuardar"
-        Me.pbGuardar.Size = New System.Drawing.Size(502, 31)
-        Me.pbGuardar.Step = 1
-        Me.pbGuardar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pbGuardar.TabIndex = 25
-        Me.pbGuardar.Value = 1
-        Me.pbGuardar.Visible = False
         '
         'btnGuardar
         '
@@ -250,20 +222,19 @@ Partial Class P_invent_N
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
         Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(5)
         Me.SplitContainer1.Size = New System.Drawing.Size(1313, 420)
-        Me.SplitContainer1.SplitterDistance = 701
+        Me.SplitContainer1.SplitterDistance = 700
         Me.SplitContainer1.TabIndex = 22
         '
         'dgvTabla
         '
-        Me.dgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.dgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTabla.BackgroundColor = System.Drawing.Color.White
         Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTabla.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.nombreArticulo, Me.n_Proveedor, Me.n_Critico, Me.n_existencia})
         Me.dgvTabla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvTabla.Location = New System.Drawing.Point(0, 0)
         Me.dgvTabla.Name = "dgvTabla"
-        Me.dgvTabla.Size = New System.Drawing.Size(697, 416)
+        Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvTabla.Size = New System.Drawing.Size(696, 416)
         Me.dgvTabla.TabIndex = 23
         '
         'ID
@@ -324,7 +295,7 @@ Partial Class P_invent_N
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(5, 5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(594, 406)
+        Me.GroupBox1.Size = New System.Drawing.Size(595, 406)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos de los artículos defectuosos"
@@ -418,7 +389,7 @@ Partial Class P_invent_N
         Me.dgvDefectuoso.Name = "dgvDefectuoso"
         Me.dgvDefectuoso.ReadOnly = True
         Me.dgvDefectuoso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDefectuoso.Size = New System.Drawing.Size(588, 279)
+        Me.dgvDefectuoso.Size = New System.Drawing.Size(589, 279)
         Me.dgvDefectuoso.TabIndex = 0
         '
         'ID_Articulo
@@ -503,7 +474,6 @@ Partial Class P_invent_N
     Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Nombre_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
-    Friend WithEvents pbGuardar As System.Windows.Forms.ProgressBar
     Friend WithEvents gbAgregar As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents btnAgregarArti As System.Windows.Forms.Button
@@ -523,6 +493,5 @@ Partial Class P_invent_N
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtProveedor As System.Windows.Forms.ComboBox
-    Friend WithEvents pbCargar As System.Windows.Forms.ProgressBar
-    Friend WithEvents txtCargando As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class
