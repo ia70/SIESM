@@ -81,7 +81,7 @@ Public Class P_invent_N
                     dgvTabla.Item(0, i).Value = TablaArticulos.Tables(0).Rows(i)(0).ToString()
                     dgvTabla.Item(1, i).Value = TablaArticulos.Tables(0).Rows(i)(1).ToString()
                     dgvTabla.Item(2, i).Value = txtProveedor.Text
-                    dgvTabla.Item(3, i).Value = "5"
+                    dgvTabla.Item(3, i).Value = "2"
                     dgvTabla.Item(4, i).Value = "X"
                     'M(dgvTabla.Item(1, i).Value.ToString)
                 Next
@@ -177,9 +177,13 @@ Public Class P_invent_N
     End Sub
 
     Private Sub dgvTabla_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvTabla.CurrentCellChanged
-        txtNombreArticulo.Text = dgvTabla.Item(1, dgvTabla.CurrentRow.Index).Value
-        txtID_Articulo.Text = dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value
-        On Error Resume Next
-        txtProveedor.Text = dgvTabla.Item(2, dgvTabla.CurrentRow.Index).Value
+        Try
+            txtNombreArticulo.Text = dgvTabla.Item(1, dgvTabla.CurrentRow.Index).Value
+            txtID_Articulo.Text = dgvTabla.Item(0, dgvTabla.CurrentRow.Index).Value
+            txtProveedor.Text = dgvTabla.Item(2, dgvTabla.CurrentRow.Index).Value
+        Catch ex As Exception
+
+        End Try
+      
     End Sub
 End Class
