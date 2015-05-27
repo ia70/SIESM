@@ -25,6 +25,7 @@ Partial Class P_invent_N
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnDefectuosos = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -52,10 +53,10 @@ Partial Class P_invent_N
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombreArticulo = New System.Windows.Forms.Label()
         Me.dgvDefectuoso = New System.Windows.Forms.DataGridView()
-        Me.ID_Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ID_Defectuso = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio_Venta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ID_Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio_Venta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre_Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -94,6 +95,7 @@ Partial Class P_invent_N
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.btnDefectuosos)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.gbAgregar)
         Me.Panel2.Controls.Add(Me.btnGuardar)
@@ -104,6 +106,18 @@ Partial Class P_invent_N
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1313, 101)
         Me.Panel2.TabIndex = 21
+        '
+        'btnDefectuosos
+        '
+        Me.btnDefectuosos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnDefectuosos.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDefectuosos.ForeColor = System.Drawing.Color.Black
+        Me.btnDefectuosos.Location = New System.Drawing.Point(773, 20)
+        Me.btnDefectuosos.Name = "btnDefectuosos"
+        Me.btnDefectuosos.Size = New System.Drawing.Size(198, 33)
+        Me.btnDefectuosos.TabIndex = 28
+        Me.btnDefectuosos.Text = "Guardar Defectuosos"
+        Me.btnDefectuosos.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -179,11 +193,11 @@ Partial Class P_invent_N
         Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnGuardar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.Black
-        Me.btnGuardar.Location = New System.Drawing.Point(642, 15)
+        Me.btnGuardar.Location = New System.Drawing.Point(500, 20)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(81, 33)
+        Me.btnGuardar.Size = New System.Drawing.Size(198, 33)
         Me.btnGuardar.TabIndex = 24
-        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.Text = "Guardar Inventario"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'txtSucursal
@@ -321,6 +335,7 @@ Partial Class P_invent_N
         '
         'txtPrecio_venta
         '
+        Me.txtPrecio_venta.Enabled = False
         Me.txtPrecio_venta.ForeColor = System.Drawing.Color.Green
         Me.txtPrecio_venta.Location = New System.Drawing.Point(263, 115)
         Me.txtPrecio_venta.Name = "txtPrecio_venta"
@@ -383,51 +398,53 @@ Partial Class P_invent_N
         'dgvDefectuoso
         '
         Me.dgvDefectuoso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDefectuoso.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_Articulo, Me.ID_Defectuso, Me.Precio_Venta, Me.Cantidad, Me.Nombre_Articulo})
+        Me.dgvDefectuoso.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID_Defectuso, Me.ID_Articulo, Me.Cantidad, Me.Precio_Venta, Me.Nombre_Articulo})
         Me.dgvDefectuoso.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.dgvDefectuoso.Location = New System.Drawing.Point(3, 124)
         Me.dgvDefectuoso.Name = "dgvDefectuoso"
-        Me.dgvDefectuoso.ReadOnly = True
         Me.dgvDefectuoso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvDefectuoso.Size = New System.Drawing.Size(589, 279)
         Me.dgvDefectuoso.TabIndex = 0
-        '
-        'ID_Articulo
-        '
-        Me.ID_Articulo.HeaderText = "ID-Artículo"
-        Me.ID_Articulo.Name = "ID_Articulo"
-        Me.ID_Articulo.ReadOnly = True
         '
         'ID_Defectuso
         '
         Me.ID_Defectuso.HeaderText = "ID_Defectuso"
         Me.ID_Defectuso.Name = "ID_Defectuso"
         Me.ID_Defectuso.ReadOnly = True
+        Me.ID_Defectuso.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ID_Defectuso.Width = 120
         '
-        'Precio_Venta
+        'ID_Articulo
         '
-        Me.Precio_Venta.HeaderText = "Precio de venta"
-        Me.Precio_Venta.Name = "Precio_Venta"
-        Me.Precio_Venta.ReadOnly = True
-        Me.Precio_Venta.Width = 150
+        Me.ID_Articulo.HeaderText = "ID-Artículo"
+        Me.ID_Articulo.Name = "ID_Articulo"
+        Me.ID_Articulo.ReadOnly = True
+        Me.ID_Articulo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
         'Cantidad
         '
         Me.Cantidad.HeaderText = "Cantidad"
         Me.Cantidad.Name = "Cantidad"
-        Me.Cantidad.ReadOnly = True
+        Me.Cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'Precio_Venta
+        '
+        Me.Precio_Venta.HeaderText = "Precio de venta"
+        Me.Precio_Venta.Name = "Precio_Venta"
+        Me.Precio_Venta.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Precio_Venta.Width = 150
         '
         'Nombre_Articulo
         '
         Me.Nombre_Articulo.HeaderText = "Nombre del Artículo"
         Me.Nombre_Articulo.Name = "Nombre_Articulo"
         Me.Nombre_Articulo.ReadOnly = True
+        Me.Nombre_Articulo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Nombre_Articulo.Width = 500
         '
         'P_invent_N
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1313, 625)
         Me.Controls.Add(Me.SplitContainer1)
@@ -468,11 +485,6 @@ Partial Class P_invent_N
     Friend WithEvents dgvTabla As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents dgvDefectuoso As System.Windows.Forms.DataGridView
-    Friend WithEvents ID_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ID_Defectuso As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Precio_Venta As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Nombre_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents gbAgregar As System.Windows.Forms.GroupBox
     Friend WithEvents txtIdArticulo As System.Windows.Forms.TextBox
@@ -494,4 +506,10 @@ Partial Class P_invent_N
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtProveedor As System.Windows.Forms.ComboBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents btnDefectuosos As System.Windows.Forms.Button
+    Friend WithEvents ID_Defectuso As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ID_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Precio_Venta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nombre_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

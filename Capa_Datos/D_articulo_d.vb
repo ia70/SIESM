@@ -33,7 +33,7 @@ Public Class D_articulo_d
                 .Add("id_suc", MySqlDbType.VarChar).Value = _Elemento.id_sucursal
                 .Add("id_art", MySqlDbType.VarChar).Value = _Elemento.id_articulo
                 .Add("id_def", MySqlDbType.VarChar).Value = _Elemento.id_defectuoso
-                .Add("pre_ven", MySqlDbType.VarChar).Value = _Elemento.precio_venta
+                .Add("pre_ven", MySqlDbType.Decimal).Value = _Elemento.precio_venta
                 .Add("can", MySqlDbType.Int32).Value = _Elemento.cantidad
                 .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
             End With
