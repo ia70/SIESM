@@ -30,7 +30,7 @@ Partial Class P_invent_N
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtProveedor = New System.Windows.Forms.ComboBox()
         Me.gbAgregar = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtIdArticulo = New System.Windows.Forms.TextBox()
         Me.btnAgregarArti = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtSucursal = New System.Windows.Forms.ComboBox()
@@ -145,7 +145,7 @@ Partial Class P_invent_N
         '
         'gbAgregar
         '
-        Me.gbAgregar.Controls.Add(Me.TextBox1)
+        Me.gbAgregar.Controls.Add(Me.txtIdArticulo)
         Me.gbAgregar.Controls.Add(Me.btnAgregarArti)
         Me.gbAgregar.Location = New System.Drawing.Point(636, 48)
         Me.gbAgregar.Name = "gbAgregar"
@@ -154,13 +154,13 @@ Partial Class P_invent_N
         Me.gbAgregar.TabStop = False
         Me.gbAgregar.Visible = False
         '
-        'TextBox1
+        'txtIdArticulo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(412, 19)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(166, 26)
-        Me.TextBox1.TabIndex = 28
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtIdArticulo.Location = New System.Drawing.Point(412, 19)
+        Me.txtIdArticulo.Name = "txtIdArticulo"
+        Me.txtIdArticulo.Size = New System.Drawing.Size(166, 26)
+        Me.txtIdArticulo.TabIndex = 28
+        Me.txtIdArticulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnAgregarArti
         '
@@ -475,7 +475,7 @@ Partial Class P_invent_N
     Friend WithEvents Nombre_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents gbAgregar As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtIdArticulo As System.Windows.Forms.TextBox
     Friend WithEvents btnAgregarArti As System.Windows.Forms.Button
     Friend WithEvents txtCantidad As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label4 As System.Windows.Forms.Label
