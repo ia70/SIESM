@@ -1,8 +1,11 @@
 ﻿Imports Capa_Negocios
 Imports Libersoft
+Imports Capa_Entidad
 Public Class P_PuntoVenta
     Private Tabla As DataSet
-    Private Elemento As New N_Articulo
+    Private Venta As New N_venta
+    Private VentaEntidad As New E_venta
+    Private Elemento As New N_inventario
     Public Ticket As New cTicket
     Public Barcode As New cBarCode
 
@@ -50,10 +53,10 @@ Public Class P_PuntoVenta
         If Tabla.Tables(0).Rows.Count > 0 Then
             dgvTabla.Rows.Add()
             txtCantidad.Value = 1
-            dgvTabla.Item(0, Fila).Value = Tabla.Tables(0).Rows(0)(0).ToString()
-            dgvTabla.Item(1, Fila).Value = Tabla.Tables(0).Rows(0)(2).ToString()
-            dgvTabla.Item(2, Fila).Value = "1"
-            dgvTabla.Item(3, Fila).Value = Tabla.Tables(0).Rows(0)(6).ToString()
+            dgvTabla.Item("id_articulo", Fila).Value = Tabla.Tables(0).Rows(0)(0).ToString()
+            dgvTabla.Item("nombre_articulo", Fila).Value = Tabla.Tables(0).Rows(0)(1).ToString()
+            dgvTabla.Item("cantidad", Fila).Value = "1"
+            dgvTabla.Item("precio", Fila).Value = Tabla.Tables(0).Rows(0)(2).ToString()
             Subtotales()
         End If
 
@@ -62,18 +65,33 @@ Public Class P_PuntoVenta
         Dim Filas As Integer
         Filas = dgvTabla.Rows.Count
         G_PuntoVenta_Total = 0
+        G_PuntoVenta_Descuento = 0
         For i As Integer = 0 To (Filas - 1)
             If Not dgvTabla.Item(0, i).Value = "" Then
                 On Error Resume Next
-                If dgvTabla.Item(2, i).Value = 0 Or dgvTabla.Item(2, i).Value.ToString = "" Or Not IsNumeric(dgvTabla.Item(2, i).Value) Then
-                    dgvTabla.Item(2, i).Value = "1"
-                    dgvTabla.Item(4, i).Value = ToDecimal(CDec(dgvTabla.Item(2, i).Value) * CDec(dgvTabla.Item(3, i).Value)).ToString
-                    G_PuntoVenta_Total += dgvTabla.Item(4, i).Value
+                If dgvTabla.Item("cantidad", i).Value = 0 Or dgvTabla.Item("cantidad", i).Value.ToString = "" Or Not IsNumeric(dgvTabla.Item("cantidad", i).Value) Then
+                    dgvTabla.Item("cantidad", i).Value = "1"
+                    If dgvTabla.Item("descuento", i).Value.ToString = "" Then
+                        dgvTabla.Item("subtotal", i).Value = ToDecimal(CDec(dgvTabla.Item("cantidad", i).Value) * CDec(dgvTabla.Item("precio", i).Value)).ToString
+                    Else
+                        dgvTabla.Item("subtotal", i).Value = ToDecimal(CDec(dgvTabla.Item("cantidad", i).Value) * CDec(dgvTabla.Item("descuento", i).Value)).ToString
+                        G_PuntoVenta_Descuento += (Val(dgvTabla.Item("precio", i).Value) - Val(dgvTabla.Item("descuento", i).Value)) * Val(dgvTabla.Item("cantidad", i).Value)
+                    End If
+                    G_PuntoVenta_Total += dgvTabla.Item("subtotal", i).Value
                 Else
-                    dgvTabla.Item(4, i).Value = ToDecimal(CDec(dgvTabla.Item(2, i).Value) * CDec(dgvTabla.Item(3, i).Value)).ToString
-                    G_PuntoVenta_Total += dgvTabla.Item(4, i).Value
+                    If Elemento.Query("SELECT existencia FROM inventario WHERE id_articulo = '" & dgvTabla.Item("id_articulo", i).Value & "' && id_sucursal = '" & G_Sucursal_nombre & "'").Tables(0).Rows(0)(0) < dgvTabla.Item("cantidad", i).Value Then
+                        M("¡Existencia insuficiente del artículo!", 1)
+                        dgvTabla.Item("cantidad", i).Value = Elemento.Query("SELECT existencia FROM inventario WHERE id_articulo = '" & dgvTabla.Item("id_articulo", i).Value & "' && id_sucursal = '" & G_Sucursal_nombre & "'").Tables(0).Rows(0)(0)
+                    End If
+                    If dgvTabla.Item("descuento", i).Value.ToString = "" Then
+                        dgvTabla.Item("subtotal", i).Value = ToDecimal(CDec(dgvTabla.Item("cantidad", i).Value) * CDec(dgvTabla.Item("precio", i).Value)).ToString
+                    Else
+                        dgvTabla.Item("subtotal", i).Value = ToDecimal(CDec(dgvTabla.Item("cantidad", i).Value) * CDec(dgvTabla.Item("descuento", i).Value)).ToString
+                        G_PuntoVenta_Descuento += (Val(dgvTabla.Item("precio", i).Value) - Val(dgvTabla.Item("descuento", i).Value)) * Val(dgvTabla.Item("cantidad", i).Value)
+                    End If
+                    G_PuntoVenta_Total += dgvTabla.Item("subtotal", i).Value
+                    End If
                 End If
-            End If
         Next
         txtTotal.Text = ToDecimal(G_PuntoVenta_Total)
     End Sub
@@ -92,7 +110,7 @@ Public Class P_PuntoVenta
     End Sub
     Private Sub txtCantidad_ValueChanged(sender As Object, e As EventArgs) Handles txtCantidad.ValueChanged
         If dgvTabla.Rows.Count > 1 Then
-            dgvTabla.Item(2, (dgvTabla.Rows.Count - 2)).Value = txtCantidad.Value.ToString
+            dgvTabla.Item("cantidad", (dgvTabla.Rows.Count - 2)).Value = txtCantidad.Value.ToString
             Subtotales()
         End If
         txtArticulo.Focus()
@@ -124,6 +142,12 @@ Public Class P_PuntoVenta
             txtEfectivo.Focus()
         End If
     End Sub
+
+    Private Sub txtEfectivo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEfectivo.KeyPress
+        If e.KeyChar = Chr(13) Then
+            Call btnCobrar_Click(sender, e)
+        End If
+    End Sub
     Private Sub txtEfectivo_LostFocus(sender As Object, e As EventArgs) Handles txtEfectivo.LostFocus
         If Val(txtEfectivo.Text) > Val(txtTotal.Text) Then
             G_PuntoVenta_Cambio = ToDecimal(Val(txtEfectivo.Text) - Val(txtTotal.Text))
@@ -136,17 +160,21 @@ Public Class P_PuntoVenta
         Dim existe As Boolean = True
         If Len(txtArticulo.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtArticulo.Text) Then
             For i As Integer = 0 To dgvTabla.Rows.Count - 1
-                If dgvTabla.Item(0, i).Value = txtArticulo.Text And Not txtArticulo.Text = "" Then
+                If dgvTabla.Item("id_articulo", i).Value = txtArticulo.Text And Not txtArticulo.Text = "" Then
                     existe = False
-                    dgvTabla.Item(2, i).Value += 1
+                    dgvTabla.Item("cantidad", i).Value += 1
                     txtArticulo.Text = ""
                     txtArticulo.Focus()
                 End If
             Next
             If existe Then
-                Tabla = Elemento.Consultar(txtArticulo.Text)
+                Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & txtArticulo.Text & "' && id_sucursal = '" & G_Sucursal_nombre & "'")
                 If Tabla.Tables(0).Rows.Count = 0 Then
-                    M("El articulo solicitado no existe", 3)
+                    M("¡El articulo solicitado no está dentro del inventario de esta sucursal!", 3)
+                    txtArticulo.Text = ""
+                    txtArticulo.Focus()
+                ElseIf Tabla.Tables(0).Rows(0)(3).ToString = "0" Then
+                    M("¡Artículo agotado!", 1)
                     txtArticulo.Text = ""
                     txtArticulo.Focus()
                 Else
@@ -163,11 +191,13 @@ Public Class P_PuntoVenta
     End Sub
 
     Private Sub btnCobrar_Click(sender As Object, e As EventArgs) Handles btnCobrar.Click
+        Dim Codigo As String
 
         If Val(txtEfectivo.Text) >= Val(txtTotal.Text) Then
+            Codigo = GenerarNumeroVenta()
             G_PuntoVenta_Monto = txtEfectivo.Text
-            Ticket.BarCode_Ima = Barcode.CodigoDeBarra("78945")
-            Ticket.BarCode_Text = "78945"
+            Ticket.BarCode_Ima = Barcode.CodigoDeBarra(Codigo)
+            Ticket.BarCode_Text = Codigo
             Ticket.Transaccion = txtTransacción.SelectedItem.ToString
             Ticket.TipoPago = txtTipo_Pago.SelectedItem.ToString
             Ticket.Tabla = dgvTabla
@@ -205,4 +235,15 @@ Public Class P_PuntoVenta
         G_PuntoVenta_Transacción = "Venta"
         txtArticulo.Focus()
     End Sub
+
+    Private Function GenerarNumeroVenta() As String
+        Dim Valor As String
+        If Elemento.Query("SELECT id_reg FROM venta").Tables(0).Rows.Count > 0 Then
+            Valor = Format(Val(Venta.Final().Tables(0).Rows(0)(0) + 1), "00000").ToString
+        Else
+            Valor = Format(10000, "00000").ToString
+        End If
+
+        Return Valor
+    End Function
 End Class
