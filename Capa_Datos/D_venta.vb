@@ -7,7 +7,7 @@ Public Class D_venta
     Dim Comando As New MySqlCommand
 
     '--Modificar lo de abajo ******************************************************
-    Dim Tabla As String = "ventas"
+    Dim Tabla As String = "venta"
 
 
     'Inserta un articulo en la base de datos
@@ -29,15 +29,17 @@ Public Class D_venta
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id", MySqlDbType.VarChar).Value = _Elemento.id_registro
+                .Add("id", MySqlDbType.Int32).Value = _Elemento.id_reg
                 .Add("id_ven", MySqlDbType.VarChar).Value = _Elemento.id_venta
                 .Add("id_usu", MySqlDbType.VarChar).Value = _Elemento.id_usuario
-                .Add("id_art", MySqlDbType.Int32).Value = _Elemento.id_articulo
-                .Add("can", MySqlDbType.VarChar).Value = _Elemento.cantidad
+                .Add("id_suc", MySqlDbType.VarChar).Value = _Elemento.id_sucursal
+                .Add("id_art", MySqlDbType.VarChar).Value = _Elemento.id_articulo
+                .Add("tra", MySqlDbType.VarChar).Value = _Elemento.transaccion
+                .Add("can", MySqlDbType.Decimal).Value = _Elemento.cantidad
                 .Add("pre_com", MySqlDbType.Decimal).Value = _Elemento.precio_compra
                 .Add("pre_ven", MySqlDbType.Decimal).Value = _Elemento.precio_venta
                 .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
-                .Add("hora", MySqlDbType.LongBlob).Value = _Elemento.hora
+                .Add("hor", MySqlDbType.VarChar).Value = _Elemento.hora
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception

@@ -5,7 +5,7 @@ Module Validacion
 #Region "Funciones de Validación de campos"
 
     Public Function ToDecimal(ByVal num As Decimal) As Decimal
-        Return Format((num * 1), "##,##0.00")
+        Return Format((num * 1), "##,##0.##")
     End Function
     'Funcion para corregir escritura a mayusculas y minusculas
     Public Function Validar_Nombres(ByVal Tx As TextBox, ByVal e As KeyPressEventArgs) As KeyPressEventArgs

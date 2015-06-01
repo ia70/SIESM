@@ -13,6 +13,13 @@ Libersoft
 	<value>String</value>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="P:Libersoft.cTicket.Descuento">
+	<summary>
+ Descuento total en la venta
+ </summary>
+	<value>String</value>
+	<returns></returns>
+	<remarks></remarks>
 </member><member name="P:Libersoft.cTicket.Transaccion">
 	<summary>
  Transacción que se está realizando: Venta, Cotización

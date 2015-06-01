@@ -24,7 +24,7 @@
     Public G_PuntoVenta_Transacción As String
     Public G_PuntoVenta_TipoPago As String
     Public G_PuntoVenta_Cambio As String
-    Public G_PuntoVenta_Descuento As Decimal
+    Public G_PuntoVenta_Descuento As String = ""
 
 
 End Module

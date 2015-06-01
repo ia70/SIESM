@@ -1,20 +1,22 @@
 ﻿Public Class E_venta
 
-    Private _id_reg As String
+    Private _id_reg As Integer
     Private _id_venta As String
     Private _id_usuario As String
+    Private _id_sucursal As String
     Private _id_articulo As String
+    Private _transaccion As String
     Private _cantidad As Integer
     Private _precio_compra As String
     Private _precio_venta As String
     Private _fecha As String
     Private _hora As String
 
-    Public Property id_registro As String
+    Public Property id_reg As Integer
         Get
             Return _id_reg
         End Get
-        Set(value As String)
+        Set(value As Integer)
             _id_reg = value
         End Set
     End Property
@@ -34,12 +36,28 @@
             _id_usuario = value
         End Set
     End Property
+    Public Property id_sucursal As String
+        Get
+            Return _id_sucursal
+        End Get
+        Set(value As String)
+            _id_sucursal = value
+        End Set
+    End Property
     Public Property id_articulo As String
         Get
             Return _id_articulo
         End Get
         Set(value As String)
             _id_articulo = value
+        End Set
+    End Property
+    Public Property transaccion As String
+        Get
+            Return _transaccion
+        End Get
+        Set(value As String)
+            _transaccion = value
         End Set
     End Property
     Public Property cantidad As Integer
