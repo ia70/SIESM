@@ -572,7 +572,7 @@ Partial Class P_PuntoVenta
         Me.txtTransacción.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txtTransacción.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTransacción.FormattingEnabled = True
-        Me.txtTransacción.Items.AddRange(New Object() {"Venta", "Cotización"})
+        Me.txtTransacción.Items.AddRange(New Object() {"Operación", "Cotización"})
         Me.txtTransacción.Location = New System.Drawing.Point(498, 194)
         Me.txtTransacción.Name = "txtTransacción"
         Me.txtTransacción.Size = New System.Drawing.Size(166, 40)
