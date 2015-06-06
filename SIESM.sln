@@ -11,8 +11,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Capa_Datos", "Capa_Datos\Ca
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Capa_Presentacion", "Capa_Presentacion\Capa_Presentacion.vbproj", "{EC4D854E-A851-49D5-AE2E-D149E1759828}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Libersoft", "..\Libersoft\Libersoft\Libersoft.vbproj", "{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{EC4D854E-A851-49D5-AE2E-D149E1759828}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC4D854E-A851-49D5-AE2E-D149E1759828}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC4D854E-A851-49D5-AE2E-D149E1759828}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
