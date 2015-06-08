@@ -193,8 +193,8 @@ Public Class P_PuntoVenta
             Else
                 Subtotales()
             End If
-        Else
-            Validar_Num(e)
+            'Else
+            '   Validar_Num(e)
         End If
     End Sub
 
@@ -268,7 +268,11 @@ Public Class P_PuntoVenta
     End Sub
 
     Private Sub txtArticulo_TextChanged(sender As Object, e As EventArgs) Handles txtArticulo.TextChanged
-
+        If Not IsNumeric(txtArticulo.Text) And Not txtArticulo.Text = "" Then
+            dgvConsulta.DataSource = Elemento.Filtrar(txtArticulo.Text).Tables(0)
+        ElseIf txtArticulo.Text = "" Then
+            dgvConsulta.DataSource = ""
+        End If
     End Sub
 
     Private Sub txtTotal_Click(sender As Object, e As EventArgs) Handles txtTotal.Click
@@ -278,6 +282,23 @@ Public Class P_PuntoVenta
     Private Sub txtTotal_TextChanged(sender As Object, e As EventArgs) Handles txtTotal.TextChanged
         If txtTipo_Pago.Text = "Cheque" Then
             txtEfectivo.Text = txtTotal.Text
+        End If
+    End Sub
+
+    Private Sub dgvConsulta_DoubleClick(sender As Object, e As EventArgs) Handles dgvConsulta.DoubleClick
+        Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia, articulo.nombre FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & dgvConsulta.Item(0, dgvConsulta.CurrentRow.Index).Value & "' && id_sucursal = '" & G_Sucursal_nombre & "'")
+        If Tabla.Tables(0).Rows.Count = 0 Then
+            M("¡El articulo solicitado no está dentro del inventario de esta sucursal!", 3)
+            txtArticulo.Text = ""
+            txtArticulo.Focus()
+        ElseIf Tabla.Tables(0).Rows(0)(3).ToString = "0" Then
+            M("¡Artículo agotado!", 1)
+            txtArticulo.Text = ""
+            txtArticulo.Focus()
+        Else
+            txtArticulo.Text = ""
+            btnCobrar.Enabled = True
+            LlenarCampos()
         End If
     End Sub
 End Class

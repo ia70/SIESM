@@ -72,6 +72,7 @@ Partial Class P_PuntoVenta
         Me.txtCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTransacción = New System.Windows.Forms.ComboBox()
+        Me.dgvConsulta = New System.Windows.Forms.DataGridView()
         Me.P_NavBar.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cMenu.SuspendLayout()
@@ -80,6 +81,7 @@ Partial Class P_PuntoVenta
         Me.PFecha.SuspendLayout()
         Me.PHeader.SuspendLayout()
         CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'P_NavBar
@@ -150,14 +152,14 @@ Partial Class P_PuntoVenta
         Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTabla.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_articulo, Me.nombre_articulo, Me.cantidad, Me.precio, Me.descuento, Me.subtotal, Me.nombre_corto})
         Me.dgvTabla.ContextMenuStrip = Me.cMenu
-        Me.dgvTabla.Location = New System.Drawing.Point(143, 256)
+        Me.dgvTabla.Location = New System.Drawing.Point(143, 305)
         Me.dgvTabla.MultiSelect = False
         Me.dgvTabla.Name = "dgvTabla"
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvTabla.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTabla.Size = New System.Drawing.Size(920, 339)
+        Me.dgvTabla.Size = New System.Drawing.Size(920, 330)
         Me.dgvTabla.TabIndex = 2
         Me.TTCorteCaja.SetToolTip(Me.dgvTabla, "Listado de los articulos que se están vendiendo." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Presiona click derecho si des" & _
         "eas borrar uno o todos los registros.")
@@ -409,7 +411,7 @@ Partial Class P_PuntoVenta
         Me.PFooter.Controls.Add(Me.txtSucursal_Colonia)
         Me.PFooter.Controls.Add(Me.txtSucursal_Calle)
         Me.PFooter.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PFooter.Location = New System.Drawing.Point(0, 575)
+        Me.PFooter.Location = New System.Drawing.Point(0, 675)
         Me.PFooter.Name = "PFooter"
         Me.PFooter.Size = New System.Drawing.Size(1327, 75)
         Me.PFooter.TabIndex = 4
@@ -538,7 +540,7 @@ Partial Class P_PuntoVenta
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(313, 160)
+        Me.Label5.Location = New System.Drawing.Point(755, 160)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(143, 32)
         Me.Label5.TabIndex = 8
@@ -547,7 +549,7 @@ Partial Class P_PuntoVenta
         'txtCantidad
         '
         Me.txtCantidad.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantidad.Location = New System.Drawing.Point(344, 194)
+        Me.txtCantidad.Location = New System.Drawing.Point(786, 194)
         Me.txtCantidad.Maximum = New Decimal(New Integer() {500, 0, 0, 0})
         Me.txtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtCantidad.Name = "txtCantidad"
@@ -561,7 +563,7 @@ Partial Class P_PuntoVenta
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(490, 160)
+        Me.Label7.Location = New System.Drawing.Point(932, 160)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(187, 32)
         Me.Label7.TabIndex = 10
@@ -573,17 +575,33 @@ Partial Class P_PuntoVenta
         Me.txtTransacción.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTransacción.FormattingEnabled = True
         Me.txtTransacción.Items.AddRange(New Object() {"Operación", "Cotización"})
-        Me.txtTransacción.Location = New System.Drawing.Point(498, 194)
+        Me.txtTransacción.Location = New System.Drawing.Point(940, 194)
         Me.txtTransacción.Name = "txtTransacción"
         Me.txtTransacción.Size = New System.Drawing.Size(166, 40)
         Me.txtTransacción.TabIndex = 11
+        '
+        'dgvConsulta
+        '
+        Me.dgvConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvConsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgvConsulta.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.dgvConsulta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvConsulta.Location = New System.Drawing.Point(295, 151)
+        Me.dgvConsulta.MultiSelect = False
+        Me.dgvConsulta.Name = "dgvConsulta"
+        Me.dgvConsulta.ReadOnly = True
+        Me.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvConsulta.Size = New System.Drawing.Size(462, 148)
+        Me.dgvConsulta.TabIndex = 81
         '
         'P_PuntoVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.fondos14
-        Me.ClientSize = New System.Drawing.Size(1327, 650)
+        Me.ClientSize = New System.Drawing.Size(1327, 750)
+        Me.Controls.Add(Me.dgvConsulta)
         Me.Controls.Add(Me.txtTransacción)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtCantidad)
@@ -611,6 +629,7 @@ Partial Class P_PuntoVenta
         Me.PFecha.ResumeLayout(False)
         Me.PHeader.ResumeLayout(False)
         CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvConsulta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -658,4 +677,5 @@ Partial Class P_PuntoVenta
     Friend WithEvents descuento As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents subtotal As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents nombre_corto As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dgvConsulta As System.Windows.Forms.DataGridView
 End Class
