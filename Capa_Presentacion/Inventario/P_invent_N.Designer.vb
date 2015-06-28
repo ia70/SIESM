@@ -112,7 +112,7 @@ Partial Class P_invent_N
         Me.btnDefectuosos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnDefectuosos.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDefectuosos.ForeColor = System.Drawing.Color.Black
-        Me.btnDefectuosos.Location = New System.Drawing.Point(773, 20)
+        Me.btnDefectuosos.Location = New System.Drawing.Point(773, 17)
         Me.btnDefectuosos.Name = "btnDefectuosos"
         Me.btnDefectuosos.Size = New System.Drawing.Size(198, 33)
         Me.btnDefectuosos.TabIndex = 28
@@ -161,16 +161,16 @@ Partial Class P_invent_N
         '
         Me.gbAgregar.Controls.Add(Me.txtIdArticulo)
         Me.gbAgregar.Controls.Add(Me.btnAgregarArti)
-        Me.gbAgregar.Location = New System.Drawing.Point(636, 48)
+        Me.gbAgregar.Location = New System.Drawing.Point(636, 50)
         Me.gbAgregar.Name = "gbAgregar"
-        Me.gbAgregar.Size = New System.Drawing.Size(616, 57)
+        Me.gbAgregar.Size = New System.Drawing.Size(616, 46)
         Me.gbAgregar.TabIndex = 26
         Me.gbAgregar.TabStop = False
         Me.gbAgregar.Visible = False
         '
         'txtIdArticulo
         '
-        Me.txtIdArticulo.Location = New System.Drawing.Point(412, 19)
+        Me.txtIdArticulo.Location = New System.Drawing.Point(412, 15)
         Me.txtIdArticulo.Name = "txtIdArticulo"
         Me.txtIdArticulo.Size = New System.Drawing.Size(166, 26)
         Me.txtIdArticulo.TabIndex = 28
@@ -181,7 +181,7 @@ Partial Class P_invent_N
         Me.btnAgregarArti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnAgregarArti.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregarArti.ForeColor = System.Drawing.Color.Black
-        Me.btnAgregarArti.Location = New System.Drawing.Point(137, 14)
+        Me.btnAgregarArti.Location = New System.Drawing.Point(137, 12)
         Me.btnAgregarArti.Name = "btnAgregarArti"
         Me.btnAgregarArti.Size = New System.Drawing.Size(263, 33)
         Me.btnAgregarArti.TabIndex = 27
@@ -193,7 +193,7 @@ Partial Class P_invent_N
         Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnGuardar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.Black
-        Me.btnGuardar.Location = New System.Drawing.Point(500, 20)
+        Me.btnGuardar.Location = New System.Drawing.Point(500, 17)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(198, 33)
         Me.btnGuardar.TabIndex = 24

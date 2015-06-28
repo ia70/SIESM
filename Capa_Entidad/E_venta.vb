@@ -6,7 +6,7 @@
     Private _id_sucursal As String
     Private _id_articulo As String
     Private _transaccion As String
-    Private _cantidad As Integer
+    Private _cantidad As String
     Private _precio_compra As String
     Private _precio_venta As String
     Private _fecha As String
@@ -60,11 +60,11 @@
             _transaccion = value
         End Set
     End Property
-    Public Property cantidad As Integer
+    Public Property cantidad As String
         Get
             Return _cantidad
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _cantidad = value
         End Set
     End Property

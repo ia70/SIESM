@@ -35,9 +35,9 @@ Public Class D_venta
                 .Add("id_suc", MySqlDbType.VarChar).Value = _Elemento.id_sucursal
                 .Add("id_art", MySqlDbType.VarChar).Value = _Elemento.id_articulo
                 .Add("tra", MySqlDbType.VarChar).Value = _Elemento.transaccion
-                .Add("can", MySqlDbType.Decimal).Value = _Elemento.cantidad
-                .Add("pre_com", MySqlDbType.Decimal).Value = _Elemento.precio_compra
-                .Add("pre_ven", MySqlDbType.Decimal).Value = _Elemento.precio_venta
+                .Add("can", MySqlDbType.VarChar).Value = _Elemento.cantidad
+                .Add("pre_com", MySqlDbType.VarChar).Value = _Elemento.precio_compra
+                .Add("pre_ven", MySqlDbType.VarChar).Value = _Elemento.precio_venta
                 .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
                 .Add("hor", MySqlDbType.VarChar).Value = _Elemento.hora
             End With

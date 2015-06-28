@@ -54,7 +54,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zoxPzt/5hnSG5EmeoB1Uoue90rXaqRTTqeT5E4Z5iBY=</dsig:DigestValue>
+        <dsig:DigestValue>rSAxD9rCFdXFHkaJy9COyxeH1zcZSnji/uPaIl7NQmw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,7 +66,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vkuSMttXrpzvDvwUFJJdYNNg2AtFE4obuclZpmcMGWA=</dsig:DigestValue>
+        <dsig:DigestValue>AwIB6dOl1nSddXNpC0yBAiV3uSLaknpUFhRUUfQa3qQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,19 +78,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pvxWTZqk0IoOUpv1PDOJ+35Va1mY6JsZEpF6jwNIlS4=</dsig:DigestValue>
+        <dsig:DigestValue>OPAauLdmyGgqnYmOjC3a6MdT36Wom/qAFbYzG/60G0s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="3988992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="3991552">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wm0yFjnUd7M/rGQA7DDZwWEEW7iBPsv7wgn4WwFVi5E=</dsig:DigestValue>
+        <dsig:DigestValue>xvovvzwGz88UfNJruGfF0+5tdJ+32pPqNtIalqy7bdA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,17 +114,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qk7ybppqKSrwuXBAgepB2k4Rk/GLyZ6WKRZH1rvXuyU=</dsig:DigestValue>
+        <dsig:DigestValue>1eS/Ez5rAyDSguu8rKPoFeFS2jnSw73FOiJBil9+iY4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Capa_Presentacion.exe.config" size="346">
+  <file name="Capa_Presentacion.exe.config" size="350">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>B+Y9qjfdqxjqjB19wNUrXt5TkLcNtn2ow7fkR99WLVU=</dsig:DigestValue>
+      <dsig:DigestValue>hdBaV0lnSmSoLuy3sguw+mxBAHY52vdodDupS8jixa8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

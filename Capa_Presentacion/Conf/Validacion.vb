@@ -183,6 +183,10 @@ Module Validacion
     Public Function getFecha() As String
         Return Date.Today.Date.ToString("yyyy.MM.dd")
     End Function
+
+    Public Function getHora() As String
+        Return String.Format("{0:HH:mm:ss tt}", DateTime.Now)
+    End Function
 #End Region
 
 End Module
