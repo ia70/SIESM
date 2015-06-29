@@ -145,7 +145,7 @@ Partial Class P_articulo_N
         Me.txtPrecio_venta.Enabled = False
         Me.txtPrecio_venta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio_venta.Location = New System.Drawing.Point(173, 196)
-        Me.txtPrecio_venta.MaxLength = 20
+        Me.txtPrecio_venta.MaxLength = 10
         Me.txtPrecio_venta.Name = "txtPrecio_venta"
         Me.txtPrecio_venta.Size = New System.Drawing.Size(121, 26)
         Me.txtPrecio_venta.TabIndex = 31
@@ -165,7 +165,7 @@ Partial Class P_articulo_N
         Me.txtPrecio_compra.Enabled = False
         Me.txtPrecio_compra.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio_compra.Location = New System.Drawing.Point(173, 160)
-        Me.txtPrecio_compra.MaxLength = 20
+        Me.txtPrecio_compra.MaxLength = 10
         Me.txtPrecio_compra.Name = "txtPrecio_compra"
         Me.txtPrecio_compra.Size = New System.Drawing.Size(121, 26)
         Me.txtPrecio_compra.TabIndex = 29
@@ -256,7 +256,7 @@ Partial Class P_articulo_N
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(173, 65)
-        Me.txtNombre.MaxLength = 20
+        Me.txtNombre.MaxLength = 150
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtNombre.Size = New System.Drawing.Size(269, 26)

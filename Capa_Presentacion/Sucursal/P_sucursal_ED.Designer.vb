@@ -24,6 +24,7 @@ Partial Class P_sucursal_ED
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnBuscar_imagen = New System.Windows.Forms.Button()
         Me.btnlimpiar_campos = New System.Windows.Forms.Button()
         Me.txtTipo = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -50,7 +51,6 @@ Partial Class P_sucursal_ED
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnBuscar_imagen = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +104,16 @@ Partial Class P_sucursal_ED
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(728, 521)
         Me.Panel3.TabIndex = 18
+        '
+        'btnBuscar_imagen
+        '
+        Me.btnBuscar_imagen.Enabled = False
+        Me.btnBuscar_imagen.Location = New System.Drawing.Point(464, 385)
+        Me.btnBuscar_imagen.Name = "btnBuscar_imagen"
+        Me.btnBuscar_imagen.Size = New System.Drawing.Size(253, 30)
+        Me.btnBuscar_imagen.TabIndex = 89
+        Me.btnBuscar_imagen.Text = "Buscar imágen"
+        Me.btnBuscar_imagen.UseVisualStyleBackColor = True
         '
         'btnlimpiar_campos
         '
@@ -249,7 +259,7 @@ Partial Class P_sucursal_ED
         Me.txttelefono.Enabled = False
         Me.txttelefono.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttelefono.Location = New System.Drawing.Point(173, 365)
-        Me.txttelefono.MaxLength = 20
+        Me.txttelefono.MaxLength = 12
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(121, 26)
         Me.txttelefono.TabIndex = 52
@@ -319,7 +329,7 @@ Partial Class P_sucursal_ED
         Me.txtdireccion.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtdireccion.Enabled = False
         Me.txtdireccion.Location = New System.Drawing.Point(173, 259)
-        Me.txtdireccion.MaxLength = 300
+        Me.txtdireccion.MaxLength = 500
         Me.txtdireccion.Multiline = True
         Me.txtdireccion.Name = "txtdireccion"
         Me.txtdireccion.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -331,7 +341,7 @@ Partial Class P_sucursal_ED
         Me.txtNombre.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(173, 222)
-        Me.txtNombre.MaxLength = 150
+        Me.txtNombre.MaxLength = 100
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtNombre.Size = New System.Drawing.Size(269, 26)
@@ -377,16 +387,6 @@ Partial Class P_sucursal_ED
         Me.Label6.Text = "Editar Sucursal"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label6.UseCompatibleTextRendering = True
-        '
-        'btnBuscar_imagen
-        '
-        Me.btnBuscar_imagen.Enabled = False
-        Me.btnBuscar_imagen.Location = New System.Drawing.Point(464, 385)
-        Me.btnBuscar_imagen.Name = "btnBuscar_imagen"
-        Me.btnBuscar_imagen.Size = New System.Drawing.Size(253, 30)
-        Me.btnBuscar_imagen.TabIndex = 89
-        Me.btnBuscar_imagen.Text = "Buscar imágen"
-        Me.btnBuscar_imagen.UseVisualStyleBackColor = True
         '
         'P_sucursal_ED
         '

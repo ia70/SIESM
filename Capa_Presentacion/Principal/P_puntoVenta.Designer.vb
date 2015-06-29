@@ -35,6 +35,14 @@ Partial Class P_PuntoVenta
         Me.btnConsultaPrecio = New System.Windows.Forms.Button()
         Me.btnCorteCaja = New System.Windows.Forms.Button()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.id_articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre_articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre_corto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio_compra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EliminarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarTodaLaTablaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -66,14 +74,6 @@ Partial Class P_PuntoVenta
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTransacción = New System.Windows.Forms.ComboBox()
         Me.dgvConsulta = New System.Windows.Forms.DataGridView()
-        Me.id_articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre_articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre_corto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precio_compra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.P_NavBar.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cMenu.SuspendLayout()
@@ -102,6 +102,7 @@ Partial Class P_PuntoVenta
         Me.btnAdministracion.BackColor = System.Drawing.Color.White
         Me.btnAdministracion.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.Tools
         Me.btnAdministracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAdministracion.Enabled = False
         Me.btnAdministracion.Location = New System.Drawing.Point(0, 305)
         Me.btnAdministracion.Name = "btnAdministracion"
         Me.btnAdministracion.Size = New System.Drawing.Size(96, 96)
@@ -114,6 +115,7 @@ Partial Class P_PuntoVenta
         Me.btnConsultaExistencia.BackColor = System.Drawing.Color.White
         Me.btnConsultaExistencia.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.Database
         Me.btnConsultaExistencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnConsultaExistencia.Enabled = False
         Me.btnConsultaExistencia.Location = New System.Drawing.Point(0, 204)
         Me.btnConsultaExistencia.Name = "btnConsultaExistencia"
         Me.btnConsultaExistencia.Size = New System.Drawing.Size(96, 96)
@@ -126,6 +128,7 @@ Partial Class P_PuntoVenta
         Me.btnConsultaPrecio.BackColor = System.Drawing.Color.White
         Me.btnConsultaPrecio.BackgroundImage = Global.Capa_Presentacion.My.Resources.Resources.Search
         Me.btnConsultaPrecio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnConsultaPrecio.Enabled = False
         Me.btnConsultaPrecio.Location = New System.Drawing.Point(0, 102)
         Me.btnConsultaPrecio.Name = "btnConsultaPrecio"
         Me.btnConsultaPrecio.Size = New System.Drawing.Size(96, 96)
@@ -164,6 +167,97 @@ Partial Class P_PuntoVenta
         Me.dgvTabla.TabIndex = 2
         Me.TTCorteCaja.SetToolTip(Me.dgvTabla, "Listado de los articulos que se están vendiendo." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Presiona click derecho si des" & _
         "eas borrar uno o todos los registros.")
+        '
+        'id_articulo
+        '
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.id_articulo.DefaultCellStyle = DataGridViewCellStyle1
+        Me.id_articulo.FillWeight = 80.0!
+        Me.id_articulo.Frozen = True
+        Me.id_articulo.HeaderText = "ID"
+        Me.id_articulo.MinimumWidth = 80
+        Me.id_articulo.Name = "id_articulo"
+        Me.id_articulo.ReadOnly = True
+        Me.id_articulo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.id_articulo.Visible = False
+        Me.id_articulo.Width = 80
+        '
+        'nombre_articulo
+        '
+        Me.nombre_articulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nombre_articulo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.nombre_articulo.FillWeight = 500.0!
+        Me.nombre_articulo.Frozen = True
+        Me.nombre_articulo.HeaderText = "Nombre del Articulo"
+        Me.nombre_articulo.MinimumWidth = 500
+        Me.nombre_articulo.Name = "nombre_articulo"
+        Me.nombre_articulo.ReadOnly = True
+        Me.nombre_articulo.Width = 500
+        '
+        'cantidad
+        '
+        Me.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cantidad.DefaultCellStyle = DataGridViewCellStyle3
+        Me.cantidad.FillWeight = 80.0!
+        Me.cantidad.Frozen = True
+        Me.cantidad.HeaderText = "Cant."
+        Me.cantidad.MinimumWidth = 80
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ToolTipText = "Para modificar la cantidad has doble click en el campo cantidad de la fila desead" & _
+    "a."
+        Me.cantidad.Width = 80
+        '
+        'precio
+        '
+        Me.precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.precio.DefaultCellStyle = DataGridViewCellStyle4
+        Me.precio.FillWeight = 120.0!
+        Me.precio.Frozen = True
+        Me.precio.HeaderText = "Precio"
+        Me.precio.MinimumWidth = 120
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        Me.precio.Width = 120
+        '
+        'descuento
+        '
+        Me.descuento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.descuento.FillWeight = 120.0!
+        Me.descuento.HeaderText = "DPU"
+        Me.descuento.MinimumWidth = 120
+        Me.descuento.Name = "descuento"
+        Me.descuento.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.descuento.Width = 120
+        '
+        'subtotal
+        '
+        Me.subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle5
+        Me.subtotal.FillWeight = 120.0!
+        Me.subtotal.HeaderText = "Subtotal"
+        Me.subtotal.MinimumWidth = 120
+        Me.subtotal.Name = "subtotal"
+        Me.subtotal.ReadOnly = True
+        Me.subtotal.Width = 120
+        '
+        'nombre_corto
+        '
+        Me.nombre_corto.HeaderText = "Nombre Corto"
+        Me.nombre_corto.Name = "nombre_corto"
+        Me.nombre_corto.ReadOnly = True
+        Me.nombre_corto.Visible = False
+        Me.nombre_corto.Width = 132
+        '
+        'precio_compra
+        '
+        Me.precio_compra.HeaderText = "Precio Compra"
+        Me.precio_compra.Name = "precio_compra"
+        Me.precio_compra.Visible = False
+        Me.precio_compra.Width = 140
         '
         'cMenu
         '
@@ -511,97 +605,6 @@ Partial Class P_PuntoVenta
         Me.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvConsulta.Size = New System.Drawing.Size(847, 175)
         Me.dgvConsulta.TabIndex = 81
-        '
-        'id_articulo
-        '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.id_articulo.DefaultCellStyle = DataGridViewCellStyle1
-        Me.id_articulo.FillWeight = 80.0!
-        Me.id_articulo.Frozen = True
-        Me.id_articulo.HeaderText = "ID"
-        Me.id_articulo.MinimumWidth = 80
-        Me.id_articulo.Name = "id_articulo"
-        Me.id_articulo.ReadOnly = True
-        Me.id_articulo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.id_articulo.Visible = False
-        Me.id_articulo.Width = 80
-        '
-        'nombre_articulo
-        '
-        Me.nombre_articulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nombre_articulo.DefaultCellStyle = DataGridViewCellStyle2
-        Me.nombre_articulo.FillWeight = 500.0!
-        Me.nombre_articulo.Frozen = True
-        Me.nombre_articulo.HeaderText = "Nombre del Articulo"
-        Me.nombre_articulo.MinimumWidth = 500
-        Me.nombre_articulo.Name = "nombre_articulo"
-        Me.nombre_articulo.ReadOnly = True
-        Me.nombre_articulo.Width = 500
-        '
-        'cantidad
-        '
-        Me.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cantidad.DefaultCellStyle = DataGridViewCellStyle3
-        Me.cantidad.FillWeight = 80.0!
-        Me.cantidad.Frozen = True
-        Me.cantidad.HeaderText = "Cant."
-        Me.cantidad.MinimumWidth = 80
-        Me.cantidad.Name = "cantidad"
-        Me.cantidad.ToolTipText = "Para modificar la cantidad has doble click en el campo cantidad de la fila desead" & _
-    "a."
-        Me.cantidad.Width = 80
-        '
-        'precio
-        '
-        Me.precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.precio.DefaultCellStyle = DataGridViewCellStyle4
-        Me.precio.FillWeight = 120.0!
-        Me.precio.Frozen = True
-        Me.precio.HeaderText = "Precio"
-        Me.precio.MinimumWidth = 120
-        Me.precio.Name = "precio"
-        Me.precio.ReadOnly = True
-        Me.precio.Width = 120
-        '
-        'descuento
-        '
-        Me.descuento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.descuento.FillWeight = 120.0!
-        Me.descuento.HeaderText = "DPU"
-        Me.descuento.MinimumWidth = 120
-        Me.descuento.Name = "descuento"
-        Me.descuento.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.descuento.Width = 120
-        '
-        'subtotal
-        '
-        Me.subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle5
-        Me.subtotal.FillWeight = 120.0!
-        Me.subtotal.HeaderText = "Subtotal"
-        Me.subtotal.MinimumWidth = 120
-        Me.subtotal.Name = "subtotal"
-        Me.subtotal.ReadOnly = True
-        Me.subtotal.Width = 120
-        '
-        'nombre_corto
-        '
-        Me.nombre_corto.HeaderText = "Nombre Corto"
-        Me.nombre_corto.Name = "nombre_corto"
-        Me.nombre_corto.ReadOnly = True
-        Me.nombre_corto.Visible = False
-        Me.nombre_corto.Width = 132
-        '
-        'precio_compra
-        '
-        Me.precio_compra.HeaderText = "Precio Compra"
-        Me.precio_compra.Name = "precio_compra"
-        Me.precio_compra.Visible = False
-        Me.precio_compra.Width = 140
         '
         'P_PuntoVenta
         '

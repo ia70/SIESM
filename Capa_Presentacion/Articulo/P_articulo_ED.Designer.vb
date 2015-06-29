@@ -221,7 +221,7 @@ Partial Class P_articulo_ED
         Me.txtPrecio_venta.Enabled = False
         Me.txtPrecio_venta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio_venta.Location = New System.Drawing.Point(173, 353)
-        Me.txtPrecio_venta.MaxLength = 20
+        Me.txtPrecio_venta.MaxLength = 10
         Me.txtPrecio_venta.Name = "txtPrecio_venta"
         Me.txtPrecio_venta.Size = New System.Drawing.Size(121, 26)
         Me.txtPrecio_venta.TabIndex = 52
@@ -241,7 +241,7 @@ Partial Class P_articulo_ED
         Me.txtPrecio_compra.Enabled = False
         Me.txtPrecio_compra.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio_compra.Location = New System.Drawing.Point(173, 317)
-        Me.txtPrecio_compra.MaxLength = 20
+        Me.txtPrecio_compra.MaxLength = 10
         Me.txtPrecio_compra.Name = "txtPrecio_compra"
         Me.txtPrecio_compra.Size = New System.Drawing.Size(121, 26)
         Me.txtPrecio_compra.TabIndex = 50

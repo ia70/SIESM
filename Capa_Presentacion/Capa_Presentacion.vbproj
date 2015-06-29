@@ -239,10 +239,22 @@
     <Compile Include="Principal\Popup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Principal\P_CajaInicio.Designer.vb">
+      <DependentUpon>P_CajaInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\P_CajaInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\P_Cobrar.Designer.vb">
       <DependentUpon>P_Cobrar.vb</DependentUpon>
     </Compile>
     <Compile Include="Principal\P_Cobrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\P_CorteCaja.Designer.vb">
+      <DependentUpon>P_CorteCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\P_CorteCaja.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principal\P_PuntoVenta.Designer.vb">
@@ -389,8 +401,14 @@
     <EmbeddedResource Include="Principal\Popup.resx">
       <DependentUpon>Popup.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Principal\P_CajaInicio.resx">
+      <DependentUpon>P_CajaInicio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\P_Cobrar.resx">
       <DependentUpon>P_Cobrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\P_CorteCaja.resx">
+      <DependentUpon>P_CorteCaja.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\P_PuntoVenta.resx">
       <DependentUpon>P_PuntoVenta.vb</DependentUpon>

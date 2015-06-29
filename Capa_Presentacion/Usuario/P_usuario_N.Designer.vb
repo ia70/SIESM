@@ -133,7 +133,7 @@ Partial Class P_usuario_N
         '
         Me.Txtapellidos.Enabled = False
         Me.Txtapellidos.Location = New System.Drawing.Point(136, 137)
-        Me.Txtapellidos.MaxLength = 12
+        Me.Txtapellidos.MaxLength = 30
         Me.Txtapellidos.Name = "Txtapellidos"
         Me.Txtapellidos.Size = New System.Drawing.Size(269, 26)
         Me.Txtapellidos.TabIndex = 46
@@ -151,7 +151,7 @@ Partial Class P_usuario_N
         '
         Me.txtnombre.Enabled = False
         Me.txtnombre.Location = New System.Drawing.Point(138, 93)
-        Me.txtnombre.MaxLength = 12
+        Me.txtnombre.MaxLength = 20
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(269, 26)
         Me.txtnombre.TabIndex = 44
@@ -160,7 +160,7 @@ Partial Class P_usuario_N
         '
         Me.txtcontrasena.Enabled = False
         Me.txtcontrasena.Location = New System.Drawing.Point(138, 58)
-        Me.txtcontrasena.MaxLength = 500
+        Me.txtcontrasena.MaxLength = 15
         Me.txtcontrasena.Name = "txtcontrasena"
         Me.txtcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtcontrasena.Size = New System.Drawing.Size(204, 26)
@@ -170,7 +170,7 @@ Partial Class P_usuario_N
         '
         Me.txtid_usuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtid_usuario.Location = New System.Drawing.Point(138, 23)
-        Me.txtid_usuario.MaxLength = 30
+        Me.txtid_usuario.MaxLength = 15
         Me.txtid_usuario.Name = "txtid_usuario"
         Me.txtid_usuario.Size = New System.Drawing.Size(204, 26)
         Me.txtid_usuario.TabIndex = 42

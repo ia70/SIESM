@@ -115,7 +115,7 @@ Partial Class P_usuario_ED
         '
         Me.Txtid.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txtid.Location = New System.Drawing.Point(129, 155)
-        Me.Txtid.MaxLength = 30
+        Me.Txtid.MaxLength = 15
         Me.Txtid.Name = "Txtid"
         Me.Txtid.Size = New System.Drawing.Size(204, 26)
         Me.Txtid.TabIndex = 89
@@ -227,7 +227,7 @@ Partial Class P_usuario_ED
         '
         Me.Txtapellidos.Enabled = False
         Me.Txtapellidos.Location = New System.Drawing.Point(129, 314)
-        Me.Txtapellidos.MaxLength = 12
+        Me.Txtapellidos.MaxLength = 30
         Me.Txtapellidos.Name = "Txtapellidos"
         Me.Txtapellidos.Size = New System.Drawing.Size(269, 26)
         Me.Txtapellidos.TabIndex = 46
@@ -245,7 +245,7 @@ Partial Class P_usuario_ED
         '
         Me.txtnombre.Enabled = False
         Me.txtnombre.Location = New System.Drawing.Point(128, 267)
-        Me.txtnombre.MaxLength = 12
+        Me.txtnombre.MaxLength = 20
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(269, 26)
         Me.txtnombre.TabIndex = 44
@@ -254,7 +254,7 @@ Partial Class P_usuario_ED
         '
         Me.txtcontraseña.Enabled = False
         Me.txtcontraseña.Location = New System.Drawing.Point(129, 224)
-        Me.txtcontraseña.MaxLength = 500
+        Me.txtcontraseña.MaxLength = 15
         Me.txtcontraseña.Name = "txtcontraseña"
         Me.txtcontraseña.Size = New System.Drawing.Size(204, 26)
         Me.txtcontraseña.TabIndex = 43
@@ -263,7 +263,7 @@ Partial Class P_usuario_ED
         '
         Me.txtusuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtusuario.Location = New System.Drawing.Point(129, 192)
-        Me.txtusuario.MaxLength = 30
+        Me.txtusuario.MaxLength = 15
         Me.txtusuario.Name = "txtusuario"
         Me.txtusuario.Size = New System.Drawing.Size(204, 26)
         Me.txtusuario.TabIndex = 42
