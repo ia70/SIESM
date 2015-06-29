@@ -25,6 +25,9 @@ Partial Class P_CorteCaja
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtTotalArticulosVendidos = New System.Windows.Forms.Label()
         Me.txtTotaDineroCaja = New System.Windows.Forms.Label()
         Me.txtTotalVentas = New System.Windows.Forms.Label()
@@ -35,9 +38,6 @@ Partial Class P_CorteCaja
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCorte = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -85,6 +85,36 @@ Partial Class P_CorteCaja
         Me.Panel3.Size = New System.Drawing.Size(649, 311)
         Me.Panel3.TabIndex = 17
         '
+        'Label8
+        '
+        Me.Label8.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Blue
+        Me.Label8.Location = New System.Drawing.Point(436, 90)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(21, 29)
+        Me.Label8.TabIndex = 11
+        Me.Label8.Text = "$"
+        '
+        'Label7
+        '
+        Me.Label7.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Blue
+        Me.Label7.Location = New System.Drawing.Point(436, 56)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(21, 29)
+        Me.Label7.TabIndex = 10
+        Me.Label7.Text = "$"
+        '
+        'Label5
+        '
+        Me.Label5.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Blue
+        Me.Label5.Location = New System.Drawing.Point(436, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(27, 29)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "$"
+        '
         'txtTotalArticulosVendidos
         '
         Me.txtTotalArticulosVendidos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -103,7 +133,7 @@ Partial Class P_CorteCaja
         Me.txtTotaDineroCaja.ForeColor = System.Drawing.Color.Red
         Me.txtTotaDineroCaja.Location = New System.Drawing.Point(463, 90)
         Me.txtTotaDineroCaja.Name = "txtTotaDineroCaja"
-        Me.txtTotaDineroCaja.Size = New System.Drawing.Size(136, 28)
+        Me.txtTotaDineroCaja.Size = New System.Drawing.Size(136, 34)
         Me.txtTotaDineroCaja.TabIndex = 7
         Me.txtTotaDineroCaja.Text = "."
         '
@@ -125,7 +155,7 @@ Partial Class P_CorteCaja
         Me.txtInicioCaja.ForeColor = System.Drawing.Color.Green
         Me.txtInicioCaja.Location = New System.Drawing.Point(463, 22)
         Me.txtInicioCaja.Name = "txtInicioCaja"
-        Me.txtInicioCaja.Size = New System.Drawing.Size(136, 29)
+        Me.txtInicioCaja.Size = New System.Drawing.Size(136, 34)
         Me.txtInicioCaja.TabIndex = 5
         Me.txtInicioCaja.Text = "."
         '
@@ -191,36 +221,6 @@ Partial Class P_CorteCaja
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Corte de caja"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label5
-        '
-        Me.Label5.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Blue
-        Me.Label5.Location = New System.Drawing.Point(436, 22)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 29)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "$"
-        '
-        'Label7
-        '
-        Me.Label7.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Blue
-        Me.Label7.Location = New System.Drawing.Point(436, 56)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(21, 29)
-        Me.Label7.TabIndex = 10
-        Me.Label7.Text = "$"
-        '
-        'Label8
-        '
-        Me.Label8.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Blue
-        Me.Label8.Location = New System.Drawing.Point(436, 90)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(21, 29)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "$"
         '
         'P_CorteCaja
         '

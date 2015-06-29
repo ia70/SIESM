@@ -227,6 +227,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Principal\Administracion.Designer.vb">
+      <DependentUpon>Administracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Administracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\ImagenViewer.Designer.vb">
       <DependentUpon>ImagenViewer.vb</DependentUpon>
     </Compile>
@@ -394,6 +400,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Administracion.resx">
+      <DependentUpon>Administracion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\ImagenViewer.resx">
       <DependentUpon>ImagenViewer.vb</DependentUpon>

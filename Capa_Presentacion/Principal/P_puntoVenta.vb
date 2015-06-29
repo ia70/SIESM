@@ -324,4 +324,12 @@ Public Class P_PuntoVenta
     Private Sub btnCorteCaja_Click(sender As Object, e As EventArgs) Handles btnCorteCaja.Click
         Popup.PopupFrm(P_CorteCaja)
     End Sub
+
+    Private Sub btnAdministracion_Click(sender As Object, e As EventArgs) Handles btnAdministracion.Click
+        Administracion.Show()
+    End Sub
+
+    Private Sub btnConsultaPrecio_Click(sender As Object, e As EventArgs) Handles btnConsultaPrecio.Click
+        Popup.PopupFrm(P_articulo_C)
+    End Sub
 End Class
