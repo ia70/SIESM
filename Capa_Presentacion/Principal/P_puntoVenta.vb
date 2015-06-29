@@ -40,7 +40,7 @@ Public Class P_PuntoVenta
 
         txtTipo_Pago.SelectedIndex = 0
         txtTransacción.SelectedIndex = 0
-
+        txtVendedor.Text = G_Usuario_Nombre + " " + G_Usuario_Apellidos
         txtArticulo.Focus()
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -307,4 +307,11 @@ Public Class P_PuntoVenta
         End If
     End Sub
 
+    Private Sub dgvTabla_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub btnCorteCaja_Click(sender As Object, e As EventArgs) Handles btnCorteCaja.Click
+        Popup.PopupFrm(P_CorteCaja)
+    End Sub
 End Class
