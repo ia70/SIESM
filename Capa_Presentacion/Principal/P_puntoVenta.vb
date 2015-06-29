@@ -217,7 +217,7 @@ Public Class P_PuntoVenta
             Popup.PopupFrm(P_Cobrar)
             Ticket.ImprimirTicket()
             RegistrarVenta()
-            'NuevaVenta()
+            NuevaVenta()
         ElseIf txtTransacción.SelectedIndex = 1 Then
             Ticket.Transaccion = txtTransacción.Text
             Ticket.Tabla = dgvTabla
@@ -225,6 +225,7 @@ Public Class P_PuntoVenta
             Ticket.Logotipo = Image.FromFile("logotipo.bmp")
             Popup.PopupFrm(P_Cobrar)
             Ticket.ImprimirTicket()
+            NuevaVenta()
         Else
             M("¡Monto insuficiente para cubrir el total de la venta!", 1)
             txtEfectivo.Text = ""
@@ -263,16 +264,25 @@ Public Class P_PuntoVenta
     Private Sub RegistrarVenta()
         Dim Existencia_ As Decimal
         Try
-        For i = 0 To dgvTabla.RowCount - 2
-            If dgvTabla.Item(4, i).Value = "" Then
-                Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(3, i).Value & "', '" & getFecha() & "', '" & getHora() & "')")
+            If txtFactura.Checked = True Then
+                txtFactura.Checked = False
+                For i = 0 To dgvTabla.RowCount - 2
+                    Existencia_ = Val(Elemento.Query("SELECT existencia FROM inventario WHERE id_articulo='" & dgvTabla.Item(0, i).Value & "' AND id_sucursal='" & G_Sucursal_nombre & "'").Tables(0).Rows(0)(0))
+                    Existencia_ = Existencia_ - Val(dgvTabla.Item(2, i).Value)
+                    Elemento.Query("UPDATE inventario SET existencia = " & Existencia_ & " WHERE id_articulo='" & dgvTabla.Item(0, i).Value & "' AND id_sucursal='" & G_Sucursal_nombre & "'")
+                Next
             Else
-                Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(4, i).Value & "', '" & getFecha() & "', '" & getHora() & "')")
+                For i = 0 To dgvTabla.RowCount - 2
+                    If dgvTabla.Item(4, i).Value = "" Then
+                        Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(3, i).Value & "', '" & getFecha() & "', '" & getHora() & "')")
+                    Else
+                        Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(4, i).Value & "', '" & getFecha() & "', '" & getHora() & "')")
+                    End If
+                    Existencia_ = Val(Elemento.Query("SELECT existencia FROM inventario WHERE id_articulo='" & dgvTabla.Item(0, i).Value & "' AND id_sucursal='" & G_Sucursal_nombre & "'").Tables(0).Rows(0)(0))
+                    Existencia_ = Existencia_ - Val(dgvTabla.Item(2, i).Value)
+                    Elemento.Query("UPDATE inventario SET existencia = " & Existencia_ & " WHERE id_articulo='" & dgvTabla.Item(0, i).Value & "' AND id_sucursal='" & G_Sucursal_nombre & "'")
+                Next
             End If
-            Existencia_ = Val(Elemento.Query("SELECT existencia FROM inventario WHERE id_articulo='" & dgvTabla.Item(0, i).Value & "' AND id_sucursal='" & G_Sucursal_nombre & "'").Tables(0).Rows(0)(0))
-            Existencia_ = Existencia_ - Val(dgvTabla.Item(2, i).Value)
-            Elemento.Query("UPDATE inventario SET existencia = " & Existencia_ & " WHERE id_articulo='" & dgvTabla.Item(0, i).Value & "' AND id_sucursal='" & G_Sucursal_nombre & "'")
-            Next
         Catch ex As Exception
             M("Error al registrar venta: " + ex.ToString)
         End Try

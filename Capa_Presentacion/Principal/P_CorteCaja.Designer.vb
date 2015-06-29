@@ -52,16 +52,16 @@ Partial Class P_CorteCaja
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(487, 314)
+        Me.Panel1.Size = New System.Drawing.Size(659, 370)
         Me.Panel1.TabIndex = 3
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(5, 263)
+        Me.Panel2.Location = New System.Drawing.Point(5, 319)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(477, 46)
+        Me.Panel2.Size = New System.Drawing.Size(649, 46)
         Me.Panel2.TabIndex = 18
         '
         'Panel3
@@ -82,14 +82,15 @@ Partial Class P_CorteCaja
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(477, 255)
+        Me.Panel3.Size = New System.Drawing.Size(649, 311)
         Me.Panel3.TabIndex = 17
         '
         'txtTotalArticulosVendidos
         '
-        Me.txtTotalArticulosVendidos.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalArticulosVendidos.ForeColor = System.Drawing.Color.Blue
-        Me.txtTotalArticulosVendidos.Location = New System.Drawing.Point(302, 109)
+        Me.txtTotalArticulosVendidos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtTotalArticulosVendidos.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalArticulosVendidos.ForeColor = System.Drawing.Color.Olive
+        Me.txtTotalArticulosVendidos.Location = New System.Drawing.Point(463, 124)
         Me.txtTotalArticulosVendidos.Name = "txtTotalArticulosVendidos"
         Me.txtTotalArticulosVendidos.Size = New System.Drawing.Size(136, 32)
         Me.txtTotalArticulosVendidos.TabIndex = 8
@@ -97,9 +98,10 @@ Partial Class P_CorteCaja
         '
         'txtTotaDineroCaja
         '
-        Me.txtTotaDineroCaja.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotaDineroCaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtTotaDineroCaja.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotaDineroCaja.ForeColor = System.Drawing.Color.Red
-        Me.txtTotaDineroCaja.Location = New System.Drawing.Point(315, 81)
+        Me.txtTotaDineroCaja.Location = New System.Drawing.Point(463, 90)
         Me.txtTotaDineroCaja.Name = "txtTotaDineroCaja"
         Me.txtTotaDineroCaja.Size = New System.Drawing.Size(136, 28)
         Me.txtTotaDineroCaja.TabIndex = 7
@@ -107,69 +109,72 @@ Partial Class P_CorteCaja
         '
         'txtTotalVentas
         '
-        Me.txtTotalVentas.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.txtTotalVentas.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotalVentas.ForeColor = System.Drawing.Color.Black
-        Me.txtTotalVentas.Location = New System.Drawing.Point(315, 50)
+        Me.txtTotalVentas.Location = New System.Drawing.Point(463, 56)
         Me.txtTotalVentas.Name = "txtTotalVentas"
-        Me.txtTotalVentas.Size = New System.Drawing.Size(136, 31)
+        Me.txtTotalVentas.Size = New System.Drawing.Size(136, 34)
         Me.txtTotalVentas.TabIndex = 6
         Me.txtTotalVentas.Text = "."
         '
         'txtInicioCaja
         '
-        Me.txtInicioCaja.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInicioCaja.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtInicioCaja.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtInicioCaja.ForeColor = System.Drawing.Color.Green
-        Me.txtInicioCaja.Location = New System.Drawing.Point(315, 22)
+        Me.txtInicioCaja.Location = New System.Drawing.Point(463, 22)
         Me.txtInicioCaja.Name = "txtInicioCaja"
-        Me.txtInicioCaja.Size = New System.Drawing.Size(136, 28)
+        Me.txtInicioCaja.Size = New System.Drawing.Size(136, 29)
         Me.txtInicioCaja.TabIndex = 5
         Me.txtInicioCaja.Text = "."
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(29, 81)
+        Me.Label4.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(29, 90)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(227, 22)
+        Me.Label4.Size = New System.Drawing.Size(338, 34)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Total de dinero en caja:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(29, 50)
+        Me.Label3.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(29, 56)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(130, 22)
+        Me.Label3.Size = New System.Drawing.Size(194, 34)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Total ventas:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(29, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(138, 22)
+        Me.Label2.Size = New System.Drawing.Size(207, 34)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Inicio de caja:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 109)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(29, 124)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(268, 22)
+        Me.Label1.Size = New System.Drawing.Size(401, 34)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Total de articulos vendidos:"
         '
         'btnCorte
         '
-        Me.btnCorte.Location = New System.Drawing.Point(316, 161)
+        Me.btnCorte.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCorte.Location = New System.Drawing.Point(409, 200)
         Me.btnCorte.Name = "btnCorte"
-        Me.btnCorte.Size = New System.Drawing.Size(135, 31)
+        Me.btnCorte.Size = New System.Drawing.Size(217, 41)
         Me.btnCorte.TabIndex = 0
         Me.btnCorte.Text = "Hacer corte"
         Me.btnCorte.UseVisualStyleBackColor = True
@@ -178,42 +183,42 @@ Partial Class P_CorteCaja
         '
         Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(5, 5)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(477, 49)
+        Me.Label6.Size = New System.Drawing.Size(649, 49)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Corte de caja"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5
         '
-        Me.Label5.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Blue
-        Me.Label5.Location = New System.Drawing.Point(302, 22)
+        Me.Label5.Location = New System.Drawing.Point(436, 22)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(16, 29)
+        Me.Label5.Size = New System.Drawing.Size(27, 29)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "$"
         '
         'Label7
         '
-        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Blue
-        Me.Label7.Location = New System.Drawing.Point(302, 50)
+        Me.Label7.Location = New System.Drawing.Point(436, 56)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(16, 29)
+        Me.Label7.Size = New System.Drawing.Size(21, 29)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "$"
         '
         'Label8
         '
-        Me.Label8.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Blue
-        Me.Label8.Location = New System.Drawing.Point(302, 81)
+        Me.Label8.Location = New System.Drawing.Point(436, 90)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(16, 29)
+        Me.Label8.Size = New System.Drawing.Size(21, 29)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "$"
         '
@@ -221,7 +226,7 @@ Partial Class P_CorteCaja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(487, 314)
+        Me.ClientSize = New System.Drawing.Size(659, 370)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
