@@ -301,7 +301,7 @@ Public Class P_PuntoVenta
         End If
     End Sub
     Private Sub dgvConsulta_DoubleClick(sender As Object, e As EventArgs) Handles dgvConsulta.DoubleClick
-        Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia, articulo.nombre FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & dgvConsulta.Item(0, dgvConsulta.CurrentRow.Index).Value & "' && id_sucursal = '" & G_Sucursal_nombre & "'")
+        Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia, articulo.nombre, articulo.precio_compra FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & dgvConsulta.Item(0, dgvConsulta.CurrentRow.Index).Value & "' && id_sucursal = '" & G_Sucursal_nombre & "'")
         If Tabla.Tables(0).Rows.Count = 0 Then
             M("¡El articulo solicitado no está dentro del inventario de esta sucursal!", 3)
             txtArticulo.Text = ""
