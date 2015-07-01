@@ -217,7 +217,7 @@ Public Class P_PuntoVenta
             Popup.PopupFrm(P_Cobrar)
             Ticket.ImprimirTicket()
             RegistrarVenta()
-            NuevaVenta()
+            'NuevaVenta()
         ElseIf txtTransacción.SelectedIndex = 1 Then
             Ticket.Transaccion = txtTransacción.Text
             Ticket.Tabla = dgvTabla
