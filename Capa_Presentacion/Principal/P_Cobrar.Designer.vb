@@ -39,7 +39,7 @@ Partial Class P_Cobrar
         Me.TxtCambio.Name = "TxtCambio"
         Me.TxtCambio.Size = New System.Drawing.Size(612, 108)
         Me.TxtCambio.TabIndex = 3
-        Me.TxtCambio.Text = "1,788.93"
+        Me.TxtCambio.Text = "0"
         Me.TxtCambio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
@@ -63,7 +63,7 @@ Partial Class P_Cobrar
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(300, 73)
         Me.txtTotal.TabIndex = 5
-        Me.txtTotal.Text = "1,788.93"
+        Me.txtTotal.Text = "0"
         Me.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
@@ -87,7 +87,7 @@ Partial Class P_Cobrar
         Me.txtEfectivo.Name = "txtEfectivo"
         Me.txtEfectivo.Size = New System.Drawing.Size(300, 73)
         Me.txtEfectivo.TabIndex = 7
-        Me.txtEfectivo.Text = "1,788.93"
+        Me.txtEfectivo.Text = "0"
         Me.txtEfectivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label5

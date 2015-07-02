@@ -13,6 +13,20 @@ Libersoft
 	<value>String</value>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="P:Libersoft.cTicket.Fecha">
+	<summary>
+ Fecha en que se registra la transacción
+ </summary>
+	<value>String</value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Libersoft.cTicket.Hora">
+	<summary>
+ Hora en que se registra la transacción
+ </summary>
+	<value>String</value>
+	<returns></returns>
+	<remarks></remarks>
 </member><member name="P:Libersoft.cTicket.Descuento">
 	<summary>
  Descuento total en la venta

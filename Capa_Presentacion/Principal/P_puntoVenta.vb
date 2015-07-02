@@ -126,11 +126,13 @@ Public Class P_PuntoVenta
             txtEfectivo.Visible = True
             txtTipo_Pago.Visible = True
             btnCobrar.Text = "Cobrar"
+            txtFactura.Visible = True
         Else
             lbl_monto.Visible = False
             LblTipo_pago.Visible = False
             txtEfectivo.Visible = False
             txtTipo_Pago.Visible = False
+            txtFactura.Visible = False
             btnCobrar.Text = "Cotizar"
         End If
         G_PuntoVenta_Transacción = txtTransacción.SelectedItem.ToString
@@ -160,6 +162,10 @@ Public Class P_PuntoVenta
     End Sub
     Private Sub txtArticulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtArticulo.KeyPress
         Dim existe As Boolean = True
+        If e.KeyChar = Chr(13) And txtArticulo.Text = "" And dgvTabla.RowCount > 1 And txtTransacción.Text = "Cotización" Then
+            Call btnCobrar_Click(sender, e)
+            Exit Sub
+        End If
         If e.KeyChar = Chr(13) And txtArticulo.Text = "" And dgvTabla.RowCount > 1 And txtTipo_Pago.Text = "Efectivo" Then
             txtEfectivo.Focus()
             Exit Sub
@@ -203,9 +209,13 @@ Public Class P_PuntoVenta
         Dim Ticket As New cTicket
         G_PuntoVenta_Transacción = txtTransacción.Text
         G_PuntoVenta_NumeroTicket = GenerarNumeroVenta()
+        G_PuntoVenta_Monto = Val(txtEfectivo.Text)
+        G_PuntoVenta_Total = Val(txtTotal.Text)
+        G_PuntoVenta_Fecha = getFecha()
+        G_PuntoVenta_Hora = getHora()
         If Val(txtEfectivo.Text) >= Val(txtTotal.Text) Then
             Codigo = GenerarNumeroVenta()
-            G_PuntoVenta_Monto = txtEfectivo.Text
+            'G_PuntoVenta_Monto = txtEfectivo.Text
             Ticket.BarCode_Ima = Barcode.CodigoDeBarra(G_PuntoVenta_NumeroTicket)
             Ticket.BarCode_Text = G_PuntoVenta_NumeroTicket
             Ticket.Transaccion = G_PuntoVenta_Transacción
@@ -214,6 +224,8 @@ Public Class P_PuntoVenta
             Ticket.Logotipo = Image.FromFile("logotipo.bmp")
             Ticket.Efectivo = G_PuntoVenta_Monto
             Ticket.Descuento = G_PuntoVenta_Descuento
+            Ticket.Fecha = G_PuntoVenta_Fecha
+            Ticket.Hora = G_PuntoVenta_Hora
             Popup.PopupFrm(P_Cobrar)
             Ticket.ImprimirTicket()
             RegistrarVenta()
@@ -221,11 +233,13 @@ Public Class P_PuntoVenta
         ElseIf txtTransacción.SelectedIndex = 1 Then
             Ticket.Transaccion = txtTransacción.Text
             Ticket.Tabla = dgvTabla
+            Ticket.Fecha = G_PuntoVenta_Fecha
+            Ticket.Hora = G_PuntoVenta_Hora
             Ticket.Descuento = G_PuntoVenta_Descuento
             Ticket.Logotipo = Image.FromFile("logotipo.bmp")
             Popup.PopupFrm(P_Cobrar)
             Ticket.ImprimirTicket()
-            NuevaVenta()
+            'NuevaVenta()
         Else
             M("¡Monto insuficiente para cubrir el total de la venta!", 1)
             txtEfectivo.Text = ""
@@ -242,9 +256,9 @@ Public Class P_PuntoVenta
         txtTipo_Pago.SelectedIndex = 0
         txtTransacción.SelectedIndex = 0
         txtCantidad.Value = 1
-        G_PuntoVenta_Monto = "0"
-        G_PuntoVenta_Total = "0"
-        G_PuntoVenta_Cambio = "0"
+        G_PuntoVenta_Monto = 0
+        G_PuntoVenta_Total = 0
+        G_PuntoVenta_Cambio = 0
         G_PuntoVenta_CantdadArticulos = 0
         G_PuntoVenta_TipoPago = "Efectivo"
         G_PuntoVenta_Transacción = "Venta"
@@ -274,9 +288,9 @@ Public Class P_PuntoVenta
             Else
                 For i = 0 To dgvTabla.RowCount - 2
                     If dgvTabla.Item(4, i).Value = "" Then
-                        Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(3, i).Value & "', '" & getFecha() & "', '" & getHora() & "')")
+                        Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(3, i).Value & "', '" & G_PuntoVenta_Fecha & "', '" & G_PuntoVenta_Hora & "')")
                     Else
-                        Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(4, i).Value & "', '" & getFecha() & "', '" & getHora() & "')")
+                        Elemento.Query("INSERT INTO venta (id_venta, id_usuario, id_sucursal, id_articulo, transaccion, cantidad, precio_compra, precio_venta, fecha, hora) VALUES ('" & G_PuntoVenta_NumeroTicket.ToString & "', '" & G_Usuario_id.ToString & "', '" & G_Sucursal_nombre.ToString & "', '" & dgvTabla.Item(0, i).Value & "', '" & txtTransacción.Text & "', '" & dgvTabla.Item(2, i).Value & "', '" & dgvTabla.Item(7, i).Value & "', '" & dgvTabla.Item(4, i).Value & "', '" & G_PuntoVenta_Fecha & "', '" & G_PuntoVenta_Hora & "')")
                     End If
                     Existencia_ = Val(Elemento.Query("SELECT existencia FROM inventario WHERE id_articulo='" & dgvTabla.Item(0, i).Value & "' AND id_sucursal='" & G_Sucursal_nombre & "'").Tables(0).Rows(0)(0))
                     Existencia_ = Existencia_ - Val(dgvTabla.Item(2, i).Value)

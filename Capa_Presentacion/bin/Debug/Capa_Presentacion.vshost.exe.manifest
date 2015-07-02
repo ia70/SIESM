@@ -83,14 +83,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="4022784">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="4023296">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X3qGKpOMawXPU4TMtdCUP99TlhGYhtwYfVeJoWN1Qvs=</dsig:DigestValue>
+        <dsig:DigestValue>NThqFBZzaAPhMbFHWkzggcWFpgAuc6sgQkSN5uBI1DI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -107,14 +107,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Libersoft.dll" size="40960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Libersoft.dll" size="41472">
       <assemblyIdentity name="Libersoft" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8d+9a2XDrCR4P7Veg+aZVb2+u1+IXDe81PS4W0se1K4=</dsig:DigestValue>
+        <dsig:DigestValue>Dz4EJWwXXuaH6lpUzP2GLKGOHjH2vjJQWmyGyfEPojw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

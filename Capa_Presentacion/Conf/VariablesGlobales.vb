@@ -26,6 +26,8 @@
     Public G_PuntoVenta_Cambio As String
     Public G_PuntoVenta_Descuento As String = ""
     Public G_PuntoVenta_InicioCaja As Integer = 0
+    Public G_PuntoVenta_Fecha As String
+    Public G_PuntoVenta_Hora As String
 
 
 End Module

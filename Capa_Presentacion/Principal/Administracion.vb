@@ -65,6 +65,6 @@
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
-        Popup.PopupFrm(P_invent_N)
+        P_invent_N.Show()
     End Sub
 End Class

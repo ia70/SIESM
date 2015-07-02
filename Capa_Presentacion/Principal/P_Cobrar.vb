@@ -9,9 +9,14 @@
         'Me.Close()
     End Sub
     Private Sub P_Cobrar_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        TxtCambio.Text = "$" + G_PuntoVenta_Cambio
-        txtTotal.Text = "$" + ToDecimal(G_PuntoVenta_Total).ToString
         txtEfectivo.Text = "$" + ToDecimal(G_PuntoVenta_Monto).ToString
+        txtTotal.Text = "$" + ToDecimal(G_PuntoVenta_Total).ToString
+        If CInt(G_PuntoVenta_Monto) = 0 Then
+            TxtCambio.Text = "$0"
+        Else
+            TxtCambio.Text = "$" + ToDecimal(G_PuntoVenta_Monto - G_PuntoVenta_Total).ToString
+        End If
+
     End Sub
 
 End Class
