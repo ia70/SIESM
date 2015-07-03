@@ -270,7 +270,7 @@ Public Class P_PuntoVenta
         If Elemento.Query("SELECT id_reg FROM venta").Tables(0).Rows.Count > 0 Then
             Valor = Format(Val(Venta.Final().Tables(0).Rows(0)(0) + 1), "00000").ToString
         Else
-            Valor = Format(10000, "00000").ToString
+            Valor = Format(0, "00000").ToString
         End If
 
         Return Valor
