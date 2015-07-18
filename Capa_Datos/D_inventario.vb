@@ -99,8 +99,8 @@ Public Class D_inventario
     End Sub
 
     'Devuelve los primeros 5 registros que coinciden con el filtro/busqueda
-    Public Function Filtrar(ByVal Cadena As String) As DataSet
-        Return QueryC("CALL " & Tabla & "_filtrar('" & Cadena.Replace(" ", "%").ToString & "')")
+    Public Function Filtrar(ByVal Cadena As String, ByVal Sucursal As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_filtrar('" & Cadena.Replace(" ", "%").ToString & "', '" & Sucursal & "')")
     End Function
 
     'Esta funcion contiene los datos de coneccion y consulta a la Base de datos

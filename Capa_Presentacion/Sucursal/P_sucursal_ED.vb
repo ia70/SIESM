@@ -79,12 +79,13 @@ Public Class P_sucursal_ED
 
 #Region "Funciones de validacion de campos"
     Private Sub LlenarCampos()
+        On Error Resume Next
         txtid_sucursal.Text = Tabla.Tables(0).Rows(0)(0).ToString()
         txtNombre.Text = Tabla.Tables(0).Rows(0)(1).ToString()
         Txtdescripcion.Text = Tabla.Tables(0).Rows(0)(3).ToString()
         txtdireccion.Text = Tabla.Tables(0).Rows(0)(2).ToString()
         txttelefono.Text = Tabla.Tables(0).Rows(0)(4).ToString()
-        txttipo.Text = Tabla.Tables(0).Rows(0)(6).ToString()
+        txtTipo.Text = Tabla.Tables(0).Rows(0)(6).ToString()
         txtfecha.Text = Date.Today
         ptrimagen.Image = Nothing
         On Error Resume Next

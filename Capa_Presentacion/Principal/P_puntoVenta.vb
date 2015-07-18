@@ -38,6 +38,12 @@ Public Class P_PuntoVenta
         End With
         dgvTabla.ScrollBars = ScrollBars.Both
 
+
+        txtSucursal_Direccion.Text = G_Sucursal_Calle
+        txtSucursal_Telefono.Text = G_Sucursal_Telefono
+
+
+
         txtTipo_Pago.SelectedIndex = 0
         txtTransacción.SelectedIndex = 0
         txtVendedor.Text = G_Usuario_Nombre + " " + G_Usuario_Apellidos
@@ -270,7 +276,7 @@ Public Class P_PuntoVenta
         If Elemento.Query("SELECT id_reg FROM venta").Tables(0).Rows.Count > 0 Then
             Valor = Format(Val(Venta.Final().Tables(0).Rows(0)(0) + 1), "00000").ToString
         Else
-            Valor = Format(0, "00000").ToString
+            Valor = Format(1, "00000").ToString
         End If
 
         Return Valor
@@ -304,7 +310,7 @@ Public Class P_PuntoVenta
 
     Private Sub txtArticulo_TextChanged(sender As Object, e As EventArgs) Handles txtArticulo.TextChanged
         If Not IsNumeric(txtArticulo.Text) And Not txtArticulo.Text = "" Then
-            dgvConsulta.DataSource = Elemento.Filtrar(txtArticulo.Text).Tables(0)
+            dgvConsulta.DataSource = Elemento.Filtrar(txtArticulo.Text, G_Sucursal_nombre).Tables(0)
         ElseIf txtArticulo.Text = "" Then
             dgvConsulta.DataSource = ""
         End If

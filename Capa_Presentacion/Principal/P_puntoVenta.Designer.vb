@@ -23,12 +23,12 @@ Partial Class P_PuntoVenta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.P_NavBar = New System.Windows.Forms.Panel()
         Me.btnAdministracion = New System.Windows.Forms.Button()
         Me.btnConsultaExistencia = New System.Windows.Forms.Button()
@@ -66,9 +66,7 @@ Partial Class P_PuntoVenta
         Me.txtHora = New System.Windows.Forms.Label()
         Me.txtSucursal_Correo = New System.Windows.Forms.Label()
         Me.txtSucursal_Telefono = New System.Windows.Forms.Label()
-        Me.txtSucursal_Ciudad = New System.Windows.Forms.Label()
-        Me.txtSucursal_Colonia = New System.Windows.Forms.Label()
-        Me.txtSucursal_Calle = New System.Windows.Forms.Label()
+        Me.txtSucursal_Direccion = New System.Windows.Forms.Label()
         Me.PHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TTCorteCaja = New System.Windows.Forms.ToolTip(Me.components)
@@ -160,8 +158,8 @@ Partial Class P_PuntoVenta
         Me.dgvTabla.Location = New System.Drawing.Point(143, 280)
         Me.dgvTabla.MultiSelect = False
         Me.dgvTabla.Name = "dgvTabla"
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvTabla.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTabla.Size = New System.Drawing.Size(999, 334)
@@ -171,8 +169,8 @@ Partial Class P_PuntoVenta
         '
         'id_articulo
         '
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.id_articulo.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.id_articulo.DefaultCellStyle = DataGridViewCellStyle1
         Me.id_articulo.FillWeight = 80.0!
         Me.id_articulo.Frozen = True
         Me.id_articulo.HeaderText = "ID"
@@ -186,8 +184,8 @@ Partial Class P_PuntoVenta
         'nombre_articulo
         '
         Me.nombre_articulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nombre_articulo.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nombre_articulo.DefaultCellStyle = DataGridViewCellStyle2
         Me.nombre_articulo.FillWeight = 500.0!
         Me.nombre_articulo.Frozen = True
         Me.nombre_articulo.HeaderText = "Nombre del Articulo"
@@ -199,8 +197,8 @@ Partial Class P_PuntoVenta
         'cantidad
         '
         Me.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cantidad.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cantidad.DefaultCellStyle = DataGridViewCellStyle3
         Me.cantidad.FillWeight = 80.0!
         Me.cantidad.Frozen = True
         Me.cantidad.HeaderText = "Cant."
@@ -213,8 +211,8 @@ Partial Class P_PuntoVenta
         'precio
         '
         Me.precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.precio.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.precio.DefaultCellStyle = DataGridViewCellStyle4
         Me.precio.FillWeight = 120.0!
         Me.precio.Frozen = True
         Me.precio.HeaderText = "Precio"
@@ -236,8 +234,8 @@ Partial Class P_PuntoVenta
         'subtotal
         '
         Me.subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle5
         Me.subtotal.FillWeight = 120.0!
         Me.subtotal.HeaderText = "Subtotal"
         Me.subtotal.MinimumWidth = 120
@@ -433,9 +431,7 @@ Partial Class P_PuntoVenta
         Me.PFooter.Controls.Add(Me.PFecha)
         Me.PFooter.Controls.Add(Me.txtSucursal_Correo)
         Me.PFooter.Controls.Add(Me.txtSucursal_Telefono)
-        Me.PFooter.Controls.Add(Me.txtSucursal_Ciudad)
-        Me.PFooter.Controls.Add(Me.txtSucursal_Colonia)
-        Me.PFooter.Controls.Add(Me.txtSucursal_Calle)
+        Me.PFooter.Controls.Add(Me.txtSucursal_Direccion)
         Me.PFooter.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PFooter.Location = New System.Drawing.Point(0, 623)
         Me.PFooter.Name = "PFooter"
@@ -527,41 +523,17 @@ Partial Class P_PuntoVenta
         Me.txtSucursal_Telefono.TabIndex = 3
         Me.txtSucursal_Telefono.Text = "Tel. 314-99-06"
         '
-        'txtSucursal_Ciudad
+        'txtSucursal_Direccion
         '
-        Me.txtSucursal_Ciudad.BackColor = System.Drawing.Color.Transparent
-        Me.txtSucursal_Ciudad.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.txtSucursal_Ciudad.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSucursal_Ciudad.ForeColor = System.Drawing.Color.Black
-        Me.txtSucursal_Ciudad.Location = New System.Drawing.Point(15, 46)
-        Me.txtSucursal_Ciudad.Name = "txtSucursal_Ciudad"
-        Me.txtSucursal_Ciudad.Size = New System.Drawing.Size(300, 24)
-        Me.txtSucursal_Ciudad.TabIndex = 2
-        Me.txtSucursal_Ciudad.Text = "Villahermosa Tab. Mex."
-        '
-        'txtSucursal_Colonia
-        '
-        Me.txtSucursal_Colonia.BackColor = System.Drawing.Color.Transparent
-        Me.txtSucursal_Colonia.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.txtSucursal_Colonia.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSucursal_Colonia.ForeColor = System.Drawing.Color.Black
-        Me.txtSucursal_Colonia.Location = New System.Drawing.Point(15, 24)
-        Me.txtSucursal_Colonia.Name = "txtSucursal_Colonia"
-        Me.txtSucursal_Colonia.Size = New System.Drawing.Size(300, 24)
-        Me.txtSucursal_Colonia.TabIndex = 1
-        Me.txtSucursal_Colonia.Text = "Colonia Centro, C.P. 86000"
-        '
-        'txtSucursal_Calle
-        '
-        Me.txtSucursal_Calle.BackColor = System.Drawing.Color.Transparent
-        Me.txtSucursal_Calle.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.txtSucursal_Calle.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSucursal_Calle.ForeColor = System.Drawing.Color.Black
-        Me.txtSucursal_Calle.Location = New System.Drawing.Point(15, 2)
-        Me.txtSucursal_Calle.Name = "txtSucursal_Calle"
-        Me.txtSucursal_Calle.Size = New System.Drawing.Size(300, 24)
-        Me.txtSucursal_Calle.TabIndex = 0
-        Me.txtSucursal_Calle.Text = "Calle Lino Merino #226"
+        Me.txtSucursal_Direccion.BackColor = System.Drawing.Color.Transparent
+        Me.txtSucursal_Direccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.txtSucursal_Direccion.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSucursal_Direccion.ForeColor = System.Drawing.Color.Black
+        Me.txtSucursal_Direccion.Location = New System.Drawing.Point(13, 4)
+        Me.txtSucursal_Direccion.Name = "txtSucursal_Direccion"
+        Me.txtSucursal_Direccion.Size = New System.Drawing.Size(306, 63)
+        Me.txtSucursal_Direccion.TabIndex = 0
+        Me.txtSucursal_Direccion.Text = "Calle Lino Merino #226"
         '
         'PHeader
         '
@@ -700,9 +672,7 @@ Partial Class P_PuntoVenta
     Friend WithEvents PFooter As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtArticulo As System.Windows.Forms.TextBox
-    Friend WithEvents txtSucursal_Calle As System.Windows.Forms.Label
-    Friend WithEvents txtSucursal_Ciudad As System.Windows.Forms.Label
-    Friend WithEvents txtSucursal_Colonia As System.Windows.Forms.Label
+    Friend WithEvents txtSucursal_Direccion As System.Windows.Forms.Label
     Friend WithEvents txtSucursal_Telefono As System.Windows.Forms.Label
     Friend WithEvents txtSucursal_Correo As System.Windows.Forms.Label
     Friend WithEvents PFecha As System.Windows.Forms.Panel

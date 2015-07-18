@@ -46,8 +46,8 @@ Public Class N_inventario
         Return Elemento.Existe(ID)
     End Function
 
-    Public Function Filtrar(ByVal ID As String) As DataSet
-        Return Elemento.Filtrar(ID)
+    Public Function Filtrar(ByVal ID As String, ByVal Sucursal As String) As DataSet
+        Return Elemento.Filtrar(ID, Sucursal)
     End Function
     Public Function Query(ByVal Cadena As String) As DataSet
         Return Elemento.Query(Cadena)
