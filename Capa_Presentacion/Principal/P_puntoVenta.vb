@@ -273,7 +273,7 @@ Public Class P_PuntoVenta
     End Sub
     Private Function GenerarNumeroVenta() As String
         Dim Valor As String
-        If Elemento.Query("SELECT id_reg FROM venta").Tables(0).Rows.Count > 0 Then
+        If Elemento.Query("SELECT id_reg FROM venta WHERE id_sucursal='" & G_Sucursal_nombre & "'").Tables(0).Rows.Count > 0 Then
             Valor = Format(Val(Venta.Final().Tables(0).Rows(0)(0) + 1), "00000").ToString
         Else
             Valor = Format(1, "00000").ToString
