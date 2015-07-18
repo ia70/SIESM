@@ -90,7 +90,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZZqMuKHwjxsJ6faRHeHhERM5U6zSjTTvC8Wum3OAG68=</dsig:DigestValue>
+        <dsig:DigestValue>OTorQrvvs3as+kKOhl5cOknXeU4ToJx99v1cg+xljqI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,17 +114,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZIK0+DZGt9X1rAOFpXtXa2pCT+1Ki2ojtmOydQUPWks=</dsig:DigestValue>
+        <dsig:DigestValue>YAdG3WkUzSTq9eEzvJ1gpOoogVUHnWLKaHs6h2waksE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Capa_Presentacion.exe.config" size="346">
+  <file name="Capa_Presentacion.exe.config" size="350">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>B+Y9qjfdqxjqjB19wNUrXt5TkLcNtn2ow7fkR99WLVU=</dsig:DigestValue>
+      <dsig:DigestValue>hdBaV0lnSmSoLuy3sguw+mxBAHY52vdodDupS8jixa8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
