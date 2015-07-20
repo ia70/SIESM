@@ -274,7 +274,7 @@ Public Class P_PuntoVenta
     Private Function GenerarNumeroVenta() As String
         Dim Valor As String
         If Elemento.Query("SELECT id_reg FROM venta WHERE id_sucursal='" & G_Sucursal_nombre & "'").Tables(0).Rows.Count > 0 Then
-            Valor = Format(Val(Venta.Final().Tables(0).Rows(0)(0) + 1), "00000").ToString
+            Valor = Format(Val(Venta.Final(G_Sucursal_nombre).Tables(0).Rows(0)(0) + 1), "00000").ToString
         Else
             Valor = Format(1, "00000").ToString
         End If
@@ -307,7 +307,6 @@ Public Class P_PuntoVenta
             M("Error al registrar venta: " + ex.ToString)
         End Try
     End Sub
-
     Private Sub txtArticulo_TextChanged(sender As Object, e As EventArgs) Handles txtArticulo.TextChanged
         If Not IsNumeric(txtArticulo.Text) And Not txtArticulo.Text = "" Then
             dgvConsulta.DataSource = Elemento.Filtrar(txtArticulo.Text, G_Sucursal_nombre).Tables(0)
@@ -321,7 +320,7 @@ Public Class P_PuntoVenta
         End If
     End Sub
     Private Sub dgvConsulta_DoubleClick(sender As Object, e As EventArgs) Handles dgvConsulta.DoubleClick
-        Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia, articulo.nombre, articulo.precio_compra FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & dgvConsulta.Item(0, dgvConsulta.CurrentRow.Index).Value & "' && id_sucursal = '" & G_Sucursal_nombre & "'")
+        Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia, articulo.nombre, articulo.precio_compra FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & dgvConsulta.Item(0, dgvConsulta.CurrentRow.Index).Value & "' && inventario.id_sucursal = '" & G_Sucursal_nombre & "'")
         If Tabla.Tables(0).Rows.Count = 0 Then
             M("¡El articulo solicitado no está dentro del inventario de esta sucursal!", 3)
             txtArticulo.Text = ""
@@ -336,19 +335,12 @@ Public Class P_PuntoVenta
             LlenarCampos()
         End If
     End Sub
-
-    Private Sub dgvTabla_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
     Private Sub btnCorteCaja_Click(sender As Object, e As EventArgs) Handles btnCorteCaja.Click
         Popup.PopupFrm(P_CorteCaja)
     End Sub
-
     Private Sub btnAdministracion_Click(sender As Object, e As EventArgs) Handles btnAdministracion.Click
         Administracion.Show()
     End Sub
-
     Private Sub btnConsultaPrecio_Click(sender As Object, e As EventArgs) Handles btnConsultaPrecio.Click
         Popup.PopupFrm(P_articulo_C)
     End Sub

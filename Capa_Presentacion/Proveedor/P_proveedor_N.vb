@@ -13,9 +13,9 @@ Public Class P_proveedor_N
         _Proveedor.telefono = txtTelefono.Text
         _Proveedor.fecha = getFecha()
         If Elemento.Insertar(_Proveedor) Then
-            M("¡El proveedor ha sido guardado con exito!", 1)
+            M("¡El proveedor ha sido guardado con exito!")
         Else
-            M("¡No se ha podido guardar el proveedor!", 3)
+            M("¡No se ha podido guardar el proveedor!", 2)
         End If
         Call btnlimpiar_campos_Click(sender, e)
     End Sub

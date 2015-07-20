@@ -45,4 +45,8 @@ Public Class N_sucursal
     Public Function Filtrar(ByVal ID As String) As DataSet
         Return Elemento.Filtrar(ID)
     End Function
+
+    Public Sub AsignarBD(ByVal Cadena As String)
+        Elemento.DbIPSet(Cadena)
+    End Sub
 End Class

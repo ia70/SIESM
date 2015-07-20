@@ -111,6 +111,7 @@
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Elemento.Eliminar(txtid_usuario.Text)
         Call btnAtras_Click(sender, e)
+        M("¡Registro eliminado correctamente", 0)
         LimpiarCampos()
     End Sub
 

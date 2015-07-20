@@ -26,7 +26,7 @@ Public Class P_sucursal_ED
             Tabla = Elemento.Final()
             LlenarCampos()
             Campos(True)
-        ElseIf Elemento.Existe(txtid_sucursal.Text) Then
+        ElseIf Elemento.Existe(Val(txtid_sucursal.Text) - 1) Then
             Tabla = Elemento.Atras(txtid_sucursal.Text)
             LlenarCampos()
             Campos(True)
@@ -38,8 +38,8 @@ Public Class P_sucursal_ED
             Tabla = Elemento.Inicio()
             LlenarCampos()
             Campos(True)
-        ElseIf Elemento.Existe(txtid_sucursal.Text) Then
-            Tabla = Elemento.Siguiente(txtid_sucursal.Text)
+        ElseIf Elemento.Existe(Val(txtid_sucursal.Text) + 1) Then
+            Tabla = Elemento.Siguiente(Val(txtid_sucursal.Text))
             LlenarCampos()
             Campos(True)
         End If
@@ -137,9 +137,9 @@ Public Class P_sucursal_ED
         _Sucursal.imagen = Imagen_Bytes(ptrimagen.Image)
         _Sucursal.tipo = txtTipo.Text
         If Elemento.Editar(_Sucursal) Then
-            M("¡La sucursal ha sido editada con exito!", 1)
+            M("¡La sucursal ha sido editada con exito!", 0)
         Else
-            M("¡No se ha podido editar la sucursal!", 3)
+            M("¡No se ha podido editar la sucursal!", 2)
         End If
 
     End Sub

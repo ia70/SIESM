@@ -1,4 +1,7 @@
 ﻿Module VariablesGlobales
+    'Variables generales
+    Public DBIP As String
+
     'Variables Globales Sucursal
     Public G_Sucursal_id As Integer = 0
     Public G_Sucursal_nombre As String = "Lino Merino"

@@ -64,9 +64,9 @@ Public Class P_articulo_ED
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = getFecha()
         If Elemento.Editar(_Articulo) Then
-            M("¡La sucursal ha sido editada con exito!", 1)
+            M("¡La sucursal ha sido editada con exito!", 0)
         Else
-            M("¡No se ha podido editar la sucursal!", 3)
+            M("¡No se ha podido editar la sucursal!", 2)
         End If
         'Call btnlimpiar_campos_Click(sender, e)
         Campos(False)
@@ -109,7 +109,7 @@ Public Class P_articulo_ED
             If Len(txtConsulta.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtConsulta.Text) Then
                 Tabla = Elemento.Consultar(txtConsulta.Text)
                 If Tabla.Tables(0).Rows.Count = 0 Then
-                    M("El articulo solicitado no existe", 3)
+                    M("El articulo solicitado no existe", 2)
                     txtConsulta.Text = ""
                     txtConsulta.Focus()
                 Else

@@ -54,7 +54,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4lDaUdPhl6UTVzmjvLvYXt5QRdAKy1ugGPjTWMt3/C8=</dsig:DigestValue>
+        <dsig:DigestValue>4tydassQSj3Liaz/vx1ugIqhZO+EH9tR1SKh6JssXq8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,19 +78,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JK0AfURCIbbhNJnQeAK87yde2UMyhnsfY5aK8AgqbwU=</dsig:DigestValue>
+        <dsig:DigestValue>T/Bl9smCK3Y7SS+Iv8ZdCf0mhvHxN5yTdTpixlr/fCI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="4027904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="4032512">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OTorQrvvs3as+kKOhl5cOknXeU4ToJx99v1cg+xljqI=</dsig:DigestValue>
+        <dsig:DigestValue>uYU6pO1S1W8uPsJZLEbDcVgYiUUsqIqSxlNJdxHbKJo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -118,13 +118,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Capa_Presentacion.exe.config" size="350">
+  <file name="Capa_Presentacion.exe.config" size="483">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hdBaV0lnSmSoLuy3sguw+mxBAHY52vdodDupS8jixa8=</dsig:DigestValue>
+      <dsig:DigestValue>drv811gYr0J8A6gJ+y2pqy68n4d+f937aTmCGINiZDc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

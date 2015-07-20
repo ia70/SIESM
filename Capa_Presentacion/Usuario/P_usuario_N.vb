@@ -15,9 +15,9 @@ Public Class P_usuario_N
         _usuario.imagen = Imagen_Bytes(ptrimagen.Image)
         _usuario.fecha = getFecha()
         If Elemento.Insertar(_usuario) Then
-            M("¡El usuario ha sido agregado con exito!", 1)
+            M("¡El usuario ha sido agregado con exito!", 0)
         Else
-            M("¡No se ha podido agregar el usuario!", 3)
+            M("¡No se ha podido agregar el usuario!", 2)
         End If
         Call btnlimpiar_campos_Click(sender, e)
     End Sub

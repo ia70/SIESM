@@ -194,6 +194,12 @@
     <Compile Include="Login\VerificacionSucursal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login\Verificando.Designer.vb">
+      <DependentUpon>Verificando.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Verificando.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Merma\P_merma_C.Designer.vb">
       <DependentUpon>P_merma_C.vb</DependentUpon>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\VerificacionSucursal.resx">
       <DependentUpon>VerificacionSucursal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Verificando.resx">
+      <DependentUpon>Verificando.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Merma\P_merma_C.resx">
       <DependentUpon>P_merma_C.vb</DependentUpon>

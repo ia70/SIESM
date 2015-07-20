@@ -49,7 +49,7 @@ Public Class P_usuario_ED
             If Len(txtConsulta.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtConsulta.Text) Then
                 Tabla = Elemento.Consultar(txtConsulta.Text)
                 If Tabla.Tables(0).Rows.Count = 0 Then
-                    M("El usuario solicitado no existe", 3)
+                    M("El usuario solicitado no existe", 2)
                     txtConsulta.Text = ""
                     txtConsulta.Focus()
                 Else
@@ -142,9 +142,9 @@ Public Class P_usuario_ED
         _Usuario.fecha = getFecha()
         _Usuario.imagen = Imagen_Bytes(ptrimagen.Image)
         If Elemento.Editar(_Usuario) Then
-            M("¡El usuario ha sido editado con exito!", 1)
+            M("¡El usuario ha sido editado con exito!", 0)
         Else
-            M("¡No se ha podido editar el usuario!", 3)
+            M("¡No se ha podido editar el usuario!", 2)
         End If
 
     End Sub
@@ -157,6 +157,10 @@ Public Class P_usuario_ED
     End Sub
 
     Private Sub txttipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txttipo.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub btnguardar_Click_1(sender As Object, e As EventArgs) Handles btnguardar.Click
 
     End Sub
 End Class

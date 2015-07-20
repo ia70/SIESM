@@ -117,3 +117,4 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Pr
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.P_CajaInicio.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Administracion.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.VerificacionSucursal.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Verificando.resources

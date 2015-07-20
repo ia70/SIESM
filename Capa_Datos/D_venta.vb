@@ -67,8 +67,8 @@ Public Class D_venta
     End Function
 
     'Devuelve el ultimo articulo que aparece en la tabla articulo
-    Public Function GetFinal() As DataSet
-        Return QueryC("CALL " & Tabla & "_final()")
+    Public Function GetFinal(ByVal Sucu As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_final('" & Sucu & "')")
     End Function
 
     'Devuelve el siguiente articulo en la tabla articulo en base al que se especifica

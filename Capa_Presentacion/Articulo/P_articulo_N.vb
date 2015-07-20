@@ -53,9 +53,9 @@ Public Class P_articulo_N
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = getFecha()
         If Elemento.Insertar(_Articulo) Then
-            M("¡El articulo ha sido guardado con exito!", 1)
+            M("¡El articulo ha sido guardado con exito!", 0)
         Else
-            M("¡No se ha podido guardar el articulo!", 3)
+            M("¡No se ha podido guardar el articulo!", 2)
         End If
         Call btnlimpiar_campos_Click(sender, e)
         Campos(False)
@@ -75,7 +75,7 @@ Public Class P_articulo_N
     Private Sub txtid_articulo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtid_articulo.KeyPress
         If e.KeyChar = ChrW(13) And Len(txtid_articulo.Text) > 4 Then
             If Elemento.Existe(txtid_articulo.Text) Then
-                M("¡El articulo " + txtid_articulo.Text + " ya existe!", 3)
+                M("¡El articulo " + txtid_articulo.Text + " ya existe!", 1)
                 txtid_articulo.Text = ""
                 txtid_articulo.Focus()
             Else

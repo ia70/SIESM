@@ -72,6 +72,7 @@ Public Class P_proveedor_EL
         btnAtras_Click(sender, e)
         Elemento.Eliminar(txtId_proveedor.Text)
         txtConsulta.Text = ""
+        M("¡Registro eliminado correctamente!")
         txtConsulta.Focus()
     End Sub
 

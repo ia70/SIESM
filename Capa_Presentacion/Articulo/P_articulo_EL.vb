@@ -18,6 +18,7 @@ Public Class P_articulo_EL
 #Region "Botones"
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Elemento.Eliminar(txtid_articulo.Text)
+        M("¡Registro eliminado correctamente!", 0)
         LimpiarCampos()
     End Sub
 
@@ -55,7 +56,7 @@ Public Class P_articulo_EL
             If Len(txtConsulta.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtConsulta.Text) Then
                 Tabla = Elemento.Consultar(txtConsulta.Text)
                 If Tabla.Tables(0).Rows.Count = 0 Then
-                    M("El articulo solicitado no existe", 3)
+                    M("El articulo solicitado no existe", 2)
                     txtConsulta.Text = ""
                     txtConsulta.Focus()
                 Else

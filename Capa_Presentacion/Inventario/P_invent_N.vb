@@ -50,6 +50,7 @@ Public Class P_invent_N
         dgvTabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         Llenar_Tabla()
         cargaCompleta = True
+        txtSucursal.Text = G_Sucursal_nombre
         'HCargarDatos.Start()
 
     End Sub
@@ -78,7 +79,7 @@ Public Class P_invent_N
             Next
             If TotalElementos = 0 Then
                 Inventario.Query("DELETE FROM inventario WHERE id_sucursal= '" & txtSucursal.Text & "'")
-                M("Inventario eliminado correctamente!")
+                M("Inventario eliminado correctamente!", 0)
                 Llenar_Tabla()
                 Exit Sub
             End If
@@ -102,7 +103,7 @@ Public Class P_invent_N
                 End If
             Next
 
-            M("Registros guardados correctamente!")
+            M("Registros guardados correctamente!", 0)
             Llenar_Tabla()
         Catch ex As Exception
             M(ex.ToString, 2)
@@ -126,7 +127,6 @@ Public Class P_invent_N
             txtPrecio_venta.Enabled = True
         End If
     End Sub
-
     Private Sub dgvTabla_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvTabla.CurrentCellChanged
         Try
             txtNombreArticulo.Text = dgvTabla.Item(1, dgvTabla.CurrentRow.Index).Value
@@ -145,7 +145,7 @@ Public Class P_invent_N
             If Len(txtIdArticulo.Text) > 4 And e.KeyChar = ChrW(13) And IsNumeric(txtIdArticulo.Text) Then
                 TablaArticulos = Inventario.Query("SELECT id_articulo,descripcion FROM articulo WHERE id_articulo = '" & txtIdArticulo.Text & "'")
                 If TablaArticulos.Tables(0).Rows.Count = 0 Then
-                    M("El articulo solicitado no existe", 3)
+                    M("El articulo solicitado no existe", 1)
                     txtIdArticulo.Text = ""
                     txtIdArticulo.Focus()
                 Else
@@ -205,7 +205,7 @@ Public Class P_invent_N
     Private Sub btnAgregarArti_Click(sender As Object, e As EventArgs) Handles btnAgregarArti.Click
         TablaArticulos = Inventario.Query("SELECT id_articulo,descripcion FROM articulo WHERE id_articulo = '" & txtIdArticulo.Text & "'")
         If TablaArticulos.Tables(0).Rows.Count = 0 Then
-            M("El articulo solicitado no existe", 3)
+            M("El articulo solicitado no existe", 2)
             txtIdArticulo.Text = ""
             txtIdArticulo.Focus()
         Else
@@ -214,7 +214,6 @@ Public Class P_invent_N
         End If
     End Sub
 #End Region
-
 #Region "Defectuosos"
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim Fila As Integer
@@ -267,7 +266,6 @@ Public Class P_invent_N
         End If
     End Sub
 #End Region
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDefectuosos.Click
         Dim TotalElementos As Integer
         TotalElementos = 0
@@ -290,7 +288,7 @@ Public Class P_invent_N
                 End If
             Next
 
-            M("Registros guardados correctamente!")
+            M("Registros guardados correctamente!", 0)
             CargarDefectuosos()
         Catch ex As Exception
             M(ex.ToString)

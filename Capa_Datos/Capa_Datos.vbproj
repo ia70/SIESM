@@ -70,6 +70,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core.vb" />
     <Compile Include="D_articulo_d.vb" />
     <Compile Include="D_Login.vb" />
     <Compile Include="Conexion.vb" />

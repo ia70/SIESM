@@ -82,7 +82,7 @@ Public Class D_sucursal
     'Consulta la existencia de un articulo y devuelve SI o No 
     Public Function Existe(ByVal ID As String) As Boolean
         Dim valor As Boolean = False
-        If QueryC("CALL " & Tabla & "_consultar('" & ID & "')").Tables(0).Rows.Count Then
+        If QueryC("CALL " & Tabla & "_consultar2('" & ID & "')").Tables(0).Rows.Count Then
             valor = True
         End If
         Return Valor
@@ -118,4 +118,8 @@ Public Class D_sucursal
         End Try
 
     End Function
+
+    Public Sub DbIPSet(ByVal Cadena As String)
+        DBIP = Cadena
+    End Sub
 End Class

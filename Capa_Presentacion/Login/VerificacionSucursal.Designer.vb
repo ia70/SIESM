@@ -88,14 +88,17 @@ Partial Class VerificacionSucursal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(520, 414)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtSucursal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label6)
         Me.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "VerificacionSucursal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Verificación de Sucursal"
         Me.ResumeLayout(False)
 

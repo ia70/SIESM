@@ -23,7 +23,7 @@ Public Class VerificacionSucursal
         Dim oSW As StreamWriter
 
         oSW = New StreamWriter(Application.StartupPath.ToString & "\core\sucinf.dll")
-        sLine = txtSucursal.Text
+        sLine = txtSucursal.Text & Chr(13) & DBIP
         oSW.WriteLine(sLine)
         oSW.Flush()
         oSW.Close()

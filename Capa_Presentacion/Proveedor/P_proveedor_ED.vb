@@ -15,9 +15,9 @@ Public Class P_proveedor_ED
         _Proveedor.telefono = txtTelefono.Text
         _Proveedor.fecha = getFecha()
         If Elemento.Editar(_Proveedor) Then
-            M("¡El proveedor ha sido editado con exito!", 1)
+            M("¡El proveedor ha sido editado con exito!")
         Else
-            M("¡No se ha podido editar el proveedor!", 3)
+            M("¡No se ha podido editar el proveedor!", 2)
         End If
         Call btnlimpiar_campos_Click(sender, e)
     End Sub

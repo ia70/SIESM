@@ -23,8 +23,8 @@ Public Class N_venta
         Return Elemento.GetInicio()
     End Function
 
-    Public Function Final() As DataSet
-        Return Elemento.GetFinal()
+    Public Function Final(ByVal Sucu As String) As DataSet
+        Return Elemento.GetFinal(Sucu)
     End Function
 
     Public Function Siguiente(ByVal ID As String) As DataSet

@@ -23,8 +23,8 @@ Public Class P_sucursal_EL
         If txtid_sucursal.Text = "" Or txtid_sucursal.Text = Elemento.Inicio.Tables(0).Rows(0)(0).ToString() Then
             Tabla = Elemento.Final()
             LlenarCampos()
-        ElseIf Elemento.Existe(txtid_sucursal.Text) Then
-            Tabla = Elemento.Atras(txtid_sucursal.Text)
+        ElseIf Elemento.Existe(Val(txtid_sucursal.Text) - 1) Then
+            Tabla = Elemento.Atras(Val(txtid_sucursal.Text))
             LlenarCampos()
         End If
     End Sub
@@ -33,8 +33,8 @@ Public Class P_sucursal_EL
         If txtid_sucursal.Text = "" Or txtid_sucursal.Text = Elemento.Final.Tables(0).Rows(0)(0).ToString() Then
             Tabla = Elemento.Inicio()
             LlenarCampos()
-        ElseIf Elemento.Existe(txtid_sucursal.Text) Then
-            Tabla = Elemento.Siguiente(txtid_sucursal.Text)
+        ElseIf Elemento.Existe(Val(txtid_sucursal.Text) + 1) Then
+            Tabla = Elemento.Siguiente(Val(txtid_sucursal.Text))
             LlenarCampos()
         End If
     End Sub
@@ -108,6 +108,7 @@ Public Class P_sucursal_EL
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Elemento.Eliminar(txtid_sucursal.Text)
         Call btnAtras_Click(sender, e)
+        M("¡Registro eliminado correctamente!", 2)
         LimpiarCampos()
     End Sub
 
