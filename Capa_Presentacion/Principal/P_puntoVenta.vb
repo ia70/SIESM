@@ -189,13 +189,13 @@ Public Class P_PuntoVenta
                 End If
             Next
             If existe Then
-                Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia, articulo.nombre, articulo.precio_compra FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & txtArticulo.Text & "' && id_sucursal = '" & G_Sucursal_nombre & "'")
+                Tabla = Elemento.Query("SELECT inventario.id_articulo,articulo.descripcion,articulo.precio_venta,inventario.existencia, articulo.nombre, articulo.precio_compra FROM inventario INNER JOIN articulo ON articulo.id_articulo = inventario.id_articulo WHERE inventario.id_articulo = '" & txtArticulo.Text & "' && inventario.id_sucursal = '" & G_Sucursal_nombre & "'")
                 If Tabla.Tables(0).Rows.Count = 0 Then
                     M("¡El articulo solicitado no está dentro del inventario de esta sucursal!", 3)
                     txtArticulo.Text = ""
                     txtArticulo.Focus()
-                ElseIf Tabla.Tables(0).Rows(0)(3).ToString = "0" Or Tabla.Tables(0).Rows(0)(3).ToString = "" Or Tabla.Tables(0).Rows(0)(3) = 0 Or Tabla.Tables(0).Rows(0)(3) = vbNull Then
-                    M("¡Artículo agotado!", 1)
+                ElseIf Tabla.Tables(0).Rows(0)(3).ToString = "0.00" Then
+                    M("¡Artículo agotado o fuera del inventario de la tienda!", 1)
                     txtArticulo.Text = ""
                     txtArticulo.Focus()
                 Else
@@ -343,5 +343,9 @@ Public Class P_PuntoVenta
     End Sub
     Private Sub btnConsultaPrecio_Click(sender As Object, e As EventArgs) Handles btnConsultaPrecio.Click
         Popup.PopupFrm(P_articulo_C)
+    End Sub
+
+    Private Sub dgvConsulta_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvConsulta.CellContentClick
+
     End Sub
 End Class
