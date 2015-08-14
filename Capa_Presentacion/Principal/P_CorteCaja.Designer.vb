@@ -25,6 +25,8 @@ Partial Class P_CorteCaja
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnInformeDetallado = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -36,7 +38,7 @@ Partial Class P_CorteCaja
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnCorte = New System.Windows.Forms.Button()
+        Me.btnInformeSencillo = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -52,14 +54,14 @@ Partial Class P_CorteCaja
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel1.Size = New System.Drawing.Size(659, 370)
+        Me.Panel1.Size = New System.Drawing.Size(659, 391)
         Me.Panel1.TabIndex = 3
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(5, 319)
+        Me.Panel2.Location = New System.Drawing.Point(5, 340)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(649, 46)
         Me.Panel2.TabIndex = 18
@@ -67,6 +69,8 @@ Partial Class P_CorteCaja
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.btnSalir)
+        Me.Panel3.Controls.Add(Me.btnInformeDetallado)
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label5)
@@ -78,12 +82,32 @@ Partial Class P_CorteCaja
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Controls.Add(Me.btnCorte)
+        Me.Panel3.Controls.Add(Me.btnInformeSencillo)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(5, 54)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(649, 311)
+        Me.Panel3.Size = New System.Drawing.Size(649, 332)
         Me.Panel3.TabIndex = 17
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.Location = New System.Drawing.Point(541, 233)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(85, 47)
+        Me.btnSalir.TabIndex = 13
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnInformeDetallado
+        '
+        Me.btnInformeDetallado.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInformeDetallado.Location = New System.Drawing.Point(35, 186)
+        Me.btnInformeDetallado.Name = "btnInformeDetallado"
+        Me.btnInformeDetallado.Size = New System.Drawing.Size(281, 41)
+        Me.btnInformeDetallado.TabIndex = 12
+        Me.btnInformeDetallado.Text = "Informe detallado"
+        Me.btnInformeDetallado.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -199,15 +223,15 @@ Partial Class P_CorteCaja
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Total de articulos vendidos:"
         '
-        'btnCorte
+        'btnInformeSencillo
         '
-        Me.btnCorte.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCorte.Location = New System.Drawing.Point(409, 200)
-        Me.btnCorte.Name = "btnCorte"
-        Me.btnCorte.Size = New System.Drawing.Size(217, 41)
-        Me.btnCorte.TabIndex = 0
-        Me.btnCorte.Text = "Hacer corte"
-        Me.btnCorte.UseVisualStyleBackColor = True
+        Me.btnInformeSencillo.Font = New System.Drawing.Font("Arial", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInformeSencillo.Location = New System.Drawing.Point(345, 186)
+        Me.btnInformeSencillo.Name = "btnInformeSencillo"
+        Me.btnInformeSencillo.Size = New System.Drawing.Size(281, 41)
+        Me.btnInformeSencillo.TabIndex = 0
+        Me.btnInformeSencillo.Text = "Informe sencillo"
+        Me.btnInformeSencillo.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -226,7 +250,7 @@ Partial Class P_CorteCaja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(659, 370)
+        Me.ClientSize = New System.Drawing.Size(659, 391)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -249,7 +273,7 @@ Partial Class P_CorteCaja
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents btnCorte As System.Windows.Forms.Button
+    Friend WithEvents btnInformeSencillo As System.Windows.Forms.Button
     Friend WithEvents txtTotalArticulosVendidos As System.Windows.Forms.Label
     Friend WithEvents txtTotaDineroCaja As System.Windows.Forms.Label
     Friend WithEvents txtTotalVentas As System.Windows.Forms.Label
@@ -257,4 +281,6 @@ Partial Class P_CorteCaja
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents btnInformeDetallado As System.Windows.Forms.Button
+    Friend WithEvents btnSalir As System.Windows.Forms.Button
 End Class
