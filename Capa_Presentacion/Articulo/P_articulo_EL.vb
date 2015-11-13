@@ -89,6 +89,11 @@ Public Class P_articulo_EL
         txtUnidad_medida.Text = Tabla.Tables(0).Rows(0)(4).ToString()
         txtPrecio_compra.Text = Tabla.Tables(0).Rows(0)(5).ToString()
         txtPrecio_venta.Text = Tabla.Tables(0).Rows(0)(6).ToString()
+        If Tabla.Tables(0).Rows(0)(9).ToString = "1" Then
+            txtIva.Checked = True
+        Else
+            txtIva.Checked = False
+        End If
         ptrimagen.Image = Nothing
         On Error Resume Next
         ptrimagen.Image = Bytes_Imagen(Tabla.Tables(0).Rows(0)(7))
@@ -104,6 +109,7 @@ Public Class P_articulo_EL
         txtPrecio_venta.Text = ""
         txtUnidad_medida.Text = ""
         txtNivel_critico.Value = "0"
+        txtIva.Checked = False
         ptrimagen.Image = Nothing
         txtConsulta.Focus()
     End Sub

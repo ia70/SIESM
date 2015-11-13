@@ -52,6 +52,11 @@ Public Class P_articulo_N
         _Articulo.precio_venta = getPrecio_Venta()
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = getFecha()
+        If txtIva.Checked Then
+            _Articulo.iva = "1"
+        Else
+            _Articulo.iva = "0"
+        End If
         If Elemento.Insertar(_Articulo) Then
             M("¡El articulo ha sido guardado con exito!", 0)
         Else
@@ -158,6 +163,7 @@ Public Class P_articulo_N
         txtUnidad_medida.Enabled = Valor
         txtNivel_critico.Enabled = Valor
         btnlimpiar_campos.Enabled = Valor
+        txtIva.Enabled = Valor
         btnguardar.Enabled = Valor
         btnbuscar_imagen.Enabled = Valor
     End Sub
@@ -168,6 +174,7 @@ Public Class P_articulo_N
         txtdescripcion.Text = ""
         txtPrecio_compra.Text = ""
         txtPrecio_venta.Text = ""
+        txtIva.Checked = False
         txtUnidad_medida.Text = ""
         'txtNivel_critico.Value = 0
         ptrimagen.Image = Nothing
@@ -177,15 +184,5 @@ Public Class P_articulo_N
 
 #End Region
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
-    Private Sub txtUnidad_medida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtUnidad_medida.SelectedIndexChanged
-
-    End Sub
 End Class

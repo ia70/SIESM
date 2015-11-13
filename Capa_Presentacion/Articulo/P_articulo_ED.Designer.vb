@@ -25,6 +25,7 @@ Partial Class P_articulo_ED
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtIva = New System.Windows.Forms.CheckBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtConsulta = New System.Windows.Forms.TextBox()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
@@ -83,6 +84,7 @@ Partial Class P_articulo_ED
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.txtIva)
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.txtConsulta)
         Me.Panel3.Controls.Add(Me.dgvTabla)
@@ -113,6 +115,17 @@ Partial Class P_articulo_ED
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(730, 542)
         Me.Panel3.TabIndex = 17
+        '
+        'txtIva
+        '
+        Me.txtIva.AutoSize = True
+        Me.txtIva.Enabled = False
+        Me.txtIva.Location = New System.Drawing.Point(356, 321)
+        Me.txtIva.Name = "txtIva"
+        Me.txtIva.Size = New System.Drawing.Size(86, 22)
+        Me.txtIva.TabIndex = 85
+        Me.txtIva.Text = "IVA 16%"
+        Me.txtIva.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -429,4 +442,5 @@ Partial Class P_articulo_ED
     Friend WithEvents txtConsulta As System.Windows.Forms.TextBox
     Friend WithEvents dgvTabla As System.Windows.Forms.DataGridView
     Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents txtIva As System.Windows.Forms.CheckBox
 End Class

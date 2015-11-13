@@ -63,6 +63,11 @@ Public Class P_articulo_ED
         _Articulo.precio_venta = getPrecio_Venta()
         _Articulo.imagen = Imagen_Bytes(ptrimagen.Image)
         _Articulo.fecha = getFecha()
+        If txtIva.Checked = True Then
+            _Articulo.iva = "1"
+        Else
+            _Articulo.iva = "0"
+        End If
         If Elemento.Editar(_Articulo) Then
             M("¡La sucursal ha sido editada con exito!", 0)
         Else
@@ -188,6 +193,7 @@ Public Class P_articulo_ED
         txtUnidad_medida.Enabled = Valor
         txtNivel_critico.Enabled = Valor
         btnlimpiar_campos.Enabled = Valor
+        txtIva.Enabled = Valor
         btnguardar.Enabled = Valor
         btnbuscar_imagen.Enabled = Valor
         txtConsulta.Focus()
@@ -200,6 +206,7 @@ Public Class P_articulo_ED
         txtdescripcion.Text = ""
         txtPrecio_compra.Text = ""
         txtPrecio_venta.Text = ""
+        txtIva.Checked = False
         'txtUnidad_medida.Text = ""
         ptrimagen.Image = Nothing
         Campos(False)
@@ -214,6 +221,11 @@ Public Class P_articulo_ED
         txtUnidad_medida.Text = Tabla.Tables(0).Rows(0)(4).ToString()
         txtPrecio_compra.Text = Tabla.Tables(0).Rows(0)(5).ToString()
         txtPrecio_venta.Text = Tabla.Tables(0).Rows(0)(6).ToString()
+        If Tabla.Tables(0).Rows(0)(9).ToString = "1" Then
+            txtIva.Checked = True
+        Else
+            txtIva.Checked = False
+        End If
         ptrimagen.Image = Nothing
         On Error Resume Next
         ptrimagen.Image = Bytes_Imagen(Tabla.Tables(0).Rows(0)(7))

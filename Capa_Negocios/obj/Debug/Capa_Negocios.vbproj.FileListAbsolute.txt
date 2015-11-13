@@ -28,3 +28,4 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negoci
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.dll
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.xml
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.pdb
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Negocios\bin\Debug\MySql.Data.dll

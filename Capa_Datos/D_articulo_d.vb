@@ -36,6 +36,7 @@ Public Class D_articulo_d
                 .Add("pre_ven", MySqlDbType.Decimal).Value = _Elemento.precio_venta
                 .Add("can", MySqlDbType.Int32).Value = _Elemento.cantidad
                 .Add("fec", MySqlDbType.Date).Value = _Elemento.fecha
+                .Add("iva_", MySqlDbType.VarChar).Value = _Elemento.iva
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception

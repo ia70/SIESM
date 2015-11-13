@@ -8,6 +8,7 @@
     Private _precio_venta As String
     Private _imagen As Byte()
     Private _fecha As String
+    Private _iva As String
 
     Public Property id_articulo As String
         Get
@@ -87,6 +88,14 @@
         End Get
         Set(value As String)
             _fecha = value
+        End Set
+    End Property
+    Public Property iva As String
+        Get
+            Return _iva
+        End Get
+        Set(value As String)
+            _iva = value
         End Set
     End Property
 End Class

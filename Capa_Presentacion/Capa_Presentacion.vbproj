@@ -249,6 +249,12 @@
     <Compile Include="Principal\Administracion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Principal\Factura.Designer.vb">
+      <DependentUpon>Factura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Factura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal\ImagenViewer.Designer.vb">
       <DependentUpon>ImagenViewer.vb</DependentUpon>
     </Compile>
@@ -283,6 +289,12 @@
       <DependentUpon>P_PuntoVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="Principal\P_PuntoVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\TipoPago.Designer.vb">
+      <DependentUpon>TipoPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\TipoPago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedor\P_proveedor_C.Designer.vb">
@@ -426,6 +438,9 @@
     <EmbeddedResource Include="Principal\Administracion.resx">
       <DependentUpon>Administracion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Factura.resx">
+      <DependentUpon>Factura.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal\ImagenViewer.resx">
       <DependentUpon>ImagenViewer.vb</DependentUpon>
     </EmbeddedResource>
@@ -443,6 +458,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\P_PuntoVenta.resx">
       <DependentUpon>P_PuntoVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\TipoPago.resx">
+      <DependentUpon>TipoPago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedor\P_proveedor_C.resx">
       <DependentUpon>P_proveedor_C.vb</DependentUpon>

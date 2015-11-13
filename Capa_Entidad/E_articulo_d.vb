@@ -6,6 +6,7 @@
     Private _precio_venta As Decimal
     Private _cantidad As Integer
     Private _fecha As String
+    Private _iva As String
 
     Public Property id_reg As Integer
         Get
@@ -70,6 +71,14 @@
         End Set
     End Property
 
+    Public Property iva As String
+        Get
+            Return _iva
+        End Get
+        Set(value As String)
+            _iva = value
+        End Set
+    End Property
 
 
 End Class

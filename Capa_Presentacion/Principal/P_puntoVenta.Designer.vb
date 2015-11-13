@@ -47,7 +47,6 @@ Partial Class P_PuntoVenta
         Me.EliminarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrarTodaLaTablaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PInfoVenta = New System.Windows.Forms.Panel()
-        Me.txtFactura = New System.Windows.Forms.CheckBox()
         Me.LblTipo_pago = New System.Windows.Forms.Label()
         Me.txtTipo_Pago = New System.Windows.Forms.ComboBox()
         Me.btnCobrar = New System.Windows.Forms.Button()
@@ -280,7 +279,6 @@ Partial Class P_PuntoVenta
         '
         Me.PInfoVenta.BackColor = System.Drawing.Color.WhiteSmoke
         Me.PInfoVenta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PInfoVenta.Controls.Add(Me.txtFactura)
         Me.PInfoVenta.Controls.Add(Me.LblTipo_pago)
         Me.PInfoVenta.Controls.Add(Me.txtTipo_Pago)
         Me.PInfoVenta.Controls.Add(Me.btnCobrar)
@@ -293,17 +291,6 @@ Partial Class P_PuntoVenta
         Me.PInfoVenta.Name = "PInfoVenta"
         Me.PInfoVenta.Size = New System.Drawing.Size(214, 422)
         Me.PInfoVenta.TabIndex = 3
-        '
-        'txtFactura
-        '
-        Me.txtFactura.AutoSize = True
-        Me.txtFactura.ForeColor = System.Drawing.Color.Blue
-        Me.txtFactura.Location = New System.Drawing.Point(38, 279)
-        Me.txtFactura.Name = "txtFactura"
-        Me.txtFactura.Size = New System.Drawing.Size(133, 36)
-        Me.txtFactura.TabIndex = 7
-        Me.txtFactura.Text = "Factura"
-        Me.txtFactura.UseVisualStyleBackColor = True
         '
         'LblTipo_pago
         '
@@ -703,5 +690,4 @@ Partial Class P_PuntoVenta
     Friend WithEvents precio_compra As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtVendedor As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtFactura As System.Windows.Forms.CheckBox
 End Class

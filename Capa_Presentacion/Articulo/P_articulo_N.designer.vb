@@ -25,6 +25,7 @@ Partial Class P_articulo_N
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtIva = New System.Windows.Forms.CheckBox()
         Me.txtNivel_critico = New System.Windows.Forms.NumericUpDown()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtUnidad_medida = New System.Windows.Forms.ComboBox()
@@ -77,6 +78,7 @@ Partial Class P_articulo_N
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel3.Controls.Add(Me.txtIva)
         Me.Panel3.Controls.Add(Me.txtNivel_critico)
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.txtUnidad_medida)
@@ -102,6 +104,16 @@ Partial Class P_articulo_N
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(730, 389)
         Me.Panel3.TabIndex = 17
+        '
+        'txtIva
+        '
+        Me.txtIva.AutoSize = True
+        Me.txtIva.Location = New System.Drawing.Point(356, 164)
+        Me.txtIva.Name = "txtIva"
+        Me.txtIva.Size = New System.Drawing.Size(86, 22)
+        Me.txtIva.TabIndex = 85
+        Me.txtIva.Text = "IVA 16%"
+        Me.txtIva.UseVisualStyleBackColor = True
         '
         'txtNivel_critico
         '
@@ -357,4 +369,5 @@ Partial Class P_articulo_N
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtNivel_critico As System.Windows.Forms.NumericUpDown
+    Friend WithEvents txtIva As System.Windows.Forms.CheckBox
 End Class
