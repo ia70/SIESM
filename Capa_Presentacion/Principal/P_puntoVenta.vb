@@ -225,7 +225,7 @@ Public Class P_PuntoVenta
             Ticket.Transaccion = G_PuntoVenta_Transacción
             Ticket.TipoPago = txtTipo_Pago.Text
             Ticket.Tabla = dgvTabla
-            Ticket.Logotipo = Image.FromFile("logotipo.bmp")
+            Ticket.Logotipo = Image.FromFile("core/logotipo.bmp")
             Ticket.Efectivo = G_PuntoVenta_Monto
             Ticket.Descuento = G_PuntoVenta_Descuento
             Ticket.Fecha = G_PuntoVenta_Fecha
@@ -240,7 +240,7 @@ Public Class P_PuntoVenta
             Ticket.Fecha = G_PuntoVenta_Fecha
             Ticket.Hora = G_PuntoVenta_Hora
             Ticket.Descuento = G_PuntoVenta_Descuento
-            Ticket.Logotipo = Image.FromFile("logotipo.bmp")
+            Ticket.Logotipo = Image.FromFile("core/logotipo.bmp")
             Popup.PopupFrm(P_Cobrar)
             Ticket.ImprimirTicket()
             'NuevaVenta()

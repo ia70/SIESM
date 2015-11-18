@@ -25,3 +25,16 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.dll
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.xml
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.pdb
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Datos\bin\Debug\MySql.Data.dll
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Datos.xml
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\itextsharp.dll
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.xml
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbprojResolveAssemblyReference.cache
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.Resources.resources
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbproj.GenerateResource.Cache
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.xml
+C:\Users\UPCH123\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.pdb
