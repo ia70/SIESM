@@ -119,3 +119,5 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Pr
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.VerificacionSucursal.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Verificando.resources
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\bin\Debug\MySql.Data.dll
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.Factura.resources
+D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Presentacion\obj\Debug\Capa_Presentacion.TipoPago.resources

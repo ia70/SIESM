@@ -137,6 +137,30 @@
     <Compile Include="Articulo\P_articulo_N.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Clientes\ClienteCon.Designer.vb">
+      <DependentUpon>ClienteCon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ClienteCon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ClienteEdi.Designer.vb">
+      <DependentUpon>ClienteEdi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ClienteEdi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ClienteEli.Designer.vb">
+      <DependentUpon>ClienteEli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ClienteEli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ClienteN.Designer.vb">
+      <DependentUpon>ClienteN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ClienteN.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Conf\VariablesGlobales.vb" />
     <Compile Include="Devolucion\P_devol_C.Designer.vb">
       <DependentUpon>P_devol_C.vb</DependentUpon>
@@ -383,6 +407,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Articulo\P_articulo_N.resx">
       <DependentUpon>P_articulo_N.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ClienteCon.resx">
+      <DependentUpon>ClienteCon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ClienteN.resx">
+      <DependentUpon>ClienteN.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Devolucion\P_devol_C.resx">
       <DependentUpon>P_devol_C.vb</DependentUpon>
