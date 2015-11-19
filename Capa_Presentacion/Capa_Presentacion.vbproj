@@ -411,6 +411,12 @@
     <EmbeddedResource Include="Clientes\ClienteCon.resx">
       <DependentUpon>ClienteCon.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ClienteEdi.resx">
+      <DependentUpon>ClienteEdi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ClienteEli.resx">
+      <DependentUpon>ClienteEli.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes\ClienteN.resx">
       <DependentUpon>ClienteN.vb</DependentUpon>
     </EmbeddedResource>
