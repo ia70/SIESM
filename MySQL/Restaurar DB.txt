@@ -1,0 +1,7 @@
+1 - Abrir CMD o Simbolo del Sistema
+2 - En la vantana cmd pegar lo siguiente:
+
+cd C:\Program Files\MySQL\MySQL Server 5.6\bin
+
+
+mysql --user=SIESM --password=siesm_2015 siesm< C:/siesm.SQL
