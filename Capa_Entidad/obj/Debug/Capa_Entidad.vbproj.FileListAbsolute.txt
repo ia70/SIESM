@@ -14,3 +14,11 @@ D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 D:\Mis Archivos\Mis  Documentos\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.Cache
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
