@@ -44,7 +44,8 @@ Public Class D_inventario
             MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, "SIESM")
         Finally
             da.Dispose()
-            cn.Dispose()
+            cn.Close()
+            'cn.Dispose()
         End Try
         Return Estado
     End Function
@@ -113,7 +114,7 @@ Public Class D_inventario
             da.Fill(ds, StrConv(Tabla, 3))
             da.Dispose()
             cn.Close()
-            cn.Dispose()
+            'cn.Dispose()
             Return ds
             ds.Dispose()
         Catch ex As Exception
@@ -133,7 +134,7 @@ Public Class D_inventario
             da.Fill(ds, "Tabla")
             da.Dispose()
             cn.Close()
-            cn.Dispose()
+            'cn.Dispose()
             Return ds
             ds.Dispose()
         Catch ex As Exception

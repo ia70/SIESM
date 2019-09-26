@@ -6,7 +6,7 @@ Public Class P_PuntoVenta
     Private Venta As New N_venta
     Private VentaEntidad As New E_venta
     Private Elemento As New N_inventario
-    Public Barcode As New cBarCode
+    Public Barcode As New CodigoBarra
 
     Private Sub P_PuntoVenta_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         P_NavBar.Location = New Point(22, (Me.Height - P_NavBar.Height) / 2)
@@ -210,7 +210,7 @@ Public Class P_PuntoVenta
     End Sub
     Private Sub btnCobrar_Click(sender As Object, e As EventArgs) Handles btnCobrar.Click
         Dim Codigo As String
-        Dim Ticket As New cTicket
+        Dim Ticket As New Ticket
         G_PuntoVenta_Transacción = txtTransacción.Text
         G_PuntoVenta_NumeroTicket = GenerarNumeroVenta()
         G_PuntoVenta_Monto = Val(txtEfectivo.Text)

@@ -6,343 +6,461 @@ Libersoft
 </name>
 </assembly>
 <members>
-<member name="P:Libersoft.cImpresoraTickets.Operacion">
-	<summary>
- Tipo de operación
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Empresa">
-	<summary>
- Nombre de la empresa 
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Fecha">
-	<summary>
- Fecha en que se registra la transacción
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Hora">
-	<summary>
- Hora en que se registra la transacción
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Espacio">
-	<summary>
- Espacio entre lineas
- </summary>
-	<value>Decimal</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Ancho_Hoja">
-	<summary>
- Ancho de la hoja de impresión en puntos
- </summary>
-	<value>Decimal</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Logotipo">
-	<summary>
- Logotipo de la empresa
- </summary>
-	<value>Image</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.BarCode_Ima">
-	<summary>
- Imágen de código de barras
- </summary>
-	<value>Image</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Tabla">
-	<summary>
- DataGridView donde esta el cuerpo del contenido del Ticket
- </summary>
-	<value>DataGridView</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cImpresoraTickets.Impresora">
-	<summary>
- Nombre de la impresora
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cImpresoraTickets.ImprimirTicket">
-	<summary>
- Imprimir ticket
- </summary>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cImpresoraTickets.NumeroToTexto(System.Decimal)">
-	<summary>
- Convierte un número a texto especificando los pesos y centavos
- </summary>
-	<param name="Num">Número a convertir a texto</param>
-	<returns>String</returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cImpresoraTickets.NumToTex(System.String)">
-	<summary>
- Recibe como parametro un numero y devuelve el numero expresado en cadena
- </summary>
-	<param name="Num">Número a convertir a texto</param>
-	<returns>Cadena</returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cImpresoraTickets.EndPrint">
-	<summary>
- Indica el termino de un impresión
- </summary>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cImpresoraTickets.StartPrint(System.Drawing.Printing.PrintPageEventArgs)">
-	<summary>
- Indica el inicio de la creación de un documento
- </summary>
-	<param name="e">PrintPageEventArgs</param>
-	<remarks></remarks>
-</member><member name="P:Libersoft.My.Resources.Resources.ResourceManager">
-	<summary>
+<member name="T:Libersoft.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Libersoft.My.Resources.Resources.ResourceManager">
+<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
-</member><member name="P:Libersoft.My.Resources.Resources.Culture">
-	<summary>
+</member>
+<member name="P:Libersoft.My.Resources.Resources.Culture">
+<summary>
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
-</member><member name="T:Libersoft.My.Resources.Resources">
-	<summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member><member name="P:Libersoft.cTicket.TipoPago">
-	<summary>
- Tipo de pago
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Fecha">
-	<summary>
- Fecha en que se registra la transacción
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Hora">
-	<summary>
- Hora en que se registra la transacción
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Descuento">
-	<summary>
- Descuento total en la venta
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Transaccion">
-	<summary>
- Transacción que se está realizando: Venta, Cotización
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Efectivo">
-	<summary>
- Efectivo con el cual está pagando el cliente
- </summary>
-	<value>String</value>
-	<returns>String</returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Espacio">
-	<summary>
- Espacio entre lineas
- </summary>
-	<value>Decimal</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Ancho_Hoja">
-	<summary>
- Ancho de la hoja de impresión en puntos
- </summary>
-	<value>Decimal</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Cambio">
-	<summary>
- Cambio que se le devlverá al cliente
- </summary>
-	<value>String</value>
-	<returns>String</returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Correo">
-	<summary>
- Correo electrónico de la empresa
- </summary>
-	<value>String</value>
-	<returns>String</returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Empresa">
-	<summary>
- Nombre de la empresa
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.IndexArticulo">
-	<summary>
- Indice de la columna articulo en el DataGridView
- </summary>
-	<value>Integer</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.IndexCantidad">
-	<summary>
- Indice de la columna cantidad en el DataGridView
- </summary>
-	<value>Integer</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.IndexSubTotal">
-	<summary>
- Indice de la columna articulo en el DataGridView
- </summary>
-	<value>Integer</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Calle">
-	<summary>
- Nombre de la calle donde está ubicada la empresa
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Colonia">
-	<summary>
- Nombre de la colonia donde está ubicada la empresa
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Municipio">
-	<summary>
- Nombre de la ciudad donde está ubicada la empresa
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Logotipo">
-	<summary>
- Logotipo de la empresa
- </summary>
-	<value>Image</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Telefono">
-	<summary>
- Telefono de la empresa
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.BarCode_Text">
-	<summary>
- Texto/Número de código de barra
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.BarCode_Ima">
-	<summary>
- Imágen de código de barras
- </summary>
-	<value>Image</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Tabla">
-	<summary>
- DataGridView donde esta el cuerpo del contenido del Ticket
- </summary>
-	<value>DataGridView</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.CodigoPostal">
-	<summary>
- Código postal
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Impresora">
-	<summary>
- Nombre de la impresora
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="P:Libersoft.cTicket.Mensaje">
-	<summary>
- Mensaje de fin de ticket. Ej. : ¡Gracias por su preferencia!
- </summary>
-	<value>String</value>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cTicket.ImprimirTicket">
-	<summary>
- Imprime ticket
- </summary>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cTicket.NumeroToTexto(System.Decimal)">
-	<summary>
- Convierte un número a texto especificando los pesos y centavos
- </summary>
-	<param name="Num">Número a convertir a texto</param>
-	<returns>String</returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cTicket.NumToTex(System.String)">
-	<summary>
- Recibe como parametro un numero y devuelve el numero expresado en cadena
- </summary>
-	<param name="Num">Número a convertir a texto</param>
-	<returns>Cadena</returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cTicket.PrintText(System.String,System.Drawing.Font,System.Int32)">
-	<summary>
- Agrega una linea al documento. Alineación: 0-&gt; Izquierda; 1-&gt;Centro; 2-&gt; Derecha
- </summary>
-	<param name="Texto">Texto a imprimir</param>
-	<param name="Fuente_F">Titulo; Encabezado; Cuerpo; Columna</param>
-	<param name="Alineacion">Alineación: 0-&gt; Izquierda; 1-&gt;Centro; 2-&gt; Derecha</param>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cTicket.EndPrint">
-	<summary>
- Indica el termino de un impresión
- </summary>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cTicket.StartPrint(System.Drawing.Printing.PrintPageEventArgs)">
-	<summary>
- Indica el inicio de la creación de un documento
- </summary>
-	<param name="e">PrintPageEventArgs</param>
-	<remarks></remarks>
-</member><member name="M:Libersoft.cBarCode.CodigoDeBarra(System.String,System.Boolean,System.Int32)">
-	<summary>
+</member>
+<member name="M:Libersoft.CodigoBarra.CodigoDeBarra(System.String,System.Boolean,System.Int32)">
+ <summary>
  Devuelve la imagen de código de barras del número especificado
  </summary>
-	<param name="Codigo">Número al que se le generará el código de barras</param>
-	<param name="Numero">True si se quiere que debajo del codigo de barras aparesca el numero y false de lo contrario</param>
-	<param name="Tamaño">Tamaño delcódigo de barra (Altura)</param>
-	<returns>Bitmap</returns>
-	<remarks></remarks>
+ <param name="Codigo">Número al que se le generará el código de barras</param>
+ <param name="Numero">True si se quiere que debajo del codigo de barras aparesca el numero y false de lo contrario</param>
+ <param name="Tamaño">Tamaño delcódigo de barra (Altura)</param>
+ <returns>Bitmap</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Operacion">
+ <summary>
+ Tipo de operación
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Empresa">
+ <summary>
+ Nombre de la empresa 
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Fecha">
+ <summary>
+ Fecha en que se registra la transacción
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Hora">
+ <summary>
+ Hora en que se registra la transacción
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Espacio">
+ <summary>
+ Espacio entre lineas
+ </summary>
+ <value>Decimal</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Ancho_Hoja">
+ <summary>
+ Ancho de la hoja de impresión en puntos
+ </summary>
+ <value>Decimal</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Logotipo">
+ <summary>
+ Logotipo de la empresa
+ </summary>
+ <value>Image</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.BarCode_Ima">
+ <summary>
+ Imágen de código de barras
+ </summary>
+ <value>Image</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Tabla">
+ <summary>
+ DataGridView donde esta el cuerpo del contenido del Ticket
+ </summary>
+ <value>DataGridView</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.cImpresoraTickets.Impresora">
+ <summary>
+ Nombre de la impresora
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.cImpresoraTickets.ImprimirTicket">
+ <summary>
+ Imprimir ticket
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.cImpresoraTickets.NumeroToTexto(System.Decimal)">
+ <summary>
+ Convierte un número a texto especificando los pesos y centavos
+ </summary>
+ <param name="Num">Número a convertir a texto</param>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.cImpresoraTickets.NumToTex(System.String)">
+ <summary>
+ Recibe como parametro un numero y devuelve el numero expresado en cadena
+ </summary>
+ <param name="Num">Número a convertir a texto</param>
+ <returns>Cadena</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.cImpresoraTickets.PrintTextFinal(System.String,System.Drawing.Font,System.String,System.Drawing.Font,System.Int32)">
+ <summary>
+ Agrega una linea al documento. Alineación: 0-> Izquierda; 1->Centro; 2-> Derecha
+ </summary>
+ <param name="Texto">Texto a imprimir</param>
+ <param name="Fuente_Ope">Titulo; Encabezado; Cuerpo; Columna</param>
+ <param name="Alineacion">Alineación: 0-> Izquierda; 1->Centro; 2-> Derecha</param>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.cImpresoraTickets.EndPrint">
+ <summary>
+ Indica el termino de un impresión
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.cImpresoraTickets.StartPrint(System.Drawing.Printing.PrintPageEventArgs)">
+ <summary>
+ Indica el inicio de la creación de un documento
+ </summary>
+ <param name="e">PrintPageEventArgs</param>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.Debug.Msg(System.String,System.Int32)">
+ <summary>  
+ Muestra mensaje en pantalla
+ </summary>
+ <param name="Mensaje">Mensaje a mostrar</param>
+ <param name="Icono">0-Info. 1-Warning. 2-Error. 3-Question</param>
+</member>
+<member name="P:Libersoft.Ticket.TipoPago">
+ <summary>
+ Tipo de pago
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Fecha">
+ <summary>
+ Fecha en que se registra la transacción
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Hora">
+ <summary>
+ Hora en que se registra la transacción
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Descuento">
+ <summary>
+ Descuento total en la venta
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Transaccion">
+ <summary>
+ Transacción que se está realizando: Venta, Cotización
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Efectivo">
+ <summary>
+ Efectivo con el cual está pagando el cliente
+ </summary>
+ <value>String</value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Espacio">
+ <summary>
+ Espacio entre lineas
+ </summary>
+ <value>Decimal</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Ancho_Hoja">
+ <summary>
+ Ancho de la hoja de impresión en puntos
+ </summary>
+ <value>Decimal</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Cambio">
+ <summary>
+ Cambio que se le devlverá al cliente
+ </summary>
+ <value>String</value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Correo">
+ <summary>
+ Correo electrónico de la empresa
+ </summary>
+ <value>String</value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Empresa">
+ <summary>
+ Nombre de la empresa
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.IndexArticulo">
+ <summary>
+ Indice de la columna articulo en el DataGridView
+ </summary>
+ <value>Integer</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.IndexCantidad">
+ <summary>
+ Indice de la columna cantidad en el DataGridView
+ </summary>
+ <value>Integer</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.IndexSubTotal">
+ <summary>
+ Indice de la columna articulo en el DataGridView
+ </summary>
+ <value>Integer</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Calle">
+ <summary>
+ Nombre de la calle donde está ubicada la empresa
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Colonia">
+ <summary>
+ Nombre de la colonia donde está ubicada la empresa
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Municipio">
+ <summary>
+ Nombre de la ciudad donde está ubicada la empresa
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Logotipo">
+ <summary>
+ Logotipo de la empresa
+ </summary>
+ <value>Image</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Telefono">
+ <summary>
+ Telefono de la empresa
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.BarCode_Text">
+ <summary>
+ Texto/Número de código de barra
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.BarCode_Ima">
+ <summary>
+ Imágen de código de barras
+ </summary>
+ <value>Image</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Tabla">
+ <summary>
+ DataGridView donde esta el cuerpo del contenido del Ticket
+ </summary>
+ <value>DataGridView</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.CodigoPostal">
+ <summary>
+ Código postal
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Impresora">
+ <summary>
+ Nombre de la impresora
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.Ticket.Mensaje">
+ <summary>
+ Mensaje de fin de ticket. Ej. : ¡Gracias por su preferencia!
+ </summary>
+ <value>String</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.Ticket.ImprimirTicket">
+ <summary>
+ Imprime ticket
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.Ticket.NumeroToTexto(System.Decimal)">
+ <summary>
+ Convierte un número a texto especificando los pesos y centavos
+ </summary>
+ <param name="Num">Número a convertir a texto</param>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.Ticket.NumToTex(System.String)">
+ <summary>
+ Recibe como parametro un numero y devuelve el numero expresado en cadena
+ </summary>
+ <param name="Num">Número a convertir a texto</param>
+ <returns>Cadena</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.Ticket.PrintText(System.String,System.Drawing.Font,System.Int32)">
+ <summary>
+ Agrega una linea al documento. Alineación: 0-> Izquierda; 1->Centro; 2-> Derecha
+ </summary>
+ <param name="Texto">Texto a imprimir</param>
+ <param name="Fuente_F">Titulo; Encabezado; Cuerpo; Columna</param>
+ <param name="Alineacion">Alineación: 0-> Izquierda; 1->Centro; 2-> Derecha</param>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.Ticket.EndPrint">
+ <summary>
+ Indica el termino de un impresión
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.Ticket.StartPrint(System.Drawing.Printing.PrintPageEventArgs)">
+ <summary>
+ Indica el inicio de la creación de un documento
+ </summary>
+ <param name="e">PrintPageEventArgs</param>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.ValidacionCaracteres.Permitidos(System.String)">
+ <summary>
+ Establece o consulta la lista de caracteres permitidos
+ </summary>
+ <param name="Caracteres">Cadena de caracteres permitidos</param>
+ <value>Cadena sin separadores</value>
+ <returns>Cadena tipo Strings</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.ValidacionCaracteres.Prohibidos(System.String)">
+ <summary>
+ Establece o consulta la lista de caracteres prohibidos
+ </summary>
+ <param name="Caracteres">Cadena de caracteres prohibidos</param>
+ <value>Cadena sin separadores</value>
+ <returns>Cadena tipo Strings</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Libersoft.ValidacionCaracteres.TipoValidacion(System.Byte)">
+ <summary>
+ Especifica que tipo de validación se aplicará
+ </summary>
+ <param name="Valor">Tipo de validación</param>
+ <value>Entero entre 1 y 4</value>
+ <returns>Tipo de validación Integer</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Libersoft.ValidacionCaracteres.#ctor(System.Byte,System.String)">
+ <summary>
+ Inicialización de la clase ValidacionCaracteres
+ </summary>
+ <param name="TipoValidacion">
+ Opción:
+ 1- Letras y números
+ 2- Solo letras
+ 3- Solo números
+ 4- Caracteres Permitidos
+ 5- Caracteres Prohibidos</param>
+ <param name="Permitidos">Cadena de caracteres permitidos (Opcional)</param>
+ <remarks><list type="numeric">
+ <item><description>Lestras y números</description></item>
+ <item><description>Solo Lestras</description></item>
+ <item><description>Solo números</description></item>
+ </list></remarks>
+</member>
+<member name="M:Libersoft.ValidacionCaracteres.Verificar(System.String)">
+ <summary>
+ Verificar
+ </summary>
+ <param name="Cadena">Caracter ó cadena a verificar</param>
+ <returns></returns>
+ <remarks></remarks>
 </member>
 </members>
 </doc>

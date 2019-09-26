@@ -1,0 +1,74 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 3 (0x3)
+    Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=MX, ST=Tabasco, L=Villahermosa, O=SIESM, OU=Libersoft, CN=siesm_/name=siesm_1/emailAddress=plasticos_y_derivados@hotmail.com
+        Validity
+            Not Before: Aug 13 02:08:50 2015 GMT
+            Not After : Aug 10 02:08:50 2025 GMT
+        Subject: C=MX, ST=Tabasco, L=SIESM, O=Libersoft, OU=siesm_, CN=siesm_1/name=siesm_2/emailAddress=constitucion@hotmail.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:b1:fb:f3:99:c8:09:dc:64:27:97:9c:f1:5b:83:
+                    72:94:91:7d:82:ff:a9:37:f4:5e:f4:d6:77:c8:9c:
+                    2c:ab:d8:e7:da:21:0e:8d:8a:ba:b0:04:7d:58:52:
+                    bb:ef:d8:4b:35:74:00:67:5d:07:be:23:c7:ca:f8:
+                    0c:3f:b7:76:bc:f3:d4:7e:c7:70:8c:9e:e9:54:62:
+                    ed:d2:8f:1f:8b:4f:1f:47:30:2d:d9:26:3d:d9:29:
+                    d6:ca:62:49:6a:d1:29:ab:4b:46:44:28:50:34:d5:
+                    11:a6:54:8e:f3:e7:4e:cd:43:45:4a:d1:97:5c:a6:
+                    fe:79:c8:7d:73:25:68:12:2d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                ED:0C:B0:78:A6:5C:44:37:8B:F2:85:BB:A2:D3:1F:FE:38:77:23:F3
+            X509v3 Authority Key Identifier: 
+                keyid:40:72:9B:9A:BE:D7:58:FB:83:6A:13:E4:E2:9C:A6:C6:C1:D3:04:15
+                DirName:/C=MX/ST=Tabasco/L=Villahermosa/O=SIESM/OU=Libersoft/CN=siesm_/name=siesm_1/emailAddress=plasticos_y_derivados@hotmail.com
+                serial:FE:18:5D:6D:D4:41:06:8D
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: md5WithRSAEncryption
+         11:a4:da:d4:ea:63:c4:07:95:69:de:d1:ed:7c:1d:b0:0a:53:
+         97:03:9a:1f:3a:76:01:39:f3:b6:9c:e0:b8:ce:b0:69:49:ae:
+         ad:76:ec:1a:4c:fd:d2:ee:8d:fc:00:55:45:0a:8d:b9:c7:15:
+         4f:bc:8d:37:54:42:4c:64:db:95:68:5c:eb:f8:37:62:71:3c:
+         c3:52:3f:1d:c8:f4:a1:38:c8:d7:92:52:79:b1:55:3c:cb:96:
+         93:fb:a2:28:5f:a4:a7:7a:05:47:41:84:b1:59:72:55:06:fe:
+         cd:0a:c6:4b:3a:bc:4e:6a:dd:ca:f9:38:79:27:1a:68:a1:43:
+         88:99
+-----BEGIN CERTIFICATE-----
+MIIEMDCCA5mgAwIBAgIBAzANBgkqhkiG9w0BAQQFADCBrzELMAkGA1UEBhMCTVgx
+EDAOBgNVBAgTB1RhYmFzY28xFTATBgNVBAcTDFZpbGxhaGVybW9zYTEOMAwGA1UE
+ChMFU0lFU00xEjAQBgNVBAsTCUxpYmVyc29mdDEPMA0GA1UEAxQGc2llc21fMRAw
+DgYDVQQpFAdzaWVzbV8xMTAwLgYJKoZIhvcNAQkBFiFwbGFzdGljb3NfeV9kZXJp
+dmFkb3NAaG90bWFpbC5jb20wHhcNMTUwODEzMDIwODUwWhcNMjUwODEwMDIwODUw
+WjCBoTELMAkGA1UEBhMCTVgxEDAOBgNVBAgTB1RhYmFzY28xDjAMBgNVBAcTBVNJ
+RVNNMRIwEAYDVQQKEwlMaWJlcnNvZnQxDzANBgNVBAsUBnNpZXNtXzEQMA4GA1UE
+AxQHc2llc21fMTEQMA4GA1UEKRQHc2llc21fMjEnMCUGCSqGSIb3DQEJARYYY29u
+c3RpdHVjaW9uQGhvdG1haWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKB
+gQCx+/OZyAncZCeXnPFbg3KUkX2C/6k39F701nfInCyr2OfaIQ6NirqwBH1YUrvv
+2Es1dABnXQe+I8fK+Aw/t3a889R+x3CMnulUYu3Sjx+LTx9HMC3ZJj3ZKdbKYklq
+0SmrS0ZEKFA01RGmVI7z507NQ0VK0Zdcpv55yH1zJWgSLQIDAQABo4IBZjCCAWIw
+CQYDVR0TBAIwADAtBglghkgBhvhCAQ0EIBYeRWFzeS1SU0EgR2VuZXJhdGVkIENl
+cnRpZmljYXRlMB0GA1UdDgQWBBTtDLB4plxEN4vyhbui0x/+OHcj8zCB5AYDVR0j
+BIHcMIHZgBRAcpuavtdY+4NqE+TinKbGwdMEFaGBtaSBsjCBrzELMAkGA1UEBhMC
+TVgxEDAOBgNVBAgTB1RhYmFzY28xFTATBgNVBAcTDFZpbGxhaGVybW9zYTEOMAwG
+A1UEChMFU0lFU00xEjAQBgNVBAsTCUxpYmVyc29mdDEPMA0GA1UEAxQGc2llc21f
+MRAwDgYDVQQpFAdzaWVzbV8xMTAwLgYJKoZIhvcNAQkBFiFwbGFzdGljb3NfeV9k
+ZXJpdmFkb3NAaG90bWFpbC5jb22CCQD+GF1t1EEGjTATBgNVHSUEDDAKBggrBgEF
+BQcDAjALBgNVHQ8EBAMCB4AwDQYJKoZIhvcNAQEEBQADgYEAEaTa1OpjxAeVad7R
+7XwdsApTlwOaHzp2ATnztpzguM6waUmurXbsGkz90u6N/ABVRQqNuccVT7yNN1RC
+TGTblWhc6/g3YnE8w1I/Hcj0oTjI15JSebFVPMuWk/uiKF+kp3oFR0GEsVlyVQb+
+zQrGSzq8Tmrdyvk4eScaaKFDiJk=
+-----END CERTIFICATE-----

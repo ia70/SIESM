@@ -42,50 +42,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="46592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="29696">
       <assemblyIdentity name="Capa_Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FzHhMZyDAuYOLZPf6Yr+C11HK4qaVHskG3y+IOMkS1E=</dsig:DigestValue>
+        <dsig:DigestValue>NZZiT07nrGQEwyuvwiq5wTnRh4nzdqDIgoFi4vxSbCI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Entidad.dll" size="34816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Entidad.dll" size="17920">
       <assemblyIdentity name="Capa_Entidad" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7qRHSiTewUL61ejLZXeazQ6PTZpXQpHuFS4Anhde/dc=</dsig:DigestValue>
+        <dsig:DigestValue>ehzsLm2uwc5NkWcI+kPkdYbvVsHzCTlEXzMBVJiJrpA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Negocios.dll" size="31744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Negocios.dll" size="15360">
       <assemblyIdentity name="Capa_Negocios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>niDDei5mQk5UN5iU9ctHAF8kiYEUAYC/aLWk9femTFs=</dsig:DigestValue>
+        <dsig:DigestValue>gGpIujhitDeooWPzkbvCn1PwBGPnfOQdOIGah7Auc/M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="4084736">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="4003328">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rRrK8ROBzUQHGI0wJwADpoTj2D/CQtWdrKQcp+dwDhI=</dsig:DigestValue>
+        <dsig:DigestValue>ojEaGG1BNDAlwKac5aGsr+RcjNwH9NUlVXvcO7rgRs8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,14 +102,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Libersoft.dll" size="49152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Libersoft.dll" size="33792">
       <assemblyIdentity name="Libersoft" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ILOK37Zb4PX6UgYgH5hwREafXpuUSaAa0Uvw/4WnwIE=</dsig:DigestValue>
+        <dsig:DigestValue>waDAkQqx0YsCZ/KpR7DHkwfGnJEzHXfXobmkIZaZHTs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -6,150 +6,184 @@ Capa_Presentacion
 </name>
 </assembly>
 <members>
+<member name="T:Capa_Presentacion.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
 <member name="P:Capa_Presentacion.My.Resources.Resources.ResourceManager">
-	<summary>
+<summary>
   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Culture">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Culture">
+<summary>
   Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.alt1">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.alt1">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Back">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Back">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Back1">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Back1">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Back2">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Back2">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.barras">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.barras">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.bg117">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.bg117">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Box">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Box">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.CAJON_DINERO_FRONT_RS5158">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.CAJON_DINERO_FRONT_RS5158">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.CAJON_DINERO_FRONT_RS51581">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.CAJON_DINERO_FRONT_RS51581">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Database">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Database">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.dd1">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.dd1">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.degra1">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.degra1">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.degra7">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.degra7">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.degra7___copia">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.degra7___copia">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.degradados_fondos_de_pantalla_textura_la_luz_patr_n_fondo_un_degradado_429735">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.degradados_fondos_de_pantalla_textura_la_luz_patr_n_fondo_un_degradado_429735">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.DSC02120">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.DSC02120">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Floppy">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Floppy">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.fondos14">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.fondos14">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Forward">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Forward">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.GUID_7E4F80EB_CB9C_4D35_8C6C_7F414C0DDDD4">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.GUID_7E4F80EB_CB9C_4D35_8C6C_7F414C0DDDD4">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.images">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.images">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Key">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Key">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.laminas">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.laminas">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Metal_Steel_Textured_White">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Metal_Steel_Textured_White">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.metal5">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.metal5">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.photos_demandstudios_com_getty_article_114_171_87452002_XS">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.photos_demandstudios_com_getty_article_114_171_87452002_XS">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.photos_demandstudios_com_getty_article_129_15_87466107_XS">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.photos_demandstudios_com_getty_article_129_15_87466107_XS">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Search">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Search">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.System">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.System">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.Tools">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.Tools">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="P:Capa_Presentacion.My.Resources.Resources.url">
-	<summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.url">
+<summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
-</member><member name="T:Capa_Presentacion.My.Resources.Resources">
-	<summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member><member name="M:Capa_Presentacion.Popup.PopupFrm(System.Windows.Forms.Form,System.Int32)">
-	<summary>
+</member>
+<member name="M:Capa_Presentacion.Popup.PopupFrm(System.Windows.Forms.Form,System.Int32)">
+ <summary>
  Muestra un formulario resaltado
  </summary>
-	<param name="Frm">Formulario</param>
-	<param name="Valor">0 - Cerrar con clic fuera, 1- Cerrar hasta que dialogo se sierre</param>
-	<remarks></remarks>
+ <param name="Frm">Formulario</param>
+ <param name="Valor">0 - Cerrar con clic fuera, 1- Cerrar hasta que dialogo se sierre</param>
+ <remarks></remarks>
 </member>
 </members>
 </doc>

@@ -22,3 +22,12 @@ C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbpro
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.CoreCompileInputs.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb

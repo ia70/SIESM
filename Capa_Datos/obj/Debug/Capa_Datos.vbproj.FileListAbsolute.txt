@@ -53,3 +53,22 @@ C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbproj.Ge
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.dll
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.xml
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Capa_Datos.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\MySql.Data.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\itextsharp.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Capa_Entidad.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbprojAssemblyReference.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.Resources.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbproj.GenerateResource.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbproj.CoreCompileInputs.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.vbproj.CopyComplete
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Libersoft.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Libersoft.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Datos\bin\Debug\Libersoft.xml

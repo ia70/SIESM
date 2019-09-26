@@ -43,9 +43,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Libersoft">
-      <HintPath>..\..\Impresora_tickeck\Core\Libersoft.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Capa_Presentacion\Core\MySql.Data.dll</HintPath>
@@ -118,6 +115,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Libersoft\Libersoft\Libersoft.vbproj">
+      <Project>{9cd6b19f-7081-41c5-9d5b-14ffae70469c}</Project>
+      <Name>Libersoft</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.vbproj">
       <Project>{3982c303-342e-45a0-9e6d-2a705b618371}</Project>
       <Name>Capa_Entidad</Name>
