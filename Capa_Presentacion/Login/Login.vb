@@ -145,8 +145,14 @@ Public Class Login
             Else
                 M("¡Conexión establecida correctamente!", 0)
             End If
-            conexion.Close()
-            VSucursal.AsignarBD(DBIP)
+            Try
+                conexion.Close()
+                VSucursal.AsignarBD(DBIP)
+            Catch ex As Exception
+                MsgBox("Aplicación terminada", vbYes + vbCritical, "SIESM")
+                End
+            End Try
+
 
         End If
 

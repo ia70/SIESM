@@ -82,9 +82,14 @@ Public Class D_usuario
     'Consulta la existencia de un articulo y devuelve SI o No 
     Public Function Existe(ByVal ID As String) As Boolean
         Dim valor As Boolean = False
-        If QueryC("CALL " & Tabla & "_consultar('" & ID & "')").Tables(0).Rows.Count Then
-            valor = True
-        End If
+        Try
+            If QueryC("CALL " & Tabla & "_consultar('" & ID & "')").Tables(0).Rows.Count Then
+                valor = True
+            End If
+        Catch ex As Exception
+
+        End Try
+
         Return Valor
     End Function
 

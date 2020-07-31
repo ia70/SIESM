@@ -76,6 +76,9 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LOGO_Libersoft_Oficial 2 - 90x90.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp, Version=5.0.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -673,6 +676,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LOGO_Libersoft_Oficial 2 - 90x90.ico" />
+    <Content Include="LOGO_Libersoft_Oficial 90x90.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

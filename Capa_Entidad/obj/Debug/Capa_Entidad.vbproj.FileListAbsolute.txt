@@ -31,3 +31,11 @@ C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Deb
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.dll
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.pdb
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\bin\Debug\Capa_Entidad.xml
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.Resources.resources
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.vbproj.GenerateResource.cache
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.dll
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.xml
+C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Entidad\obj\Debug\Capa_Entidad.pdb
