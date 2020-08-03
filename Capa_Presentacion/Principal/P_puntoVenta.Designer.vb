@@ -631,7 +631,7 @@ Partial Class P_PuntoVenta
         Me.MinimumSize = New System.Drawing.Size(690, 382)
         Me.Name = "P_PuntoVenta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P_PuntoVenta"
+        Me.Text = "Punto de venta"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.P_NavBar.ResumeLayout(False)
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
