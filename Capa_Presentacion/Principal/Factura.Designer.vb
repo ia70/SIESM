@@ -22,9 +22,26 @@ Partial Class Factura
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Factura))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.id_art = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,27 +52,11 @@ Partial Class Factura
         Me.CantFactu = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PU_IVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Sub_TF = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -80,6 +81,34 @@ Partial Class Factura
         Me.Panel1.Size = New System.Drawing.Size(1031, 54)
         Me.Panel1.TabIndex = 3
         '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Button3)
+        Me.Panel4.Controls.Add(Me.Button2)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel4.Location = New System.Drawing.Point(786, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(245, 54)
+        Me.Panel4.TabIndex = 1
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(12, 13)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(105, 31)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Cancelar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(131, 13)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(105, 31)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Emitir factura"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.TextBox2)
@@ -100,6 +129,144 @@ Partial Class Factura
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1031, 156)
         Me.Panel2.TabIndex = 5
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TextBox2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.Blue
+        Me.TextBox2.Location = New System.Drawing.Point(483, 11)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(136, 26)
+        Me.TextBox2.TabIndex = 12
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(421, 14)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(57, 19)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Folio :"
+        '
+        'Label8
+        '
+        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Blue
+        Me.Label8.Location = New System.Drawing.Point(751, 119)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(158, 20)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Hora"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Blue
+        Me.Label7.Location = New System.Drawing.Point(603, 118)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(128, 23)
+        Me.Label7.TabIndex = 9
+        Me.Label7.Text = "Fecha"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(877, 42)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(58, 27)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Nuevo"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(25, 114)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(153, 19)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "Emisor de factura :"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox3.ForeColor = System.Drawing.Color.Blue
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Mateo Sánchez Almeyda", "José del Carmen Sánchez Almeyda"})
+        Me.ComboBox3.Location = New System.Drawing.Point(184, 110)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(392, 27)
+        Me.ComboBox3.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(25, 80)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(119, 19)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Tipo de pago :"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.ForeColor = System.Drawing.Color.Blue
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Efectivo", "Cheque", "Transferencia"})
+        Me.ComboBox2.Location = New System.Drawing.Point(150, 76)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(162, 27)
+        Me.ComboBox2.TabIndex = 4
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TextBox1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.Blue
+        Me.TextBox1.Location = New System.Drawing.Point(99, 11)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(136, 26)
+        Me.TextBox1.TabIndex = 3
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(25, 14)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(65, 19)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Ticket :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(25, 46)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(68, 19)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Cliente:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.ForeColor = System.Drawing.Color.Blue
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(99, 42)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(772, 27)
+        Me.ComboBox1.TabIndex = 0
         '
         'Panel3
         '
@@ -167,172 +334,6 @@ Partial Class Factura
         Me.Sub_TF.Name = "Sub_TF"
         Me.Sub_TF.ReadOnly = True
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.ForeColor = System.Drawing.Color.Blue
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(99, 42)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(772, 27)
-        Me.ComboBox1.TabIndex = 0
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(25, 46)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 19)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Cliente:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(25, 14)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 19)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Ticket :"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.Blue
-        Me.TextBox1.Location = New System.Drawing.Point(99, 11)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 26)
-        Me.TextBox1.TabIndex = 3
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(25, 80)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(119, 19)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Tipo de pago :"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.ForeColor = System.Drawing.Color.Blue
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Efectivo", "Cheque", "Transferencia"})
-        Me.ComboBox2.Location = New System.Drawing.Point(150, 76)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(162, 27)
-        Me.ComboBox2.TabIndex = 4
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(25, 114)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(153, 19)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "Emisor de factura :"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.ForeColor = System.Drawing.Color.Blue
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Mateo Sánchez Almeyda", "José del Carmen Sánchez Almeyda"})
-        Me.ComboBox3.Location = New System.Drawing.Point(184, 110)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(392, 27)
-        Me.ComboBox3.TabIndex = 6
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(877, 42)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(58, 27)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Nuevo"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Blue
-        Me.Label7.Location = New System.Drawing.Point(603, 118)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(128, 23)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Fecha"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label8
-        '
-        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Blue
-        Me.Label8.Location = New System.Drawing.Point(751, 119)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(158, 20)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "Hora"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Button3)
-        Me.Panel4.Controls.Add(Me.Button2)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(786, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(245, 54)
-        Me.Panel4.TabIndex = 1
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(131, 13)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(105, 31)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Emitir factura"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.TextBox2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.Blue
-        Me.TextBox2.Location = New System.Drawing.Point(483, 11)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(136, 26)
-        Me.TextBox2.TabIndex = 12
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(421, 14)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(57, 19)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Folio :"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(12, 13)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(105, 31)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Cancelar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Factura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -343,16 +344,17 @@ Partial Class Factura
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Factura"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Facturación"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

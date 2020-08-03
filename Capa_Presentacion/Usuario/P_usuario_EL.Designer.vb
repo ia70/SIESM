@@ -22,9 +22,12 @@ Partial Class P_usuario_EL
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_usuario_EL))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Txtid = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnSiguiente = New System.Windows.Forms.Button()
@@ -47,8 +50,6 @@ Partial Class P_usuario_EL
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnterminar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Txtid = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +109,26 @@ Partial Class P_usuario_EL
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(745, 473)
         Me.Panel3.TabIndex = 17
+        '
+        'Txtid
+        '
+        Me.Txtid.Enabled = False
+        Me.Txtid.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtid.Location = New System.Drawing.Point(136, 197)
+        Me.Txtid.MaxLength = 30
+        Me.Txtid.Name = "Txtid"
+        Me.Txtid.Size = New System.Drawing.Size(204, 26)
+        Me.Txtid.TabIndex = 91
+        Me.Txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(40, 204)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(24, 18)
+        Me.Label9.TabIndex = 90
+        Me.Label9.Text = "Id:"
         '
         'btnEliminar
         '
@@ -330,26 +351,6 @@ Partial Class P_usuario_EL
         Me.Label6.Text = "Eliminar usuario"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Txtid
-        '
-        Me.Txtid.Enabled = False
-        Me.Txtid.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid.Location = New System.Drawing.Point(136, 197)
-        Me.Txtid.MaxLength = 30
-        Me.Txtid.Name = "Txtid"
-        Me.Txtid.Size = New System.Drawing.Size(204, 26)
-        Me.Txtid.TabIndex = 91
-        Me.Txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(40, 204)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(24, 18)
-        Me.Label9.TabIndex = 90
-        Me.Label9.Text = "Id:"
-        '
         'P_usuario_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -357,10 +358,11 @@ Partial Class P_usuario_EL
         Me.ClientSize = New System.Drawing.Size(755, 532)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_usuario_EL"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P_usuario_EL"
+        Me.Text = "Eliminar usuario"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

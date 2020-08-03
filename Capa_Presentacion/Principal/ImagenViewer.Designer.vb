@@ -22,6 +22,7 @@ Partial Class ImagenViewer
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ImagenViewer))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,6 +48,7 @@ Partial Class ImagenViewer
         Me.ClientSize = New System.Drawing.Size(284, 262)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ImagenViewer"
         Me.Padding = New System.Windows.Forms.Padding(10)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

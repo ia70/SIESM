@@ -22,6 +22,7 @@ Partial Class P_invent_ED
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_invent_ED))
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txtcondicion = New System.Windows.Forms.ComboBox()
@@ -162,9 +163,10 @@ Partial Class P_invent_ED
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label6)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_invent_ED"
-        Me.Text = "P_invent_ED"
+        Me.Text = "Editar Inventario"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).EndInit()

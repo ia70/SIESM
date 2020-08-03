@@ -22,9 +22,14 @@ Partial Class P_devol_ED
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_devol_ED))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Txthora = New System.Windows.Forms.TextBox()
+        Me.Txtfecha = New System.Windows.Forms.TextBox()
         Me.txtcantidad = New System.Windows.Forms.NumericUpDown()
         Me.Txtdescripcion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -41,10 +46,6 @@ Partial Class P_devol_ED
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Txtfecha = New System.Windows.Forms.TextBox()
-        Me.Txthora = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.txtcantidad, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,6 +100,44 @@ Partial Class P_devol_ED
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(734, 487)
         Me.Panel3.TabIndex = 17
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(34, 347)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(46, 18)
+        Me.Label9.TabIndex = 44
+        Me.Label9.Text = "Hora:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(34, 320)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(56, 18)
+        Me.Label8.TabIndex = 43
+        Me.Label8.Text = "Fecha:"
+        '
+        'Txthora
+        '
+        Me.Txthora.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txthora.Location = New System.Drawing.Point(173, 344)
+        Me.Txthora.MaxLength = 20
+        Me.Txthora.Name = "Txthora"
+        Me.Txthora.Size = New System.Drawing.Size(204, 26)
+        Me.Txthora.TabIndex = 42
+        Me.Txthora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Txtfecha
+        '
+        Me.Txtfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtfecha.Location = New System.Drawing.Point(173, 312)
+        Me.Txtfecha.MaxLength = 20
+        Me.Txtfecha.Name = "Txtfecha"
+        Me.Txtfecha.Size = New System.Drawing.Size(204, 26)
+        Me.Txtfecha.TabIndex = 41
+        Me.Txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtcantidad
         '
@@ -259,44 +298,6 @@ Partial Class P_devol_ED
         Me.Label6.Text = "Editar Reporte  De Devolución"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Txtfecha
-        '
-        Me.Txtfecha.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtfecha.Location = New System.Drawing.Point(173, 312)
-        Me.Txtfecha.MaxLength = 20
-        Me.Txtfecha.Name = "Txtfecha"
-        Me.Txtfecha.Size = New System.Drawing.Size(204, 26)
-        Me.Txtfecha.TabIndex = 41
-        Me.Txtfecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Txthora
-        '
-        Me.Txthora.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txthora.Location = New System.Drawing.Point(173, 344)
-        Me.Txthora.MaxLength = 20
-        Me.Txthora.Name = "Txthora"
-        Me.Txthora.Size = New System.Drawing.Size(204, 26)
-        Me.Txthora.TabIndex = 42
-        Me.Txthora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(34, 320)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(56, 18)
-        Me.Label8.TabIndex = 43
-        Me.Label8.Text = "Fecha:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(34, 347)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(46, 18)
-        Me.Label9.TabIndex = 44
-        Me.Label9.Text = "Hora:"
-        '
         'P_devol_ED
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -304,10 +305,11 @@ Partial Class P_devol_ED
         Me.ClientSize = New System.Drawing.Size(744, 546)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_devol_ED"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P_devol_ED"
+        Me.Text = "Devolucion Editar"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

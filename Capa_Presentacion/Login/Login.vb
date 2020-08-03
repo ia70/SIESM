@@ -31,8 +31,8 @@ Public Class Login
                 G_Usuario_Imagen = tabla.Tables(0).Rows(0)(8)
                 tabla = Nothing
 
-                If File.Exists(Application.StartupPath.ToString & "\core\sucinf.dll") Then
-                    Archivo = New StreamReader(Application.StartupPath.ToString & "\core\sucinf.dll")
+                If File.Exists(Application.StartupPath.ToString & "\sucinf.dll") Then
+                    Archivo = New StreamReader(Application.StartupPath.ToString & "\sucinf.dll")
 
                     'Do
                     sLine = Archivo.ReadLine()
@@ -89,8 +89,8 @@ Public Class Login
         Dim Archivo As StreamReader
         Dim sLine As String = ""
 
-        If File.Exists(Application.StartupPath.ToString & "\core\sucinf.dll") Then
-            Archivo = New StreamReader(Application.StartupPath.ToString & "\core\sucinf.dll")
+        If File.Exists(Application.StartupPath.ToString & "\sucinf.dll") Then
+            Archivo = New StreamReader(Application.StartupPath.ToString & "\sucinf.dll")
 
             sLine = Archivo.ReadLine()
             sLine = Archivo.ReadLine()
@@ -111,7 +111,7 @@ Public Class Login
                 conexion = Nothing
             Else
                 VSucursal.AsignarBD(DBIP)
-                M("¡Conexión establecida correctamente!", 0)
+                'M("¡Conexión establecida correctamente!", 0)
                 conexion.Close()
             End If
 

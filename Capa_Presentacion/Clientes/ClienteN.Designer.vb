@@ -22,10 +22,22 @@ Partial Class ClienteN
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClienteN))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -34,20 +46,9 @@ Partial Class ClienteN
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -110,6 +111,95 @@ Partial Class ClienteN
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Domicilio"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(107, 67)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(170, 26)
+        Me.TextBox9.TabIndex = 31
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(104, 99)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(550, 26)
+        Me.TextBox4.TabIndex = 30
+        '
+        'Label5
+        '
+        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(17, 102)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(80, 29)
+        Me.Label5.TabIndex = 29
+        Me.Label5.Text = "Colonia :"
+        '
+        'Label8
+        '
+        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(17, 70)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(104, 29)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "Municipio :"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Tabasco", "Campeche", "Distrito Federal", "Chiapas", "--------------", "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima", "Durango", "Estado de México", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas"})
+        Me.ComboBox1.Location = New System.Drawing.Point(107, 33)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(170, 27)
+        Me.ComboBox1.TabIndex = 26
+        '
+        'Label9
+        '
+        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(17, 36)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(104, 29)
+        Me.Label9.TabIndex = 25
+        Me.Label9.Text = "Estado :"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(104, 253)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(269, 26)
+        Me.TextBox8.TabIndex = 22
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(104, 224)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(69, 26)
+        Me.TextBox7.TabIndex = 21
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(104, 194)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(69, 26)
+        Me.TextBox6.TabIndex = 20
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(104, 165)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(69, 26)
+        Me.TextBox5.TabIndex = 19
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(104, 131)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(550, 26)
+        Me.TextBox3.TabIndex = 17
         '
         'Label13
         '
@@ -185,88 +275,6 @@ Partial Class ClienteN
         Me.TextBox2.Size = New System.Drawing.Size(178, 26)
         Me.TextBox2.TabIndex = 14
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(104, 131)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(550, 26)
-        Me.TextBox3.TabIndex = 17
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(104, 165)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(69, 26)
-        Me.TextBox5.TabIndex = 19
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(104, 194)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(69, 26)
-        Me.TextBox6.TabIndex = 20
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(104, 224)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(69, 26)
-        Me.TextBox7.TabIndex = 21
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(104, 253)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(269, 26)
-        Me.TextBox8.TabIndex = 22
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Tabasco", "Campeche", "Distrito Federal", "Chiapas", "--------------", "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima", "Durango", "Estado de México", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas"})
-        Me.ComboBox1.Location = New System.Drawing.Point(107, 33)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(170, 27)
-        Me.ComboBox1.TabIndex = 26
-        '
-        'Label9
-        '
-        Me.Label9.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(17, 36)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(104, 29)
-        Me.Label9.TabIndex = 25
-        Me.Label9.Text = "Estado :"
-        '
-        'Label8
-        '
-        Me.Label8.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(17, 70)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(104, 29)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "Municipio :"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(104, 99)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(550, 26)
-        Me.TextBox4.TabIndex = 30
-        '
-        'Label5
-        '
-        Me.Label5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(17, 102)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 29)
-        Me.Label5.TabIndex = 29
-        Me.Label5.Text = "Colonia :"
-        '
         'TextBox10
         '
         Me.TextBox10.Location = New System.Drawing.Point(180, 453)
@@ -292,13 +300,6 @@ Partial Class ClienteN
         Me.Button2.Text = "Guardar"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(107, 67)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(170, 26)
-        Me.TextBox9.TabIndex = 31
-        '
         'ClienteN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -316,6 +317,7 @@ Partial Class ClienteN
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "ClienteN"
         Me.Text = "Nuevo Cliente"

@@ -82,26 +82,36 @@ Public Class P_invent_N
                 M("Inventario eliminado correctamente!", 0)
                 Llenar_Tabla()
                 Exit Sub
-            End If
-            Inventario.Query("DELETE FROM inventario WHERE id_sucursal= '" & txtSucursal.Text & "'")
-            For Each Fila As DataGridViewRow In dgvTabla.Rows
-                If IsNumeric(Fila.Cells(4).Value) Then
-                    IE.condicion = "Buena Condición"
-                    IE.existencia = Fila.Cells(4).Value
-                    IE.fecha = getFecha()
-                    IE.id_articulo = Fila.Cells(0).Value.ToString
-                    IE.id_inventario = 0
-                    IE.id_proveedor = Fila.Cells(2).Value.ToString
-                    IE.id_sucursal = txtSucursal.Text
-                    IE.id_usuario = G_Usuario_id
-                    IE.nivel_critico = Fila.Cells(3).Value
-                    If Inventario.Insertar(IE) Then
-                    Else
-                        M("No se pudo insertar elemento: " + Fila.Cells(0).Value.ToString, 2)
-                        Exit Sub
+            Else
+                Try
+                    Inventario.Query("DELETE FROM inventario WHERE id_sucursal= '" & txtSucursal.Text & "'")
+                Catch ex As Exception
+
+                End Try
+
+                For Each Fila As DataGridViewRow In dgvTabla.Rows
+                    If IsNumeric(Fila.Cells(4).Value) Then
+                        IE.condicion = "Buena Condición"
+                        IE.existencia = Fila.Cells(4).Value
+                        IE.fecha = getFecha()
+                        IE.id_articulo = Fila.Cells(0).Value.ToString
+                        IE.id_inventario = 0
+                        IE.id_proveedor = Fila.Cells(2).Value.ToString
+                        IE.id_sucursal = txtSucursal.Text
+                        IE.id_usuario = G_Usuario_id
+                        IE.nivel_critico = Fila.Cells(3).Value
+                        Try
+                            If Inventario.Insertar(IE) Then
+                            Else
+                                M("No se pudo insertar elemento: " + Fila.Cells(0).Value.ToString, 2)
+                                Exit Sub
+                            End If
+                        Catch ex As Exception
+
+                        End Try
                     End If
-                End If
-            Next
+                Next
+            End If
 
             M("Registros guardados correctamente!", 0)
             Llenar_Tabla()

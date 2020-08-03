@@ -22,9 +22,13 @@ Partial Class P_proveedor_C
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_proveedor_C))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.txtFecha = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtId_proveedor = New System.Windows.Forms.TextBox()
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.txtConsulta = New System.Windows.Forms.TextBox()
@@ -39,9 +43,6 @@ Partial Class P_proveedor_C
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtId_proveedor = New System.Windows.Forms.TextBox()
-        Me.txtFecha = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +94,37 @@ Partial Class P_proveedor_C
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(424, 465)
         Me.Panel3.TabIndex = 17
+        '
+        'txtFecha
+        '
+        Me.txtFecha.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtFecha.Enabled = False
+        Me.txtFecha.Location = New System.Drawing.Point(129, 339)
+        Me.txtFecha.MaxLength = 30
+        Me.txtFecha.Name = "txtFecha"
+        Me.txtFecha.Size = New System.Drawing.Size(269, 26)
+        Me.txtFecha.TabIndex = 87
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(25, 342)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(97, 18)
+        Me.Label5.TabIndex = 86
+        Me.Label5.Text = "Fecha Reg. :"
+        '
+        'txtId_proveedor
+        '
+        Me.txtId_proveedor.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.txtId_proveedor.Enabled = False
+        Me.txtId_proveedor.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtId_proveedor.Location = New System.Drawing.Point(339, 165)
+        Me.txtId_proveedor.MaxLength = 20
+        Me.txtId_proveedor.Name = "txtId_proveedor"
+        Me.txtId_proveedor.Size = New System.Drawing.Size(59, 26)
+        Me.txtId_proveedor.TabIndex = 85
+        Me.txtId_proveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnSiguiente
         '
@@ -241,37 +273,6 @@ Partial Class P_proveedor_C
         Me.Label6.Text = "Consultar proveedor"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'txtId_proveedor
-        '
-        Me.txtId_proveedor.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtId_proveedor.Enabled = False
-        Me.txtId_proveedor.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtId_proveedor.Location = New System.Drawing.Point(339, 165)
-        Me.txtId_proveedor.MaxLength = 20
-        Me.txtId_proveedor.Name = "txtId_proveedor"
-        Me.txtId_proveedor.Size = New System.Drawing.Size(59, 26)
-        Me.txtId_proveedor.TabIndex = 85
-        Me.txtId_proveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtFecha
-        '
-        Me.txtFecha.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.txtFecha.Enabled = False
-        Me.txtFecha.Location = New System.Drawing.Point(129, 339)
-        Me.txtFecha.MaxLength = 30
-        Me.txtFecha.Name = "txtFecha"
-        Me.txtFecha.Size = New System.Drawing.Size(269, 26)
-        Me.txtFecha.TabIndex = 87
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(25, 342)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(97, 18)
-        Me.Label5.TabIndex = 86
-        Me.Label5.Text = "Fecha Reg. :"
-        '
         'P_proveedor_C
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -281,6 +282,7 @@ Partial Class P_proveedor_C
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_proveedor_C"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

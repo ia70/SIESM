@@ -22,20 +22,21 @@ Partial Class P_invent_EL
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_invent_EL))
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Txtcondicion = New System.Windows.Forms.TextBox()
+        Me.Txtcantidad = New System.Windows.Forms.TextBox()
+        Me.Txtproveedor = New System.Windows.Forms.TextBox()
+        Me.Txtsucursal = New System.Windows.Forms.TextBox()
+        Me.Txtfecha = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Txtarticulo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Txtfecha = New System.Windows.Forms.TextBox()
-        Me.Txtsucursal = New System.Windows.Forms.TextBox()
-        Me.Txtproveedor = New System.Windows.Forms.TextBox()
-        Me.Txtcantidad = New System.Windows.Forms.TextBox()
-        Me.Txtcondicion = New System.Windows.Forms.TextBox()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,6 +73,50 @@ Partial Class P_invent_EL
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(413, 300)
         Me.Panel3.TabIndex = 19
+        '
+        'Txtcondicion
+        '
+        Me.Txtcondicion.Location = New System.Drawing.Point(194, 199)
+        Me.Txtcondicion.Name = "Txtcondicion"
+        Me.Txtcondicion.Size = New System.Drawing.Size(141, 26)
+        Me.Txtcondicion.TabIndex = 45
+        '
+        'Txtcantidad
+        '
+        Me.Txtcantidad.Location = New System.Drawing.Point(194, 158)
+        Me.Txtcantidad.Name = "Txtcantidad"
+        Me.Txtcantidad.Size = New System.Drawing.Size(141, 26)
+        Me.Txtcantidad.TabIndex = 44
+        '
+        'Txtproveedor
+        '
+        Me.Txtproveedor.Location = New System.Drawing.Point(194, 117)
+        Me.Txtproveedor.Name = "Txtproveedor"
+        Me.Txtproveedor.Size = New System.Drawing.Size(141, 26)
+        Me.Txtproveedor.TabIndex = 43
+        '
+        'Txtsucursal
+        '
+        Me.Txtsucursal.Location = New System.Drawing.Point(194, 76)
+        Me.Txtsucursal.Name = "Txtsucursal"
+        Me.Txtsucursal.Size = New System.Drawing.Size(141, 26)
+        Me.Txtsucursal.TabIndex = 42
+        '
+        'Txtfecha
+        '
+        Me.Txtfecha.Location = New System.Drawing.Point(194, 237)
+        Me.Txtfecha.Name = "Txtfecha"
+        Me.Txtfecha.Size = New System.Drawing.Size(141, 26)
+        Me.Txtfecha.TabIndex = 41
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(93, 245)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(56, 18)
+        Me.Label7.TabIndex = 40
+        Me.Label7.Text = "Fecha:"
         '
         'Label5
         '
@@ -125,50 +170,6 @@ Partial Class P_invent_EL
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Sucursal:"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(93, 245)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 18)
-        Me.Label7.TabIndex = 40
-        Me.Label7.Text = "Fecha:"
-        '
-        'Txtfecha
-        '
-        Me.Txtfecha.Location = New System.Drawing.Point(194, 237)
-        Me.Txtfecha.Name = "Txtfecha"
-        Me.Txtfecha.Size = New System.Drawing.Size(141, 26)
-        Me.Txtfecha.TabIndex = 41
-        '
-        'Txtsucursal
-        '
-        Me.Txtsucursal.Location = New System.Drawing.Point(194, 76)
-        Me.Txtsucursal.Name = "Txtsucursal"
-        Me.Txtsucursal.Size = New System.Drawing.Size(141, 26)
-        Me.Txtsucursal.TabIndex = 42
-        '
-        'Txtproveedor
-        '
-        Me.Txtproveedor.Location = New System.Drawing.Point(194, 117)
-        Me.Txtproveedor.Name = "Txtproveedor"
-        Me.Txtproveedor.Size = New System.Drawing.Size(141, 26)
-        Me.Txtproveedor.TabIndex = 43
-        '
-        'Txtcantidad
-        '
-        Me.Txtcantidad.Location = New System.Drawing.Point(194, 158)
-        Me.Txtcantidad.Name = "Txtcantidad"
-        Me.Txtcantidad.Size = New System.Drawing.Size(141, 26)
-        Me.Txtcantidad.TabIndex = 44
-        '
-        'Txtcondicion
-        '
-        Me.Txtcondicion.Location = New System.Drawing.Point(194, 199)
-        Me.Txtcondicion.Name = "Txtcondicion"
-        Me.Txtcondicion.Size = New System.Drawing.Size(141, 26)
-        Me.Txtcondicion.TabIndex = 45
-        '
         'P_invent_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -177,9 +178,10 @@ Partial Class P_invent_EL
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label6)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_invent_EL"
-        Me.Text = "P_invent_EL"
+        Me.Text = "Eliminar Inventario"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)

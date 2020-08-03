@@ -22,9 +22,12 @@ Partial Class P_merma_ED
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_merma_ED))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Txtid_sucursal = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.btnSiguiente = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.txtConsulta = New System.Windows.Forms.TextBox()
@@ -47,8 +50,6 @@ Partial Class P_merma_ED
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Txtid_sucursal = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,6 +109,25 @@ Partial Class P_merma_ED
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(652, 527)
         Me.Panel3.TabIndex = 17
+        '
+        'Txtid_sucursal
+        '
+        Me.Txtid_sucursal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtid_sucursal.Location = New System.Drawing.Point(122, 146)
+        Me.Txtid_sucursal.MaxLength = 20
+        Me.Txtid_sucursal.Name = "Txtid_sucursal"
+        Me.Txtid_sucursal.Size = New System.Drawing.Size(204, 26)
+        Me.Txtid_sucursal.TabIndex = 94
+        Me.Txtid_sucursal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(40, 149)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(72, 18)
+        Me.Label9.TabIndex = 93
+        Me.Label9.Text = "Sucursal:"
         '
         'btnSiguiente
         '
@@ -329,25 +349,6 @@ Partial Class P_merma_ED
         Me.Label6.Text = "Editar Articulo En Merma"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(40, 149)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(72, 18)
-        Me.Label9.TabIndex = 93
-        Me.Label9.Text = "Sucursal:"
-        '
-        'Txtid_sucursal
-        '
-        Me.Txtid_sucursal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_sucursal.Location = New System.Drawing.Point(122, 146)
-        Me.Txtid_sucursal.MaxLength = 20
-        Me.Txtid_sucursal.Name = "Txtid_sucursal"
-        Me.Txtid_sucursal.Size = New System.Drawing.Size(204, 26)
-        Me.Txtid_sucursal.TabIndex = 94
-        Me.Txtid_sucursal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'P_merma_ED
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -355,10 +356,11 @@ Partial Class P_merma_ED
         Me.ClientSize = New System.Drawing.Size(662, 586)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_merma_ED"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P_merma_ED"
+        Me.Text = "Editar merma"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

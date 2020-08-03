@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KUFIpk+Ka7MA+I1jiugkcu8Sdm73gd4nw7XfVdvGWM4=</dsig:DigestValue>
+        <dsig:DigestValue>StUWy7JsoMAB3EAqdU2RkwwTbULhwlV/XX4ZGtRa/rI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pKB4u6toouZzJBIUxT7e26dFnqfffcikMPJBu5ihmog=</dsig:DigestValue>
+        <dsig:DigestValue>Bh1JadJNd1JPmQvKXZ/fNRkIgnk+TbvWNuCKF2tHAyQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AyVVOPpQf7FIHAb8kaCMvYvxgbuiXFiGlgWn9Qnz6Bc=</dsig:DigestValue>
+        <dsig:DigestValue>l0TbicOcHD32GZSc8XS0f4UfPzPhx/p6/6i1bsrxtBs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="4037632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.exe" size="5532672">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qXLhevkISBMS3YkLtIXln6bfPq7BTFBRx4YObH/is60=</dsig:DigestValue>
+        <dsig:DigestValue>MTZ8VFtLbwuXiVkDNxY/Zhgb/G2EQ3PNr5kznxen8g8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vmsVJd3oGi08zCLHHJkMzq4oY8gH0jra/cdPBTZGgbc=</dsig:DigestValue>
+        <dsig:DigestValue>BzWxwT3oqgfiUXnfXzbB/10A6RIut+EmNbtFGXWHHPA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

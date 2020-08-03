@@ -22,15 +22,21 @@ Public Class VerificacionSucursal
         Dim arrText As New ArrayList()
         Dim oSW As StreamWriter
 
-        oSW = New StreamWriter(Application.StartupPath.ToString & "\core\sucinf.dll")
-        sLine = txtSucursal.Text & Chr(13) & DBIP
-        oSW.WriteLine(sLine)
-        oSW.Flush()
-        oSW.Close()
+        Try
+            oSW = New StreamWriter(Application.StartupPath.ToString & "\sucinf.dll")
+            sLine = txtSucursal.Text & Chr(13) & DBIP
+            oSW.WriteLine(sLine)
+            oSW.Flush()
+            oSW.Close()
+        Catch ex As Exception
+            oSW.Flush()
+            oSW.Close()
+        End Try
 
 
-        If File.Exists(Application.StartupPath.ToString & "\core\sucinf.dll") Then
-            Archivo = New StreamReader(Application.StartupPath.ToString & "\core\sucinf.dll")
+
+        If File.Exists(Application.StartupPath.ToString & "\sucinf.dll") Then
+            Archivo = New StreamReader(Application.StartupPath.ToString & "\sucinf.dll")
 
             'Do
             sLine = Archivo.ReadLine()
@@ -54,7 +60,7 @@ Public Class VerificacionSucursal
             P_CajaInicio.Show()
             Me.Close()
         Else
-            
+
         End If
 
     End Sub

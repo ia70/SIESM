@@ -22,6 +22,7 @@ Partial Class P_sucursal_EL
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_sucursal_EL))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.txttipo = New System.Windows.Forms.TextBox()
@@ -371,6 +372,7 @@ Partial Class P_sucursal_EL
         Me.ClientSize = New System.Drawing.Size(735, 572)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_sucursal_EL"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

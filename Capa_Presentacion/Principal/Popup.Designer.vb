@@ -22,9 +22,10 @@ Partial Class Popup
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Popup))
         Me.SuspendLayout()
         '
-        'PantallaOscora
+        'Popup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -32,7 +33,8 @@ Partial Class Popup
         Me.ClientSize = New System.Drawing.Size(601, 417)
         Me.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "PantallaOscora"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Popup"
         Me.Opacity = 0.7R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PantallaOscora"

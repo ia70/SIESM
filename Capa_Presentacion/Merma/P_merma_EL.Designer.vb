@@ -22,9 +22,12 @@ Partial Class P_merma_EL
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_merma_EL))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Txtid_sucursal = New System.Windows.Forms.TextBox()
+        Me.Id = New System.Windows.Forms.Label()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.txtConsulta = New System.Windows.Forms.TextBox()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
@@ -46,8 +49,6 @@ Partial Class P_merma_EL
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Id = New System.Windows.Forms.Label()
-        Me.Txtid_sucursal = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +107,26 @@ Partial Class P_merma_EL
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(643, 546)
         Me.Panel3.TabIndex = 17
+        '
+        'Txtid_sucursal
+        '
+        Me.Txtid_sucursal.Enabled = False
+        Me.Txtid_sucursal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txtid_sucursal.Location = New System.Drawing.Point(119, 160)
+        Me.Txtid_sucursal.MaxLength = 20
+        Me.Txtid_sucursal.Name = "Txtid_sucursal"
+        Me.Txtid_sucursal.Size = New System.Drawing.Size(204, 26)
+        Me.Txtid_sucursal.TabIndex = 91
+        Me.Txtid_sucursal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Id
+        '
+        Me.Id.AutoSize = True
+        Me.Id.Location = New System.Drawing.Point(37, 163)
+        Me.Id.Name = "Id"
+        Me.Id.Size = New System.Drawing.Size(72, 18)
+        Me.Id.TabIndex = 90
+        Me.Id.Text = "Sucursal:"
         '
         'btnEliminar
         '
@@ -322,26 +343,6 @@ Partial Class P_merma_EL
         Me.Label6.Text = "Eliminar Articulo En Merma"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Id
-        '
-        Me.Id.AutoSize = True
-        Me.Id.Location = New System.Drawing.Point(37, 163)
-        Me.Id.Name = "Id"
-        Me.Id.Size = New System.Drawing.Size(72, 18)
-        Me.Id.TabIndex = 90
-        Me.Id.Text = "Sucursal:"
-        '
-        'Txtid_sucursal
-        '
-        Me.Txtid_sucursal.Enabled = False
-        Me.Txtid_sucursal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtid_sucursal.Location = New System.Drawing.Point(119, 160)
-        Me.Txtid_sucursal.MaxLength = 20
-        Me.Txtid_sucursal.Name = "Txtid_sucursal"
-        Me.Txtid_sucursal.Size = New System.Drawing.Size(204, 26)
-        Me.Txtid_sucursal.TabIndex = 91
-        Me.Txtid_sucursal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'P_merma_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -349,10 +350,11 @@ Partial Class P_merma_EL
         Me.ClientSize = New System.Drawing.Size(653, 605)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_merma_EL"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P_merma_EL"
+        Me.Text = "Eliminar Articulo"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

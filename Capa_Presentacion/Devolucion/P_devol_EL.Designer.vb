@@ -22,14 +22,15 @@ Partial Class P_devol_EL
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_devol_EL))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtid_venta = New System.Windows.Forms.TextBox()
-        Me.btneliminar = New System.Windows.Forms.Button()
-        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnlimpiar_campos = New System.Windows.Forms.Button()
+        Me.btneliminar = New System.Windows.Forms.Button()
+        Me.txtid_venta = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -56,59 +57,6 @@ Partial Class P_devol_EL
         Me.Panel2.Size = New System.Drawing.Size(448, 46)
         Me.Panel2.TabIndex = 18
         '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(5, 5)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(448, 49)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Eliminar Registro de Devolución"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(32, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 18)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "ID de Venta:"
-        '
-        'txtid_venta
-        '
-        Me.txtid_venta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid_venta.Location = New System.Drawing.Point(173, 41)
-        Me.txtid_venta.MaxLength = 20
-        Me.txtid_venta.Name = "txtid_venta"
-        Me.txtid_venta.Size = New System.Drawing.Size(204, 26)
-        Me.txtid_venta.TabIndex = 18
-        Me.txtid_venta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'btneliminar
-        '
-        Me.btneliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btneliminar.Enabled = False
-        Me.btneliminar.Location = New System.Drawing.Point(290, 106)
-        Me.btneliminar.Name = "btneliminar"
-        Me.btneliminar.Size = New System.Drawing.Size(105, 30)
-        Me.btneliminar.TabIndex = 24
-        Me.btneliminar.Text = "Eliminar"
-        Me.btneliminar.UseVisualStyleBackColor = True
-        '
-        'btnlimpiar_campos
-        '
-        Me.btnlimpiar_campos.Enabled = False
-        Me.btnlimpiar_campos.Location = New System.Drawing.Point(133, 106)
-        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
-        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
-        Me.btnlimpiar_campos.TabIndex = 26
-        Me.btnlimpiar_campos.Text = "Limpiar campos"
-        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.ButtonFace
@@ -122,6 +70,59 @@ Partial Class P_devol_EL
         Me.Panel3.Size = New System.Drawing.Size(448, 198)
         Me.Panel3.TabIndex = 17
         '
+        'btnlimpiar_campos
+        '
+        Me.btnlimpiar_campos.Enabled = False
+        Me.btnlimpiar_campos.Location = New System.Drawing.Point(133, 106)
+        Me.btnlimpiar_campos.Name = "btnlimpiar_campos"
+        Me.btnlimpiar_campos.Size = New System.Drawing.Size(138, 30)
+        Me.btnlimpiar_campos.TabIndex = 26
+        Me.btnlimpiar_campos.Text = "Limpiar campos"
+        Me.btnlimpiar_campos.UseVisualStyleBackColor = True
+        '
+        'btneliminar
+        '
+        Me.btneliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btneliminar.Enabled = False
+        Me.btneliminar.Location = New System.Drawing.Point(290, 106)
+        Me.btneliminar.Name = "btneliminar"
+        Me.btneliminar.Size = New System.Drawing.Size(105, 30)
+        Me.btneliminar.TabIndex = 24
+        Me.btneliminar.Text = "Eliminar"
+        Me.btneliminar.UseVisualStyleBackColor = True
+        '
+        'txtid_venta
+        '
+        Me.txtid_venta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtid_venta.Location = New System.Drawing.Point(173, 41)
+        Me.txtid_venta.MaxLength = 20
+        Me.txtid_venta.Name = "txtid_venta"
+        Me.txtid_venta.Size = New System.Drawing.Size(204, 26)
+        Me.txtid_venta.TabIndex = 18
+        Me.txtid_venta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(32, 44)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(93, 18)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "ID de Venta:"
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(5, 5)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(448, 49)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Eliminar Registro de Devolución"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'P_devol_EL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -129,10 +130,11 @@ Partial Class P_devol_EL
         Me.ClientSize = New System.Drawing.Size(458, 257)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "P_devol_EL"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "P_devol_EL"
+        Me.Text = "Devolucion Registro"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

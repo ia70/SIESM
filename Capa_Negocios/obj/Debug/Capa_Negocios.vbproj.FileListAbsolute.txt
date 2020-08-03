@@ -60,28 +60,6 @@ C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbp
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.dll
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.xml
 C:\Users\Daniel\Documents\GitHub\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.pdb
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.pdb
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.xml
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\MySql.Data.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.pdb
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.xml
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.pdb
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.xml
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbprojAssemblyReference.cache
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.Resources.resources
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.GenerateResource.cache
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.CoreCompileInputs.cache
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.CopyComplete
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.xml
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.pdb
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Libersoft.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\itextsharp.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Libersoft.pdb
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Libersoft.xml
 C:\Users\pcd51\Documents\Visual Studio 2019\Proyects\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.dll
 C:\Users\pcd51\Documents\Visual Studio 2019\Proyects\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.pdb
 C:\Users\pcd51\Documents\Visual Studio 2019\Proyects\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.xml
@@ -124,3 +102,25 @@ C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Negocios\obj\Deb
 C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.dll
 C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.xml
 C:\Users\pcd51\Documents\Visual Studio 2019\Projects\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Negocios.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Libersoft.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\itextsharp.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\MySql.Data.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Libersoft.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Libersoft.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Datos.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\bin\Debug\Capa_Entidad.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbprojAssemblyReference.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.Resources.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.GenerateResource.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.CoreCompileInputs.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.vbproj.CopyComplete
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.dll
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\SIESM\Capa_Negocios\obj\Debug\Capa_Negocios.pdb

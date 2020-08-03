@@ -29,6 +29,7 @@ Partial Class P_PuntoVenta
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_PuntoVenta))
         Me.P_NavBar = New System.Windows.Forms.Panel()
         Me.btnAdministracion = New System.Windows.Forms.Button()
         Me.btnConsultaExistencia = New System.Windows.Forms.Button()
@@ -163,7 +164,7 @@ Partial Class P_PuntoVenta
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvTabla.Size = New System.Drawing.Size(999, 334)
         Me.dgvTabla.TabIndex = 2
-        Me.TTCorteCaja.SetToolTip(Me.dgvTabla, "Listado de los articulos que se están vendiendo." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Presiona click derecho si des" & _
+        Me.TTCorteCaja.SetToolTip(Me.dgvTabla, "Listado de los articulos que se están vendiendo." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Presiona click derecho si des" &
         "eas borrar uno o todos los registros.")
         '
         'id_articulo
@@ -203,7 +204,7 @@ Partial Class P_PuntoVenta
         Me.cantidad.HeaderText = "Cant."
         Me.cantidad.MinimumWidth = 80
         Me.cantidad.Name = "cantidad"
-        Me.cantidad.ToolTipText = "Para modificar la cantidad has doble click en el campo cantidad de la fila desead" & _
+        Me.cantidad.ToolTipText = "Para modificar la cantidad has doble click en el campo cantidad de la fila desead" &
     "a."
         Me.cantidad.Width = 80
         '
@@ -625,6 +626,7 @@ Partial Class P_PuntoVenta
         Me.Controls.Add(Me.dgvTabla)
         Me.Controls.Add(Me.P_NavBar)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(690, 382)
         Me.Name = "P_PuntoVenta"

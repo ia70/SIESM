@@ -22,6 +22,7 @@ Partial Class VerificacionSucursal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VerificacionSucursal))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -60,8 +61,8 @@ Partial Class VerificacionSucursal
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(521, 115)
         Me.Label1.TabIndex = 26
-        Me.Label1.Text = "Esta computadora actualmente no esta registrada o aun no se le ha asignado una su" & _
-    "cursal. Por favor seleccione la sucursal a la que estará asignada la computadora" & _
+        Me.Label1.Text = "Esta computadora actualmente no esta registrada o aun no se le ha asignado una su" &
+    "cursal. Por favor seleccione la sucursal a la que estará asignada la computadora" &
     ":"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -96,6 +97,7 @@ Partial Class VerificacionSucursal
         Me.Controls.Add(Me.Label6)
         Me.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "VerificacionSucursal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

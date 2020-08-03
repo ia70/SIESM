@@ -22,6 +22,7 @@ Partial Class P_CajaInicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(P_CajaInicio))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtInicioCaja = New System.Windows.Forms.TextBox()
         Me.btnContinuar = New System.Windows.Forms.Button()
@@ -72,6 +73,7 @@ Partial Class P_CajaInicio
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
